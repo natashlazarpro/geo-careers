@@ -554,7 +554,7 @@ function createMarker(c) {
     width:13px;height:13px;border-radius:50%;
     background:${color};border:2px solid rgba(255,255,255,.85);
     box-shadow:0 0 0 2px ${color}66,0 2px 6px rgba(0,0,0,.4);
-    cursor:pointer;transition:transform .13s;
+    cursor:pointer;transition:transform .13s;will-change:transform;
   `;
   el.addEventListener('mouseenter', () => el.style.transform = 'scale(1.7)');
   el.addEventListener('mouseleave', () => {
@@ -645,7 +645,9 @@ map.on('load', async () => {
   try {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    COMPANIES = await res.json();
+    COMPANIES = (await res.json()).map(c => ({
+      ...c, lat: parseFloat(c.lat), lng: parseFloat(c.lng)
+    }));
   } catch (err) {
     console.error('Failed to load company data:', err);
     return;
