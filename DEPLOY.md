@@ -57,22 +57,18 @@ const ALLOWED_ORIGIN = "https://YOUR_USERNAME.github.io";
 
 Re-deploy the worker after saving.
 
-### 3c. Switch index.html to use the worker
+### 3c. Set your worker URL in config.js
 
-At the top of the `<script>` block in `index.html`, add:
+Open `config.js` and replace `YOUR_WORKER_URL_HERE` with your real worker URL:
+
 ```js
+const MAPBOX_TOKEN = 'pk.your_real_token';
 const DATA_URL = 'https://gis-jobs-berlin.YOUR_SUBDOMAIN.workers.dev/companies';
 ```
 
-Then replace the hardcoded `COMPANIES` array with a fetch:
-```js
-map.on('load', async () => {
-  const res = await fetch(DATA_URL);
-  const companies = await res.json();
-  companies.forEach(c => { markers[c.id] = createMarker(c); });
-  buildList(companies);
-});
-```
+That's it — `index.html` already fetches from `DATA_URL` on load. The `COMPANIES` array has been removed from `index.html`, so no company data is in the public repo.
+
+> **Note:** `config.js` is listed in `.gitignore` — never commit it.
 
 ---
 
