@@ -16,7 +16,12 @@
       --muted:    #6e7681;
       --text:     #1a1f2e;
       --subtext:  #3d4451;
-      --accent:   #7b68ee;
+      --p1: #cdb4db;
+      --p2: #ffc8dd;
+      --p3: #ffafcc;
+      --p4: #bde0fe;
+      --p5: #a2d2ff;
+      --accent: #9b87c8;
       --green:    #2da44e;
       --orange:   #d4912a;
       --alt-row:  #f5f6f8;
@@ -83,8 +88,8 @@
       transition: all 0.15s;
     }
     .lang-btn.active {
-      background: var(--accent);
-      color: #fff;
+      background: var(--p1);
+      color: #5a2d6e;
     }
     .lang-btn:not(.active):hover { background: var(--bg); color: var(--text); }
 
@@ -142,8 +147,8 @@
       transition: all .15s;
       user-select: none;
     }
-    .chip:hover { border-color: var(--accent); color: var(--accent); }
-    .chip.active { background: #f0eeff; border-color: var(--accent); color: var(--accent); }
+    .chip:hover { border-color: var(--p3); color: #9b4f72; }
+    .chip.active { background: var(--p1); border-color: var(--p3); color: #5a2d6e; }
 
     #reset-btn {
       width: 100%;
@@ -157,7 +162,7 @@
       transition: all .15s;
       margin-top: 2px;
     }
-    #reset-btn:hover { border-color: var(--accent); color: var(--accent); }
+    #reset-btn:hover { border-color: var(--p3); color: #9b4f72; }
 
     /* ── Company list ───────────────────────────────────────────────────────── */
     #company-list {
@@ -176,8 +181,8 @@
       transition: all .13s;
       margin-bottom: 3px;
     }
-    .c-card:hover { background: #f0eeff; border-color: var(--border); }
-    .c-card.active { background: #ece8ff; border-color: var(--accent); }
+    .c-card:hover { background: var(--p4); border-color: var(--border); }
+    .c-card.active { background: var(--p1); border-color: var(--p3); }
 
     .c-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
     .c-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; }
@@ -211,6 +216,7 @@
       box-shadow: 0 8px 32px rgba(0,0,0,.12) !important;
     }
     .mapboxgl-popup-tip { display: none !important; }
+    .mini-popup .mapboxgl-popup-content { min-width: unset; max-width: 200px; border-radius: 7px !important; }
     .mapboxgl-popup-close-button {
       color: var(--muted) !important;
       font-size: 18px !important;
@@ -227,7 +233,7 @@
       font-size: 15px; font-weight: 700;
       padding-right: 22px; margin-bottom: 3px;
     }
-    .pop-sector { font-size: 11px; color: var(--accent); }
+    .pop-sector { font-size: 11px; color: #9b4f72; }
 
     .pop-body { padding: 10px 14px; }
     .pop-row {
@@ -262,8 +268,8 @@
       text-align: center; text-decoration: none;
       cursor: pointer; transition: all .13s;
     }
-    .pop-primary   { background: #238636; border: 1px solid #2ea043; color: #fff; }
-    .pop-primary:hover { background: #2ea043; }
+    .pop-primary   { background: var(--p5); border: 1px solid var(--p4); color: #1559a0; }
+    .pop-primary:hover { background: var(--p4); }
     .pop-secondary { background: var(--bg); border: 1px solid var(--border); color: var(--subtext); }
     .pop-secondary:hover { border-color: var(--accent); color: var(--accent); }
     .pop-disabled  { background: var(--bg); border: 1px solid var(--border); color: var(--muted); cursor: default; }
@@ -288,24 +294,56 @@
       color: var(--muted);
       cursor: pointer;
       transition: all .15s;
-      margin-bottom: 8px;
-      text-align: left;
+      margin-bottom: 6px;
+      text-align: center;
     }
-    #tech-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+    #tech-toggle-btn:hover { border-color: var(--p3); color: #9b4f72; }
     #tech-filter-group { display: none; }
     #tech-filter-group.open { display: block; }
 
+    /* ── Detail panel ───────────────────────────────────────────────────────── */
+    #detail-panel {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      overflow-y: auto;
+    }
+    #back-btn {
+      flex-shrink: 0;
+      padding: 10px 14px;
+      font-size: 12px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      cursor: pointer;
+      text-align: left;
+      transition: color .15s;
+    }
+    #back-btn:hover { color: #9b4f72; }
+    #detail-content { padding: 16px 14px; flex: 1; }
+    .detail-name { font-size: 18px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
+    .detail-sector { font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing:.06em; color: #9b4f72; margin-bottom: 6px; }
+    .detail-meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .detail-website { font-size: 11px; color: var(--accent); text-decoration: none;
+      display: block; margin-bottom: 12px; word-break: break-all; }
+    .detail-website:hover { text-decoration: underline; }
+    .detail-divider { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
+    .detail-about { font-size: 12.5px; color: var(--subtext); line-height: 1.65; }
+    .detail-actions { display: flex; gap: 7px; margin-top: 14px; }
+
     /* ── Role badge ──────────────────────────────────────────────────────────── */
-    .r-core  { background:#dcfce7; color:#15803d; border:1px solid #86efac; }
-    .r-team  { background:#dbeafe; color:#1d4ed8; border:1px solid #93c5fd; }
-    .r-side  { background:#fce7f3; color:#be185d; border:1px solid #f9a8d4; }
+    .r-core  { background:var(--p4); color:#1559a0; border:1px solid var(--p5); }
+    .r-team  { background:var(--p1); color:#5a2d6e; border:1px solid var(--p3); }
+    .r-side  { background:var(--p2); color:#9b4f72; border:1px solid var(--p3); }
   </style>
 </head>
 <body>
 
 <div id="topbar">
   <div class="logo">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9b87c8" stroke-width="2.2">
       <circle cx="12" cy="10" r="3"/>
       <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 14-8 14S4 15.25 4 10a8 8 0 0 1 8-8z"/>
     </svg>
@@ -365,9 +403,7 @@
           <div class="chip" data-filter="lang" data-value="DE">
             <span class="t-en">German</span><span class="t-de" style="display:none">Deutsch</span>
           </div>
-          <div class="chip" data-filter="lang" data-value="ENG/DE">
-            <span class="t-en">Both</span><span class="t-de" style="display:none">Beides</span>
-          </div>
+
         </div>
       </div>
 
@@ -381,6 +417,14 @@
         <span class="t-en">✕ Reset All Filters</span>
         <span class="t-de" style="display:none">✕ Alle Filter zurücksetzen</span>
       </button>
+    </div>
+
+    <div id="detail-panel">
+      <button id="back-btn">
+        <span class="t-en">← Back to list</span>
+        <span class="t-de" style="display:none">← Zurück zur Liste</span>
+      </button>
+      <div id="detail-content"></div>
     </div>
 
     <div id="company-list">
@@ -416,10 +460,7 @@ function setLang(lang) {
 
   // Rebuild list & reopen popup if open
   applyFilters();
-  if (activePopup && activeCardId) {
-    const c = COMPANIES.find(x => x.id === activeCardId);
-    if (c) activePopup.setHTML(buildPopupHTML(c));
-  }
+  if (activeCompany) showDetail(activeCompany);
 }
 
 // ─── Company data (fetched from worker) ─────────────────────────────────────
@@ -447,10 +488,10 @@ function roleClass(r) {
   return r === 'Core product' ? 'r-core' : r === 'Dedicated team' ? 'r-team' : 'r-side';
 }
 function markerColor(r) {
-  return r === 'Core product' ? '#6db88c' : r === 'Dedicated team' ? '#7eb3ef' : '#f4a7c3';
+  return r === 'Core product' ? '#a2d2ff' : r === 'Dedicated team' ? '#cdb4db' : '#ffafcc';
 }
 function langFlag(l) {
-  return l === 'ENG' ? '🇬🇧' : l === 'DE' ? '🇩🇪' : '🇬🇧🇩🇪';
+  return l === 'ENG' ? 'EN' : l === 'DE' ? 'DE' : 'EN/DE';
 }
 function matchesFilters(c) {
   if (activeFilters.sector && !c.sector?.includes(activeFilters.sector)) return false;
@@ -529,7 +570,7 @@ function buildPopupHTML(c) {
   const roleLabel = LANG === 'de'
     ? (c.role === 'Core product' ? 'Kernprodukt' : c.role === 'Dedicated team' ? 'GIS-Team' : 'Nebentool')
     : c.role;
-  const sizeLabel = LANG === 'de' ? `${c.size} Mitarb.` : `${c.size} emp.`;
+  const sizeLabel = c.size;
   const careersLabel = LANG === 'de' ? 'Stellen ansehen →' : 'View Jobs →';
   const linkedinLabel = 'LinkedIn';
   const noJobs = LANG === 'de' ? 'Keine Stellenseite' : 'No jobs page';
@@ -538,9 +579,9 @@ function buildPopupHTML(c) {
   const sizeLabel2 = LANG === 'de' ? 'Größe' : 'Size';
   const techLabel  = LANG === 'de' ? 'Tech-Stack' : 'Tech stack';
   const langLabel  = LANG === 'de' ? 'Sprache' : 'Language';
-  const langVal = c.lang === 'ENG' ? (LANG === 'de' ? '🇬🇧 Englisch' : '🇬🇧 English')
-                : c.lang === 'DE'  ? (LANG === 'de' ? '🇩🇪 Deutsch' : '🇩🇪 German')
-                : '🇬🇧🇩🇪';
+  const langVal = c.lang === 'ENG' ? (LANG === 'de' ? 'Englisch' : 'English')
+                : c.lang === 'DE'  ? (LANG === 'de' ? 'Deutsch' : 'German')
+                : (LANG === 'de' ? 'Englisch / Deutsch' : 'English / German');
   const techTags = c.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
   const careersBtn = c.careers
     ? `<a class="pop-btn pop-primary" href="${c.careers}" target="_blank">${careersLabel}</a>`
@@ -586,15 +627,56 @@ function buildPopupHTML(c) {
   `;
 }
 
-// ─── Open popup ───────────────────────────────────────────────────────────────
-function openPopup(c) {
-  if (activePopup) activePopup.remove();
-  activePopup = new mapboxgl.Popup({ closeButton: true, maxWidth: '330px', offset: 18 })
-    .setLngLat([c.lng, c.lat])
-    .setHTML(buildPopupHTML(c))
-    .addTo(map);
-  activePopup.on('close', () => { setActiveCard(null); activePopup = null; });
+// ─── Show detail in sidebar ───────────────────────────────────────────────────
+let activeCompany = null;
+
+function showDetail(c) {
+  activeCompany = c;
+  const about = LANG === 'de' ? c.about_de : c.about_en;
+  const langText = c.lang === 'ENG' ? (LANG === 'de' ? 'Englisch' : 'English')
+                 : c.lang === 'DE'  ? (LANG === 'de' ? 'Deutsch' : 'German')
+                 : (LANG === 'de' ? 'Englisch / Deutsch' : 'English / German');
+  const careersLabel = LANG === 'de' ? 'Stellen ansehen →' : 'View Jobs →';
+  const techTags = (c.tech || []).map(t => `<span class="tech-tag">${t}</span>`).join('');
+  const careersBtn = c.careers
+    ? `<a class="pop-btn pop-primary" href="${c.careers}" target="_blank">${careersLabel}</a>`
+    : '';
+  const linkedinBtn = c.linkedin
+    ? `<a class="pop-btn pop-secondary" href="${c.linkedin}" target="_blank">LinkedIn</a>`
+    : '';
+  document.getElementById('detail-content').innerHTML = `
+    <div class="detail-name">${c.name}</div>
+    <div class="detail-sector">${c.sector}</div>
+    <div class="detail-meta">${c.size} · ${langText}</div>
+    ${c.website ? `<a class="detail-website" href="${c.website}" target="_blank">${c.website.replace(/^https?:\/\//,'')}</a>` : ''}
+    <hr class="detail-divider">
+    ${about ? `<div class="detail-about">${about}</div>` : ''}
+    ${techTags ? `<div class="tech-wrap" style="margin-top:10px;">${techTags}</div>` : ''}
+    <div class="detail-actions">${careersBtn}${linkedinBtn}</div>
+  `;
+  document.getElementById('detail-panel').style.display = 'flex';
+  document.getElementById('filters').style.display = 'none';
+  document.getElementById('company-list').style.display = 'none';
   setActiveCard(c.id);
+}
+
+function hideDetail() {
+  activeCompany = null;
+  document.getElementById('detail-panel').style.display = 'none';
+  document.getElementById('filters').style.display = 'block';
+  document.getElementById('company-list').style.display = 'flex';
+  setActiveCard(null);
+  if (activePopup) { activePopup.remove(); activePopup = null; }
+}
+
+function openPopup(c) {
+  showDetail(c);
+  // Minimal tooltip on map
+  if (activePopup) activePopup.remove();
+  activePopup = new mapboxgl.Popup({ closeButton: false, maxWidth: '200px', offset: 18, className: 'mini-popup' })
+    .setLngLat([c.lng, c.lat])
+    .setHTML(`<div style="font-weight:600;font-size:13px;padding:6px 10px;">${c.name}</div>`)
+    .addTo(map);
 }
 
 // ─── Markers ──────────────────────────────────────────────────────────────────
@@ -672,10 +754,10 @@ function applyFilters() {
     }
   });
   buildList(visible);
-  if (activePopup && activeCardId && !visible.find(c => c.id === activeCardId)) {
-    activePopup.remove(); activePopup = null; setActiveCard(null);
-  }
+  if (activeCompany && !visible.find(c => c.id === activeCompany.id)) hideDetail();
 }
+
+document.getElementById('back-btn').addEventListener('click', hideDetail);
 
 // Role / size / lang chips (sector chips get listeners in buildSectorChips)
 document.querySelectorAll('.chip:not([data-filter="sector"])').forEach(chip => {
