@@ -10,16 +10,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #0d1117;
-      --surface:  #161b22;
-      --border:   #30363d;
-      --muted:    #8b949e;
-      --text:     #e6edf3;
-      --subtext:  #c9d1d9;
-      --blue:     #58a6ff;
-      --green:    #3fb950;
-      --orange:   #e3b341;
-      --alt-row:  #0d1117;
+      --bg:       #f5f6f8;
+      --surface:  #ffffff;
+      --border:   #dde1e7;
+      --muted:    #6e7681;
+      --text:     #1a1f2e;
+      --subtext:  #3d4451;
+      --accent:   #7b68ee;
+      --green:    #2da44e;
+      --orange:   #d4912a;
+      --alt-row:  #f5f6f8;
     }
 
     body {
@@ -51,7 +51,7 @@
       gap: 7px;
       font-weight: 700;
       font-size: 15px;
-      color: var(--blue);
+      color: var(--accent);
       white-space: nowrap;
     }
 
@@ -83,21 +83,21 @@
       transition: all 0.15s;
     }
     .lang-btn.active {
-      background: var(--blue);
+      background: var(--accent);
       color: #fff;
     }
-    .lang-btn:not(.active):hover { background: #21262d; color: var(--text); }
+    .lang-btn:not(.active):hover { background: var(--bg); color: var(--text); }
 
-    .count-badge {
+    .visitor-badge {
       font-size: 12px;
       color: var(--muted);
-      background: #21262d;
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 4px 12px;
       white-space: nowrap;
     }
-    .count-badge span { color: var(--blue); font-weight: 600; }
+    .visitor-badge span { color: var(--accent); font-weight: 600; }
 
     /* ── Layout ─────────────────────────────────────────────────────────────── */
     #main { display: flex; flex: 1; overflow: hidden; }
@@ -136,14 +136,14 @@
       padding: 3px 9px;
       border-radius: 20px;
       border: 1px solid var(--border);
-      background: #21262d;
+      background: var(--bg);
       color: var(--subtext);
       cursor: pointer;
       transition: all .15s;
       user-select: none;
     }
-    .chip:hover { border-color: var(--blue); color: var(--blue); }
-    .chip.active { background: #1f3a5f; border-color: var(--blue); color: var(--blue); }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+    .chip.active { background: #f0eeff; border-color: var(--accent); color: var(--accent); }
 
     #reset-btn {
       width: 100%;
@@ -157,7 +157,7 @@
       transition: all .15s;
       margin-top: 2px;
     }
-    #reset-btn:hover { border-color: var(--blue); color: var(--blue); }
+    #reset-btn:hover { border-color: var(--accent); color: var(--accent); }
 
     /* ── Company list ───────────────────────────────────────────────────────── */
     #company-list {
@@ -176,8 +176,8 @@
       transition: all .13s;
       margin-bottom: 3px;
     }
-    .c-card:hover { background: #21262d; border-color: var(--border); }
-    .c-card.active { background: #1f3a5f; border-color: var(--blue); }
+    .c-card:hover { background: #f0eeff; border-color: var(--border); }
+    .c-card.active { background: #ece8ff; border-color: var(--accent); }
 
     .c-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
     .c-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; }
@@ -202,13 +202,13 @@
 
     /* ── Popup ──────────────────────────────────────────────────────────────── */
     .mapboxgl-popup-content {
-      background: #161b22 !important;
+      background: #ffffff !important;
       border: 1px solid var(--border) !important;
       border-radius: 10px !important;
       padding: 0 !important;
       min-width: 290px;
       max-width: 330px;
-      box-shadow: 0 8px 40px rgba(0,0,0,.6) !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,.12) !important;
     }
     .mapboxgl-popup-tip { display: none !important; }
     .mapboxgl-popup-close-button {
@@ -221,13 +221,13 @@
 
     .pop-header {
       padding: 14px 14px 10px;
-      border-bottom: 1px solid #21262d;
+      border-bottom: 1px solid var(--border);
     }
     .pop-name {
       font-size: 15px; font-weight: 700;
       padding-right: 22px; margin-bottom: 3px;
     }
-    .pop-sector { font-size: 11px; color: var(--blue); }
+    .pop-sector { font-size: 11px; color: var(--accent); }
 
     .pop-body { padding: 10px 14px; }
     .pop-row {
@@ -242,14 +242,14 @@
       color: var(--muted);
       line-height: 1.6;
       padding: 8px 14px 10px;
-      border-top: 1px solid #21262d;
+      border-top: 1px solid var(--border);
     }
 
     .tech-wrap { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
     .tech-tag {
       font-size: 10px; padding: 2px 6px;
-      background: #21262d; border: 1px solid var(--border);
-      border-radius: 3px; color: var(--muted);
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 3px; color: var(--subtext);
     }
 
     .pop-actions {
@@ -264,30 +264,48 @@
     }
     .pop-primary   { background: #238636; border: 1px solid #2ea043; color: #fff; }
     .pop-primary:hover { background: #2ea043; }
-    .pop-secondary { background: #21262d; border: 1px solid var(--border); color: var(--subtext); }
-    .pop-secondary:hover { border-color: var(--blue); color: var(--blue); }
-    .pop-disabled  { background: var(--surface); border: 1px solid #21262d; color: #484f58; cursor: default; }
+    .pop-secondary { background: var(--bg); border: 1px solid var(--border); color: var(--subtext); }
+    .pop-secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .pop-disabled  { background: var(--bg); border: 1px solid var(--border); color: var(--muted); cursor: default; }
 
     /* ── Sector badge colors ─────────────────────────────────────────────────── */
-    .s-mobility    { background:#1f3a5f; color:#79c0ff; }
-    .s-env         { background:#1a3a2a; color:#7ee787; }
-    .s-infra       { background:#2d2a1e; color:#e3b341; }
-    .s-tech        { background:#2d1f3f; color:#d2a8ff; }
-    .s-planning    { background:#3d2226; color:#ffa198; }
-    .s-logistics   { background:#1c2a3a; color:#56d3eb; }
-    .s-other       { background:#21262d; color:var(--muted); }
+    .s-mobility    { background:#dbeafe; color:#1d4ed8; }
+    .s-env         { background:#dcfce7; color:#15803d; }
+    .s-infra       { background:#fef9c3; color:#a16207; }
+    .s-tech        { background:#f3e8ff; color:#7e22ce; }
+    .s-planning    { background:#fce7f3; color:#be185d; }
+    .s-logistics   { background:#cffafe; color:#0e7490; }
+    .s-other       { background:#f1f5f9; color:#475569; }
+
+    /* ── Tech filter toggle ─────────────────────────────────────────────────── */
+    #tech-toggle-btn {
+      width: 100%;
+      padding: 6px;
+      font-size: 11px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .15s;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+    #tech-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+    #tech-filter-group { display: none; }
+    #tech-filter-group.open { display: block; }
 
     /* ── Role badge ──────────────────────────────────────────────────────────── */
-    .r-core  { background:#1a3a2a; color:#3fb950; border:1px solid #2ea043; }
-    .r-team  { background:#1f3a5f; color:#58a6ff; border:1px solid #1f6feb; }
-    .r-side  { background:#2d2a1e; color:#d29922; border:1px solid #9e6a03; }
+    .r-core  { background:#dcfce7; color:#15803d; border:1px solid #86efac; }
+    .r-team  { background:#dbeafe; color:#1d4ed8; border:1px solid #93c5fd; }
+    .r-side  { background:#fce7f3; color:#be185d; border:1px solid #f9a8d4; }
   </style>
 </head>
 <body>
 
 <div id="topbar">
   <div class="logo">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="2.2">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2">
       <circle cx="12" cy="10" r="3"/>
       <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 14-8 14S4 15.25 4 10a8 8 0 0 1 8-8z"/>
     </svg>
@@ -301,7 +319,7 @@
     <button class="lang-btn"        id="btn-de" onclick="setLang('de')">DE</button>
   </div>
 
-  <div class="count-badge"><span id="visible-count">30</span> / 30</div>
+  <div class="visitor-badge">👁 <span id="visitor-count">—</span> <span class="t-en">visitors</span><span class="t-de" style="display:none">Besucher</span></div>
 </div>
 
 <div id="main">
@@ -353,9 +371,15 @@
         </div>
       </div>
 
+      <button id="tech-toggle-btn">⚙ <span class="t-en">Add Tech Filters</span><span class="t-de" style="display:none">Tech-Filter hinzufügen</span></button>
+      <div id="tech-filter-group">
+        <div class="filter-label" id="lbl-tech">Tech Stack</div>
+        <div class="chip-wrap" id="tech-chips"></div>
+      </div>
+
       <button id="reset-btn">
-        <span class="t-en">✕ Reset filters</span>
-        <span class="t-de" style="display:none">✕ Filter zurücksetzen</span>
+        <span class="t-en">✕ Reset All Filters</span>
+        <span class="t-de" style="display:none">✕ Alle Filter zurücksetzen</span>
       </button>
     </div>
 
@@ -402,7 +426,7 @@ function setLang(lang) {
 let COMPANIES = [];
 
 // ─── Filter state ─────────────────────────────────────────────────────────────
-const activeFilters = { sector: null, role: null, size: null, lang: null };
+const activeFilters = { sector: null, role: null, size: null, lang: null, tech: null };
 let activePopup = null;
 let activeCardId = null;
 const markers = {};
@@ -423,7 +447,7 @@ function roleClass(r) {
   return r === 'Core product' ? 'r-core' : r === 'Dedicated team' ? 'r-team' : 'r-side';
 }
 function markerColor(r) {
-  return r === 'Core product' ? '#3fb950' : r === 'Dedicated team' ? '#58a6ff' : '#e3b341';
+  return r === 'Core product' ? '#6db88c' : r === 'Dedicated team' ? '#7eb3ef' : '#f4a7c3';
 }
 function langFlag(l) {
   return l === 'ENG' ? '🇬🇧' : l === 'DE' ? '🇩🇪' : '🇬🇧🇩🇪';
@@ -433,6 +457,7 @@ function matchesFilters(c) {
   if (activeFilters.role   && c.role !== activeFilters.role)             return false;
   if (activeFilters.size   && c.size !== activeFilters.size)             return false;
   if (activeFilters.lang   && c.lang !== activeFilters.lang)             return false;
+  if (activeFilters.tech   && !c.tech?.includes(activeFilters.tech))           return false;
   return true;
 }
 
@@ -460,12 +485,38 @@ function buildSectorChips() {
   });
 }
 
+// ─── Tech chips (built after data loads) ─────────────────────────────────────
+function buildTechChips() {
+  const techs = [...new Set(COMPANIES.flatMap(c => c.tech || []))].sort();
+  const wrap = document.getElementById('tech-chips');
+  wrap.innerHTML = '';
+  techs.forEach(t => {
+    const el = document.createElement('div');
+    el.className = 'chip';
+    el.dataset.filter = 'tech';
+    el.dataset.value = t;
+    el.textContent = t;
+    el.addEventListener('click', () => {
+      const wasActive = el.classList.contains('active');
+      document.querySelectorAll('.chip[data-filter="tech"]').forEach(c => c.classList.remove('active'));
+      if (!wasActive) { el.classList.add('active'); activeFilters.tech = t; }
+      else            { activeFilters.tech = null; }
+      applyFilters();
+    });
+    wrap.appendChild(el);
+  });
+  // toggle button
+  document.getElementById('tech-toggle-btn').addEventListener('click', () => {
+    document.getElementById('tech-filter-group').classList.toggle('open');
+  });
+}
+
 // ─── Map ──────────────────────────────────────────────────────────────────────
 mapboxgl.accessToken = MAPBOX_TOKEN;
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/dark-v11',
+  style: 'mapbox://styles/mapbox/light-v11',
   center: [13.405, 52.515],
   zoom: 11.5
 });
@@ -658,11 +709,20 @@ map.on('load', async () => {
     return;
   }
   buildSectorChips();
+  buildTechChips();
   COMPANIES.forEach(c => { markers[c.id] = createMarker(c); });
   buildList(COMPANIES);
-  document.querySelector('.count-badge').textContent =
-    `${COMPANIES.length} / ${COMPANIES.length}`;
+
 });
+
+// ─── Visitor counter ──────────────────────────────────────────────────────────
+fetch('https://api.countapi.xyz/hit/natashlazarpro.github.io/gis-jobs-berlin')
+  .then(r => r.json())
+  .then(d => {
+    const el = document.getElementById('visitor-count');
+    if (el && d.value) el.textContent = d.value.toLocaleString();
+  })
+  .catch(() => {});
 </script>
 </body>
 </html>
