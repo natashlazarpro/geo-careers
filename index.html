@@ -116,6 +116,15 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      transition: width .25s ease;
+    }
+    #sidebar.detail-open {
+      width: 380px;
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border-right: 1px solid rgba(255,255,255,0.6);
+      box-shadow: 4px 0 32px rgba(0,0,0,0.08);
     }
 
     #filters {
@@ -300,6 +309,13 @@
     #tech-toggle-btn:hover { border-color: var(--p3); color: #9b4f72; }
     #tech-filter-group { display: none; }
     #tech-filter-group.open { display: block; }
+    #tech-filter-group .chip-wrap {
+      max-height: 120px;
+      overflow-y: auto;
+      padding-right: 2px;
+    }
+    #tech-filter-group .chip-wrap::-webkit-scrollbar { width: 3px; }
+    #tech-filter-group .chip-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
     /* ── Detail panel ───────────────────────────────────────────────────────── */
     #detail-panel {
@@ -331,7 +347,7 @@
     .detail-website:hover { text-decoration: underline; }
     .detail-divider { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
     .detail-about { font-size: 12.5px; color: var(--subtext); line-height: 1.65; }
-    .detail-actions { display: flex; gap: 7px; margin-top: 14px; }
+    .detail-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
 
     /* ── Role badge ──────────────────────────────────────────────────────────── */
     .r-core  { background:var(--p4); color:#1559a0; border:1px solid var(--p5); }
@@ -662,6 +678,7 @@ function showDetail(c) {
 
 function hideDetail() {
   activeCompany = null;
+  document.getElementById('sidebar').classList.remove('detail-open');
   document.getElementById('detail-panel').style.display = 'none';
   document.getElementById('filters').style.display = 'block';
   document.getElementById('company-list').style.display = 'flex';
@@ -675,7 +692,7 @@ function openPopup(c) {
   if (activePopup) activePopup.remove();
   activePopup = new mapboxgl.Popup({ closeButton: false, maxWidth: '200px', offset: 18, className: 'mini-popup' })
     .setLngLat([c.lng, c.lat])
-    .setHTML(`<div style="font-weight:600;font-size:13px;padding:6px 10px;">${c.name}</div>`)
+    .setHTML(`<div style="padding:7px 11px;"><div style="font-weight:600;font-size:13px;">${c.name}</div><div style="font-size:11px;color:#9b4f72;margin-top:2px;">${c.sector}</div></div>`)
     .addTo(map);
 }
 
