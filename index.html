@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GIS Jobs Berlin</title>
+  <title>GeoCareers — GIS Jobs Berlin</title>
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
   <style>
@@ -242,7 +242,7 @@
       font-size: 15px; font-weight: 700;
       padding-right: 22px; margin-bottom: 3px;
     }
-    .pop-sector { font-size: 11px; color: #9b4f72; }
+    .pop-sector { font-size: 11px; color: #219ebc; }
 
     .pop-body { padding: 10px 14px; }
     .pop-row {
@@ -284,12 +284,12 @@
     .pop-disabled  { background: var(--bg); border: 1px solid var(--border); color: var(--muted); cursor: default; }
 
     /* ── Sector badge colors ─────────────────────────────────────────────────── */
-    .s-mobility    { background:#dbeafe; color:#1d4ed8; }
-    .s-env         { background:#dcfce7; color:#15803d; }
-    .s-infra       { background:#fef9c3; color:#a16207; }
-    .s-tech        { background:#f3e8ff; color:#7e22ce; }
-    .s-planning    { background:#fce7f3; color:#be185d; }
-    .s-logistics   { background:#cffafe; color:#0e7490; }
+    .s-mobility    { background:#8ecae6; color:#023047; }
+    .s-env         { background:#ffb703; color:#3a2500; }
+    .s-infra       { background:#023047; color:#ffffff; }
+    .s-tech        { background:#219ebc; color:#ffffff; }
+    .s-planning    { background:#fb8500; color:#ffffff; }
+    .s-logistics   { background:#8ecae6; color:#023047; }
     .s-other       { background:#f1f5f9; color:#475569; }
 
     /* ── Tech filter toggle ─────────────────────────────────────────────────── */
@@ -340,7 +340,7 @@
     #detail-content { padding: 16px 14px; flex: 1; }
     .detail-name { font-size: 18px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
     .detail-sector { font-size: 11px; font-weight: 600; text-transform: uppercase;
-      letter-spacing:.06em; color: #9b4f72; margin-bottom: 6px; }
+      letter-spacing:.06em; color: #219ebc; margin-bottom: 6px; }
     .detail-meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
     .detail-website { font-size: 11px; color: var(--accent); text-decoration: none;
       display: block; margin-bottom: 12px; word-break: break-all; }
@@ -348,11 +348,14 @@
     .detail-divider { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
     .detail-about { font-size: 12.5px; color: var(--subtext); line-height: 1.65; }
     .detail-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .kununu-rating { display:inline-flex; align-items:center; gap:4px;
+      font-size:11px; font-weight:600; color:#fb8500; margin-top:4px; }
+    .c-rating { font-size:10px; color:#fb8500; font-weight:600; margin-left:4px; }
 
     /* ── Role badge ──────────────────────────────────────────────────────────── */
-    .r-core  { background:var(--p4); color:#1559a0; border:1px solid var(--p5); }
-    .r-team  { background:var(--p1); color:#5a2d6e; border:1px solid var(--p3); }
-    .r-side  { background:var(--p2); color:#9b4f72; border:1px solid var(--p3); }
+    .r-core  { background:#023047; color:#ffffff; border:1px solid #023047; }
+    .r-team  { background:#219ebc; color:#ffffff; border:1px solid #219ebc; }
+    .r-side  { background:#8ecae6; color:#023047; border:1px solid #8ecae6; }
   </style>
 </head>
 <body>
@@ -363,9 +366,9 @@
       <circle cx="12" cy="10" r="3"/>
       <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 14-8 14S4 15.25 4 10a8 8 0 0 1 8-8z"/>
     </svg>
-    GIS Jobs Berlin
+    GeoCareers
   </div>
-  <div class="tagline" id="tagline-text">Find companies working with GIS in Berlin</div>
+  <div class="tagline" id="tagline-text">Mapping your next career move.</div>
   <div class="spacer"></div>
 
   <div class="lang-toggle">
@@ -471,8 +474,8 @@ function setLang(lang) {
 
   // Update topbar tagline
   document.getElementById('tagline-text').textContent = lang === 'en'
-    ? 'Find companies working with GIS in Berlin'
-    : 'Unternehmen mit GIS-Tätigkeiten in Berlin finden';
+    ? 'Mapping your next career move.'
+    : 'Kartiere deinen nächsten Karriereschritt.';
 
   // Rebuild list & reopen popup if open
   applyFilters();
@@ -504,7 +507,7 @@ function roleClass(r) {
   return r === 'Core product' ? 'r-core' : r === 'Dedicated team' ? 'r-team' : 'r-side';
 }
 function markerColor(r) {
-  return r === 'Core product' ? '#a2d2ff' : r === 'Dedicated team' ? '#cdb4db' : '#ffafcc';
+  return '#1a1a2e';
 }
 function langFlag(l) {
   return l === 'ENG' ? 'EN' : l === 'DE' ? 'DE' : 'EN/DE';
@@ -663,7 +666,7 @@ function showDetail(c) {
   document.getElementById('detail-content').innerHTML = `
     <div class="detail-name">${c.name}</div>
     <div class="detail-sector">${c.sector}</div>
-    <div class="detail-meta">${c.size} · ${langText}</div>
+    <div class="detail-meta">${c.size} · ${langText}${c.kununu_rating ? ` · <span class="kununu-rating">★ ${c.kununu_rating}</span>` : ''}</div>
     ${c.website ? `<a class="detail-website" href="${c.website}" target="_blank">${c.website.replace(/^https?:\/\//,'')}</a>` : ''}
     <hr class="detail-divider">
     ${about ? `<div class="detail-about">${about}</div>` : ''}
@@ -707,7 +710,7 @@ function createMarker(c) {
   dot.style.cssText = `
     width:13px;height:13px;border-radius:50%;
     background:${color};border:2px solid rgba(255,255,255,.85);
-    box-shadow:0 0 0 2px ${color}66,0 2px 6px rgba(0,0,0,.4);
+    box-shadow:0 0 0 2px rgba(26,26,46,.25),0 2px 6px rgba(0,0,0,.35);
     transition:transform .13s;will-change:transform;
   `;
   el.appendChild(dot);
@@ -738,6 +741,13 @@ function setActiveCard(id) {
 }
 
 function buildList(companies) {
+  // Sort by kununu_rating descending (nulls at end)
+  companies = [...companies].sort((a, b) => {
+    if (a.kununu_rating && b.kununu_rating) return b.kununu_rating - a.kununu_rating;
+    if (a.kununu_rating) return -1;
+    if (b.kununu_rating) return 1;
+    return 0;
+  });
   const list = document.getElementById('company-list');
   list.querySelectorAll('.c-card').forEach(el => el.remove());
   document.getElementById('no-results').style.display = companies.length ? 'none' : 'block';
@@ -748,7 +758,7 @@ function buildList(companies) {
     div.dataset.id = c.id;
     div.innerHTML = `
       <div class="c-name">${c.name}</div>
-      <div class="c-meta"><span>${c.size}</span><span>${langFlag(c.lang)}</span></div>
+      <div class="c-meta"><span>${c.size}</span><span>${langFlag(c.lang)}</span>${c.kununu_rating ? `<span class="c-rating">★ ${c.kununu_rating}</span>` : ''}</div>
       <span class="c-badge ${sectorClass(c.sector)}" style="font-size:10px;padding:1px 7px;">${c.sector}</span>
     `;
     div.addEventListener('click', () => {
