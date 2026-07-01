@@ -201,6 +201,8 @@
       padding: 1px 7px;
       border-radius: 20px;
       margin-top: 4px;
+      white-space: normal;
+      word-break: break-word;
     }
 
     #no-results {
@@ -275,8 +277,13 @@
       flex: 1; padding: 7px 8px;
       border-radius: 6px; font-size: 11px; font-weight: 600;
       text-align: center; text-decoration: none;
-      cursor: pointer; transition: all .13s;
+      cursor: pointer; transition: all .13s; white-space: nowrap;
     }
+    .pop-btn-kununu { width:100%; padding:9px 8px; border-radius:6px; font-size:12px;
+      font-weight:700; text-align:center; text-decoration:none;
+      background:#fb8500; color:#ffffff; border:none; cursor:pointer;
+      transition: all .13s; display:block; }
+    .pop-btn-kununu:hover { background:#e07600; }
     .pop-primary   { background: var(--p5); border: 1px solid var(--p4); color: #1559a0; }
     .pop-primary:hover { background: var(--p4); }
     .pop-secondary { background: var(--bg); border: 1px solid var(--border); color: var(--subtext); }
@@ -347,7 +354,8 @@
     .detail-website:hover { text-decoration: underline; }
     .detail-divider { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
     .detail-about { font-size: 12.5px; color: var(--subtext); line-height: 1.65; }
-    .detail-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .detail-actions { display: flex; flex-direction: column; gap: 7px; margin-top: 14px; }
+    .detail-actions-row { display: flex; gap: 7px; }
     .kununu-rating { display:inline-flex; align-items:center; gap:4px;
       font-size:11px; font-weight:600; color:#fb8500; margin-top:4px; }
     .c-rating { font-size:10px; color:#fb8500; font-weight:600; margin-left:4px; }
@@ -477,7 +485,8 @@ function setLang(lang) {
     ? 'Mapping your next career move.'
     : 'Kartiere deinen nächsten Karriereschritt.';
 
-  // Rebuild list & reopen popup if open
+  // Rebuild list, sector chips & reopen popup if open
+  if (COMPANIES.length) buildSectorChips();
   applyFilters();
   if (activeCompany) showDetail(activeCompany);
 }
@@ -506,8 +515,31 @@ function sectorClass(sector) {
 function roleClass(r) {
   return r === 'Core product' ? 'r-core' : r === 'Dedicated team' ? 'r-team' : 'r-side';
 }
-function markerColor(r) {
-  return '#1a1a2e';
+function markerColor(sector) {
+  const cls = sectorClass(sector || '');
+  const palette = {
+    's-mobility': '#8ecae6', 's-env': '#ffb703', 's-infra': '#023047',
+    's-tech': '#219ebc',     's-planning': '#fb8500', 's-logistics': '#8ecae6',
+    's-other': '#94a3b8',
+  };
+  return palette[cls] || '#94a3b8';
+}
+
+// Sector translation map for German UI
+const SECTOR_DE = {
+  'Mobility':'Mobilität','Mapping':'Kartographie','Tech':'Technologie',
+  'GIS':'GIS','Infrastructure':'Infrastruktur','Environment':'Umwelt',
+  'Urban Planning':'Stadtplanung','Logistics':'Logistik','Energy':'Energie',
+  'Earth Observation':'Erdbeobachtung','Consulting':'Beratung',
+  'Real Estate':'Immobilien','Defense':'Verteidigung',
+};
+function sectorText(sector) {
+  if (!sector) return '';
+  if (LANG !== 'de') return sector;
+  return sector.split('/').map(p => {
+    const k = p.trim();
+    return SECTOR_DE[k] || k;
+  }).join(' / ');
 }
 function langFlag(l) {
   return l === 'ENG' ? 'EN' : l === 'DE' ? 'DE' : 'EN/DE';
@@ -533,7 +565,7 @@ function buildSectorChips() {
     el.className = 'chip';
     el.dataset.filter = 'sector';
     el.dataset.value = s;
-    el.textContent = s;
+    el.textContent = LANG === 'de' ? (SECTOR_DE[s] || s) : s;
     el.addEventListener('click', () => {
       const wasActive = el.classList.contains('active');
       document.querySelectorAll('.chip[data-filter="sector"]').forEach(c => c.classList.remove('active'));
@@ -547,7 +579,7 @@ function buildSectorChips() {
 
 // ─── Tech chips (built after data loads) ─────────────────────────────────────
 function buildTechChips() {
-  const techs = [...new Set(COMPANIES.flatMap(c => c.tech || []))].sort();
+  const techs = [...new Set(COMPANIES.flatMap(c => Array.isArray(c.tech) ? c.tech : (c.tech||'').split(',').map(t=>t.trim()).filter(Boolean)))].sort();
   const wrap = document.getElementById('tech-chips');
   wrap.innerHTML = '';
   techs.forEach(t => {
@@ -590,7 +622,7 @@ function buildPopupHTML(c) {
     ? (c.role === 'Core product' ? 'Kernprodukt' : c.role === 'Dedicated team' ? 'GIS-Team' : 'Nebentool')
     : c.role;
   const sizeLabel = c.size;
-  const careersLabel = LANG === 'de' ? 'Stellen ansehen →' : 'View Jobs →';
+  const careersLabel = LANG === 'de' ? 'Stellen ansehen' : 'View Jobs';
   const linkedinLabel = 'LinkedIn';
   const noJobs = LANG === 'de' ? 'Keine Stellenseite' : 'No jobs page';
   const addressLabel = LANG === 'de' ? 'Adresse' : 'Address';
@@ -612,7 +644,7 @@ function buildPopupHTML(c) {
   return `
     <div class="pop-header">
       <div class="pop-name">${c.name}</div>
-      <div class="pop-sector">${c.sector}</div>
+      <div class="pop-sector">${sectorText(c.sector)}</div>
     </div>
     <div class="pop-body">
       <div class="pop-row">
@@ -651,27 +683,38 @@ let activeCompany = null;
 
 function showDetail(c) {
   activeCompany = c;
-  const about = LANG === 'de' ? c.about_de : c.about_en;
+  const about = LANG === 'de' ? (c.about_de || c.about_en) : c.about_en;
   const langText = c.lang === 'ENG' ? (LANG === 'de' ? 'Englisch' : 'English')
                  : c.lang === 'DE'  ? (LANG === 'de' ? 'Deutsch' : 'German')
                  : (LANG === 'de' ? 'Englisch / Deutsch' : 'English / German');
-  const careersLabel = LANG === 'de' ? 'Stellen ansehen →' : 'View Jobs →';
-  const techTags = (c.tech || []).map(t => `<span class="tech-tag">${t}</span>`).join('');
+  const careersLabel = LANG === 'de' ? 'Stellen ansehen' : 'View Jobs';
+  const reviewsLabel = LANG === 'de' ? 'Bewertungen lesen (Kununu)' : 'Read Reviews (Kununu)';
+  const addrLabel = LANG === 'de' ? 'Adresse' : 'Address';
+  const techTags = (Array.isArray(c.tech) ? c.tech : (c.tech||'').split(','))
+    .map(t => t.trim()).filter(Boolean)
+    .map(t => `<span class="tech-tag">${t}</span>`).join('');
+  const sector = sectorText(c.sector);
+  const kununuBtn = c.kununu
+    ? `<a class="pop-btn-kununu" href="${c.kununu}" target="_blank">${reviewsLabel} ★${c.kununu_rating ? ' ' + c.kununu_rating : ''}</a>`
+    : '';
   const careersBtn = c.careers
     ? `<a class="pop-btn pop-primary" href="${c.careers}" target="_blank">${careersLabel}</a>`
     : '';
   const linkedinBtn = c.linkedin
     ? `<a class="pop-btn pop-secondary" href="${c.linkedin}" target="_blank">LinkedIn</a>`
     : '';
+  const actionRow = (careersBtn || linkedinBtn)
+    ? `<div class="detail-actions-row">${careersBtn}${linkedinBtn}</div>` : '';
   document.getElementById('detail-content').innerHTML = `
     <div class="detail-name">${c.name}</div>
-    <div class="detail-sector">${c.sector}</div>
+    <div class="detail-sector">${sector}</div>
     <div class="detail-meta">${c.size} · ${langText}${c.kununu_rating ? ` · <span class="kununu-rating">★ ${c.kununu_rating}</span>` : ''}</div>
+    ${c.address ? `<div style="font-size:11px;color:var(--muted);margin-bottom:8px;">📍 ${c.address}</div>` : ''}
     ${c.website ? `<a class="detail-website" href="${c.website}" target="_blank">${c.website.replace(/^https?:\/\//,'')}</a>` : ''}
     <hr class="detail-divider">
     ${about ? `<div class="detail-about">${about}</div>` : ''}
     ${techTags ? `<div class="tech-wrap" style="margin-top:10px;">${techTags}</div>` : ''}
-    <div class="detail-actions">${careersBtn}${linkedinBtn}</div>
+    <div class="detail-actions">${kununuBtn}${actionRow}</div>
   `;
   document.getElementById('detail-panel').style.display = 'flex';
   document.getElementById('filters').style.display = 'none';
@@ -695,13 +738,13 @@ function openPopup(c) {
   if (activePopup) activePopup.remove();
   activePopup = new mapboxgl.Popup({ closeButton: false, maxWidth: '200px', offset: 18, className: 'mini-popup' })
     .setLngLat([c.lng, c.lat])
-    .setHTML(`<div style="padding:7px 11px;"><div style="font-weight:600;font-size:13px;">${c.name}</div><div style="font-size:11px;color:#9b4f72;margin-top:2px;">${c.sector}</div></div>`)
+    .setHTML(`<div style="padding:7px 11px;"><div style="font-weight:600;font-size:13px;">${c.name}</div><div style="font-size:11px;color:#219ebc;margin-top:2px;">${sectorText(c.sector)}</div></div>`)
     .addTo(map);
 }
 
 // ─── Markers ──────────────────────────────────────────────────────────────────
 function createMarker(c) {
-  const color = markerColor(c.role);
+  const color = markerColor(c.sector);
   // Outer el: passed to Mapbox — never touch its transform (Mapbox uses it for positioning)
   const el = document.createElement('div');
   el.style.cssText = 'width:13px;height:13px;cursor:pointer;';
@@ -709,8 +752,8 @@ function createMarker(c) {
   const dot = document.createElement('div');
   dot.style.cssText = `
     width:13px;height:13px;border-radius:50%;
-    background:${color};border:2px solid rgba(255,255,255,.85);
-    box-shadow:0 0 0 2px rgba(26,26,46,.25),0 2px 6px rgba(0,0,0,.35);
+    background:${color};
+    box-shadow:0 2px 8px rgba(0,0,0,.28);
     transition:transform .13s;will-change:transform;
   `;
   el.appendChild(dot);
@@ -759,7 +802,7 @@ function buildList(companies) {
     div.innerHTML = `
       <div class="c-name">${c.name}</div>
       <div class="c-meta"><span>${c.size}</span><span>${langFlag(c.lang)}</span>${c.kununu_rating ? `<span class="c-rating">★ ${c.kununu_rating}</span>` : ''}</div>
-      <span class="c-badge ${sectorClass(c.sector)}" style="font-size:10px;padding:1px 7px;">${c.sector}</span>
+      <span class="c-badge ${sectorClass(c.sector)}" style="font-size:10px;padding:1px 7px;">${sectorText(c.sector)}</span>
     `;
     div.addEventListener('click', () => {
       map.flyTo({ center: [c.lng, c.lat], zoom: Math.max(map.getZoom(), 13), duration: 450 });
@@ -768,7 +811,7 @@ function buildList(companies) {
     list.insertBefore(div, document.getElementById('no-results'));
   });
 
-  document.getElementById('visible-count').textContent = companies.length;
+  const vc = document.getElementById('visible-count'); if (vc) vc.textContent = companies.length;
 }
 
 // ─── Filters ──────────────────────────────────────────────────────────────────
