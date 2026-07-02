@@ -757,8 +757,8 @@ function createMarker(c) {
   const dot = document.createElement('div');
   dot.style.cssText = `
     width:13px;height:13px;border-radius:50%;
-    background:${color};
-    box-shadow:0 2px 8px rgba(0,0,0,.28);
+    background:${color};border:2px solid rgba(255,255,255,.9);
+    box-shadow:0 0 0 1.5px ${color}99,0 2px 6px rgba(0,0,0,.35);
     transition:transform .13s;will-change:transform;
   `;
   el.appendChild(dot);
@@ -873,13 +873,21 @@ map.on('load', async () => {
 });
 
 // ─── Visitor counter ──────────────────────────────────────────────────────────
-fetch('https://api.countapi.xyz/hit/natashlazarpro.github.io/gis-jobs-berlin')
-  .then(r => r.json())
-  .then(d => {
+// Visitor counter with 4s timeout so it never hangs page load
+(async () => {
+  try {
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 4000);
+    const r = await fetch(
+      'https://api.countapi.xyz/hit/natashlazarpro.github.io/gis-jobs-berlin',
+      { signal: ctrl.signal }
+    );
+    clearTimeout(tid);
+    const d = await r.json();
     const el = document.getElementById('visitor-count');
     if (el && d.value) el.textContent = d.value.toLocaleString();
-  })
-  .catch(() => {});
+  } catch (_) {}
+})();
 </script>
 </body>
 </html>
