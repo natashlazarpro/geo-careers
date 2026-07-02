@@ -93,16 +93,6 @@
     }
     .lang-btn:not(.active):hover { background: var(--bg); color: var(--text); }
 
-    .visitor-badge {
-      font-size: 12px;
-      color: var(--muted);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 4px 12px;
-      white-space: nowrap;
-    }
-    .visitor-badge span { color: #219ebc; font-weight: 600; }
 
     /* ── Layout ─────────────────────────────────────────────────────────────── */
     #main { display: flex; flex: 1; overflow: hidden; }
@@ -117,7 +107,9 @@
       flex-direction: column;
       overflow: hidden;
       transition: width .25s ease;
+      min-height: 0;
     }
+
     #sidebar.detail-open {
       width: 380px;
       background: rgba(255,255,255,0.55);
@@ -127,11 +119,7 @@
       box-shadow: 4px 0 32px rgba(0,0,0,0.08);
     }
 
-    #filters {
-      padding: 14px;
-      border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
-    }
+
 
     .filter-label {
       font-size: 10px;
@@ -175,20 +163,31 @@
 
     /* ── Company list ───────────────────────────────────────────────────────── */
     #company-list {
-      flex: 1;
-      overflow-y: auto;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      overflow-y: hidden;
       padding: 6px;
+      gap: 5px;
+      flex-shrink: 0;
+      height: 120px;
+      border-top: 1px solid var(--border);
+      align-items: stretch;
     }
-    #company-list::-webkit-scrollbar { width: 3px; }
+    #company-list::-webkit-scrollbar { height: 4px; }
     #company-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
     .c-card {
-      padding: 10px 11px;
+      padding: 8px 10px;
       border-radius: 7px;
       border: 1px solid transparent;
       cursor: pointer;
       transition: all .13s;
-      margin-bottom: 3px;
+      flex-shrink: 0;
+      width: 152px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
     .c-card:hover { background: #e8f4fb; border-color: var(--accent); }
     .c-card.active { background: #d6eef7; border-color: var(--accent); }
@@ -389,12 +388,11 @@
     <button class="lang-btn"        id="btn-de" onclick="setLang('de')">DE</button>
   </div>
 
-  <div class="visitor-badge">👁 <span id="visitor-count">—</span> <span class="t-en">visitors</span><span class="t-de" style="display:none">Besucher</span></div>
 </div>
 
 <div id="main">
   <div id="sidebar">
-    <div id="filters">
+    <div id="filters" style="padding:14px;border-bottom:1px solid var(--border);overflow-y:auto;flex:1;overflow-y:auto;">
 
       <div class="filter-group">
         <div class="filter-label" id="lbl-sector">Sector</div>
@@ -873,14 +871,7 @@ map.on('load', async () => {
 });
 
 // ─── Visitor counter ──────────────────────────────────────────────────────────
-// Visitor counter
-fetch('https://api.countapi.xyz/hit/natashlazarpro.github.io/gis-jobs-berlin')
-  .then(function(r) { return r.json(); })
-  .then(function(d) {
-    var el = document.getElementById('visitor-count');
-    if (el && d.value) el.textContent = d.value.toLocaleString();
-  })
-  .catch(function() {});
+
 </script>
 </body>
 </html>
