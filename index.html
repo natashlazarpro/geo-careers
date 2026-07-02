@@ -21,7 +21,7 @@
       --p3: #ffafcc;
       --p4: #bde0fe;
       --p5: #a2d2ff;
-      --accent: #9b87c8;
+      --accent: #219ebc;
       --green:    #2da44e;
       --orange:   #d4912a;
       --alt-row:  #f5f6f8;
@@ -88,8 +88,8 @@
       transition: all 0.15s;
     }
     .lang-btn.active {
-      background: var(--p1);
-      color: #5a2d6e;
+      background: #d6eef7;
+      color: #023047;
     }
     .lang-btn:not(.active):hover { background: var(--bg); color: var(--text); }
 
@@ -102,7 +102,7 @@
       padding: 4px 12px;
       white-space: nowrap;
     }
-    .visitor-badge span { color: var(--accent); font-weight: 600; }
+    .visitor-badge span { color: #219ebc; font-weight: 600; }
 
     /* ── Layout ─────────────────────────────────────────────────────────────── */
     #main { display: flex; flex: 1; overflow: hidden; }
@@ -156,8 +156,8 @@
       transition: all .15s;
       user-select: none;
     }
-    .chip:hover { border-color: var(--p3); color: #9b4f72; }
-    .chip.active { background: var(--p1); border-color: var(--p3); color: #5a2d6e; }
+    .chip:hover { border-color: var(--p5); color: #023047; }
+    .chip.active { background: #d6eef7; border-color: var(--accent); color: #023047; }
 
     #reset-btn {
       width: 100%;
@@ -171,7 +171,7 @@
       transition: all .15s;
       margin-top: 2px;
     }
-    #reset-btn:hover { border-color: var(--p3); color: #9b4f72; }
+    #reset-btn:hover { border-color: var(--accent); color: #023047; }
 
     /* ── Company list ───────────────────────────────────────────────────────── */
     #company-list {
@@ -190,8 +190,8 @@
       transition: all .13s;
       margin-bottom: 3px;
     }
-    .c-card:hover { background: var(--p4); border-color: var(--border); }
-    .c-card.active { background: var(--p1); border-color: var(--p3); }
+    .c-card:hover { background: #e8f4fb; border-color: var(--accent); }
+    .c-card.active { background: #d6eef7; border-color: var(--accent); }
 
     .c-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
     .c-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; }
@@ -279,13 +279,18 @@
       text-align: center; text-decoration: none;
       cursor: pointer; transition: all .13s; white-space: nowrap;
     }
-    .pop-btn-kununu { width:100%; padding:9px 8px; border-radius:6px; font-size:12px;
-      font-weight:700; text-align:center; text-decoration:none;
+    .pop-btn-kununu { flex:1; padding:7px 8px; border-radius:6px; font-size:11px;
+      font-weight:600; text-align:center; text-decoration:none;
+      background:var(--bg); border:1px solid var(--border); color:var(--subtext);
+      cursor:pointer; transition: all .13s; }
+    .pop-btn-kununu:hover { border-color:var(--accent); color:var(--accent); }
+    .pop-btn-careers { width:100%; padding:10px 8px; border-radius:6px; font-size:13px;
+      font-weight:700; text-align:center; text-decoration:none; display:block;
       background:#fb8500; color:#ffffff; border:none; cursor:pointer;
-      transition: all .13s; display:block; }
-    .pop-btn-kununu:hover { background:#e07600; }
-    .pop-primary   { background: var(--p5); border: 1px solid var(--p4); color: #1559a0; }
-    .pop-primary:hover { background: var(--p4); }
+      transition: all .13s; }
+    .pop-btn-careers:hover { background:#e07600; }
+    .pop-primary   { background: #219ebc; border: 1px solid #1a8aaa; color: #ffffff; }
+    .pop-primary:hover { background: #1a8aaa; }
     .pop-secondary { background: var(--bg); border: 1px solid var(--border); color: var(--subtext); }
     .pop-secondary:hover { border-color: var(--accent); color: var(--accent); }
     .pop-disabled  { background: var(--bg); border: 1px solid var(--border); color: var(--muted); cursor: default; }
@@ -313,7 +318,7 @@
       margin-bottom: 6px;
       text-align: center;
     }
-    #tech-toggle-btn:hover { border-color: var(--p3); color: #9b4f72; }
+    #tech-toggle-btn:hover { border-color: var(--accent); color: #023047; }
     #tech-filter-group { display: none; }
     #tech-filter-group.open { display: block; }
     #tech-filter-group .chip-wrap {
@@ -343,7 +348,7 @@
       text-align: left;
       transition: color .15s;
     }
-    #back-btn:hover { color: #9b4f72; }
+    #back-btn:hover { color: #023047; }
     #detail-content { padding: 16px 14px; flex: 1; }
     .detail-name { font-size: 18px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
     .detail-sector { font-size: 11px; font-weight: 600; text-transform: uppercase;
@@ -370,7 +375,7 @@
 
 <div id="topbar">
   <div class="logo">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9b87c8" stroke-width="2.2">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#219ebc" stroke-width="2.2">
       <circle cx="12" cy="10" r="3"/>
       <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 14-8 14S4 15.25 4 10a8 8 0 0 1 8-8z"/>
     </svg>
@@ -688,33 +693,33 @@ function showDetail(c) {
                  : c.lang === 'DE'  ? (LANG === 'de' ? 'Deutsch' : 'German')
                  : (LANG === 'de' ? 'Englisch / Deutsch' : 'English / German');
   const careersLabel = LANG === 'de' ? 'Stellen ansehen' : 'View Jobs';
-  const reviewsLabel = LANG === 'de' ? 'Bewertungen lesen (Kununu)' : 'Read Reviews (Kununu)';
+  const reviewsLabel = LANG === 'de' ? 'Bewertungen lesen' : 'Read Reviews';
   const addrLabel = LANG === 'de' ? 'Adresse' : 'Address';
   const techTags = (Array.isArray(c.tech) ? c.tech : (c.tech||'').split(','))
     .map(t => t.trim()).filter(Boolean)
     .map(t => `<span class="tech-tag">${t}</span>`).join('');
   const sector = sectorText(c.sector);
   const kununuBtn = c.kununu
-    ? `<a class="pop-btn-kununu" href="${c.kununu}" target="_blank">${reviewsLabel} ★${c.kununu_rating ? ' ' + c.kununu_rating : ''}</a>`
+    ? `<a class="pop-btn-kununu" href="${c.kununu}" target="_blank">${reviewsLabel}</a>`
     : '';
   const careersBtn = c.careers
-    ? `<a class="pop-btn pop-primary" href="${c.careers}" target="_blank">${careersLabel}</a>`
+    ? `<a class="pop-btn-careers" href="${c.careers}" target="_blank">${careersLabel}</a>`
     : '';
   const linkedinBtn = c.linkedin
     ? `<a class="pop-btn pop-secondary" href="${c.linkedin}" target="_blank">LinkedIn</a>`
     : '';
-  const actionRow = (careersBtn || linkedinBtn)
-    ? `<div class="detail-actions-row">${careersBtn}${linkedinBtn}</div>` : '';
+  const secondRow = (kununuBtn || linkedinBtn)
+    ? `<div class="detail-actions-row">${kununuBtn}${linkedinBtn}</div>` : '';
   document.getElementById('detail-content').innerHTML = `
     <div class="detail-name">${c.name}</div>
     <div class="detail-sector">${sector}</div>
     <div class="detail-meta">${c.size} · ${langText}${c.kununu_rating ? ` · <span class="kununu-rating">★ ${c.kununu_rating}</span>` : ''}</div>
-    ${c.address ? `<div style="font-size:11px;color:var(--muted);margin-bottom:8px;">📍 ${c.address}</div>` : ''}
+    ${c.address ? `<div style="font-size:11px;color:var(--muted);margin-bottom:8px;">${c.address}</div>` : ''}
     ${c.website ? `<a class="detail-website" href="${c.website}" target="_blank">${c.website.replace(/^https?:\/\//,'')}</a>` : ''}
     <hr class="detail-divider">
     ${about ? `<div class="detail-about">${about}</div>` : ''}
     ${techTags ? `<div class="tech-wrap" style="margin-top:10px;">${techTags}</div>` : ''}
-    <div class="detail-actions">${kununuBtn}${actionRow}</div>
+    <div class="detail-actions">${careersBtn}${secondRow}</div>
   `;
   document.getElementById('detail-panel').style.display = 'flex';
   document.getElementById('filters').style.display = 'none';
