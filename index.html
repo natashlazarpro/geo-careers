@@ -163,31 +163,21 @@
 
     /* ── Company list ───────────────────────────────────────────────────────── */
     #company-list {
-      display: flex;
-      flex-direction: row;
-      overflow-x: auto;
-      overflow-y: hidden;
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
       padding: 6px;
-      gap: 5px;
-      flex-shrink: 0;
-      height: 120px;
-      border-top: 1px solid var(--border);
-      align-items: stretch;
     }
-    #company-list::-webkit-scrollbar { height: 4px; }
+    #company-list::-webkit-scrollbar { width: 3px; }
     #company-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
     .c-card {
-      padding: 8px 10px;
+      padding: 10px 11px;
       border-radius: 7px;
       border: 1px solid transparent;
       cursor: pointer;
       transition: all .13s;
-      flex-shrink: 0;
-      width: 152px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      margin-bottom: 3px;
     }
     .c-card:hover { background: #e8f4fb; border-color: var(--accent); }
     .c-card.active { background: #d6eef7; border-color: var(--accent); }
