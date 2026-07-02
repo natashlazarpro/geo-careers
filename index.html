@@ -873,21 +873,14 @@ map.on('load', async () => {
 });
 
 // ─── Visitor counter ──────────────────────────────────────────────────────────
-// Visitor counter with 4s timeout so it never hangs page load
-(async () => {
-  try {
-    const ctrl = new AbortController();
-    const tid = setTimeout(() => ctrl.abort(), 4000);
-    const r = await fetch(
-      'https://api.countapi.xyz/hit/natashlazarpro.github.io/gis-jobs-berlin',
-      { signal: ctrl.signal }
-    );
-    clearTimeout(tid);
-    const d = await r.json();
-    const el = document.getElementById('visitor-count');
+// Visitor counter
+fetch('https://api.countapi.xyz/hit/natashlazarpro.github.io/gis-jobs-berlin')
+  .then(function(r) { return r.json(); })
+  .then(function(d) {
+    var el = document.getElementById('visitor-count');
     if (el && d.value) el.textContent = d.value.toLocaleString();
-  } catch (_) {}
-})();
+  })
+  .catch(function() {});
 </script>
 </body>
 </html>
