@@ -577,7 +577,7 @@
 <script>
 // ─── Config ───────────────────────────────────────────────────────────────────
 const MAPBOX_TOKEN = '__MAPBOX_TOKEN__';
-const DATA_URL = 'https://data-schield.natashlazar-pro.workers.dev/companies';
+const DATA_URL = 'https://data-schield.natashlazar-pro.workers.dev';
 
 // ─── UI language state ────────────────────────────────────────────────────────
 let LANG = 'de';
@@ -591,8 +591,8 @@ function setLang(lang) {
 
   // Update topbar tagline
   document.getElementById('tagline-text').textContent = lang === 'en'
-    ? 'Berlin & Munich — mapping your next GIS career move.'
-    : 'Berlin & München — kartiere deinen nächsten GIS-Karriereschritt.';
+    ? 'Mapping your next GIS career move.'
+    : 'Kartiere deinen nächsten GIS-Karriereschritt.';
 
   // Rebuild list, sector chips & reopen popup if open
   if (COMPANIES.length) buildSectorChips();
