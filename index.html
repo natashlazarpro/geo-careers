@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GeoCareers — GIS Jobs Berlin</title>
+  <title>GeoCareers — GIS Jobs Berlin &amp; Munich</title>
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -522,6 +522,16 @@
       </div>
 
       <div class="filter-group">
+        <div class="filter-label" id="lbl-city">City</div>
+        <div class="chip-wrap" id="city-chips">
+          <div class="chip" data-filter="city" data-value="Berlin">Berlin</div>
+          <div class="chip" data-filter="city" data-value="Munich">
+            <span class="t-en">Munich</span><span class="t-de" style="display:none">München</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-group">
         <div class="filter-label" id="lbl-lang">Language</div>
         <div class="chip-wrap" id="lang-chips">
           <div class="chip" data-filter="lang" data-value="ENG">
@@ -530,7 +540,6 @@
           <div class="chip" data-filter="lang" data-value="DE">
             <span class="t-en">German</span><span class="t-de" style="display:none">Deutsch</span>
           </div>
-
         </div>
       </div>
 
@@ -582,8 +591,8 @@ function setLang(lang) {
 
   // Update topbar tagline
   document.getElementById('tagline-text').textContent = lang === 'en'
-    ? 'Mapping your next career move.'
-    : 'Kartiere deinen nächsten Karriereschritt.';
+    ? 'Berlin & Munich — mapping your next GIS career move.'
+    : 'Berlin & München — kartiere deinen nächsten GIS-Karriereschritt.';
 
   // Rebuild list, sector chips & reopen popup if open
   if (COMPANIES.length) buildSectorChips();
@@ -595,7 +604,7 @@ function setLang(lang) {
 let COMPANIES = [];
 
 // ─── Filter state ─────────────────────────────────────────────────────────────
-const activeFilters = { sector: null, role: null, size: null, lang: null, tech: null };
+const activeFilters = { sector: null, role: null, size: null, lang: null, tech: null, city: null };
 let activePopup = null;
 let activeCardId = null;
 const markers = {};
@@ -649,7 +658,8 @@ function matchesFilters(c) {
   if (activeFilters.role   && c.role !== activeFilters.role)             return false;
   if (activeFilters.size   && c.size !== activeFilters.size)             return false;
   if (activeFilters.lang   && c.lang !== activeFilters.lang)             return false;
-  if (activeFilters.tech   && !c.tech?.includes(activeFilters.tech))           return false;
+  if (activeFilters.tech   && !c.tech?.includes(activeFilters.tech))     return false;
+  if (activeFilters.city   && c.city !== activeFilters.city)             return false;
   return true;
 }
 
@@ -709,8 +719,8 @@ mapboxgl.accessToken = MAPBOX_TOKEN;
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/light-v11',
-  center: [13.405, 52.515],
-  zoom: 11.5
+  center: [12.5, 50.8],
+  zoom: 6
 });
 
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
@@ -908,7 +918,7 @@ function buildList(companies) {
     div.dataset.id = c.id;
     div.innerHTML = `
       <div class="c-name">${c.name}</div>
-      <div class="c-meta"><span>${c.size}</span><span>${langFlag(c.lang)}</span>${c.kununu_rating ? `<span class="c-rating">★ ${c.kununu_rating}</span>` : ''}</div>
+      <div class="c-meta"><span>${c.city}</span><span>${c.size}</span><span>${langFlag(c.lang)}</span>${c.kununu_rating ? `<span class="c-rating">★ ${c.kununu_rating}</span>` : ''}</div>
       <span class="c-badge ${sectorClass(c.sector)}" style="font-size:10px;padding:1px 7px;">${sectorText(c.sector)}</span>
     `;
     div.addEventListener('click', () => {
@@ -936,7 +946,7 @@ function applyFilters() {
 
 document.getElementById('back-btn').addEventListener('click', hideDetail);
 
-// Role / size / lang chips (sector chips get listeners in buildSectorChips)
+// Role / size / lang / city chips (sector chips get listeners in buildSectorChips)
 document.querySelectorAll('.chip:not([data-filter="sector"])').forEach(chip => {
   chip.addEventListener('click', () => {
     const key = chip.dataset.filter;
@@ -964,7 +974,24 @@ map.on('load', async () => {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     COMPANIES = (await res.json()).map(c => ({
-      ...c, lat: parseFloat(c.lat), lng: parseFloat(c.lng)
+      id:            c.id,
+      name:          c.c_name,
+      website:       c.c_url,
+      address:       c.adress,
+      city:          c.city,
+      sector:        c.sector,
+      role:          c.g_role,
+      tech:          (c.g_stack || '').split(',').map(t => t.trim()).filter(Boolean),
+      size:          c.size,
+      careers:       c.kp_url,
+      kununu:        c.kununu_url,
+      kununu_rating: c.kununu_rate ? parseFloat(c.kununu_rate) : null,
+      linkedin:      c.li_url,
+      about_en:      c.eng,
+      about_de:      c.de,
+      lang:          c.sprach,
+      lat:           parseFloat(c.lat),
+      lng:           parseFloat(c.lon),
     }));
   } catch (err) {
     console.error('Failed to load company data:', err);
@@ -974,6 +1001,15 @@ map.on('load', async () => {
   buildTechChips();
   COMPANIES.forEach(c => { markers[c.id] = createMarker(c); });
   buildList(COMPANIES);
+
+  // Fit map to show all markers
+  const lngs = COMPANIES.map(c => c.lng);
+  const lats = COMPANIES.map(c => c.lat);
+  map.fitBounds(
+    [[Math.min(...lngs) - 0.3, Math.min(...lats) - 0.3],
+     [Math.max(...lngs) + 0.3, Math.max(...lats) + 0.3]],
+    { padding: 40, duration: 0 }
+  );
 
 });
 
