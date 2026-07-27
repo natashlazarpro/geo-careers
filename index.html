@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -365,6 +365,63 @@
     .r-core  { background:#023047; color:#ffffff; border:1px solid #023047; }
     .r-team  { background:#219ebc; color:#ffffff; border:1px solid #219ebc; }
     .r-side  { background:#8ecae6; color:#023047; border:1px solid #8ecae6; }
+
+    /* ── GitHub link ─────────────────────────────────────────────────────────── */
+    .github-link {
+      display: flex;
+      align-items: center;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s;
+      flex-shrink: 0;
+    }
+    .github-link:hover { color: var(--text); }
+
+    /* ── Mobile ──────────────────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      #topbar {
+        padding: 0 12px;
+        height: 46px;
+        gap: 8px;
+      }
+      .tagline { display: none; }
+
+      #main {
+        flex-direction: column;
+      }
+
+      #sidebar {
+        width: 100% !important;
+        height: 45vh;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        flex-shrink: 0;
+        order: 2;
+      }
+
+      #sidebar.detail-open {
+        width: 100% !important;
+        height: 55vh;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      }
+
+      #map {
+        flex: none;
+        height: 55vh;
+        order: 1;
+      }
+
+      .mapboxgl-popup-content {
+        min-width: 220px !important;
+        max-width: 270px !important;
+      }
+
+      #filters {
+        padding: 10px !important;
+      }
+
+      .detail-name { font-size: 15px; }
+    }
   </style>
 </head>
 <body>
@@ -381,9 +438,15 @@
   <div class="spacer"></div>
 
   <div class="lang-toggle">
-    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn"        id="btn-de" onclick="setLang('de')">DE</button>
+    <button class="lang-btn"        id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
   </div>
+
+  <a class="github-link" href="https://github.com/natashlazarpro/gis-jobs-berlin" target="_blank" title="View on GitHub">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+    </svg>
+  </a>
 
 </div>
 
@@ -471,7 +534,7 @@ const MAPBOX_TOKEN = 'pk.eyJ1IjoibmF0YXNobGF6YXIiLCJhIjoiY21yMHF3b3I3MDU3eTJzcXl
 const DATA_URL = 'https://data-schield.natashlazar-pro.workers.dev/companies';
 
 // ─── UI language state ────────────────────────────────────────────────────────
-let LANG = 'en';
+let LANG = 'de';
 
 function setLang(lang) {
   LANG = lang;
@@ -847,6 +910,9 @@ document.getElementById('reset-btn').addEventListener('click', () => {
   Object.keys(activeFilters).forEach(k => activeFilters[k] = null);
   applyFilters();
 });
+
+// ─── Set default language ─────────────────────────────────────────────────────
+setLang('de');
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 map.on('load', async () => {
