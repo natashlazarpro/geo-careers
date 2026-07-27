@@ -393,21 +393,20 @@
       }
       .tagline { display: none; }
 
-      #main {
-        flex-direction: column;
-      }
+      #main { flex-direction: column; }
 
-      /* Map: top half */
+      /* Map: 40vh on top */
       #map {
         flex: none;
-        height: 48vh;
+        height: 40vh;
         order: 1;
       }
 
-      /* Sidebar: bottom half — flex column so children share space properly */
+      /* Sidebar: 60vh on bottom, relative so detail panel can absolute-fill it */
       #sidebar {
+        position: relative;
         width: 100% !important;
-        height: 52vh;
+        height: 60vh;
         border-right: none;
         border-top: 1px solid var(--border);
         flex-shrink: 0;
@@ -417,41 +416,47 @@
         overflow: hidden;
       }
 
-      /* When company detail is open: give more room to sidebar */
       #sidebar.detail-open {
         width: 100% !important;
-        height: 60vh;
         box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
       }
-      #sidebar.detail-open ~ #map,
-      #sidebar.detail-open + #map { height: 40vh; }
 
-      /* Filters: fixed portion, scrollable */
+      /* Filters: compact, vertically scrollable */
       #filters {
         padding: 10px !important;
         flex: 0 0 auto !important;
-        max-height: 42%;
-        min-height: 0 !important;
+        max-height: 44%;
         overflow-y: auto !important;
       }
 
-      /* Company list: takes remaining space, scrollable */
+      /* Company list: remaining space, HORIZONTAL scroll on mobile */
       #company-list {
         flex: 1 1 0 !important;
         min-height: 0 !important;
-        overflow-y: auto !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: flex-start;
+        padding: 6px 8px !important;
+        gap: 8px;
       }
 
-      /* Detail panel: fills sidebar, fully scrollable so buttons are reachable */
+      /* Fixed-width cards for horizontal scroll */
+      .c-card {
+        flex: 0 0 200px;
+        margin-bottom: 0;
+      }
+
+      /* Detail panel: absolute, covers full sidebar → always scrollable */
       #detail-panel {
-        flex: 1 1 0 !important;
+        position: absolute !important;
+        top: 0; left: 0; right: 0; bottom: 0;
         height: auto !important;
-        min-height: 0 !important;
         overflow-y: auto !important;
-      }
-
-      #detail-content {
-        padding-bottom: 16px;
+        background: var(--surface);
+        z-index: 5;
       }
 
       .mapboxgl-popup-content {
@@ -716,7 +721,11 @@ const map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
 
 // Click blank map area → return to list
-map.on('click', () => { if (activeCompany) hideDetail(); });
+map.on('click', (e) => {
+  if (activeCompany && !e.originalEvent.target.closest('.mapboxgl-marker, .mapboxgl-popup-content')) {
+    hideDetail();
+  }
+});
 
 // ─── Popup builder ────────────────────────────────────────────────────────────
 function buildPopupHTML(c) {
