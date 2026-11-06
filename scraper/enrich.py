@@ -109,12 +109,17 @@ def apply(df, idx, author, city):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--cities", default=os.environ.get("ENRICH_CITIES", ""),
+                    help="comma-separated sheet names to limit the run to, e.g. cologne,frankfurt,stuttgart")
     args = ap.parse_args()
 
     cache = json.loads(CACHE_FILE.read_text(encoding="utf-8")) if CACHE_FILE.exists() else {}
     frames = excel.read_city_sheets()
     todo = []
+    only = {c.strip().lower() for c in args.cities.split(",") if c.strip()}
     for sheet, df in frames.items():
+        if only and sheet not in only:
+            continue
         for idx, row in df.iterrows():
             if row["agent_check"] == "pending":          # not researched yet: Claude fills these first
                 continue

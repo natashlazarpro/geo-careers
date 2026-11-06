@@ -9,6 +9,12 @@ on:
         description: "Also fetch LinkedIn jobs via SocialCrawl (uses up to 100 credits)"
         type: boolean
         default: false
+      enrich_credits:
+        description: "Max SocialCrawl credits for filling empty columns from LinkedIn (5 per company)"
+        default: "100"
+      enrich_cities:
+        description: "Only fill these city sheets (comma-separated, e.g. cologne,frankfurt,stuttgart); empty = all"
+        default: ""
 
 permissions:
   contents: write
@@ -27,7 +33,8 @@ jobs:
       - name: Fill empty columns from LinkedIn company pages (SocialCrawl, 5 credits per company)
         env:
           SOCIALCRAWL_API_KEY: ${{ secrets.SOCIALCRAWL_API_KEY }}
-          SOCIALCRAWL_ENRICH_MAX_CREDITS: "100"
+          SOCIALCRAWL_ENRICH_MAX_CREDITS: ${{ inputs.enrich_credits || '100' }}
+          ENRICH_CITIES: ${{ inputs.enrich_cities || '' }}
         run: python -m scraper.enrich
 
       - name: Find jobs, update workbook, geocode
