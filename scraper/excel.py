@@ -7,7 +7,7 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
-from . import config
+from . import config, normalize
 
 ALL_COLUMNS = config.COLUMNS + config.EXTRA_COLUMNS
 URL_COLUMNS = {"c_url", "kp_url", "kununu_url", "li_url"}
@@ -59,7 +59,7 @@ def write_city_sheets(frames):
 
     city_sheets = [s for s, _, _ in config.CITIES.values()]
     for sheet in city_sheets:
-        df = frames[sheet]
+        df = normalize.clean_frame(frames[sheet])   # one spelling per tool, fixed formats
         ws = wb[sheet] if sheet in wb.sheetnames else wb.create_sheet(sheet, index=city_sheets.index(sheet))
         if ws.max_row > 1:
             ws.delete_rows(2, ws.max_row)

@@ -29,7 +29,7 @@ with `agent_check = pending`. This task researches those employers and fills the
 | city | the city from the list |
 | sector | 1–3 sectors joined with ` / `, preferably: Urban Planning, Logistics, Mobility, Real Estate, Environment, Defense / Security, Public Sector, Tech / Consulting, Architecture, Surveying, Agriculture, Infrastructure, Energy, Engineering, Earth Observation, Insurance, Tech / GIS, Other |
 | g_role | `Core product` (GIS/geodata is the product) · `Dedicated team` (a GIS team supports the business) · `Side tool` (GIS used occasionally) |
-| g_stack | comma-separated GIS/data tools named in their job ads or tech pages, e.g. `ArcGIS Pro, QGIS, PostGIS, Python, FME` |
+| g_stack | comma-separated GIS/data tools named in their job ads or tech pages, e.g. `ArcGIS Pro, QGIS, PostGIS, Python, FME` — use the spellings in `scraper/normalize.py` (ORDER); the build unifies them anyway |
 | size | `1-10`, `11-50`, `51-200`, `201-500`, `500+` (company-wide employees) |
 | kp_url | careers page on the company's **own** website or own job portal (e.g. `careers.x.de`, `x.jobs.personio.de`) — never LinkedIn, StepStone or Indeed |
 | kununu_url | kununu.com company profile |
