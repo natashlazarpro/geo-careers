@@ -187,14 +187,19 @@ def domain(url):
 
 
 def merge_duplicates(df):
-    """A newly added row whose website matches an existing row is merged into that row."""
+    """A newly added row with the same website or the same official name as another row is merged into it
+    (your original rows win; between two new rows the older one is kept)."""
     doms = df["c_url"].map(domain)
+    names = df["c_name"].map(company_key)
+    is_new = df["agent_check"].astype(str).str.startswith(("done", "pending"))
     drop = []
     for i in df.index:
-        if not str(df.at[i, "agent_check"] or "").startswith(("done", "pending")) or not doms[i]:
+        if not is_new[i]:
             continue
-        twin = next((k for k in df.index if k != i and k not in drop and doms[k] == doms[i]
-                     and not str(df.at[k, "agent_check"] or "").startswith(("done", "pending"))), None)
+        same = [k for k in df.index if k != i and k not in drop
+                and ((doms[i] and doms[k] == doms[i]) or (names[i] and names[k] == names[i]))
+                and (not is_new[k] or k < i)]
+        twin = min(same, key=lambda k: (is_new[k], k)) if same else None
         if twin is None:
             continue
         df.at[twin, "open_jobs"] = int(df.at[twin, "open_jobs"] or 0) + int(df.at[i, "open_jobs"] or 0)
