@@ -24,7 +24,7 @@ def _get(params):
                 continue
             r.raise_for_status()
             if _working_path is None:
-                print(f"[BA] using {path}")
+                print(f"[BA] using {path}; sample response: {r.text[:1500]}")
             _working_path = path
             return r.json()
         except requests.RequestException as e:
