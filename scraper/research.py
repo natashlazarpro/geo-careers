@@ -1,0 +1,88 @@
+"""Helpers for the scheduled Claude research task (see RESEARCH.md).
+
+    python -m scraper.research list [N]        # print up to N companies still waiting for research (JSON)
+    python -m scraper.research add results.json  # validate researched records and store them in data/agent_cache.json
+"""
+import json
+import sys
+
+from . import agent, config, excel
+from .build import blank, company_key
+
+
+def pending(limit=25):
+    cache = agent.load_cache()
+    rows = []
+    for sheet, df in excel.read_city_sheets().items():
+        for _, r in df[df["agent_check"] == "pending"].iterrows():
+            key = f"{company_key(r['c_name'])}|{r['city']}"
+            if key in cache:
+                continue
+            rows.append({
+                "key": key, "c_name": r["c_name"], "city": r["city"],
+                "address_from_job_ad": None if blank(r["adress"]) else f"{r['adress']}, {r['postal_code'] or ''}".strip(", "),
+                "open_jobs": int(r["open_jobs"] or 0),
+                "job_titles": None if blank(r["job_titles"]) else r["job_titles"],
+                "job_links": None if blank(r["job_links"]) else r["job_links"],
+            })
+    rows.sort(key=lambda x: -x["open_jobs"])
+    return rows[:limit]
+
+
+def validate(rec):
+    """Return a list of problems with one research record (empty list = OK)."""
+    problems = []
+    for f in ("key", "c_name", "city", "eng", "de", "confidence"):
+        if blank(rec.get(f)):
+            problems.append(f"missing {f}")
+    allowed = {"size": config.SIZES, "g_role": config.G_ROLES, "sprach": config.LANGS,
+               "confidence": ["high", "medium", "low"]}
+    for f, values in allowed.items():
+        if not blank(rec.get(f)) and rec[f] not in values:
+            problems.append(f"{f}={rec[f]!r} not in {values}")
+    for f in ("c_url", "kp_url", "kununu_url", "li_url"):
+        v = rec.get(f)
+        if not blank(v) and not str(v).startswith("http"):
+            problems.append(f"{f} must be a full URL")
+    if not blank(rec.get("kp_url")) and "linkedin." in str(rec["kp_url"]):
+        problems.append("kp_url must be the company's own careers page, not LinkedIn")
+    if not blank(rec.get("kununu_rate")):
+        try:
+            if not 1 <= float(str(rec["kununu_rate"]).replace(",", ".")) <= 5:
+                problems.append("kununu_rate must be 1-5")
+        except ValueError:
+            problems.append("kununu_rate must be a number")
+    if not blank(rec.get("postal_code")) and not str(rec["postal_code"]).isdigit():
+        problems.append("postal_code must be digits only")
+    return problems
+
+
+def add(path):
+    records = json.loads(open(path, encoding="utf-8").read())
+    if isinstance(records, dict):
+        records = [records]
+    cache = agent.load_cache()
+    ok, bad = 0, 0
+    for rec in records:
+        problems = validate(rec)
+        if problems:
+            bad += 1
+            print(f"SKIPPED {rec.get('c_name')}: {'; '.join(problems)}")
+            continue
+        if not blank(rec.get("kununu_rate")):
+            rec["kununu_rate"] = float(str(rec["kununu_rate"]).replace(",", "."))
+        cache[rec.pop("key")] = rec
+        ok += 1
+    agent.save_cache(cache)
+    print(f"stored {ok} records, skipped {bad}")
+    return bad == 0
+
+
+if __name__ == "__main__":
+    cmd = sys.argv[1] if len(sys.argv) > 1 else "list"
+    if cmd == "list":
+        print(json.dumps(pending(int(sys.argv[2]) if len(sys.argv) > 2 else 25), ensure_ascii=False, indent=1))
+    elif cmd == "add":
+        sys.exit(0 if add(sys.argv[2]) else 1)
+    else:
+        sys.exit(__doc__)

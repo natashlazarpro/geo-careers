@@ -120,6 +120,9 @@ def update_companies(frames, store, use_agent):
         df["open_jobs"] = 0
         for ckey, jobs in by_sheet.get(sheet, {}).items():
             match = next((i for i, k in enumerate(keys) if same_company(k, ckey)), None)
+            researched_as = (cache.get(f"{ckey}|{city}") or {}).get("c_name")
+            if match is None and researched_as:   # job-board name -> official name found by research
+                match = next((i for i, k in enumerate(keys) if same_company(k, company_key(researched_as))), None)
             if match is None:
                 ba = next((j for j in jobs if j["source"] == "ba" and j.get("street")), {})
                 row = {c: None for c in df.columns}
@@ -163,6 +166,12 @@ def update_companies(frames, store, use_agent):
                 print(f"[Agent] {name}: ERROR {e}", file=sys.stderr)
         if result:
             apply_research(df, idx, result)
+    # research saved by the scheduled Claude task (data/agent_cache.json) for any other pending row
+    for sheet, df in frames.items():
+        for idx in df.index[df["agent_check"] == "pending"]:
+            result = cache.get(f"{company_key(df.at[idx, 'c_name'])}|{df.at[idx, 'city']}")
+            if result:
+                apply_research(df, idx, result)
     agent.save_cache(cache)
     print(f"[Agent] researched {researched} new companies this run")
     for sheet in frames:
@@ -246,7 +255,9 @@ def write_map_files(frames):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--linkedin", action="store_true", help="also query LinkedIn via SocialCrawl")
-    ap.add_argument("--no-agent", action="store_true", help="skip the Claude research step")
+    ap.add_argument("--no-agent", action="store_true", help="skip the Claude API research step")
+    ap.add_argument("--skip-fetch", action="store_true", help="reuse data/jobs.json instead of fetching jobs")
+    ap.add_argument("--no-geocode", action="store_true", help="leave new addresses for the next run to geocode")
     args = ap.parse_args()
 
     config.DATA_DIR.mkdir(exist_ok=True)
@@ -255,13 +266,15 @@ def main():
     store = {}
     if config.JOBS_FILE.exists():
         store = {j["id"]: j for j in json.loads(config.JOBS_FILE.read_text(encoding="utf-8"))}
-    store = merge_jobs(store, collect(args.linkedin), today)
-    config.JOBS_FILE.write_text(json.dumps(list(store.values()), ensure_ascii=False, indent=1), encoding="utf-8")
+    if not args.skip_fetch:
+        store = merge_jobs(store, collect(args.linkedin), today)
+        config.JOBS_FILE.write_text(json.dumps(list(store.values()), ensure_ascii=False, indent=1), encoding="utf-8")
 
     frames = excel.read_city_sheets()
     frames = update_companies(frames, store, use_agent=not args.no_agent)
-    for sheet in frames:
-        frames[sheet] = geocode.geocode_companies(frames[sheet])
+    if not args.no_geocode:
+        for sheet in frames:
+            frames[sheet] = geocode.geocode_companies(frames[sheet])
     excel.write_city_sheets(frames)
     n_points = write_map_files(frames)
 

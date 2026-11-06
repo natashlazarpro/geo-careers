@@ -2,16 +2,13 @@ name: Update GIS employers
 
 on:
   schedule:
-    - cron: "17 5 * * *"        # daily ~06:17 Berlin time: Arbeitsagentur jobs + research of new companies
+    - cron: "17 5 * * *"        # daily ~06:17 Berlin time: Arbeitsagentur jobs + geocoding
   workflow_dispatch:
     inputs:
       linkedin:
         description: "Also fetch LinkedIn jobs via SocialCrawl (uses up to 100 credits)"
         type: boolean
         default: false
-      max_companies:
-        description: "Max. new companies the agent researches this run"
-        default: "40"
 
 permissions:
   contents: write
@@ -27,13 +24,11 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
 
-      - name: Run agent
+      - name: Find jobs, update workbook, geocode
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SOCIALCRAWL_API_KEY: ${{ secrets.SOCIALCRAWL_API_KEY }}
           SOCIALCRAWL_MAX_CREDITS: "100"
-          AGENT_MAX_COMPANIES: ${{ inputs.max_companies || '40' }}
-        run: python -m scraper.build ${{ inputs.linkedin && '--linkedin' || '' }}
+        run: python -m scraper.build --no-agent ${{ inputs.linkedin && '--linkedin' || '' }}
 
       - name: Commit results
         run: |
