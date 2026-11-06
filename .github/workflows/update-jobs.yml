@@ -24,6 +24,12 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
 
+      - name: Fill empty columns from LinkedIn company pages (SocialCrawl, 5 credits per company)
+        env:
+          SOCIALCRAWL_API_KEY: ${{ secrets.SOCIALCRAWL_API_KEY }}
+          SOCIALCRAWL_ENRICH_MAX_CREDITS: "100"
+        run: python -m scraper.enrich
+
       - name: Find jobs, update workbook, geocode
         env:
           SOCIALCRAWL_API_KEY: ${{ secrets.SOCIALCRAWL_API_KEY }}
