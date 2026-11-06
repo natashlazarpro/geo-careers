@@ -68,7 +68,10 @@ def write_city_sheets(frames):
             cell = ws.cell(row=1, column=ci, value=col)
             cell.font = Font(bold=True)
             cell.fill = EXTRA_FILL if col in config.EXTRA_COLUMNS else HEADER_FILL
-            ws.column_dimensions[get_column_letter(ci)].width = WIDTHS.get(col, 14)
+            dim = ws.column_dimensions[get_column_letter(ci)]
+            dim.width = WIDTHS.get(col, 14)
+            # Only Natasha's columns are shown; the agent's tracking columns stay in the file, hidden
+            dim.hidden = col not in config.COLUMNS
         for ri, row in enumerate(df.itertuples(index=False), start=2):
             for ci, (col, val) in enumerate(zip(cols, row), start=1):
                 val = _clean(val)
