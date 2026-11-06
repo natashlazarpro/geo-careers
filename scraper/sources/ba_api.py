@@ -1,6 +1,6 @@
 """Bundesagentur für Arbeit Jobsuche API (free, public).
 
-Docs: https://jobsuche.api.bund.dev/
+Docs: https://github.com/bundesAPI/jobsuche-api
 """
 import time
 import requests
@@ -8,18 +8,24 @@ import requests
 from .. import config
 
 BASE = "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service"
-PATHS = ["/pc/v4/jobs", "/pc/v4/app/jobs"]   # fallback if the first path changes
+PATHS = ["/pc/v6/jobs", "/pc/v5/jobs", "/pc/v4/jobs", "/pc/v4/app/jobs"]   # newest first; older ones as fallback
+_working_path = None
 HEADERS = {"X-API-Key": "jobboerse-jobsuche", "User-Agent": config.USER_AGENT}
 
 
 def _get(params):
+    global _working_path
     last_err = None
-    for path in PATHS:
+    for path in ([_working_path] if _working_path else PATHS):
         try:
             r = requests.get(BASE + path, params=params, headers=HEADERS, timeout=30)
-            if r.status_code == 404:
+            if r.status_code in (403, 404):
+                last_err = f"{path}: HTTP {r.status_code}"
                 continue
             r.raise_for_status()
+            if _working_path is None:
+                print(f"[BA] using {path}")
+            _working_path = path
             return r.json()
         except requests.RequestException as e:
             last_err = e
@@ -35,7 +41,8 @@ def _normalise(item, city):
         "id": f"ba:{refnr}",
         "source": "ba",
         "title": item.get("titel") or item.get("beruf") or "",
-        "company": item.get("arbeitgeber") or "",
+        "company": item.get("arbeitgeber") if isinstance(item.get("arbeitgeber"), str)
+                   else (item.get("arbeitgeber") or {}).get("name", ""),
         "city": city,
         "location_text": ort.get("ort") or city,
         "address": address,
@@ -63,7 +70,9 @@ def fetch(city):
                 "size": config.BA_PAGE_SIZE,
                 "page": page,
             })
-            items = data.get("stellenangebote") or []
+            items = data.get("stellenangebote") or data.get("jobs") or data.get("ergebnisse") or []
+            if not items and data and "maxErgebnisse" not in data:
+                print(f"[BA] unexpected response fields: {list(data)[:10]}")
             for it in items:
                 job = _normalise(it, city)
                 jobs[job["id"]] = job
