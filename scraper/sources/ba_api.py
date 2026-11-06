@@ -24,7 +24,7 @@ def _get(params):
                 continue
             r.raise_for_status()
             if _working_path is None:
-                print(f"[BA] using {path}; sample response: {r.text[:1500]}")
+                print(f"[BA] using {path}")
             _working_path = path
             return r.json()
         except requests.RequestException as e:
@@ -33,24 +33,35 @@ def _get(params):
 
 
 def _normalise(item, city):
-    ort = item.get("arbeitsort") or {}
-    coords = ort.get("koordinaten") or {}
-    refnr = item.get("refnr")
-    address = ", ".join(p for p in [ort.get("strasse"), f"{ort.get('plz', '')} {ort.get('ort', '')}".strip()] if p)
+    """Handle the v6 format (ergebnisliste/firma/stellenlokationen) and the older v4 format."""
+    if "referenznummer" in item or "firma" in item:                       # v6
+        loc = (item.get("stellenlokationen") or [{}])[0]
+        adr = loc.get("adresse") or {}
+        street = " ".join(p for p in [adr.get("strasse"), adr.get("hausnummer")] if p) or None
+        refnr, title, company = item.get("referenznummer"), item.get("stellenangebotsTitel"), item.get("firma")
+        lat, lon, plz, ort = loc.get("breite"), loc.get("laenge"), adr.get("plz"), adr.get("ort")
+        posted = item.get("datumErsteVeroeffentlichung")
+    else:                                                                  # v4
+        ort_ = item.get("arbeitsort") or {}
+        coords = ort_.get("koordinaten") or {}
+        street, plz, ort = ort_.get("strasse"), ort_.get("plz"), ort_.get("ort")
+        refnr, title, company = item.get("refnr"), item.get("titel") or item.get("beruf"), item.get("arbeitgeber")
+        lat, lon = coords.get("lat"), coords.get("lon")
+        posted = item.get("aktuelleVeroeffentlichungsdatum") or item.get("eintrittsdatum")
+    address = ", ".join(p for p in [street, f"{plz or ''} {ort or ''}".strip()] if p)
     return {
         "id": f"ba:{refnr}",
         "source": "ba",
-        "title": item.get("titel") or item.get("beruf") or "",
-        "company": item.get("arbeitgeber") if isinstance(item.get("arbeitgeber"), str)
-                   else (item.get("arbeitgeber") or {}).get("name", ""),
+        "title": title or "",
+        "company": company or "",
         "city": city,
-        "location_text": ort.get("ort") or city,
+        "location_text": ort or city,
         "address": address,
-        "street": ort.get("strasse"),
-        "plz": ort.get("plz"),
-        "lat": coords.get("lat"),
-        "lon": coords.get("lon"),
-        "posted": item.get("aktuelleVeroeffentlichungsdatum") or item.get("eintrittsdatum"),
+        "street": street,
+        "plz": plz,
+        "lat": lat,
+        "lon": lon,
+        "posted": posted,
         "url": item.get("externeUrl") or f"https://www.arbeitsagentur.de/jobsuche/jobdetail/{refnr}",
     }
 
@@ -70,14 +81,11 @@ def fetch(city):
                 "size": config.BA_PAGE_SIZE,
                 "page": page,
             })
-            items = data.get("stellenangebote") or data.get("jobs") or data.get("ergebnisse") or []
-            if not items and data and "maxErgebnisse" not in data:
-                print(f"[BA] unexpected response fields: {list(data)[:10]}")
+            items = data.get("ergebnisliste") or data.get("stellenangebote") or []
             for it in items:
                 job = _normalise(it, city)
                 jobs[job["id"]] = job
-            total = int(data.get("maxErgebnisse") or 0)
-            if not items or page * config.BA_PAGE_SIZE >= total or page >= 5:
+            if len(items) < config.BA_PAGE_SIZE or page >= 5:
                 break
             page += 1
             time.sleep(0.5)
