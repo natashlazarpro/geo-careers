@@ -1,0 +1,11 @@
+// Cloudflare deploy settings for the GeoCareers website.
+// Only the folder "public" is published (the build command copies index.html into it),
+// so the workbook and the rest of data/ stay private.
+{
+  "name": "geo-careers",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  }
+}
