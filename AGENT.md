@@ -1,7 +1,10 @@
 # GeoCareers employer agent
 
 Finds GIS jobs in Germany's 10 largest cities, researches every employer it hasn't seen before,
-and keeps `data/gis_employers.xlsx` up to date (one sheet per city, your column layout).
+and keeps the workbook `gis_employers.xlsx` up to date (one sheet per city, your column layout).
+
+**Where the data lives:** in Cloudflare Workers KV (namespace `geocareers-data`), not in this repo.
+The `data-schield` Worker (`worker/`) serves only the map data, and only to geocareers.app.
 
 ## How it runs
 
@@ -15,21 +18,26 @@ and keeps `data/gis_employers.xlsx` up to date (one sheet per city, your column 
 4. Writes the outputs (below) and commits them.
 
 **Every morning ~08:31 — scheduled Claude task (your Claude subscription)**
-Researches up to 25 pending employers with web search and fills
+Researches the employers in `research/pending.json` with web search and fills
 `c_name, c_url, adress, postal_code, sector, g_role, g_stack, size, kp_url, kununu_url, kununu_rate, li_url, eng, de, sprach`,
-following `RESEARCH.md`. Results are stored in `data/agent_cache.json`, so a company is only researched once.
+following `RESEARCH.md`. It pushes the results to `research/inbox/`; the GitHub job adds them to the workbook
+in Cloudflare and deletes the file. A company is only researched once.
 
-## Outputs
+## Outputs (stored in Cloudflare)
 
-- `data/gis_employers.xlsx` — your 17 columns, plus grey helper columns:
+- `gis_employers.xlsx` — your 17 columns, plus grey helper columns:
   `lat, lon, open_jobs, job_titles, job_links, first_seen, last_seen, source, agent_check, agent_notes`
-- `data/companies.geojson` — for the web map
-- `data/companies.gpkg` — for ArcGIS Pro / QGIS (EPSG:25832)
+- `companies.json` — what the website loads through data-schield
+- `companies.geojson` — GeoJSON
+- `companies.gpkg` — for ArcGIS Pro / QGIS (EPSG:25832)
 
 **Your edits are safe:** only empty cells are filled and rows are added; nothing you typed is overwritten or deleted.
 Rows with `agent_check = done (low)` are worth a quick manual look.
 
 ## Setup
+
+- Secret `CLOUDFLARE_API_TOKEN` (Cloudflare token from the "Edit Cloudflare Workers" template) — reads/writes the data
+  and deploys data-schield. Without it the job falls back to keeping the data in `data/` in the repo.
 
 - For LinkedIn runs: Settings → Secrets and variables → Actions → secret `SOCIALCRAWL_API_KEY`.
 - Start a run by hand: Actions → **Update GIS employers** → Run workflow (tick LinkedIn if you want it).
@@ -46,6 +54,8 @@ Rows with `agent_check = done (low)` are worth a quick manual look.
 
 ```bash
 pip install -r requirements.txt
+export CLOUDFLARE_API_TOKEN=... CF_ACCOUNT_ID=c0692e0b23a25270623944360c717438
+python -m scraper.store pull                       # download the data from Cloudflare into data/
 python -m scraper.build --no-agent                 # jobs + workbook + geocoding
 python -m scraper.build --no-agent --linkedin      # also LinkedIn (needs SOCIALCRAWL_API_KEY)
 python -m scraper.research list                    # employers waiting for research

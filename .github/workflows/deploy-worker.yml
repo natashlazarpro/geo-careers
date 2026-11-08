@@ -1,0 +1,26 @@
+name: Deploy data-schield
+
+on:
+  push:
+    branches: [main]
+    paths: ["worker/**"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT_ID: c0692e0b23a25270623944360c717438
+      CLOUDFLARE_ACCOUNT_ID: c0692e0b23a25270623944360c717438
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Deploy the Worker with the KV namespace
+        run: |
+          KV_ID=$(python -m scraper.store ns-id)
+          sed "s/__KV_ID__/$KV_ID/" worker/wrangler.template.jsonc > worker/wrangler.jsonc
+          cd worker && npx -y wrangler@4 deploy

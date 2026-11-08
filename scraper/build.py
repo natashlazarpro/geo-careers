@@ -246,6 +246,10 @@ def write_map_files(frames):
                          "properties": props})
     config.GEOJSON_FILE.write_text(json.dumps({"type": "FeatureCollection", "updated": date.today().isoformat(),
                                                "features": features}, ensure_ascii=False, default=str), encoding="utf-8")
+    # flat list for the website: your 17 columns + coordinates
+    site = [{**{c: f["properties"][c] for c in config.COLUMNS},
+             "lon": f["geometry"]["coordinates"][0], "lat": f["geometry"]["coordinates"][1]} for f in features]
+    config.MAP_JSON_FILE.write_text(json.dumps(site, ensure_ascii=False, default=str), encoding="utf-8")
     try:
         out = gdf.copy()
         for c in out.columns:

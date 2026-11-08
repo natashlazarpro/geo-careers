@@ -1,7 +1,9 @@
 """Helpers for the scheduled Claude research task (see RESEARCH.md).
 
-    python -m scraper.research list [N]        # print up to N companies still waiting for research (JSON)
-    python -m scraper.research add results.json  # validate researched records and store them in data/agent_cache.json
+    python -m scraper.research list [N]          # print up to N companies still waiting for research (JSON)
+    python -m scraper.research check results.json  # only validate a results file (used by the research task)
+    python -m scraper.research add results.json    # validate researched records and store them in data/agent_cache.json
+    python -m scraper.research ingest             # add every file in research/inbox/, then delete them (GitHub job)
 """
 import json
 import sys
@@ -57,6 +59,32 @@ def validate(rec):
     return problems
 
 
+INBOX = config.ROOT / "research" / "inbox"
+
+
+def check(path):
+    records = json.loads(open(path, encoding="utf-8").read())
+    records = [records] if isinstance(records, dict) else records
+    bad = 0
+    for rec in records:
+        problems = validate(rec)
+        if problems:
+            bad += 1
+            print(f"PROBLEM {rec.get('c_name')}: {'; '.join(problems)}")
+    print(f"{len(records) - bad} records OK, {bad} with problems")
+    return bad == 0
+
+
+def ingest():
+    """Move research results handed off through the repo into the cache, then delete the files."""
+    files = sorted(INBOX.glob("*.json")) if INBOX.exists() else []
+    for f in files:
+        print(f"[research] ingesting {f.name}")
+        add(f)
+        f.unlink()
+    return len(files)
+
+
 def add(path):
     records = json.loads(open(path, encoding="utf-8").read())
     if isinstance(records, dict):
@@ -82,7 +110,11 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "list"
     if cmd == "list":
         print(json.dumps(pending(int(sys.argv[2]) if len(sys.argv) > 2 else 25), ensure_ascii=False, indent=1))
+    elif cmd == "check":
+        sys.exit(0 if check(sys.argv[2]) else 1)
     elif cmd == "add":
         sys.exit(0 if add(sys.argv[2]) else 1)
+    elif cmd == "ingest":
+        print(f"{ingest()} file(s) ingested")
     else:
         sys.exit(__doc__)

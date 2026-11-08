@@ -1,21 +1,20 @@
 # Employer research — instructions for the scheduled Claude task
 
-GitHub Actions finds GIS jobs every morning and adds new employers to `data/gis_employers.xlsx`
-with `agent_check = pending`. This task researches those employers and fills their columns.
+The data (workbook, caches, map data) lives in Cloudflare, not in this repo. Every morning the GitHub
+job finds GIS jobs, adds new employers to the workbook and writes the ones still waiting for research
+to `research/pending.json`. This task researches them and hands the results back through
+`research/inbox/`; the GitHub job then adds them to the workbook in Cloudflare and deletes the file.
 
 ## Steps
 
 1. `pip install -r requirements.txt`
-2. `python -m scraper.research list 25` — the companies still waiting (most open jobs first).
-   If the list is empty, stop: nothing to do.
+2. Read `research/pending.json` — the companies still waiting (most open jobs first).
+   If it is empty or missing, stop: nothing to do.
 3. Research each company with web search / web fetch (rules below) and write all results to
-   `research_batch.json` (a JSON list, one object per company, `key` copied from the list).
-4. `python -m scraper.research add research_batch.json` — fix and re-add anything it reports as SKIPPED.
-5. `python -m scraper.build --skip-fetch --no-geocode` — writes the results into the workbook.
-   (Addresses are geocoded by the next GitHub Actions run.)
-6. Delete `research_batch.json`, commit `data/` and push to `main`.
-   If the push is rejected, `git fetch origin main && git reset --hard origin/main`, then repeat
-   steps 4–6 (the batch is deterministic, so re-applying is safe).
+   `research/inbox/YYYY-MM-DD.json` (a JSON list, one object per company, `key` copied from the list).
+4. `python -m scraper.research check research/inbox/YYYY-MM-DD.json` — fix anything it reports as PROBLEM.
+5. Commit only that file and push to `main`. If the push is rejected: `git pull --rebase origin main`, push again.
+   The push starts the GitHub job, which writes the results into the workbook within a few minutes.
 
 ## Fields
 

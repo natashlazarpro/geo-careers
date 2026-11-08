@@ -3,6 +3,8 @@ name: Update GIS employers
 on:
   schedule:
     - cron: "17 5 * * *"        # daily ~06:17 Berlin time: Arbeitsagentur jobs + geocoding
+  push:
+    paths: ["research/inbox/**"]    # research results from the scheduled Claude task
   workflow_dispatch:
     inputs:
       linkedin:
@@ -19,6 +21,15 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+env:
+  # Data lives in Cloudflare KV (namespace "geocareers-data"), not in this repo.
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CF_ACCOUNT_ID: c0692e0b23a25270623944360c717438
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -30,7 +41,14 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
 
+      - name: Load data from Cloudflare
+        run: python -m scraper.store pull
+
+      - name: Add research results handed off by the Claude task
+        run: python -m scraper.research ingest
+
       - name: Fill empty columns from LinkedIn company pages (SocialCrawl, 5 credits per company)
+        if: github.event_name != 'push'
         env:
           SOCIALCRAWL_API_KEY: ${{ secrets.SOCIALCRAWL_API_KEY }}
           SOCIALCRAWL_ENRICH_MAX_CREDITS: ${{ inputs.enrich_credits || '100' }}
@@ -41,12 +59,25 @@ jobs:
         env:
           SOCIALCRAWL_API_KEY: ${{ secrets.SOCIALCRAWL_API_KEY }}
           SOCIALCRAWL_MAX_CREDITS: "100"
-        run: python -m scraper.build --no-agent ${{ inputs.linkedin && '--linkedin' || '' }}
+        run: python -m scraper.build --no-agent ${{ github.event_name == 'push' && '--skip-fetch' || '' }} ${{ inputs.linkedin && '--linkedin' || '' }}
+
+      - name: List employers waiting for research
+        run: |
+          mkdir -p research
+          python -m scraper.research list 25 > research/pending.json
+
+      - name: Save data to Cloudflare
+        run: python -m scraper.store push
 
       - name: Commit results
         run: |
           git config user.name "geocareers-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add -A research/
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            git add -f data/                              # no Cloudflare yet: keep data in the repo
+          else
+            git rm -r -q --cached data/ 2>/dev/null || true   # data is in Cloudflare: make sure none is left here
+          fi
           git diff --staged --quiet || git commit -m "Update GIS employers $(date -u +%F)"
-          git push
+          git pull --rebase -q origin main && git push

@@ -8,6 +8,7 @@ WORKBOOK = DATA_DIR / "gis_employers.xlsx"      # input AND output (rows are add
 JOBS_FILE = DATA_DIR / "jobs.json"
 GEOJSON_FILE = DATA_DIR / "companies.geojson"
 GPKG_FILE = DATA_DIR / "companies.gpkg"
+MAP_JSON_FILE = DATA_DIR / "companies.json"      # what the website loads (via the data-schield Worker)
 AGENT_CACHE = DATA_DIR / "agent_cache.json"
 
 # Top 10 German cities: name used in searches -> (sheet name, centre lat, lon)

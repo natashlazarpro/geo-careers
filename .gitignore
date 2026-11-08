@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 .env
 public/
+data/
+worker/wrangler.jsonc
