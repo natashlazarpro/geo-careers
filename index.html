@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GeoCareers — GIS Jobs Berlin &amp; Munich</title>
+  <title>GeoCareers — GIS employers in Germany</title>
+  <meta name="description" content="Every company doing GIS and geodata work in Germany, pinned to the map, one click from your next career move." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Geist:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -14,1007 +18,720 @@
   </script>
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    /* ── Tokens: Barely-There UI · one accent (Razzmatazz) · Newsreader + Geist ── */
     :root {
-      --bg:       #f5f6f8;
+      --ground:   #ffffff;
       --surface:  #ffffff;
-      --border:   #dde1e7;
-      --muted:    #737a85;
-      --text:     #1a1f2e;
-      --subtext:  #3d4451;
-      --p1: #cdb4db;
-      --p2: #ffc8dd;
-      --p3: #ffafcc;
-      --p4: #bde0fe;
-      --p5: #a2d2ff;
-      --accent: #219ebc;
-      --green:    #2da44e;
-      --orange:   #d4912a;
-      --alt-row:  #f5f6f8;
+      --surface-2:#fafaf8;
+      --grid:     #f1f1ee;
+      --line:     #e6e6e2;
+      --line-2:   #f0f0ec;
+      --field:    #d9d9d4;
+      --text:     #3c3c3b;   /* Gunmetal */
+      --muted:    #6b6b69;
+      --accent:   #db3069;   /* Razzmatazz */
+      --accent-ink:#b0204f;  /* accent for small text links (AA on white) */
+      --accent-tint:#fbf3f6;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans:  'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --wrap: 1120px;
     }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
+      margin: 0;
+      background-color: var(--ground);
+      background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 40px 40px;
       color: var(--text);
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    /* ── Topbar ─────────────────────────────────────────────────────────────── */
-    #topbar {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 0 18px;
-      height: 52px;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-weight: 700;
+      font-family: var(--sans);
       font-size: 15px;
-      color: var(--accent);
-      white-space: nowrap;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
+    a { color: var(--accent-ink); }
+    a:hover { color: #8a1840; }
+    button { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    input:focus-visible { outline-offset: -1px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .wrap { max-width: var(--wrap); width: 100%; margin: 0 auto; padding: 0 40px; }
+    .eyebrow { margin: 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 
-    .tagline {
-      font-size: 12px;
-      color: var(--muted);
-      border-left: 1px solid var(--border);
-      padding-left: 14px;
+    /* ── Header ─────────────────────────────────────────────────────────────── */
+    .site-header .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-top: 28px; padding-bottom: 28px; }
+    .logo { color: var(--text); text-decoration: none; font-family: var(--serif); font-size: 24px; }
+    .logo:hover { color: var(--text); }
+    .nav { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 13px; }
+    .nav a { color: var(--text); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+    .nav a[aria-current="page"] { border-bottom-color: var(--accent); }
+    .nav a.nav-ghost { border: 1px solid var(--text); padding: 8px 14px; }
+    .seg { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--surface); }
+    .seg button { height: 34px; padding: 0 14px; border: 0; background: transparent; font-size: 13px; cursor: pointer; }
+    .seg button[aria-pressed="true"] { background: var(--text); color: #fff; }
+    .seg.small button { padding: 0 12px; font-size: 12px; }
+
+    /* ── Hero ───────────────────────────────────────────────────────────────── */
+    .hero { max-width: 760px; margin: 0 auto; padding: 56px 40px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+    .hero h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(52px, 9vw, 88px); line-height: .95; letter-spacing: -.02em; }
+    .hero h1 em, .title em { color: var(--accent); }
+    .hero p.lead { margin: 0; font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 480px; }
+    .search { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 520px; }
+    .search input, .city-search input {
+      flex: 1 1 260px; height: 48px; border: 1px solid var(--field); background: var(--surface);
+      padding: 0 20px; font: inherit; font-size: 14px; color: var(--text); border-radius: 999px;
     }
+    .btn { height: 48px; padding: 0 24px; border: 0; border-radius: 999px; background: var(--accent); color: #fff; font-size: 14px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+    .btn:hover { color: #fff; filter: brightness(.95); }
+    .btn-ghost { background: var(--surface); color: var(--text); border: 1px solid var(--field); }
+    .btn-ghost:hover { color: var(--text); border-color: var(--text); filter: none; }
 
-    .spacer { flex: 1; }
+    /* ── Map + side panel ───────────────────────────────────────────────────── */
+    .explorer { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 24px; }
+    .map-box { flex: 999 1 560px; min-width: 0; height: 620px; border: 1px solid var(--line); background: var(--surface); position: relative; }
+    #map { position: absolute; inset: 0; }
+    .panel { flex: 1 1 300px; height: 620px; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); min-width: 0; }
+    .panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    .list { flex: 1; overflow-y: auto; }
+    .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; padding: 16px 20px; border: 0; border-bottom: 1px solid var(--line-2); background: var(--surface); text-align: left; cursor: pointer; }
+    .row:hover { background: var(--surface-2); }
+    .row[aria-current="true"] { background: var(--accent-tint); }
+    .row-name { font-family: var(--serif); font-size: 19px; line-height: 1.2; }
+    .row-meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .row-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; background: transparent; }
+    .row[aria-current="true"] .row-dot { background: var(--accent); }
+    .empty { padding: 32px 20px; color: var(--muted); font-size: 14px; text-align: center; }
 
-    /* Language toggle */
-    .lang-toggle {
-      display: flex;
-      gap: 0;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .lang-btn {
-      padding: 5px 12px;
-      font-size: 12px;
-      font-weight: 600;
-      background: transparent;
-      border: none;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .lang-btn.active {
-      background: #d6eef7;
-      color: #023047;
-    }
-    .lang-btn:not(.active):hover { background: var(--bg); color: var(--text); }
+    /* ── Employer detail (order follows the live site) ──────────────────────── */
+    .detail { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 22px; }
+    .back { align-self: flex-start; border: 0; background: none; padding: 0; color: var(--muted); font-size: 13px; cursor: pointer; }
+    .back:hover { color: var(--text); }
+    .d-name { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.05; letter-spacing: -.01em; }
+    .d-sector { margin: 8px 0 0; font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
+    .d-meta { margin: 10px 0 0; font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .d-meta .sep { color: #c9c9c4; }
+    .star { display: inline-flex; align-items: center; gap: 4px; }
+    .star svg { fill: var(--accent); }
+    .d-addr { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+    .d-web { display: inline-block; margin-top: 6px; font-size: 13px; word-break: break-all; }
+    .d-block { border-top: 1px solid var(--line); padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+    .d-about { margin: 0; font-family: var(--serif); font-size: 17px; line-height: 1.55; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { height: 28px; padding: 0 11px; display: inline-flex; align-items: center; border: 1px solid var(--line); background: var(--surface-2); border-radius: 999px; font-size: 12px; }
+    .actions { display: flex; flex-direction: column; gap: 10px; }
+    .actions .btn { width: 100%; height: 50px; font-size: 15px; }
+    .actions-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .actions-row .btn { height: 44px; padding: 0 12px; font-size: 14px; white-space: nowrap; }
+    .actions-row .btn:only-child { grid-column: 1 / -1; }
 
-
-    /* ── Layout ─────────────────────────────────────────────────────────────── */
-    #main { display: flex; flex: 1; overflow: hidden; }
-
-    /* ── Sidebar ────────────────────────────────────────────────────────────── */
-    #sidebar {
-      width: 288px;
-      flex-shrink: 0;
-      background: var(--surface);
-      border-right: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      transition: width .25s ease;
-      min-height: 0;
-    }
-
-    #sidebar.detail-open {
-      width: 380px;
-      background: rgba(255,255,255,0.55);
-      backdrop-filter: blur(24px) saturate(180%);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
-      border-right: 1px solid rgba(255,255,255,0.6);
-      box-shadow: 4px 0 32px rgba(0,0,0,0.08);
-    }
-
-
-
-    .filter-label {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-    .filter-group { margin-bottom: 12px; }
-
-    .chip-wrap { display: flex; flex-wrap: wrap; gap: 4px; }
-
-    .chip {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--subtext);
-      cursor: pointer;
-      transition: all .15s;
-      user-select: none;
-    }
-    .chip:hover { border-color: var(--p5); color: #023047; }
-    .chip.active { background: #d6eef7; border-color: var(--accent); color: #023047; }
-
-    #reset-btn {
-      width: 100%;
-      padding: 6px;
-      font-size: 11px;
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all .15s;
-      margin-top: 2px;
-    }
-    #reset-btn:hover { border-color: var(--accent); color: #023047; }
-
-    /* ── Company list ───────────────────────────────────────────────────────── */
-    #company-list {
-      flex: 1;
-      overflow-y: auto;
-      overflow-x: hidden;
-      padding: 6px;
-    }
-    #company-list::-webkit-scrollbar { width: 3px; }
-    #company-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-    .c-card {
-      padding: 10px 11px;
-      border-radius: 7px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all .13s;
-      margin-bottom: 3px;
-    }
-    .c-card:hover { background: #e8f4fb; border-color: var(--accent); }
-    .c-card.active { background: #d6eef7; border-color: var(--accent); }
-
-    .c-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
-    .c-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; }
-    .c-badge {
-      display: inline-block;
-      font-size: 10px;
-      padding: 1px 7px;
-      border-radius: 20px;
-      margin-top: 4px;
-      white-space: normal;
-      word-break: break-word;
-    }
-
-    #no-results {
-      display: none;
-      text-align: center;
-      padding: 28px 12px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* ── Map ────────────────────────────────────────────────────────────────── */
-    #map { flex: 1; }
-
-    /* ── Popup ──────────────────────────────────────────────────────────────── */
-    .mapboxgl-popup-content {
-      background: #ffffff !important;
-      border: 1px solid var(--border) !important;
-      border-radius: 10px !important;
-      padding: 0 !important;
-      min-width: 290px;
-      max-width: 330px;
-      box-shadow: 0 8px 32px rgba(0,0,0,.12) !important;
-    }
+    /* Map markers: hollow gunmetal dots; the selected one in the accent */
+    .mk { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .mk-dot { width: 10px; height: 10px; border-radius: 50%; background: #fff; border: 1.5px solid var(--text); transition: transform .12s ease-out; }
+    .mk:hover .mk-dot { transform: scale(1.4); }
+    .mk.on .mk-dot { width: 14px; height: 14px; background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 9px rgba(219,48,105,.14); }
+    .mapboxgl-popup-content { border: 1px solid var(--line) !important; border-radius: 0 !important; box-shadow: none !important; padding: 8px 12px !important; font-family: var(--sans); }
     .mapboxgl-popup-tip { display: none !important; }
-    .mini-popup .mapboxgl-popup-content { min-width: unset; max-width: 200px; border-radius: 7px !important; }
-    .mapboxgl-popup-close-button {
-      color: var(--muted) !important;
-      font-size: 18px !important;
-      right: 8px !important; top: 8px !important;
-      background: none !important;
-    }
-    .mapboxgl-popup-close-button:hover { color: var(--text) !important; }
+    .pop-name { font-family: var(--serif); font-size: 16px; }
+    .pop-sector { font-size: 11px; color: var(--accent-ink); margin-top: 2px; }
+    .mapboxgl-ctrl-group { border-radius: 0 !important; box-shadow: none !important; border: 1px solid var(--line); }
 
-    .pop-header {
-      padding: 14px 14px 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .pop-name {
-      font-size: 15px; font-weight: 700;
-      padding-right: 22px; margin-bottom: 3px;
-    }
-    .pop-sector { font-size: 11px; color: #219ebc; }
+    /* ── Directory ──────────────────────────────────────────────────────────── */
+    .page-head { display: flex; flex-direction: column; gap: 12px; padding-top: 40px; }
+    .title { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 7vw, 64px); line-height: 1; letter-spacing: -.02em; }
+    .sub { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 460px; }
+    .city-search { display: flex; flex-direction: column; gap: 10px; margin-top: 32px; }
+    .city-search .field { position: relative; display: flex; }
+    .city-search svg { position: absolute; left: 22px; top: 19px; pointer-events: none; }
+    .city-search input { height: 56px; padding-left: 52px; font-size: 16px; }
+    .filters { margin-top: 32px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .f-row { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: flex-start; padding: 18px 0; }
+    .f-row + .f-row { border-top: 1px solid var(--line-2); }
+    .f-row .label { width: 96px; padding-top: 10px; }
+    .chips { flex: 1 1 600px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { height: 34px; padding: 0 14px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; font-size: 13px; cursor: pointer; }
+    .chip:hover { border-color: var(--field); }
+    .chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: #fff; }
+    .chip.dark[aria-pressed="true"] { border-color: var(--text); background: var(--text); }
+    .f-bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line-2); }
+    .f-bar .hint { font-size: 13px; color: var(--muted); flex: 1 1 200px; }
+    .f-toggle { height: 34px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--field); background: var(--surface); border-radius: 999px; font-size: 13px; cursor: pointer; }
+    .f-toggle.on { background: var(--text); border-color: var(--text); color: #fff; }
+    .more { background: #fbfbf9; border-top: 1px solid var(--line-2); }
+    .more .f-row { padding: 18px 16px; }
+    .more .label { width: 96px; }
+    .more-foot { display: flex; justify-content: flex-end; gap: 16px; align-items: center; padding: 14px 16px; border-top: 1px solid var(--line-2); }
+    .link-btn { height: 36px; padding: 0 8px; border: 0; background: transparent; color: var(--accent-ink); font-size: 13px; cursor: pointer; }
+    .btn-dark { height: 40px; padding: 0 20px; border: 0; border-radius: 999px; background: var(--text); color: #fff; font-size: 13px; cursor: pointer; }
+    .count-bar { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; font-size: 13px; color: var(--muted); }
+    .table-box { margin-top: 14px; overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+    .table { width: 100%; min-width: 880px; border-collapse: collapse; }
+    .table th { text-align: left; font-weight: 400; padding: 14px 24px; border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .table td { padding: 16px 24px; border-bottom: 1px solid var(--line-2); font-size: 14px; vertical-align: middle; }
+    .table td.muted { color: var(--muted); }
+    .table .t-name { border: 0; background: none; padding: 0; cursor: pointer; font-family: var(--serif); font-size: 20px; text-align: left; color: var(--text); }
+    .table .t-name:hover { color: var(--accent-ink); }
+    .table .right { text-align: right; white-space: nowrap; }
 
-    .pop-body { padding: 10px 14px; }
-    .pop-row {
-      display: flex; gap: 8px;
-      margin-bottom: 7px;
-      font-size: 12px; align-items: flex-start;
-    }
-    .pop-lbl { color: var(--muted); min-width: 68px; flex-shrink: 0; }
-    .pop-val { color: var(--subtext); line-height: 1.45; }
-    .pop-about {
-      font-size: 11.5px;
-      color: var(--muted);
-      line-height: 1.6;
-      padding: 8px 14px 10px;
-      border-top: 1px solid var(--border);
-    }
+    /* ── Cities ─────────────────────────────────────────────────────────────── */
+    .cities-head { text-align: center; align-items: center; }
+    .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
+    .city-card { background: var(--surface); border: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; gap: 14px; text-align: left; cursor: pointer; }
+    .city-card:hover { border-color: var(--field); }
+    .city-card[disabled] { cursor: default; opacity: .55; }
+    .city-top { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .city-name { font-family: var(--serif); font-size: 34px; line-height: 1; }
 
-    .tech-wrap { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
-    .tech-tag {
-      font-size: 10px; padding: 2px 6px;
-      background: var(--bg); border: 1px solid var(--border);
-      border-radius: 3px; color: var(--subtext);
-    }
+    /* ── Footer ─────────────────────────────────────────────────────────────── */
+    .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 40px; padding-bottom: 40px; font-size: 12px; color: var(--muted); }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+    .footer-mark { font-family: var(--serif); font-size: 16px; color: var(--text); }
 
-    .pop-actions {
-      padding: 8px 14px 12px;
-      display: flex; gap: 7px;
-    }
-    .pop-btn {
-      flex: 1; padding: 7px 8px;
-      border-radius: 6px; font-size: 11px; font-weight: 600;
-      text-align: center; text-decoration: none;
-      cursor: pointer; transition: all .13s; white-space: nowrap;
-    }
-    .pop-btn-kununu { flex:1; padding:7px 8px; border-radius:6px; font-size:11px;
-      font-weight:600; text-align:center; text-decoration:none;
-      background:var(--bg); border:1px solid var(--border); color:var(--subtext);
-      cursor:pointer; transition: all .13s; }
-    .pop-btn-kununu:hover { border-color:var(--accent); color:var(--accent); }
-    .pop-btn-careers { width:100%; padding:10px 8px; border-radius:6px; font-size:13px;
-      font-weight:700; text-align:center; text-decoration:none; display:block;
-      background:#fb8500; color:#ffffff; border:none; cursor:pointer;
-      transition: all .13s; }
-    .pop-btn-careers:hover { background:#e07600; }
-    .pop-primary   { background: #219ebc; border: 1px solid #1a8aaa; color: #ffffff; }
-    .pop-primary:hover { background: #1a8aaa; }
-    .pop-secondary { background: var(--bg); border: 1px solid var(--border); color: var(--subtext); }
-    .pop-secondary:hover { border-color: var(--accent); color: var(--accent); }
-    .pop-disabled  { background: var(--bg); border: 1px solid var(--border); color: var(--muted); cursor: default; }
+    [hidden] { display: none !important; }
 
-    /* ── Sector badge colors ─────────────────────────────────────────────────── */
-    .s-mobility    { background:#8ecae6; color:#023047; }
-    .s-env         { background:#ffb703; color:#3a2500; }
-    .s-infra       { background:#023047; color:#ffffff; }
-    .s-tech        { background:#219ebc; color:#ffffff; }
-    .s-planning    { background:#fb8500; color:#ffffff; }
-    .s-logistics   { background:#8ecae6; color:#023047; }
-    .s-other       { background:#f1f5f9; color:#475569; }
-
-    /* ── Tech filter toggle ─────────────────────────────────────────────────── */
-    #tech-toggle-btn {
-      width: 100%;
-      padding: 6px;
-      font-size: 11px;
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all .15s;
-      margin-bottom: 6px;
-      text-align: center;
-    }
-    #tech-toggle-btn:hover { border-color: var(--accent); color: #023047; }
-    #tech-filter-group { display: none; }
-    #tech-filter-group.open { display: block; }
-    #tech-filter-group .chip-wrap {
-      max-height: 120px;
-      overflow-y: auto;
-      padding-right: 2px;
-    }
-    #tech-filter-group .chip-wrap::-webkit-scrollbar { width: 3px; }
-    #tech-filter-group .chip-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-    /* ── Detail panel ───────────────────────────────────────────────────────── */
-    #detail-panel {
-      display: none;
-      flex-direction: column;
-      height: 100%;
-      overflow-y: auto;
-    }
-    #back-btn {
-      flex-shrink: 0;
-      padding: 10px 14px;
-      font-size: 12px;
-      background: none;
-      border: none;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted);
-      cursor: pointer;
-      text-align: left;
-      transition: color .15s;
-    }
-    #back-btn:hover { color: #023047; }
-    #detail-content { padding: 16px 14px; flex: 1; }
-    .detail-name { font-size: 18px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
-    .detail-sector { font-size: 11px; font-weight: 600; text-transform: uppercase;
-      letter-spacing:.06em; color: #219ebc; margin-bottom: 6px; }
-    .detail-meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-    .detail-website { font-size: 11px; color: var(--accent); text-decoration: none;
-      display: block; margin-bottom: 12px; word-break: break-all; }
-    .detail-website:hover { text-decoration: underline; }
-    .detail-divider { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
-    .detail-about { font-size: 12.5px; color: var(--subtext); line-height: 1.65; }
-    .detail-actions { display: flex; flex-direction: column; gap: 7px; margin-top: 14px; }
-    .detail-actions-row { display: flex; gap: 7px; }
-    .kununu-rating { display:inline-flex; align-items:center; gap:4px;
-      font-size:11px; font-weight:600; color:#fb8500; margin-top:4px; }
-    .c-rating { font-size:10px; color:#fb8500; font-weight:600; margin-left:4px; }
-
-    /* ── Role badge ──────────────────────────────────────────────────────────── */
-    .r-core  { background:#023047; color:#ffffff; border:1px solid #023047; }
-    .r-team  { background:#219ebc; color:#ffffff; border:1px solid #219ebc; }
-    .r-side  { background:#8ecae6; color:#023047; border:1px solid #8ecae6; }
-
-    /* ── GitHub link ─────────────────────────────────────────────────────────── */
-    .github-link {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--muted);
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px 10px;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: all .15s;
-    }
-    .github-link:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* ── Mobile ──────────────────────────────────────────────────────────────── */
     @media (max-width: 640px) {
-      #topbar {
-        padding: 0 12px;
-        height: 46px;
-        gap: 8px;
-      }
-      .tagline { display: none; }
-
-      #main { flex-direction: column; }
-
-      /* Map: 40vh on top */
-      #map {
-        flex: none;
-        height: 40vh;
-        order: 1;
-      }
-
-      /* Sidebar: 60vh on bottom, relative so detail panel can absolute-fill it */
-      #sidebar {
-        position: relative;
-        width: 100% !important;
-        height: 60vh;
-        border-right: none;
-        border-top: 1px solid var(--border);
-        flex-shrink: 0;
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-      }
-
-      #sidebar.detail-open {
-        width: 100% !important;
-        box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
-      }
-
-      /* Filters: compact, vertically scrollable */
-      #filters {
-        padding: 10px !important;
-        flex: 0 0 auto !important;
-        max-height: 44%;
-        overflow-y: auto !important;
-      }
-
-      /* Company list: remaining space, vertical scroll (same as desktop) */
-      #company-list {
-        flex: 1 1 0 !important;
-        min-height: 0 !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-      }
-
-      /* Detail panel: absolute, covers full sidebar.
-         flex-shrink:0 on detail-content forces real overflow so scroll works */
-      #detail-panel {
-        position: absolute !important;
-        top: 0; left: 0; right: 0; bottom: 0;
-        height: auto !important;
-        overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch;
-        background: var(--surface);
-        z-index: 5;
-      }
-
-      /* Must NOT shrink — this is what lets buttons at the bottom be reachable */
-      #detail-content {
-        flex-shrink: 0 !important;
-      }
-
-      .mapboxgl-popup-content {
-        min-width: 220px !important;
-        max-width: 270px !important;
-      }
-
-      .detail-name { font-size: 15px; }
+      .wrap { padding: 0 16px; }
+      .hero { padding: 32px 16px 24px; }
+      .nav { gap: 16px; }
+      .map-box, .panel { height: 440px; }
+      .f-row .label, .more .label { width: 100%; padding-top: 0; }
     }
   </style>
 </head>
 <body>
 
-<div id="topbar">
-  <div class="logo">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#219ebc" stroke-width="2.2">
-      <circle cx="12" cy="10" r="3"/>
-      <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 14-8 14S4 15.25 4 10a8 8 0 0 1 8-8z"/>
-    </svg>
-    GeoCareers
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#map">GeoCareers</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#map" data-route="map" data-i18n="nav_map">Map</a>
+      <a href="#employers" data-route="employers" data-i18n="nav_employers">Employers</a>
+      <a href="#cities" data-route="cities" data-i18n="nav_cities">Cities</a>
+      <a class="nav-ghost" href="https://github.com/natashlazarpro/gis-jobs-berlin" target="_blank" rel="noopener">GitHub ↗</a>
+      <div class="seg small" role="group" aria-label="Language">
+        <button type="button" data-setlang="en" aria-pressed="false">EN</button>
+        <button type="button" data-setlang="de" aria-pressed="true">DE</button>
+      </div>
+    </nav>
   </div>
-  <div class="tagline" id="tagline-text">Mapping your next career move.</div>
-  <div class="spacer"></div>
+</header>
 
-  <a class="github-link" href="https://github.com/natashlazarpro/gis-jobs-berlin" target="_blank">
-    GitHub ↗
-  </a>
-
-  <div class="lang-toggle">
-    <button class="lang-btn"        id="btn-en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
-  </div>
-
-</div>
-
-<div id="main">
-  <div id="sidebar">
-    <div id="filters" style="padding:14px;border-bottom:1px solid var(--border);overflow-y:auto;flex:1;overflow-y:auto;">
-
-      <div class="filter-group">
-        <div class="filter-label" id="lbl-sector">Sector</div>
-        <div class="chip-wrap" id="sector-chips"></div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label" id="lbl-role">GIS Role</div>
-        <div class="chip-wrap" id="role-chips">
-          <div class="chip" data-filter="role" data-value="Core product">
-            <span class="t-en">Core product</span><span class="t-de" style="display:none">Kernprodukt</span>
-          </div>
-          <div class="chip" data-filter="role" data-value="Dedicated team">
-            <span class="t-en">Dedicated team</span><span class="t-de" style="display:none">GIS-Team</span>
-          </div>
-          <div class="chip" data-filter="role" data-value="Side tool">
-            <span class="t-en">Side tool</span><span class="t-de" style="display:none">Nebentool</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label" id="lbl-size">Company size</div>
-        <div class="chip-wrap" id="size-chips">
-          <div class="chip" data-filter="size" data-value="11-50">11–50</div>
-          <div class="chip" data-filter="size" data-value="51-200">51–200</div>
-          <div class="chip" data-filter="size" data-value="201-500">201–500</div>
-          <div class="chip" data-filter="size" data-value="500+">500+</div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label" id="lbl-city">City</div>
-        <div class="chip-wrap" id="city-chips">
-          <div class="chip" data-filter="city" data-value="Berlin">Berlin</div>
-          <div class="chip" data-filter="city" data-value="Munich">
-            <span class="t-en">Munich</span><span class="t-de" style="display:none">München</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-label" id="lbl-lang">Language</div>
-        <div class="chip-wrap" id="lang-chips">
-          <div class="chip" data-filter="lang" data-value="ENG">
-            <span class="t-en">English</span><span class="t-de" style="display:none">Englisch</span>
-          </div>
-          <div class="chip" data-filter="lang" data-value="DE">
-            <span class="t-en">German</span><span class="t-de" style="display:none">Deutsch</span>
-          </div>
-        </div>
-      </div>
-
-      <button id="tech-toggle-btn">⚙ <span class="t-en">Add Tech Filters</span><span class="t-de" style="display:none">Tech-Filter hinzufügen</span></button>
-      <div id="tech-filter-group">
-        <div class="filter-label" id="lbl-tech">Tech Stack</div>
-        <div class="chip-wrap" id="tech-chips"></div>
-      </div>
-
-      <button id="reset-btn">
-        <span class="t-en">✕ Reset All Filters</span>
-        <span class="t-de" style="display:none">✕ Alle Filter zurücksetzen</span>
-      </button>
+<main>
+  <!-- ═══ MAP / HOME ═══ -->
+  <section id="view-map" data-view="map">
+    <div class="hero">
+      <p class="eyebrow" data-i18n="hero_eyebrow">An index of GIS employers in Germany</p>
+      <h1 data-i18n-html="hero_title">Where maps get <em>made</em></h1>
+      <p class="lead" data-i18n="hero_lead">Every company doing GIS and geodata work, pinned to the map, one click from your next career move.</p>
+      <form class="search" id="hero-search" role="search">
+        <label class="sr-only" for="q" data-i18n="search_label">Search a tool, city or employer</label>
+        <input id="q" type="search" autocomplete="off" data-i18n-ph="search_ph" placeholder="Search a tool, city or employer" />
+        <button class="btn" type="submit" data-i18n="explore">Explore</button>
+      </form>
     </div>
 
-    <div id="detail-panel">
-      <button id="back-btn">
-        <span class="t-en">← Back to list</span>
-        <span class="t-de" style="display:none">← Zurück zur Liste</span>
-      </button>
-      <div id="detail-content"></div>
-    </div>
-
-    <div id="company-list">
-      <div id="no-results">
-        <span class="t-en">No companies match your filters.</span>
-        <span class="t-de" style="display:none">Keine Unternehmen entsprechen den Filtern.</span>
+    <div class="wrap">
+      <div class="explorer" id="explorer">
+        <div class="map-box"><div id="map" aria-label="Map of GIS employers"></div></div>
+        <aside class="panel" aria-live="polite">
+          <div id="panel-list" style="display:flex;flex-direction:column;flex:1;min-height:0">
+            <div class="panel-head"><span id="list-count"></span><a href="#employers" data-i18n="all_filters">All filters →</a></div>
+            <div class="list" id="list"></div>
+          </div>
+          <div class="detail" id="panel-detail" hidden></div>
+        </aside>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="map"></div>
-</div>
+  <!-- ═══ EMPLOYERS ═══ -->
+  <section id="view-employers" data-view="employers" hidden>
+    <div class="wrap">
+      <div class="page-head">
+        <p class="eyebrow" data-i18n="dir_eyebrow">Directory</p>
+        <h1 class="title" data-i18n="dir_title">Employers</h1>
+        <p class="sub" data-i18n="dir_sub">Every GIS and geodata employer we track.</p>
+      </div>
+
+      <div class="city-search">
+        <label class="label" for="city" data-i18n="city_label">Search the city</label>
+        <div class="field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b6b69" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="city" type="search" list="city-options" autocomplete="off" placeholder="Berlin, München, Hamburg …" />
+          <datalist id="city-options"></datalist>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="f-row">
+          <span class="label" data-i18n="f_sector">Sector</span>
+          <div class="chips" id="sector-chips"></div>
+        </div>
+        <div class="f-bar">
+          <span class="hint" data-i18n="f_hint">GIS role, language, company size and tech</span>
+          <button type="button" class="f-toggle" id="more-toggle" aria-expanded="false" aria-controls="more">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+            <span id="more-label">Filters</span>
+          </button>
+        </div>
+        <div class="more" id="more" hidden>
+          <div class="f-row"><span class="label" data-i18n="f_role">GIS role</span><div class="chips" id="role-chips"></div></div>
+          <div class="f-row"><span class="label" data-i18n="f_lang">Language</span><div class="chips" id="lang-chips"></div></div>
+          <div class="f-row"><span class="label" data-i18n="f_size">Company size</span><div class="chips" id="size-chips"></div></div>
+          <div class="f-row"><span class="label" data-i18n="f_tech">Tech</span><div class="chips" id="tech-chips"></div></div>
+          <div class="more-foot">
+            <button type="button" class="link-btn" id="clear" data-i18n="clear">Clear filters</button>
+            <button type="button" class="btn-dark" id="done" data-i18n="done">Done</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="count-bar"><span id="dir-count"></span><span data-i18n="sorted">Sorted by rating</span></div>
+      <div class="table-box">
+        <table class="table">
+          <thead><tr>
+            <th data-i18n="th_employer">Employer</th><th data-i18n="th_city">City</th><th data-i18n="th_sector">Sector</th>
+            <th data-i18n="th_role">GIS role</th><th data-i18n="th_lang">Language</th><th data-i18n="th_rating">Rating</th><th class="right" data-i18n="th_jobs">Jobs</th>
+          </tr></thead>
+          <tbody id="dir-body"></tbody>
+        </table>
+        <div class="empty" id="dir-empty" hidden data-i18n="no_results">No employers match these filters.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CITIES ═══ -->
+  <section id="view-cities" data-view="cities" hidden>
+    <div class="wrap">
+      <div class="page-head cities-head">
+        <p class="eyebrow" data-i18n="cities_eyebrow">Ten cities</p>
+        <h1 class="title" data-i18n-html="cities_title">Pick a <em>city</em></h1>
+        <p class="sub" data-i18n="cities_sub">Germany's ten largest cities. Pick one to see its GIS employers.</p>
+      </div>
+      <div class="city-grid" id="city-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="#cities">Berlin · München · Hamburg · Köln · Frankfurt · Stuttgart · Düsseldorf · Leipzig · Dortmund · Essen</a>
+    <span class="footer-mark">geocareers.app</span>
+  </div>
+</footer>
 
 <script>
 // ─── Config ───────────────────────────────────────────────────────────────────
 const MAPBOX_TOKEN = '__MAPBOX_TOKEN__';
 const DATA_URL = 'https://data-schield.natashlazar-pro.workers.dev';
 
-// ─── UI language state ────────────────────────────────────────────────────────
+// Germany's ten largest cities (same list as scraper/config.py)
+const CITIES = [
+  { de: 'Berlin',     en: 'Berlin',     keys: ['berlin'] },
+  { de: 'Hamburg',    en: 'Hamburg',    keys: ['hamburg'] },
+  { de: 'München',    en: 'Munich',     keys: ['münchen', 'munchen', 'muenchen', 'munich'] },
+  { de: 'Köln',       en: 'Cologne',    keys: ['köln', 'koln', 'koeln', 'cologne'] },
+  { de: 'Frankfurt',  en: 'Frankfurt',  keys: ['frankfurt', 'frankfurt am main'] },
+  { de: 'Stuttgart',  en: 'Stuttgart',  keys: ['stuttgart'] },
+  { de: 'Düsseldorf', en: 'Düsseldorf', keys: ['düsseldorf', 'dusseldorf', 'duesseldorf'] },
+  { de: 'Leipzig',    en: 'Leipzig',    keys: ['leipzig'] },
+  { de: 'Dortmund',   en: 'Dortmund',   keys: ['dortmund'] },
+  { de: 'Essen',      en: 'Essen',      keys: ['essen'] },
+];
+const SIZES = ['1-10', '11-50', '51-200', '201-500', '500+'];
+const ROLES = ['Core product', 'Dedicated team', 'Side tool'];
+
+// ─── Text (EN / DE) ───────────────────────────────────────────────────────────
+const T = {
+  en: {
+    nav_map: 'Map', nav_employers: 'Employers', nav_cities: 'Cities',
+    hero_eyebrow: 'An index of GIS employers in Germany',
+    hero_title: 'Where maps get <em>made</em>',
+    hero_lead: 'Every company doing GIS and geodata work, pinned to the map, one click from your next career move.',
+    search_label: 'Search a tool, city or employer', search_ph: 'Search a tool, city or employer', explore: 'Explore',
+    all_filters: 'All filters →', employers_n: n => `${n} ${n === 1 ? 'employer' : 'employers'}`,
+    dir_eyebrow: 'Directory', dir_title: 'Employers', dir_sub: 'Every GIS and geodata employer we track.',
+    city_label: 'Search the city', f_sector: 'Sector', f_hint: 'GIS role, language, company size and tech',
+    filters: 'Filters', f_role: 'GIS role', f_lang: 'Language', f_size: 'Company size', f_tech: 'Tech',
+    clear: 'Clear filters', done: 'Done', sorted: 'Sorted by rating',
+    th_employer: 'Employer', th_city: 'City', th_sector: 'Sector', th_role: 'GIS role', th_lang: 'Language', th_rating: 'Rating', th_jobs: 'Jobs',
+    no_results: 'No employers match these filters.', loading: 'Loading employers…', load_error: 'The employer data could not be loaded. Please try again later.',
+    cities_eyebrow: 'Ten cities', cities_title: 'Pick a <em>city</em>', cities_sub: "Germany's ten largest cities. Pick one to see its GIS employers.",
+    coming: 'Coming soon',
+    all: 'All', role: { 'Core product': 'Core product', 'Dedicated team': 'Dedicated team', 'Side tool': 'Side tool' },
+    lang: { ENG: 'English', DE: 'German', 'DE/ENG': 'English / German' }, lang_short: { all: 'All', en: 'EN', de: 'DE' },
+    view_jobs: 'View Jobs', view_jobs_row: 'View jobs →', reviews: 'Read Reviews', back: '← Back to list',
+    about: 'About the company', tech: 'Tech stack', no_jobs: 'No jobs page',
+  },
+  de: {
+    nav_map: 'Karte', nav_employers: 'Arbeitgeber', nav_cities: 'Städte',
+    hero_eyebrow: 'Ein Verzeichnis der GIS-Arbeitgeber in Deutschland',
+    hero_title: 'Wo Karten <em>entstehen</em>',
+    hero_lead: 'Alle Unternehmen, die mit GIS und Geodaten arbeiten – auf der Karte, einen Klick von deinem nächsten Karriereschritt entfernt.',
+    search_label: 'Tool, Stadt oder Arbeitgeber suchen', search_ph: 'Tool, Stadt oder Arbeitgeber suchen', explore: 'Entdecken',
+    all_filters: 'Alle Filter →', employers_n: n => `${n} Arbeitgeber`,
+    dir_eyebrow: 'Verzeichnis', dir_title: 'Arbeitgeber', dir_sub: 'Alle GIS- und Geodaten-Arbeitgeber, die wir erfassen.',
+    city_label: 'Stadt suchen', f_sector: 'Branche', f_hint: 'GIS-Rolle, Sprache, Unternehmensgröße und Tech',
+    filters: 'Filter', f_role: 'GIS-Rolle', f_lang: 'Sprache', f_size: 'Größe', f_tech: 'Tech',
+    clear: 'Filter zurücksetzen', done: 'Fertig', sorted: 'Nach Bewertung sortiert',
+    th_employer: 'Arbeitgeber', th_city: 'Stadt', th_sector: 'Branche', th_role: 'GIS-Rolle', th_lang: 'Sprache', th_rating: 'Bewertung', th_jobs: 'Stellen',
+    no_results: 'Keine Arbeitgeber entsprechen diesen Filtern.', loading: 'Arbeitgeber werden geladen…', load_error: 'Die Daten konnten nicht geladen werden. Bitte später erneut versuchen.',
+    cities_eyebrow: 'Zehn Städte', cities_title: 'Wähle eine <em>Stadt</em>', cities_sub: 'Die zehn größten Städte Deutschlands. Wähle eine, um ihre GIS-Arbeitgeber zu sehen.',
+    coming: 'Demnächst',
+    all: 'Alle', role: { 'Core product': 'Kernprodukt', 'Dedicated team': 'GIS-Team', 'Side tool': 'Nebentool' },
+    lang: { ENG: 'Englisch', DE: 'Deutsch', 'DE/ENG': 'Englisch / Deutsch' }, lang_short: { all: 'Alle', en: 'EN', de: 'DE' },
+    view_jobs: 'Stellen ansehen', view_jobs_row: 'Stellen →', reviews: 'Bewertungen lesen', back: '← Zurück zur Liste',
+    about: 'Über das Unternehmen', tech: 'Tech-Stack', no_jobs: 'Keine Stellenseite',
+  },
+};
+const SECTOR_DE = {
+  'Mobility': 'Mobilität', 'Mapping': 'Kartographie', 'Tech': 'Technologie', 'GIS': 'GIS', 'Infrastructure': 'Infrastruktur',
+  'Environment': 'Umwelt', 'Urban Planning': 'Stadtplanung', 'Logistics': 'Logistik', 'Energy': 'Energie',
+  'Earth Observation': 'Erdbeobachtung', 'Consulting': 'Beratung', 'Real Estate': 'Immobilien', 'Defense': 'Verteidigung',
+  'Security': 'Sicherheit', 'Public Sector': 'Öffentlicher Sektor', 'Architecture': 'Architektur', 'Surveying': 'Vermessung',
+  'Agriculture': 'Landwirtschaft', 'Engineering': 'Ingenieurwesen', 'Insurance': 'Versicherung', 'Other': 'Weitere',
+};
+
 let LANG = 'de';
+const t = k => T[LANG][k];
 
-function setLang(lang) {
-  LANG = lang;
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.getElementById('btn-de').classList.toggle('active', lang === 'de');
-  document.querySelectorAll('.t-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
-  document.querySelectorAll('.t-de').forEach(el => el.style.display = lang === 'de' ? '' : 'none');
-
-  // Update topbar tagline
-  document.getElementById('tagline-text').textContent = lang === 'en'
-    ? 'Mapping your next GIS career move.'
-    : 'Kartiere deinen nächsten GIS-Karriereschritt.';
-
-  // Rebuild list, sector chips & reopen popup if open
-  if (COMPANIES.length) buildSectorChips();
-  applyFilters();
-  if (activeCompany) showDetail(activeCompany);
-}
-
-// ─── Company data (fetched from worker) ─────────────────────────────────────
+// ─── State ────────────────────────────────────────────────────────────────────
 let COMPANIES = [];
-
-// ─── Filter state ─────────────────────────────────────────────────────────────
-const activeFilters = { sector: null, role: null, size: null, lang: null, tech: null, city: null };
-let activePopup = null;
-let activeCardId = null;
+let loadState = 'loading';            // loading | ready | error
+const F = { q: '', city: '', sectors: new Set(), role: null, lang: null, sizes: new Set(), techs: new Set() };
+let selectedId = null;
+let moreOpen = false;
 const markers = {};
+let hoverPopup = null;
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
-function sectorClass(sector) {
-  if (!sector) return 's-other';
-  const s = sector.toLowerCase();
-  if (s.includes('mobil') || s.includes('mapping')) return 's-mobility';
-  if (s.includes('environ'))  return 's-env';
-  if (s.includes('infra'))    return 's-infra';
-  if (s.includes('tech') || s.includes('gis')) return 's-tech';
-  if (s.includes('urban') || s.includes('plan')) return 's-planning';
-  if (s.includes('logis'))    return 's-logistics';
-  return 's-other';
-}
-function roleClass(r) {
-  return r === 'Core product' ? 'r-core' : r === 'Dedicated team' ? 'r-team' : 'r-side';
-}
-function markerColor(sector) {
-  const cls = sectorClass(sector || '');
-  const palette = {
-    's-mobility': '#8ecae6', 's-env': '#ffb703', 's-infra': '#023047',
-    's-tech': '#219ebc',     's-planning': '#fb8500', 's-logistics': '#8ecae6',
-    's-other': '#94a3b8',
-  };
-  return palette[cls] || '#94a3b8';
-}
-
-// Sector translation map for German UI
-const SECTOR_DE = {
-  'Mobility':'Mobilität','Mapping':'Kartographie','Tech':'Technologie',
-  'GIS':'GIS','Infrastructure':'Infrastruktur','Environment':'Umwelt',
-  'Urban Planning':'Stadtplanung','Logistics':'Logistik','Energy':'Energie',
-  'Earth Observation':'Erdbeobachtung','Consulting':'Beratung',
-  'Real Estate':'Immobilien','Defense':'Verteidigung',
+const $ = s => document.querySelector(s);
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const safeUrl = u => {
+  if (!u) return '';
+  const s = String(u).trim();
+  if (/^https?:\/\//i.test(s)) return s;
+  if (/^[\w.-]+\.[a-z]{2,}(\/|$)/i.test(s)) return 'https://' + s;
+  return '';
 };
-function sectorText(sector) {
-  if (!sector) return '';
-  if (LANG !== 'de') return sector;
-  return sector.split('/').map(p => {
-    const k = p.trim();
-    return SECTOR_DE[k] || k;
-  }).join(' / ');
-}
-function langFlag(l) {
-  return l === 'ENG' ? 'EN' : l === 'DE' ? 'DE' : 'EN/DE';
-}
-function matchesFilters(c) {
-  if (activeFilters.sector && !c.sector?.includes(activeFilters.sector)) return false;
-  if (activeFilters.role   && c.role !== activeFilters.role)             return false;
-  if (activeFilters.size   && c.size !== activeFilters.size)             return false;
-  if (activeFilters.lang   && c.lang !== activeFilters.lang)             return false;
-  if (activeFilters.tech   && !c.tech?.includes(activeFilters.tech))     return false;
-  if (activeFilters.city   && c.city !== activeFilters.city)             return false;
+const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
+const sectorParts = s => String(s || '').split('/').map(p => p.trim()).filter(Boolean);
+const sectorText = s => LANG === 'de' ? sectorParts(s).map(p => SECTOR_DE[p] || p).join(' / ') : sectorParts(s).join(' / ');
+const roleText = r => (r && t('role')[r]) || r || '';
+const langText = l => t('lang')[l] || l || '';
+const cityOf = name => {
+  const n = norm(name);
+  return CITIES.find(c => c.keys.some(k => norm(k) === n || n.startsWith(norm(k))));
+};
+const cityText = name => { const c = cityOf(name); return c ? c[LANG] : (name || ''); };
+const sortByRating = list => [...list].sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1) || a.name.localeCompare(b.name));
+const starSvg = '<svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>';
+
+function matches(c) {
+  if (F.q) {
+    const hay = norm([c.name, c.city, cityText(c.city), c.sector, sectorText(c.sector), c.tech.join(' ')].join(' '));
+    if (!norm(F.q).split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  if (F.city) {
+    const want = norm(F.city);
+    const city = cityOf(c.city);
+    const names = city ? city.keys.concat([city.de, city.en]).map(norm) : [norm(c.city)];
+    if (!names.some(n => n.startsWith(want) || want.startsWith(n))) return false;
+  }
+  if (F.sectors.size && !sectorParts(c.sector).some(p => F.sectors.has(p))) return false;
+  if (F.role && c.role !== F.role) return false;
+  if (F.lang === 'en' && !/ENG/.test(c.lang || '')) return false;
+  if (F.lang === 'de' && !/DE/.test(c.lang || '')) return false;
+  if (F.sizes.size && !F.sizes.has(c.size)) return false;
+  if (F.techs.size && !c.tech.some(x => F.techs.has(x))) return false;
   return true;
 }
-
-// ─── Sector chips (built after data loads) ────────────────────────────────────
-function buildSectorChips() {
-  const sectors = [...new Set(
-    COMPANIES.flatMap(c => (c.sector||'').split('/').map(s => s.trim()))
-  )].filter(Boolean).sort();
-  const sChipWrap = document.getElementById('sector-chips');
-  sChipWrap.innerHTML = '';
-  sectors.forEach(s => {
-    const el = document.createElement('div');
-    el.className = 'chip';
-    el.dataset.filter = 'sector';
-    el.dataset.value = s;
-    el.textContent = LANG === 'de' ? (SECTOR_DE[s] || s) : s;
-    el.addEventListener('click', () => {
-      const wasActive = el.classList.contains('active');
-      document.querySelectorAll('.chip[data-filter="sector"]').forEach(c => c.classList.remove('active'));
-      if (!wasActive) { el.classList.add('active'); activeFilters.sector = s; }
-      else            { activeFilters.sector = null; }
-      applyFilters();
-    });
-    sChipWrap.appendChild(el);
-  });
-}
-
-// ─── Tech chips (built after data loads) ─────────────────────────────────────
-function buildTechChips() {
-  const techs = [...new Set(COMPANIES.flatMap(c => Array.isArray(c.tech) ? c.tech : (c.tech||'').split(',').map(t=>t.trim()).filter(Boolean)))].sort();
-  const wrap = document.getElementById('tech-chips');
-  wrap.innerHTML = '';
-  techs.forEach(t => {
-    const el = document.createElement('div');
-    el.className = 'chip';
-    el.dataset.filter = 'tech';
-    el.dataset.value = t;
-    el.textContent = t;
-    el.addEventListener('click', () => {
-      const wasActive = el.classList.contains('active');
-      document.querySelectorAll('.chip[data-filter="tech"]').forEach(c => c.classList.remove('active'));
-      if (!wasActive) { el.classList.add('active'); activeFilters.tech = t; }
-      else            { activeFilters.tech = null; }
-      applyFilters();
-    });
-    wrap.appendChild(el);
-  });
-  // toggle button
-  document.getElementById('tech-toggle-btn').addEventListener('click', () => {
-    document.getElementById('tech-filter-group').classList.toggle('open');
-  });
-}
+const visible = () => sortByRating(COMPANIES.filter(matches));
+const extraCount = () => (F.role ? 1 : 0) + (F.lang ? 1 : 0) + F.sizes.size + F.techs.size;
 
 // ─── Map ──────────────────────────────────────────────────────────────────────
 mapboxgl.accessToken = MAPBOX_TOKEN;
-
-const map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/light-v11',
-  center: [12.5, 50.8],
-  zoom: 6
-});
-
+const map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/mapbox/light-v11', center: [10.4, 51.1], zoom: 5.2 });
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
-
-// Click blank map area → return to list
-map.on('click', (e) => {
-  if (activeCompany && !e.originalEvent.target.closest('.mapboxgl-marker, .mapboxgl-popup-content')) {
-    hideDetail();
-  }
+map.on('click', e => {
+  if (selectedId !== null && !e.originalEvent.target.closest('.mk')) select(null);
 });
 
-// ─── Popup builder ────────────────────────────────────────────────────────────
-function buildPopupHTML(c) {
-  const about = LANG === 'de' ? c.about_de : c.about_en;
-  const roleLabel = LANG === 'de'
-    ? (c.role === 'Core product' ? 'Kernprodukt' : c.role === 'Dedicated team' ? 'GIS-Team' : 'Nebentool')
-    : c.role;
-  const sizeLabel = c.size;
-  const careersLabel = LANG === 'de' ? 'Stellen ansehen' : 'View Jobs';
-  const linkedinLabel = 'LinkedIn';
-  const noJobs = LANG === 'de' ? 'Keine Stellenseite' : 'No jobs page';
-  const addressLabel = LANG === 'de' ? 'Adresse' : 'Address';
-  const roleLabel2 = LANG === 'de' ? 'GIS-Rolle' : 'GIS Role';
-  const sizeLabel2 = LANG === 'de' ? 'Größe' : 'Size';
-  const techLabel  = LANG === 'de' ? 'Tech-Stack' : 'Tech stack';
-  const langLabel  = LANG === 'de' ? 'Sprache' : 'Language';
-  const langVal = c.lang === 'ENG' ? (LANG === 'de' ? 'Englisch' : 'English')
-                : c.lang === 'DE'  ? (LANG === 'de' ? 'Deutsch' : 'German')
-                : (LANG === 'de' ? 'Englisch / Deutsch' : 'English / German');
-  const techTags = c.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
-  const careersBtn = c.careers
-    ? `<a class="pop-btn pop-primary" href="${c.careers}" target="_blank">${careersLabel}</a>`
-    : `<span class="pop-btn pop-disabled">${noJobs}</span>`;
-  const linkedinBtn = c.linkedin
-    ? `<a class="pop-btn pop-secondary" href="${c.linkedin}" target="_blank">${linkedinLabel}</a>`
-    : '';
-
-  return `
-    <div class="pop-header">
-      <div class="pop-name">${c.name}</div>
-      <div class="pop-sector">${sectorText(c.sector)}</div>
-    </div>
-    <div class="pop-body">
-      <div class="pop-row">
-        <span class="pop-lbl">${addressLabel}</span>
-        <span class="pop-val">${c.address}</span>
-      </div>
-      <div class="pop-row">
-        <span class="pop-lbl">${roleLabel2}</span>
-        <span class="pop-val">
-          <span class="c-badge ${roleClass(c.role)}" style="font-size:10px;padding:2px 8px;">${roleLabel}</span>
-        </span>
-      </div>
-      <div class="pop-row">
-        <span class="pop-lbl">${sizeLabel2}</span>
-        <span class="pop-val">${sizeLabel}</span>
-      </div>
-      <div class="pop-row">
-        <span class="pop-lbl">${langLabel}</span>
-        <span class="pop-val">${langVal}</span>
-      </div>
-      <div class="pop-row">
-        <span class="pop-lbl">${techLabel}</span>
-        <span class="pop-val"><div class="tech-wrap">${techTags}</div></span>
-      </div>
-    </div>
-    ${about ? `<div class="pop-about">${about}</div>` : ''}
-    <div class="pop-actions">
-      ${careersBtn}
-      ${linkedinBtn}
-    </div>
-  `;
-}
-
-// ─── Show detail in sidebar ───────────────────────────────────────────────────
-let activeCompany = null;
-
-function showDetail(c) {
-  activeCompany = c;
-  const about = LANG === 'de' ? (c.about_de || c.about_en) : c.about_en;
-  const langText = c.lang === 'ENG' ? (LANG === 'de' ? 'Englisch' : 'English')
-                 : c.lang === 'DE'  ? (LANG === 'de' ? 'Deutsch' : 'German')
-                 : (LANG === 'de' ? 'Englisch / Deutsch' : 'English / German');
-  const careersLabel = LANG === 'de' ? 'Stellen ansehen' : 'View Jobs';
-  const reviewsLabel = LANG === 'de' ? 'Bewertungen lesen' : 'Read Reviews';
-  const addrLabel = LANG === 'de' ? 'Adresse' : 'Address';
-  const techTags = (Array.isArray(c.tech) ? c.tech : (c.tech||'').split(','))
-    .map(t => t.trim()).filter(Boolean)
-    .map(t => `<span class="tech-tag">${t}</span>`).join('');
-  const sector = sectorText(c.sector);
-  const kununuBtn = c.kununu
-    ? `<a class="pop-btn-kununu" href="${c.kununu}" target="_blank">${reviewsLabel}</a>`
-    : '';
-  const careersBtn = c.careers
-    ? `<a class="pop-btn-careers" href="${c.careers}" target="_blank">${careersLabel}</a>`
-    : '';
-  const linkedinBtn = c.linkedin
-    ? `<a class="pop-btn pop-secondary" href="${c.linkedin}" target="_blank">LinkedIn</a>`
-    : '';
-  const secondRow = (kununuBtn || linkedinBtn)
-    ? `<div class="detail-actions-row">${kununuBtn}${linkedinBtn}</div>` : '';
-  document.getElementById('detail-content').innerHTML = `
-    <div class="detail-name">${c.name}</div>
-    <div class="detail-sector">${sector}</div>
-    <div class="detail-meta">${c.size} · ${langText}${c.kununu_rating ? ` · <span class="kununu-rating">★ ${c.kununu_rating}</span>` : ''}</div>
-    ${c.address ? `<div style="font-size:11px;color:var(--muted);margin-bottom:8px;">${c.address}</div>` : ''}
-    ${c.website ? `<a class="detail-website" href="${c.website}" target="_blank">${c.website.replace(/^https?:\/\//,'')}</a>` : ''}
-    <hr class="detail-divider">
-    ${about ? `<div class="detail-about">${about}</div>` : ''}
-    ${techTags ? `<div class="tech-wrap" style="margin-top:10px;">${techTags}</div>` : ''}
-    <div class="detail-actions">${careersBtn}${secondRow}</div>
-  `;
-  document.getElementById('detail-panel').style.display = 'flex';
-  document.getElementById('filters').style.display = 'none';
-  document.getElementById('company-list').style.display = 'none';
-  setActiveCard(c.id);
-}
-
-function hideDetail() {
-  activeCompany = null;
-  document.getElementById('sidebar').classList.remove('detail-open');
-  document.getElementById('detail-panel').style.display = 'none';
-  document.getElementById('filters').style.display = 'block';
-  document.getElementById('company-list').style.display = 'flex';
-  setActiveCard(null);
-  if (activePopup) { activePopup.remove(); activePopup = null; }
-}
-
-function openPopup(c) {
-  showDetail(c);
-  // Minimal tooltip on map
-  if (activePopup) activePopup.remove();
-  activePopup = new mapboxgl.Popup({ closeButton: false, maxWidth: '200px', offset: 18, className: 'mini-popup' })
-    .setLngLat([c.lng, c.lat])
-    .setHTML(`<div style="padding:7px 11px;"><div style="font-weight:600;font-size:13px;">${c.name}</div><div style="font-size:11px;color:#219ebc;margin-top:2px;">${sectorText(c.sector)}</div></div>`)
-    .addTo(map);
-}
-
-// ─── Markers ──────────────────────────────────────────────────────────────────
 function createMarker(c) {
-  const color = markerColor(c.sector);
-  // Outer el: passed to Mapbox — never touch its transform (Mapbox uses it for positioning)
   const el = document.createElement('div');
-  el.style.cssText = 'width:13px;height:13px;cursor:pointer;';
-  // Inner dot: all visual styling and scale effects go here
-  const dot = document.createElement('div');
-  dot.style.cssText = `
-    width:13px;height:13px;border-radius:50%;
-    background:${color};border:2px solid rgba(255,255,255,.9);
-    box-shadow:0 0 0 1.5px ${color}99,0 2px 6px rgba(0,0,0,.35);
-    transition:transform .13s;will-change:transform;
-  `;
-  el.appendChild(dot);
-  el.addEventListener('mouseenter', () => dot.style.transform = 'scale(1.7)');
-  el.addEventListener('mouseleave', () => {
-    dot.style.transform = activeCardId === c.id ? 'scale(1.5)' : 'scale(1)';
+  el.className = 'mk';
+  el.setAttribute('role', 'button');
+  el.setAttribute('tabindex', '0');
+  el.setAttribute('aria-label', c.name);
+  el.innerHTML = '<span class="mk-dot"></span>';
+  el.addEventListener('click', e => { e.stopPropagation(); select(c.id, { fly: true }); });
+  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(c.id, { fly: true }); } });
+  el.addEventListener('mouseenter', () => {
+    if (hoverPopup) hoverPopup.remove();
+    hoverPopup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: 14 })
+      .setLngLat([c.lng, c.lat])
+      .setHTML(`<div class="pop-name">${esc(c.name)}</div><div class="pop-sector">${esc(sectorText(c.sector))}</div>`)
+      .addTo(map);
   });
-  el.addEventListener('click', e => {
-    e.stopPropagation();
-    map.flyTo({ center: [c.lng, c.lat], zoom: Math.max(map.getZoom(), 13), duration: 400 });
-    openPopup(c);
-  });
-  const marker = new mapboxgl.Marker({ element: el, anchor: 'center' })
-    .setLngLat([c.lng, c.lat]).addTo(map);
-  return { marker, dot };
+  el.addEventListener('mouseleave', () => { if (hoverPopup) { hoverPopup.remove(); hoverPopup = null; } });
+  return new mapboxgl.Marker({ element: el, anchor: 'center' }).setLngLat([c.lng, c.lat]).addTo(map);
 }
 
-// ─── Card list ────────────────────────────────────────────────────────────────
-function setActiveCard(id) {
-  activeCardId = id;
-  document.querySelectorAll('.c-card').forEach(el => {
-    el.classList.toggle('active', +el.dataset.id === id);
-    if (+el.dataset.id === id) el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-  });
-  Object.entries(markers).forEach(([cid, { dot }]) => {
-    dot.style.transform = +cid === id ? 'scale(1.5)' : 'scale(1)';
-  });
+function fitTo(list) {
+  const pts = list.filter(c => isFinite(c.lat) && isFinite(c.lng));
+  if (!pts.length) return;
+  if (pts.length === 1) { map.flyTo({ center: [pts[0].lng, pts[0].lat], zoom: 12, duration: 400 }); return; }
+  const lngs = pts.map(c => c.lng), lats = pts.map(c => c.lat);
+  map.fitBounds([[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]], { padding: 60, duration: 400, maxZoom: 12 });
 }
 
-function buildList(companies) {
-  // Sort by kununu_rating descending (nulls at end)
-  companies = [...companies].sort((a, b) => {
-    if (a.kununu_rating && b.kununu_rating) return b.kununu_rating - a.kununu_rating;
-    if (a.kununu_rating) return -1;
-    if (b.kununu_rating) return 1;
-    return 0;
-  });
-  const list = document.getElementById('company-list');
-  list.querySelectorAll('.c-card').forEach(el => el.remove());
-  document.getElementById('no-results').style.display = companies.length ? 'none' : 'block';
-
-  companies.forEach(c => {
-    const div = document.createElement('div');
-    div.className = 'c-card';
-    div.dataset.id = c.id;
-    div.innerHTML = `
-      <div class="c-name">${c.name}</div>
-      <div class="c-meta"><span>${c.city}</span><span>${c.size}</span><span>${langFlag(c.lang)}</span>${c.kununu_rating ? `<span class="c-rating">★ ${c.kununu_rating}</span>` : ''}</div>
-      <span class="c-badge ${sectorClass(c.sector)}" style="font-size:10px;padding:1px 7px;">${sectorText(c.sector)}</span>
-    `;
-    div.addEventListener('click', () => {
-      map.flyTo({ center: [c.lng, c.lat], zoom: Math.max(map.getZoom(), 13), duration: 450 });
-      openPopup(c);
-    });
-    list.insertBefore(div, document.getElementById('no-results'));
-  });
-
-  const vc = document.getElementById('visible-count'); if (vc) vc.textContent = companies.length;
+// ─── Selection & detail ───────────────────────────────────────────────────────
+function select(id, opts = {}) {
+  selectedId = id;
+  Object.entries(markers).forEach(([cid, m]) => m.getElement().classList.toggle('on', +cid === id));
+  const c = COMPANIES.find(x => x.id === id);
+  if (c && opts.fly) map.flyTo({ center: [c.lng, c.lat], zoom: Math.max(map.getZoom(), 12), duration: 450 });
+  renderPanel();
 }
 
-// ─── Filters ──────────────────────────────────────────────────────────────────
-function applyFilters() {
-  const visible = COMPANIES.filter(matchesFilters);
-  COMPANIES.forEach(c => {
-    if (markers[c.id]) {
-      markers[c.id].marker.getElement().style.display =
-        visible.includes(c) ? 'block' : 'none';
-    }
-  });
-  buildList(visible);
-  if (activeCompany && !visible.find(c => c.id === activeCompany.id)) hideDetail();
+function detailHTML(c) {
+  const about = LANG === 'de' ? (c.about_de || c.about_en) : (c.about_en || c.about_de);
+  const web = safeUrl(c.website), jobs = safeUrl(c.careers), rev = safeUrl(c.kununu), li = safeUrl(c.linkedin);
+  const meta = [c.size, langText(c.lang)].filter(Boolean).map(esc);
+  if (c.rating) meta.push(`<span class="star">${starSvg}${esc(c.rating)}</span>`);
+  const second = [
+    rev ? `<a class="btn btn-ghost" href="${esc(rev)}" target="_blank" rel="noopener">${esc(t('reviews'))}</a>` : '',
+    li ? `<a class="btn btn-ghost" href="${esc(li)}" target="_blank" rel="noopener">LinkedIn</a>` : '',
+  ].join('');
+  return `
+    <button type="button" class="back" data-act="back">${esc(t('back'))}</button>
+    <div>
+      <h2 class="d-name">${esc(c.name)}</h2>
+      ${c.sector ? `<p class="d-sector">${esc(sectorText(c.sector))}</p>` : ''}
+      ${meta.length ? `<p class="d-meta">${meta.join('<span class="sep">·</span>')}</p>` : ''}
+      ${c.address ? `<p class="d-addr">${esc(c.address)}</p>` : ''}
+      ${web ? `<a class="d-web" href="${esc(web)}" target="_blank" rel="noopener">${esc(web.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}
+    </div>
+    ${about ? `<div class="d-block"><span class="label">${esc(t('about'))}</span><p class="d-about">${esc(about)}</p></div>` : ''}
+    ${c.tech.length ? `<div class="d-block"><span class="label">${esc(t('tech'))}</span><div class="tags">${c.tech.map(x => `<span class="tag">${esc(x)}</span>`).join('')}</div></div>` : ''}
+    <div class="actions">
+      ${jobs ? `<a class="btn" href="${esc(jobs)}" target="_blank" rel="noopener">${esc(t('view_jobs'))}</a>` : `<span class="btn btn-ghost" aria-disabled="true" style="cursor:default">${esc(t('no_jobs'))}</span>`}
+      ${second ? `<div class="actions-row">${second}</div>` : ''}
+    </div>`;
 }
 
-document.getElementById('back-btn').addEventListener('click', hideDetail);
+// ─── Rendering ────────────────────────────────────────────────────────────────
+function renderPanel() {
+  const c = COMPANIES.find(x => x.id === selectedId);
+  const detail = $('#panel-detail');
+  $('#panel-list').hidden = !!c;
+  detail.hidden = !c;
+  if (c) { detail.innerHTML = detailHTML(c); detail.scrollTop = 0; return; }
 
-// Role / size / lang / city chips (sector chips get listeners in buildSectorChips)
-document.querySelectorAll('.chip:not([data-filter="sector"])').forEach(chip => {
-  chip.addEventListener('click', () => {
-    const key = chip.dataset.filter;
-    const val = chip.dataset.value;
-    const wasActive = chip.classList.contains('active');
-    document.querySelectorAll(`.chip[data-filter="${key}"]`).forEach(c => c.classList.remove('active'));
-    if (!wasActive) { chip.classList.add('active'); activeFilters[key] = val; }
-    else            { activeFilters[key] = null; }
-    applyFilters();
+  const list = $('#list');
+  if (loadState !== 'ready') {
+    list.innerHTML = `<div class="empty">${esc(t(loadState === 'error' ? 'load_error' : 'loading'))}</div>`;
+    $('#list-count').textContent = '';
+    return;
+  }
+  const v = visible();
+  $('#list-count').textContent = t('employers_n')(v.length);
+  list.innerHTML = v.length ? v.map(c => `
+    <button type="button" class="row" data-id="${c.id}">
+      <span><span class="row-name">${esc(c.name)}</span>
+      <span class="row-meta" style="display:block">${esc([cityText(c.city), sectorText(c.sector)].filter(Boolean).join(' · '))}${c.rating ? ` · ★ ${esc(c.rating)}` : ''}</span></span>
+      <span class="row-dot"></span>
+    </button>`).join('') : `<div class="empty">${esc(t('no_results'))}</div>`;
+}
+
+function renderMarkers() {
+  const ids = new Set(COMPANIES.filter(matches).map(c => c.id));
+  Object.entries(markers).forEach(([id, m]) => { m.getElement().style.display = ids.has(+id) ? '' : 'none'; });
+  if (selectedId !== null && !ids.has(selectedId)) select(null);
+}
+
+function chipHTML(value, label, pressed, extraClass = '') {
+  return `<button type="button" class="chip ${extraClass}" data-value="${esc(value)}" aria-pressed="${pressed}">${esc(label)}</button>`;
+}
+
+function renderFilters() {
+  const sectors = [...new Set(COMPANIES.flatMap(c => sectorParts(c.sector)))]
+    .sort((a, b) => (LANG === 'de' ? (SECTOR_DE[a] || a) : a).localeCompare(LANG === 'de' ? (SECTOR_DE[b] || b) : b));
+  $('#sector-chips').innerHTML = sectors.map(s => chipHTML(s, LANG === 'de' ? (SECTOR_DE[s] || s) : s, F.sectors.has(s))).join('');
+  $('#role-chips').innerHTML = chipHTML('', t('all'), !F.role, 'dark') + ROLES.map(r => chipHTML(r, roleText(r), F.role === r, 'dark')).join('');
+  $('#lang-chips').innerHTML = ['', 'en', 'de'].map(l => chipHTML(l, t('lang_short')[l || 'all'], (F.lang || '') === l, 'dark')).join('');
+  const sizes = SIZES.filter(s => COMPANIES.some(c => c.size === s));
+  $('#size-chips').innerHTML = (sizes.length ? sizes : SIZES).map(s => chipHTML(s, s.replace('-', '–'), F.sizes.has(s), 'dark')).join('');
+  const techs = [...new Set(COMPANIES.flatMap(c => c.tech))].sort((a, b) => a.localeCompare(b));
+  $('#tech-chips').innerHTML = techs.map(x => chipHTML(x, x, F.techs.has(x), 'dark')).join('');
+  $('#more').hidden = !moreOpen;
+  const n = extraCount();
+  const tog = $('#more-toggle');
+  tog.classList.toggle('on', moreOpen || n > 0);
+  tog.setAttribute('aria-expanded', String(moreOpen));
+  $('#more-label').textContent = n ? `${t('filters')} · ${n}` : t('filters');
+  $('#city-options').innerHTML = CITIES.map(c => `<option value="${esc(c[LANG])}"></option>`).join('');
+}
+
+function renderDirectory() {
+  const body = $('#dir-body');
+  if (loadState !== 'ready') {
+    body.innerHTML = '';
+    $('#dir-empty').hidden = false;
+    $('#dir-empty').textContent = t(loadState === 'error' ? 'load_error' : 'loading');
+    $('#dir-count').textContent = '';
+    return;
+  }
+  const v = visible();
+  $('#dir-count').textContent = t('employers_n')(v.length);
+  $('#dir-empty').hidden = v.length > 0;
+  $('#dir-empty').textContent = t('no_results');
+  body.innerHTML = v.map(c => {
+    const jobs = safeUrl(c.careers);
+    return `<tr>
+      <td><button type="button" class="t-name" data-open="${c.id}">${esc(c.name)}</button></td>
+      <td>${esc(cityText(c.city))}</td>
+      <td class="muted">${esc(sectorText(c.sector))}</td>
+      <td class="muted">${esc(roleText(c.role))}</td>
+      <td class="muted">${esc(c.lang === 'DE/ENG' ? 'EN / DE' : c.lang === 'ENG' ? 'EN' : c.lang || '')}</td>
+      <td class="muted">${c.rating ? `<span class="star">${starSvg}${esc(c.rating)}</span>` : '–'}</td>
+      <td class="right">${jobs ? `<a href="${esc(jobs)}" target="_blank" rel="noopener">${esc(t('view_jobs_row'))}</a>` : '<span style="color:var(--muted)">–</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderCities() {
+  $('#city-grid').innerHTML = CITIES.map((city, i) => {
+    const n = COMPANIES.filter(c => cityOf(c.city) === city).length;
+    const label = loadState !== 'ready' ? '' : (n ? t('employers_n')(n) : t('coming'));
+    const off = loadState === 'ready' && n === 0;
+    return `<button type="button" class="city-card" data-city="${esc(city[LANG])}" ${off ? 'disabled' : ''}>
+      <span class="city-top"><span>${String(i + 1).padStart(2, '0')}</span><span>${esc(label)}</span></span>
+      <span class="city-name">${esc(city[LANG])}</span>
+    </button>`;
+  }).join('');
+}
+
+function renderStatic() {
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-i18n]').forEach(el => { const v = t(el.dataset.i18n); if (typeof v === 'string') el.textContent = v; });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  document.querySelectorAll('[data-setlang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setlang === LANG)));
+}
+
+function renderAll() {
+  renderStatic();
+  renderFilters();
+  renderMarkers();
+  renderPanel();
+  renderDirectory();
+  renderCities();
+}
+
+// ─── Routing (#map · #employers · #cities) ────────────────────────────────────
+function route() {
+  const r = (location.hash || '#map').slice(1);
+  const view = ['map', 'employers', 'cities'].includes(r) ? r : 'map';
+  document.querySelectorAll('[data-view]').forEach(s => { s.hidden = s.dataset.view !== view; });
+  document.querySelectorAll('[data-route]').forEach(a => {
+    if (a.dataset.route === view) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
   });
+  if (view === 'map') requestAnimationFrame(() => map.resize());
+}
+window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); });
+
+// ─── Events ───────────────────────────────────────────────────────────────────
+function setLang(l) {
+  LANG = l;
+  try { localStorage.setItem('gc-lang', l); } catch (e) {}
+  renderAll();
+}
+document.querySelectorAll('[data-setlang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.setlang)));
+
+$('#q').addEventListener('input', e => { F.q = e.target.value; renderMarkers(); renderPanel(); renderDirectory(); });
+$('#hero-search').addEventListener('submit', e => {
+  e.preventDefault();
+  select(null);
+  fitTo(COMPANIES.filter(matches));
+  $('#explorer').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+$('#city').addEventListener('input', e => { F.city = e.target.value; renderMarkers(); renderPanel(); renderDirectory(); });
 
-document.getElementById('reset-btn').addEventListener('click', () => {
-  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-  Object.keys(activeFilters).forEach(k => activeFilters[k] = null);
-  applyFilters();
+$('#list').addEventListener('click', e => { const b = e.target.closest('.row'); if (b) select(+b.dataset.id, { fly: true }); });
+$('#panel-detail').addEventListener('click', e => { if (e.target.closest('[data-act="back"]')) select(null); });
+
+function toggleIn(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
+function onFilterChange() { renderFilters(); renderMarkers(); renderPanel(); renderDirectory(); }
+$('#sector-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; toggleIn(F.sectors, b.dataset.value); onFilterChange(); });
+$('#role-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; F.role = b.dataset.value || null; onFilterChange(); });
+$('#lang-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; F.lang = b.dataset.value || null; onFilterChange(); });
+$('#size-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; toggleIn(F.sizes, b.dataset.value); onFilterChange(); });
+$('#tech-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; toggleIn(F.techs, b.dataset.value); onFilterChange(); });
+$('#more-toggle').addEventListener('click', () => { moreOpen = !moreOpen; renderFilters(); });
+$('#done').addEventListener('click', () => { moreOpen = false; renderFilters(); });
+$('#clear').addEventListener('click', () => { F.role = null; F.lang = null; F.sizes.clear(); F.techs.clear(); onFilterChange(); });
+
+$('#dir-body').addEventListener('click', e => {
+  const b = e.target.closest('[data-open]');
+  if (!b) return;
+  location.hash = '#map';
+  setTimeout(() => { select(+b.dataset.open, { fly: true }); $('#explorer').scrollIntoView({ block: 'start' }); }, 60);
 });
-
-// ─── Set default language ─────────────────────────────────────────────────────
-setLang('de');
+$('#city-grid').addEventListener('click', e => {
+  const b = e.target.closest('.city-card');
+  if (!b || b.disabled) return;
+  F.city = b.dataset.city;
+  $('#city').value = F.city;
+  onFilterChange();
+  location.hash = '#employers';
+});
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
-map.on('load', async () => {
+try { const saved = localStorage.getItem('gc-lang'); if (saved === 'en' || saved === 'de') LANG = saved; } catch (e) {}
+route();
+renderAll();
+
+async function loadData() {
   try {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     COMPANIES = (await res.json()).map(c => ({
-      id:            c.id,
-      name:          c.c_name,
-      website:       c.c_url,
-      address:       c.adress,
-      city:          c.city,
-      sector:        c.sector,
-      role:          c.g_role,
-      tech:          (c.g_stack || '').split(',').map(t => t.trim()).filter(Boolean),
-      size:          c.size,
-      careers:       c.kp_url,
-      kununu:        c.kununu_url,
-      kununu_rating: c.kununu_rate ? parseFloat(c.kununu_rate) : null,
-      linkedin:      c.li_url,
-      about_en:      c.eng,
-      about_de:      c.de,
-      lang:          c.sprach,
-      lat:           parseFloat(c.lat),
-      lng:           parseFloat(c.lon),
-    }));
+      id:       Number(c.id),
+      name:     c.c_name || '',
+      website:  c.c_url,
+      address:  c.adress,
+      city:     c.city,
+      sector:   c.sector,
+      role:     c.g_role,
+      tech:     (c.g_stack || '').split(',').map(x => x.trim()).filter(Boolean),
+      size:     c.size,
+      careers:  c.kp_url,
+      kununu:   c.kununu_url,
+      rating:   c.kununu_rate ? parseFloat(c.kununu_rate) : null,
+      linkedin: c.li_url,
+      about_en: c.eng,
+      about_de: c.de,
+      lang:     c.sprach,
+      lat:      parseFloat(c.lat),
+      lng:      parseFloat(c.lon),
+    })).filter(c => c.name);
+    loadState = 'ready';
   } catch (err) {
     console.error('Failed to load company data:', err);
+    loadState = 'error';
+    renderAll();
     return;
   }
-  buildSectorChips();
-  buildTechChips();
-  COMPANIES.forEach(c => { markers[c.id] = createMarker(c); });
-  buildList(COMPANIES);
-
-  // Fit map to show all markers
-  const lngs = COMPANIES.map(c => c.lng);
-  const lats = COMPANIES.map(c => c.lat);
-  map.fitBounds(
-    [[Math.min(...lngs) - 0.3, Math.min(...lats) - 0.3],
-     [Math.max(...lngs) + 0.3, Math.max(...lats) + 0.3]],
-    { padding: 40, duration: 0 }
-  );
-
-});
-
-// ─── Visitor counter ──────────────────────────────────────────────────────────
-
+  const place = () => {
+    COMPANIES.forEach(c => { if (isFinite(c.lat) && isFinite(c.lng)) markers[c.id] = createMarker(c); });
+    renderAll();
+    fitTo(COMPANIES);
+  };
+  if (map.loaded()) place(); else map.on('load', place);
+}
+loadData();
 </script>
 </body>
 </html>
