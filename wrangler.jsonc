@@ -9,5 +9,7 @@
   "assets": {
     "directory": "./public",
     "not_found_handling": "single-page-application"
-  }
+  },
+  // Lets Cloudflare build a preview for non-main branches (wrangler preview needs this block; it can stay empty).
+  "previews": {}
 }
