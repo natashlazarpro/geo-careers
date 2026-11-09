@@ -1,329 +1,5 @@
 [
  {
-  "key": "stadt leipzig amt für geoinformation und bodenordnung|Leipzig",
-  "c_name": "Stadt Leipzig – Amt für Geoinformation und Bodenordnung",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "helmholtz zentrum für umweltforschung ufz|Leipzig",
-  "c_name": "Helmholtz-Zentrum für Umweltforschung – UFZ",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "deutsches zentrum für integrative biodiversitätsforschung idiv|Leipzig",
-  "c_name": "Deutsches Zentrum für integrative Biodiversitätsforschung (iDiv)",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "leibniz institut für länderkunde ifl|Leipzig",
-  "c_name": "Leibniz-Institut für Länderkunde (IfL)",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "universität leipzig institut für geographie|Leipzig",
-  "c_name": "Universität Leipzig – Institut für Geographie",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig",
-  "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "dbfz deutsches biomasseforschungszentrum ggmbh|Leipzig",
-  "c_name": "DBFZ Deutsches Biomasseforschungszentrum gGmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "ontras gastransport|Leipzig",
-  "c_name": "ONTRAS Gastransport GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "vng|Leipzig",
-  "c_name": "VNG AG",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "leipziger verkehrsbetriebe lvb|Leipzig",
-  "c_name": "Leipziger Verkehrsbetriebe (LVB) GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "kommunale wasserwerke leipzig|Leipzig",
-  "c_name": "Kommunale Wasserwerke Leipzig GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "netz leipzig|Leipzig",
-  "c_name": "Netz Leipzig GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
-  "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "db infrago|Leipzig",
-  "c_name": "DB InfraGO AG",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "geo net solution|Leipzig",
-  "c_name": "geo net solution GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "ggd gesellschaft für geowissenschaftliche dienste|Leipzig",
-  "c_name": "GGD Gesellschaft für Geowissenschaftliche Dienste mbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "cdm smith|Leipzig",
-  "c_name": "CDM Smith SE",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "leipziger institut für energie|Leipzig",
-  "c_name": "Leipziger Institut für Energie GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "landesdirektion sachsen|Leipzig",
-  "c_name": "Landesdirektion Sachsen",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "regionaler planungsverband leipzig westsachsen|Leipzig",
-  "c_name": "Regionaler Planungsverband Leipzig-Westsachsen",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "iproconsult|Leipzig",
-  "c_name": "IPROconsult GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "tilia|Leipzig",
-  "c_name": "Tilia GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "dbi gas und umwelttechnik|Leipzig",
-  "c_name": "DBI Gas- und Umwelttechnik GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "mitteldeutsche flughafen flughafen leipzig halle|Leipzig",
-  "c_name": "Mitteldeutsche Flughafen AG (Flughafen Leipzig/Halle)",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "arcadis|Leipzig",
-  "c_name": "Arcadis Germany GmbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
-  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
-  "city": "Leipzig",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "stadt dortmund vermessungs und katasteramt|Dortmund",
-  "c_name": "Stadt Dortmund – Vermessungs- und Katasteramt",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "amprion|Dortmund",
-  "c_name": "Amprion GmbH",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "westnetz|Dortmund",
-  "c_name": "Westnetz GmbH",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "adesso|Dortmund",
-  "c_name": "adesso SE",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "tu dortmund fakultät raumplanung|Dortmund",
-  "c_name": "TU Dortmund – Fakultät Raumplanung",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
-  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "planersocietät|Dortmund",
-  "c_name": "Planersocietät",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "dsw21 dortmunder stadtwerke|Dortmund",
-  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
-  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "thyssengas|Dortmund",
-  "c_name": "Thyssengas GmbH",
-  "city": "Dortmund",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
   "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
   "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
   "city": "Dortmund",
@@ -443,6 +119,204 @@
  {
   "key": "stadt essen amt für geoinformation vermessung und kataster|Essen",
   "c_name": "Stadt Essen – Amt für Geoinformation, Vermessung und Kataster",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "rwe|Essen",
+  "c_name": "RWE AG",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "e on|Essen",
+  "c_name": "E.ON SE",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "westenergie|Essen",
+  "c_name": "Westenergie AG",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "open grid europe|Essen",
+  "c_name": "Open Grid Europe GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "dmt|Essen",
+  "c_name": "DMT GmbH & Co. KG",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "cadmap consulting ingenieurgesellschaft|Essen",
+  "c_name": "CADMAP Consulting Ingenieurgesellschaft mbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "hochtief|Essen",
+  "c_name": "HOCHTIEF AG",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "aldi einkauf aldi nord|Essen",
+  "c_name": "ALDI Einkauf SE & Co. oHG (ALDI Nord)",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "universität duisburg essen institut für geographie|Essen",
+  "c_name": "Universität Duisburg-Essen – Institut für Geographie",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "ruhrbahn|Essen",
+  "c_name": "Ruhrbahn GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "stadtwerke essen|Essen",
+  "c_name": "Stadtwerke Essen AG",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "fischer teamplan ingenieurbüro|Essen",
+  "c_name": "FISCHER TEAMPLAN Ingenieurbüro GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "rag montan immobilien|Essen",
+  "c_name": "RAG Montan Immobilien GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "geosat|Essen",
+  "c_name": "GEOsat GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "iww rheinisch westfälisches institut für wasserforschung|Essen",
+  "c_name": "IWW Rheinisch-Westfälisches Institut für Wasserforschung",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "allbau|Essen",
+  "c_name": "Allbau GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "entsorgungsbetriebe essen ebe|Essen",
+  "c_name": "Entsorgungsbetriebe Essen GmbH (EBE)",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "gelsenwasser|Essen",
+  "c_name": "GELSENWASSER AG",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "stadt gelsenkirchen vermessung und kataster|Essen",
+  "c_name": "Stadt Gelsenkirchen – Vermessung und Kataster",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "stadt mülheim an der ruhr vermessung und kataster|Essen",
+  "c_name": "Stadt Mülheim an der Ruhr – Vermessung und Kataster",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "business metropole ruhr|Essen",
+  "c_name": "Business Metropole Ruhr GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "iqony steag|Essen",
+  "c_name": "Iqony GmbH (STEAG)",
   "city": "Essen",
   "address_from_job_ad": null,
   "open_jobs": 0,
