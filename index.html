@@ -190,7 +190,35 @@
 
     [hidden] { display: none !important; }
 
+    /* ── Suggest ────────────────────────────────────────────────────────────── */
+    .suggest { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; padding-top: 40px; }
+    .suggest-intro { flex: 1 1 300px; display: flex; flex-direction: column; gap: 20px; }
+    .suggest-rules { border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 1.55; }
+    .suggest-rules p { margin: 0; }
+    .suggest-card { flex: 999 1 520px; min-width: 0; background: var(--surface); border: 1px solid var(--line); padding: 32px; }
+    #suggest-form { display: flex; flex-direction: column; gap: 20px; }
+    .sg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .sg-field { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+    .sg-field input, .sg-field textarea { border: 1px solid var(--field); background: var(--surface); padding: 0 14px; height: 46px; font: inherit; font-size: 14px; color: var(--text); border-radius: 8px; }
+    .sg-field textarea { height: auto; padding: 12px 14px; resize: vertical; }
+    .sg-field small { font-size: 12px; color: var(--muted); }
+    .sg-field .opt { font-style: normal; color: var(--muted); }
+    .sg-field [aria-invalid="true"] { border-color: var(--accent); }
+    .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+    .sg-error { margin: 0; font-size: 13px; color: var(--accent-ink); }
+    .sg-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid var(--line); padding-top: 20px; font-size: 12px; color: var(--muted); }
+    .sg-foot .btn { padding: 0 28px; }
+    .sg-foot .btn[disabled] { opacity: .6; cursor: default; }
+    .sg-done { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 40px 0; }
+    .sg-done h2 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1; }
+    .sg-done p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 420px; }
+    .sg-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+    .sg-done-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; padding-top: 8px; font-size: 14px; }
+    .sg-done-actions .btn { height: 44px; }
+
     @media (max-width: 640px) {
+      .suggest { gap: 32px; }
+      .suggest-card { padding: 20px; }
       .wrap { padding: 0 16px; }
       .hero { padding: 32px 16px 24px; }
       .nav { gap: 16px; }
@@ -208,7 +236,7 @@
       <a href="#map" data-route="map" data-i18n="nav_map">Map</a>
       <a href="#employers" data-route="employers" data-i18n="nav_employers">Employers</a>
       <a href="#cities" data-route="cities" data-i18n="nav_cities">Cities</a>
-      <a class="nav-ghost" href="https://github.com/natashlazarpro/gis-jobs-berlin" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="nav-ghost" href="#suggest" data-route="suggest" data-i18n="nav_suggest">Suggest</a>
       <div class="seg small" role="group" aria-label="Language">
         <button type="button" data-setlang="en" aria-pressed="false">EN</button>
         <button type="button" data-setlang="de" aria-pressed="true">DE</button>
@@ -312,6 +340,62 @@
       <div class="city-grid" id="city-grid"></div>
     </div>
   </section>
+
+  <!-- ═══ SUGGEST ═══ -->
+  <section id="view-suggest" data-view="suggest" hidden>
+    <div class="wrap suggest">
+      <div class="suggest-intro">
+        <p class="eyebrow" data-i18n="sg_eyebrow">Contribute</p>
+        <h1 class="title" data-i18n-html="sg_title">Suggest an <em>employer</em></h1>
+        <p class="sub" data-i18n="sg_sub">Know a company doing GIS or geodata work that isn't on the map yet? Send it in.</p>
+        <div class="suggest-rules">
+          <span class="label" data-i18n="sg_rules">What counts</span>
+          <p data-i18n="sg_rule1">Any company that works with GIS or geodata — whether or not it's hiring right now.</p>
+          <p data-i18n="sg_rule2">The careers link should be the company's own careers page, not a LinkedIn or job-board listing.</p>
+          <p data-i18n="sg_rule3">Any city in Germany — not only the ten on the map today.</p>
+        </div>
+      </div>
+
+      <div class="suggest-card">
+        <form id="suggest-form" novalidate>
+          <div class="sg-grid">
+            <label class="sg-field"><span data-i18n="sg_company">Company name</span>
+              <input name="company" type="text" required maxlength="150" autocomplete="organization" />
+            </label>
+            <label class="sg-field"><span data-i18n="sg_city">City</span>
+              <input name="city" type="text" required maxlength="80" data-i18n-ph="sg_city_ph" placeholder="Any city in Germany, e.g. Potsdam" />
+            </label>
+          </div>
+          <label class="sg-field"><span data-i18n="sg_url">Careers page URL</span>
+            <input name="careers_url" type="url" maxlength="400" inputmode="url" placeholder="https://company.de/karriere" />
+            <small data-i18n="sg_url_hint">The company's own site, please.</small>
+          </label>
+          <label class="sg-field"><span><span data-i18n="sg_tools">GIS tools they use</span> <em class="opt" data-i18n="sg_optional">(optional)</em></span>
+            <input name="tools" type="text" maxlength="300" placeholder="ArcGIS Pro, QGIS, PostGIS …" />
+          </label>
+          <label class="sg-field"><span><span data-i18n="sg_note">Anything else</span> <em class="opt" data-i18n="sg_optional">(optional)</em></span>
+            <textarea name="note" rows="4" maxlength="1500"></textarea>
+          </label>
+          <label class="hp" aria-hidden="true">Website <input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+          <p class="sg-error" id="sg-error" role="alert" hidden></p>
+          <div class="sg-foot">
+            <span data-i18n="sg_privacy">No account needed. Nothing is published without review.</span>
+            <button class="btn" type="submit" id="sg-submit" data-i18n="sg_send">Send suggestion</button>
+          </div>
+        </form>
+
+        <div class="sg-done" id="sg-done" hidden>
+          <span class="sg-dot" aria-hidden="true"></span>
+          <h2 data-i18n="sg_thanks">Thank you — it's in the queue.</h2>
+          <p data-i18n="sg_thanks_sub">Every suggestion is checked by hand before it goes on the map.</p>
+          <div class="sg-done-actions">
+            <button type="button" class="btn btn-ghost" id="sg-again" data-i18n="sg_again">Suggest another</button>
+            <a href="#map" data-i18n="sg_back">Back to the map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -346,6 +430,19 @@ const ROLES = ['Core product', 'Dedicated team', 'Side tool'];
 const T = {
   en: {
     nav_map: 'Map', nav_employers: 'Employers', nav_cities: 'Cities',
+    nav_suggest: 'Suggest',
+    sg_eyebrow: 'Contribute', sg_title: 'Suggest an <em>employer</em>',
+    sg_sub: "Know a company doing GIS or geodata work that isn't on the map yet? Send it in.",
+    sg_rules: 'What counts', sg_rule1: "Any company that works with GIS or geodata — whether or not it's hiring right now.",
+    sg_rule2: "The careers link should be the company's own careers page, not a LinkedIn or job-board listing.",
+    sg_rule3: 'Any city in Germany — not only the ten on the map today.',
+    sg_company: 'Company name', sg_city: 'City', sg_city_ph: 'Any city in Germany, e.g. Potsdam',
+    sg_url: 'Careers page URL', sg_url_hint: "The company's own site, please.", sg_tools: 'GIS tools they use',
+    sg_note: 'Anything else', sg_optional: '(optional)', sg_privacy: 'No account needed. Nothing is published without review.',
+    sg_send: 'Send suggestion', sg_sending: 'Sending…', sg_thanks: "Thank you — it's in the queue.",
+    sg_thanks_sub: 'Every suggestion is checked by hand before it goes on the map.', sg_again: 'Suggest another', sg_back: 'Back to the map',
+    sg_err_required: 'Please fill in the company name and the city.', sg_err_url: 'That careers link doesn’t look like a web address.',
+    sg_err_rate: 'Thanks — you’ve sent a lot today. Please try again tomorrow.', sg_err_generic: 'Sending didn’t work. Please try again in a moment.',
     hero_eyebrow: 'An index of GIS employers in Germany',
     hero_title: 'Where maps get <em>made</em>',
     hero_lead: 'Every company doing GIS and geodata work, pinned to the map, one click from your next career move.',
@@ -366,6 +463,19 @@ const T = {
   },
   de: {
     nav_map: 'Karte', nav_employers: 'Arbeitgeber', nav_cities: 'Städte',
+    nav_suggest: 'Vorschlagen',
+    sg_eyebrow: 'Mitmachen', sg_title: 'Arbeitgeber <em>vorschlagen</em>',
+    sg_sub: 'Du kennst ein Unternehmen, das mit GIS oder Geodaten arbeitet und noch nicht auf der Karte ist? Schick es uns.',
+    sg_rules: 'Was zählt', sg_rule1: 'Jedes Unternehmen, das mit GIS oder Geodaten arbeitet – egal, ob es gerade einstellt.',
+    sg_rule2: 'Der Karriere-Link sollte auf die eigene Karriereseite des Unternehmens führen, nicht auf LinkedIn oder eine Jobbörse.',
+    sg_rule3: 'Jede Stadt in Deutschland – nicht nur die zehn, die heute auf der Karte sind.',
+    sg_company: 'Unternehmen', sg_city: 'Stadt', sg_city_ph: 'Jede Stadt in Deutschland, z. B. Potsdam',
+    sg_url: 'Link zur Karriereseite', sg_url_hint: 'Bitte die eigene Website des Unternehmens.', sg_tools: 'Genutzte GIS-Tools',
+    sg_note: 'Sonstiges', sg_optional: '(optional)', sg_privacy: 'Kein Konto nötig. Nichts wird ohne Prüfung veröffentlicht.',
+    sg_send: 'Vorschlag senden', sg_sending: 'Wird gesendet…', sg_thanks: 'Danke – dein Vorschlag ist eingegangen.',
+    sg_thanks_sub: 'Jeder Vorschlag wird von Hand geprüft, bevor er auf die Karte kommt.', sg_again: 'Weiteren vorschlagen', sg_back: 'Zurück zur Karte',
+    sg_err_required: 'Bitte Unternehmen und Stadt ausfüllen.', sg_err_url: 'Der Karriere-Link sieht nicht wie eine Webadresse aus.',
+    sg_err_rate: 'Danke – du hast heute schon viele geschickt. Bitte morgen erneut versuchen.', sg_err_generic: 'Das Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.',
     hero_eyebrow: 'Ein Verzeichnis der GIS-Arbeitgeber in Deutschland',
     hero_title: 'Wo Karten <em>entstehen</em>',
     hero_lead: 'Alle Unternehmen, die mit GIS und Geodaten arbeiten – auf der Karte, einen Klick von deinem nächsten Karriereschritt entfernt.',
@@ -670,7 +780,7 @@ function renderAll() {
 // ─── Routing (#map · #employers · #cities) ────────────────────────────────────
 function route() {
   const r = (location.hash || '#map').slice(1);
-  const view = ['map', 'employers', 'cities'].includes(r) ? r : 'map';
+  const view = ['map', 'employers', 'cities', 'suggest'].includes(r) ? r : 'map';
   document.querySelectorAll('[data-view]').forEach(s => { s.hidden = s.dataset.view !== view; });
   document.querySelectorAll('[data-route]').forEach(a => {
     if (a.dataset.route === view) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -723,6 +833,59 @@ $('#city-grid').addEventListener('click', e => {
   $('#city').value = F.city;
   onFilterChange();
   location.hash = '#employers';
+});
+
+// ─── Suggest an employer ──────────────────────────────────────────────────────
+const SUGGEST_URL = DATA_URL + '/suggest';
+const sgForm = $('#suggest-form');
+function sgError(key) {
+  const el = $('#sg-error');
+  el.hidden = !key;
+  el.textContent = key ? t(key) : '';
+}
+sgForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const fd = new FormData(sgForm);
+  const data = Object.fromEntries([...fd.entries()].map(([k, v]) => [k, String(v).trim()]));
+  sgForm.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
+  const missing = ['company', 'city'].filter(k => !data[k]);
+  if (missing.length) {
+    missing.forEach(k => sgForm.elements[k].setAttribute('aria-invalid', 'true'));
+    sgForm.elements[missing[0]].focus();
+    return sgError('sg_err_required');
+  }
+  if (data.careers_url && !/^(https?:\/\/)?[^\s.]+\.[^\s]{2,}$/i.test(data.careers_url)) {
+    sgForm.elements.careers_url.setAttribute('aria-invalid', 'true');
+    sgForm.elements.careers_url.focus();
+    return sgError('sg_err_url');
+  }
+  sgError(null);
+  const btn = $('#sg-submit');
+  btn.disabled = true;
+  btn.textContent = t('sg_sending');
+  try {
+    const res = await fetch(SUGGEST_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, lang: LANG }),
+    });
+    if (res.status === 429) throw Object.assign(new Error('rate'), { key: 'sg_err_rate' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    sgForm.reset();
+    sgForm.hidden = true;
+    $('#sg-done').hidden = false;
+  } catch (err) {
+    console.error('Suggestion failed:', err);
+    sgError(err.key || 'sg_err_generic');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = t('sg_send');
+  }
+});
+$('#sg-again').addEventListener('click', () => {
+  $('#sg-done').hidden = true;
+  sgForm.hidden = false;
+  sgForm.elements.company.focus();
 });
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
