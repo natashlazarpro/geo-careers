@@ -163,6 +163,26 @@
     .more-foot { display: flex; justify-content: flex-end; gap: 16px; align-items: center; padding: 14px 16px; border-top: 1px solid var(--line-2); }
     .link-btn { height: 36px; padding: 0 8px; border: 0; background: transparent; color: var(--accent-ink); font-size: 13px; cursor: pointer; }
     .btn-dark { height: 40px; padding: 0 20px; border: 0; border-radius: 999px; background: var(--text); color: #fff; font-size: 13px; cursor: pointer; }
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 28px; position: relative; z-index: 5; }
+    .pill-wrap { position: relative; }
+    .pill { height: 44px; padding: 0 18px 0 22px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; font-size: 14px; cursor: pointer; }
+    .pill:hover { border-color: var(--field); }
+    .pill[aria-expanded="true"] { border-color: var(--text); background: #f3f3f0; }
+    .pill.on { border-color: var(--text); background: var(--text); color: #fff; }
+    .pill svg { transition: transform .12s ease-out; }
+    .pill[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .pop { position: absolute; left: 0; top: 54px; width: 340px; max-width: calc(100vw - 32px); background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 12px 32px rgba(60,60,59,.12); padding: 10px; display: flex; flex-direction: column; }
+    .pop-list { max-height: 340px; overflow-y: auto; display: flex; flex-direction: column; }
+    .opt { display: flex; align-items: center; gap: 14px; min-height: 48px; padding: 0 12px; border-radius: 10px; font-size: 15px; cursor: pointer; }
+    .opt:hover { background: var(--surface-2); }
+    .opt input { width: 20px; height: 20px; margin: 0; accent-color: var(--text); cursor: pointer; flex: none; }
+    .opt .n { margin-left: auto; font-size: 12px; color: var(--muted); }
+    .pop-foot { display: flex; gap: 10px; padding: 12px 6px 4px; border-top: 1px solid var(--line-2); margin-top: 6px; }
+    .pop-foot button { flex: 1; height: 46px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: pointer; }
+    .pop-foot .clear { border: 1px solid var(--field); background: var(--surface); }
+    .pop-foot .apply { border: 0; background: var(--accent); color: #fff; }
+    .reset { height: 44px; padding: 0 8px; border: 0; background: transparent; color: var(--accent-ink); font-size: 13px; cursor: pointer; }
+    .sort { display: flex; align-items: center; gap: 10px; }
     .count-bar { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; font-size: 13px; color: var(--muted); }
     .table-box { margin-top: 14px; overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
     .table { width: 100%; min-width: 880px; border-collapse: collapse; }
@@ -217,6 +237,8 @@
     .sg-done-actions .btn { height: 44px; }
 
     @media (max-width: 640px) {
+      .pill-wrap { position: static; }
+      .pop { left: 0; right: 0; width: auto; max-width: none; top: calc(100% + 8px); }
       .suggest { gap: 32px; }
       .suggest-card { padding: 20px; }
       .wrap { padding: 0 16px; }
@@ -291,36 +313,21 @@
         </div>
       </div>
 
-      <div class="filters">
-        <div class="f-row">
-          <span class="label" data-i18n="f_sector">Sector</span>
-          <div class="chips" id="sector-chips"></div>
-        </div>
-        <div class="f-bar">
-          <span class="hint" data-i18n="f_hint">GIS role, language, company size and tech</span>
-          <button type="button" class="f-toggle" id="more-toggle" aria-expanded="false" aria-controls="more">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
-            <span id="more-label">Filters</span>
-          </button>
-        </div>
-        <div class="more" id="more" hidden>
-          <div class="f-row"><span class="label" data-i18n="f_role">GIS role</span><div class="chips" id="role-chips"></div></div>
-          <div class="f-row"><span class="label" data-i18n="f_lang">Language</span><div class="chips" id="lang-chips"></div></div>
-          <div class="f-row"><span class="label" data-i18n="f_size">Company size</span><div class="chips" id="size-chips"></div></div>
-          <div class="f-row"><span class="label" data-i18n="f_tech">Tech</span><div class="chips" id="tech-chips"></div></div>
-          <div class="more-foot">
-            <button type="button" class="link-btn" id="clear" data-i18n="clear">Clear filters</button>
-            <button type="button" class="btn-dark" id="done" data-i18n="done">Done</button>
+      <div class="pills" id="pills"></div>
+
+      <div class="count-bar"><span id="dir-count"></span>
+        <div class="sort"><span class="label" data-i18n="sort_by">Sort by</span>
+          <div class="seg" role="group" aria-label="Sort" id="sort-seg">
+            <button type="button" data-sort="rating" aria-pressed="true" data-i18n="sort_rating">Rating</button>
+            <button type="button" data-sort="newest" aria-pressed="false" data-i18n="sort_newest">Newest</button>
           </div>
         </div>
       </div>
-
-      <div class="count-bar"><span id="dir-count"></span><span data-i18n="sorted">Sorted by rating</span></div>
       <div class="table-box">
         <table class="table">
           <thead><tr>
             <th data-i18n="th_employer">Employer</th><th data-i18n="th_city">City</th><th data-i18n="th_sector">Sector</th>
-            <th data-i18n="th_role">GIS role</th><th data-i18n="th_lang">Language</th><th data-i18n="th_rating">Rating</th><th class="right" data-i18n="th_jobs">Jobs</th>
+            <th data-i18n="th_role">GIS role</th><th data-i18n="th_lang">Language</th><th data-i18n="th_size">Size</th><th data-i18n="th_rating">Rating</th><th class="right" data-i18n="th_jobs">Jobs</th>
           </tr></thead>
           <tbody id="dir-body"></tbody>
         </table>
@@ -449,7 +456,8 @@ const T = {
     all_filters: 'All filters →', employers_n: n => `${n} ${n === 1 ? 'employer' : 'employers'}`,
     dir_eyebrow: 'Directory', dir_title: 'Employers', dir_sub: 'Every GIS and geodata employer we track.',
     city_label: 'Search the city', f_sector: 'Sector', f_hint: 'GIS role, language, company size and tech',
-    filters: 'Filters', f_role: 'GIS role', f_lang: 'Language', f_size: 'Company size', f_tech: 'Tech',
+    filters: 'Filters', f_role: 'GIS role', f_lang: 'Language', f_size: 'Size', f_tech: 'Tech',
+    clear_all: 'Clear all', apply: 'Apply', reset_filters: 'Reset filters', sort_by: 'Sort by', sort_rating: 'Rating', sort_newest: 'Newest', th_size: 'Size',
     clear: 'Clear filters', done: 'Done', sorted: 'Sorted by rating',
     th_employer: 'Employer', th_city: 'City', th_sector: 'Sector', th_role: 'GIS role', th_lang: 'Language', th_rating: 'Rating', th_jobs: 'Jobs',
     no_results: 'No employers match these filters.', loading: 'Loading employers…', load_error: 'The employer data could not be loaded. Please try again later.',
@@ -483,6 +491,7 @@ const T = {
     dir_eyebrow: 'Verzeichnis', dir_title: 'Arbeitgeber', dir_sub: 'Alle GIS- und Geodaten-Arbeitgeber, die wir erfassen.',
     city_label: 'Stadt suchen', f_sector: 'Branche', f_hint: 'GIS-Rolle, Sprache, Unternehmensgröße und Tech',
     filters: 'Filter', f_role: 'GIS-Rolle', f_lang: 'Sprache', f_size: 'Größe', f_tech: 'Tech',
+    clear_all: 'Alle löschen', apply: 'Anwenden', reset_filters: 'Filter zurücksetzen', sort_by: 'Sortieren', sort_rating: 'Bewertung', sort_newest: 'Neueste', th_size: 'Größe',
     clear: 'Filter zurücksetzen', done: 'Fertig', sorted: 'Nach Bewertung sortiert',
     th_employer: 'Arbeitgeber', th_city: 'Stadt', th_sector: 'Branche', th_role: 'GIS-Rolle', th_lang: 'Sprache', th_rating: 'Bewertung', th_jobs: 'Stellen',
     no_results: 'Keine Arbeitgeber entsprechen diesen Filtern.', loading: 'Arbeitgeber werden geladen…', load_error: 'Die Daten konnten nicht geladen werden. Bitte später erneut versuchen.',
@@ -507,9 +516,10 @@ const t = k => T[LANG][k];
 // ─── State ────────────────────────────────────────────────────────────────────
 let COMPANIES = [];
 let loadState = 'loading';            // loading | ready | error
-const F = { q: '', city: '', sectors: new Set(), role: null, lang: null, sizes: new Set(), techs: new Set() };
+const F = { q: '', city: '', sectors: new Set(), roles: new Set(), langs: new Set(), sizes: new Set(), techs: new Set(), sort: 'rating' };
+let openPill = null;          // which filter dropdown is open
+let draft = new Set();        // choices in the open dropdown before Apply
 let selectedId = null;
-let moreOpen = false;
 const markers = {};
 let hoverPopup = null;
 
@@ -548,15 +558,13 @@ function matches(c) {
     if (!names.some(n => n.startsWith(want) || want.startsWith(n))) return false;
   }
   if (F.sectors.size && !sectorParts(c.sector).some(p => F.sectors.has(p))) return false;
-  if (F.role && c.role !== F.role) return false;
-  if (F.lang === 'en' && !/ENG/.test(c.lang || '')) return false;
-  if (F.lang === 'de' && !/DE/.test(c.lang || '')) return false;
+  if (F.roles.size && !F.roles.has(c.role)) return false;
+  if (F.langs.size && ![...F.langs].some(l => (l === 'en' ? /ENG/ : /DE/).test(c.lang || ''))) return false;
   if (F.sizes.size && !F.sizes.has(c.size)) return false;
   if (F.techs.size && !c.tech.some(x => F.techs.has(x))) return false;
   return true;
 }
 const visible = () => sortByRating(COMPANIES.filter(matches));
-const extraCount = () => (F.role ? 1 : 0) + (F.lang ? 1 : 0) + F.sizes.size + F.techs.size;
 
 // ─── Map ──────────────────────────────────────────────────────────────────────
 mapboxgl.accessToken = MAPBOX_TOKEN;
@@ -663,22 +671,32 @@ function chipHTML(value, label, pressed, extraClass = '') {
   return `<button type="button" class="chip ${extraClass}" data-value="${esc(value)}" aria-pressed="${pressed}">${esc(label)}</button>`;
 }
 
-function renderFilters() {
+const chevron = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+function filterGroups() {
   const sectors = [...new Set(COMPANIES.flatMap(c => sectorParts(c.sector)))]
     .sort((a, b) => (LANG === 'de' ? (SECTOR_DE[a] || a) : a).localeCompare(LANG === 'de' ? (SECTOR_DE[b] || b) : b));
-  $('#sector-chips').innerHTML = sectors.map(s => chipHTML(s, LANG === 'de' ? (SECTOR_DE[s] || s) : s, F.sectors.has(s))).join('');
-  $('#role-chips').innerHTML = chipHTML('', t('all'), !F.role, 'dark') + ROLES.map(r => chipHTML(r, roleText(r), F.role === r, 'dark')).join('');
-  $('#lang-chips').innerHTML = ['', 'en', 'de'].map(l => chipHTML(l, t('lang_short')[l || 'all'], (F.lang || '') === l, 'dark')).join('');
   const sizes = SIZES.filter(s => COMPANIES.some(c => c.size === s));
-  $('#size-chips').innerHTML = (sizes.length ? sizes : SIZES).map(s => chipHTML(s, s.replace('-', '–'), F.sizes.has(s), 'dark')).join('');
   const techs = [...new Set(COMPANIES.flatMap(c => c.tech))].sort((a, b) => a.localeCompare(b));
-  $('#tech-chips').innerHTML = techs.map(x => chipHTML(x, x, F.techs.has(x), 'dark')).join('');
-  $('#more').hidden = !moreOpen;
-  const n = extraCount();
-  const tog = $('#more-toggle');
-  tog.classList.toggle('on', moreOpen || n > 0);
-  tog.setAttribute('aria-expanded', String(moreOpen));
-  $('#more-label').textContent = n ? `${t('filters')} · ${n}` : t('filters');
+  return [
+    { key: 'roles', label: t('f_role'), options: ROLES.map(r => [r, roleText(r)]) },
+    { key: 'sectors', label: t('f_sector'), options: sectors.map(s => [s, LANG === 'de' ? (SECTOR_DE[s] || s) : s]) },
+    { key: 'langs', label: t('f_lang'), options: [['en', t('lang').ENG], ['de', t('lang').DE]] },
+    { key: 'sizes', label: t('f_size'), options: (sizes.length ? sizes : SIZES).map(s => [s, s.replace('-', '–')]) },
+    { key: 'techs', label: t('f_tech'), options: techs.map(x => [x, x]) },
+  ];
+}
+function renderFilters() {
+  const groups = filterGroups();
+  const any = groups.some(g => F[g.key].size);
+  $('#pills').innerHTML = groups.map(g => {
+    const n = F[g.key].size, open = openPill === g.key;
+    const pop = open ? `<div class="pop" role="dialog" aria-label="${esc(g.label)}">
+        <div class="pop-list">${g.options.map(([v, l]) => `<label class="opt"><input type="checkbox" value="${esc(v)}" ${draft.has(v) ? 'checked' : ''}/><span>${esc(l)}</span></label>`).join('')}</div>
+        <div class="pop-foot"><button type="button" class="clear" data-act="clear">${esc(t('clear_all'))}</button><button type="button" class="apply" data-act="apply">${esc(t('apply'))}</button></div>
+      </div>` : '';
+    return `<div class="pill-wrap"><button type="button" class="pill${n ? ' on' : ''}" data-pill="${g.key}" aria-expanded="${open}" aria-haspopup="true"><span>${esc(g.label)}${n ? ` · ${n}` : ''}</span>${chevron}</button>${pop}</div>`;
+  }).join('') + (any ? `<button type="button" class="reset" data-act="reset">${esc(t('reset_filters'))}</button>` : '');
+  document.querySelectorAll('#sort-seg [data-sort]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.sort === F.sort)));
   $('#city-options').innerHTML = CITIES.map(c => `<option value="${esc(c[LANG])}"></option>`).join('');
 }
 
@@ -716,7 +734,11 @@ function groupEmployers(list) {
     const ratings = items.map(c => c.rating).filter(r => r);
     const rating = ratings.length ? Math.max(...ratings.map(Number)) : null;
     const careers = items.map(c => c.careers).find(u => safeUrl(u)) || '';
-    return { id: items[0].id, name, cities, sector: sectors.join(' / '), role, lang, rating, careers, n: items.length };
+    const sizeIdx = Math.max(...items.map(c => SIZES.indexOf(c.size)));
+    const size = sizeIdx >= 0 ? SIZES[sizeIdx] : '';
+    const added = items.map(c => c.added).sort().pop() || '';
+    const newest = Math.max(...items.map(c => c.id));
+    return { id: items[0].id, name, cities, sector: sectors.join(' / '), role, lang, size, rating, careers, added, newest, n: items.length };
   });
 }
 
@@ -729,7 +751,10 @@ function renderDirectory() {
     $('#dir-count').textContent = '';
     return;
   }
-  const v = sortByRating(groupEmployers(visible()));
+  const groups = groupEmployers(visible());
+  const v = F.sort === 'newest'
+    ? groups.sort((a, b) => String(b.added).localeCompare(String(a.added)) || b.newest - a.newest)
+    : sortByRating(groups);
   $('#dir-count').textContent = t('employers_n')(v.length);
   $('#dir-empty').hidden = v.length > 0;
   $('#dir-empty').textContent = t('no_results');
@@ -741,6 +766,7 @@ function renderDirectory() {
       <td class="muted">${esc(sectorText(c.sector))}</td>
       <td class="muted">${esc(roleText(c.role))}</td>
       <td class="muted">${esc(c.lang === 'DE/ENG' ? 'EN / DE' : c.lang === 'ENG' ? 'EN' : c.lang || '')}</td>
+      <td class="muted">${esc(c.size.replace('-', '–'))}</td>
       <td class="muted">${c.rating ? `<span class="star">${starSvg}${esc(c.rating)}</span>` : '–'}</td>
       <td class="right">${jobs ? `<a href="${esc(jobs)}" target="_blank" rel="noopener">${esc(t('view_jobs_row'))}</a>` : '<span style="color:var(--muted)">–</span>'}</td>
     </tr>`;
@@ -810,14 +836,27 @@ $('#panel-detail').addEventListener('click', e => { if (e.target.closest('[data-
 
 function toggleIn(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
 function onFilterChange() { renderFilters(); renderMarkers(); renderPanel(); renderDirectory(); }
-$('#sector-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; toggleIn(F.sectors, b.dataset.value); onFilterChange(); });
-$('#role-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; F.role = b.dataset.value || null; onFilterChange(); });
-$('#lang-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; F.lang = b.dataset.value || null; onFilterChange(); });
-$('#size-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; toggleIn(F.sizes, b.dataset.value); onFilterChange(); });
-$('#tech-chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; toggleIn(F.techs, b.dataset.value); onFilterChange(); });
-$('#more-toggle').addEventListener('click', () => { moreOpen = !moreOpen; renderFilters(); });
-$('#done').addEventListener('click', () => { moreOpen = false; renderFilters(); });
-$('#clear').addEventListener('click', () => { F.role = null; F.lang = null; F.sizes.clear(); F.techs.clear(); onFilterChange(); });
+$('#pills').addEventListener('click', e => {
+  const pill = e.target.closest('[data-pill]');
+  if (pill) {
+    const key = pill.dataset.pill;
+    if (openPill === key) { openPill = null; } else { openPill = key; draft = new Set(F[key]); }
+    renderFilters();
+    return;
+  }
+  const act = e.target.closest('[data-act]');
+  if (!act) return;
+  if (act.dataset.act === 'clear') { draft.clear(); renderFilters(); }
+  if (act.dataset.act === 'apply') { F[openPill] = new Set(draft); openPill = null; onFilterChange(); }
+  if (act.dataset.act === 'reset') { ['sectors', 'roles', 'langs', 'sizes', 'techs'].forEach(k => F[k].clear()); openPill = null; onFilterChange(); }
+});
+$('#pills').addEventListener('change', e => {
+  const box = e.target.closest('input[type="checkbox"]');
+  if (box) box.checked ? draft.add(box.value) : draft.delete(box.value);
+});
+document.addEventListener('click', e => { if (openPill && !e.target.closest('.pill-wrap')) { openPill = null; renderFilters(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && openPill) { const k = openPill; openPill = null; renderFilters(); $(`[data-pill="${k}"]`)?.focus(); } });
+$('#sort-seg').addEventListener('click', e => { const b = e.target.closest('[data-sort]'); if (!b) return; F.sort = b.dataset.sort; renderFilters(); renderDirectory(); });
 
 $('#dir-body').addEventListener('click', e => {
   const b = e.target.closest('[data-open]');
@@ -913,6 +952,7 @@ async function loadData() {
       about_en: c.eng,
       about_de: c.de,
       lang:     c.sprach,
+      added:    c.first_seen || '',
       lat:      parseFloat(c.lat),
       lng:      parseFloat(c.lon),
     })).filter(c => c.name);

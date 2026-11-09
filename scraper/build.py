@@ -239,15 +239,15 @@ def write_map_files(frames):
     gdf = geocode.to_geodataframe(allrows)
     features = []
     for _, r in gdf.iterrows():
-        props = {c: excel._clean(r[c]) for c in config.COLUMNS + ["open_jobs", "job_titles", "job_links", "last_seen"]}
+        props = {c: excel._clean(r[c]) for c in config.COLUMNS + ["open_jobs", "job_titles", "job_links", "first_seen", "last_seen"]}
         props = {k: (v.isoformat() if hasattr(v, "isoformat") else v) for k, v in props.items()}
         features.append({"type": "Feature",
                          "geometry": {"type": "Point", "coordinates": [round(float(r["lon"]), 6), round(float(r["lat"]), 6)]},
                          "properties": props})
     config.GEOJSON_FILE.write_text(json.dumps({"type": "FeatureCollection", "updated": date.today().isoformat(),
                                                "features": features}, ensure_ascii=False, default=str), encoding="utf-8")
-    # flat list for the website: your 17 columns + coordinates
-    site = [{**{c: f["properties"][c] for c in config.COLUMNS},
+    # flat list for the website: your 17 columns + first_seen (for "Newest") + coordinates
+    site = [{**{c: f["properties"][c] for c in config.COLUMNS}, "first_seen": f["properties"].get("first_seen"),
              "lon": f["geometry"]["coordinates"][0], "lat": f["geometry"]["coordinates"][1]} for f in features]
     config.MAP_JSON_FILE.write_text(json.dumps(site, ensure_ascii=False, default=str), encoding="utf-8")
     try:
