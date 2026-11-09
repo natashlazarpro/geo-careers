@@ -95,7 +95,8 @@ def add_new_employers(records):
     added = filled = skipped = 0
     for rec in records:
         rec.setdefault("key", f"{company_key(rec.get('c_name'))}|{rec.get('city')}")
-        problems = validate(rec)
+        to_research = bool(rec.pop("pending", False))      # only name + city known: the research task fills the rest
+        problems = [] if to_research and rec.get("c_name") else validate(rec)
         sheet = sheet_of.get(rec.get("city"))
         if problems or sheet is None:
             skipped += 1
@@ -115,6 +116,13 @@ def add_new_employers(records):
             added += 1
         else:
             filled += 1
+            if to_research:
+                continue                                    # already in the workbook
+        if to_research:
+            df.at[match, "agent_check"] = "pending"
+            df.at[match, "agent_notes"] = rec.get("notes")
+            frames[sheet] = df
+            continue
         if rec.get("adress") and not blank(df.at[match, "adress"]) and df.at[match, "source"] != "research":
             rec = {k: v for k, v in rec.items() if k not in ("adress", "postal_code")}   # keep known address
         apply_research(df, match, rec)

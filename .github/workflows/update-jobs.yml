@@ -82,7 +82,7 @@ jobs:
       - name: List employers waiting for research
         run: |
           mkdir -p research
-          python -m scraper.research list 25 > research/pending.json
+          python -m scraper.research list 50 > research/pending.json
 
       - name: Save data to Cloudflare
         run: python -m scraper.store push

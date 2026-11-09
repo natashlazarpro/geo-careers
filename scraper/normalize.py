@@ -150,9 +150,8 @@ def clean_frame(df):
         df[col] = df[col].map(lambda v, c=col: url(v, c))
     for col in ("sector", "adress", "c_name"):
         df[col] = df[col].map(lambda v: v.strip() if isinstance(v, str) else v)
-    # sort into the GeoCareers branches (rows with neither sector nor name are left alone)
-    df["sector"] = [branchen.classify(None if pd.isna(s) else s, n, None if pd.isna(d) else d)
-                    if not (pd.isna(s) and pd.isna(n)) else s
+    # sort into the GeoCareers branches (an empty sector stays empty, so research can still fill it)
+    df["sector"] = [s if pd.isna(s) or not str(s).strip() else branchen.classify(s, n, None if pd.isna(d) else d)
                     for s, n, d in zip(df["sector"], df["c_name"], df["eng"])]
     df["postal_code"] = df["postal_code"].map(
         lambda v: None if v is None or (isinstance(v, float) and pd.isna(v))
