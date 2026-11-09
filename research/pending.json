@@ -162,6 +162,78 @@
   "job_links": null
  },
  {
+  "key": "landesdirektion sachsen|Leipzig",
+  "c_name": "Landesdirektion Sachsen",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "regionaler planungsverband leipzig westsachsen|Leipzig",
+  "c_name": "Regionaler Planungsverband Leipzig-Westsachsen",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "iproconsult|Leipzig",
+  "c_name": "IPROconsult GmbH",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "tilia|Leipzig",
+  "c_name": "Tilia GmbH",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "dbi gas und umwelttechnik|Leipzig",
+  "c_name": "DBI Gas- und Umwelttechnik GmbH",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "mitteldeutsche flughafen flughafen leipzig halle|Leipzig",
+  "c_name": "Mitteldeutsche Flughafen AG (Flughafen Leipzig/Halle)",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "arcadis|Leipzig",
+  "c_name": "Arcadis Germany GmbH",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
+  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
+  "city": "Leipzig",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
   "key": "stadt dortmund vermessungs und katasteramt|Dortmund",
   "c_name": "Stadt Dortmund – Vermessungs- und Katasteramt",
   "city": "Dortmund",
@@ -261,6 +333,87 @@
   "job_links": null
  },
  {
+  "key": "pp a s pesch partner architekten stadtplaner|Dortmund",
+  "c_name": "pp a|s pesch partner architekten stadtplaner",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "schamp partner architekten stadtplaner|Dortmund",
+  "c_name": "Schamp & Partner Architekten Stadtplaner PartGmbB",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "postwelters partner mbb architektur stadtplanung|Dortmund",
+  "c_name": "postwelters + partner mbB Architektur & Stadtplanung",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "scheuvens wachten plus|Dortmund",
+  "c_name": "scheuvens + wachten plus",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "plan lokal|Dortmund",
+  "c_name": "plan-lokal",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "dortmunder netz donetz|Dortmund",
+  "c_name": "Dortmunder Netz GmbH (DONETZ)",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "dokom gesellschaft für telekommunikation dokom21|Dortmund",
+  "c_name": "DOKOM Gesellschaft für Telekommunikation mbH (DOKOM21)",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "kreis unna|Dortmund",
+  "c_name": "Kreis Unna",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "bezirksregierung arnsberg abteilung bergbau und energie in nrw|Dortmund",
+  "c_name": "Bezirksregierung Arnsberg – Abteilung Bergbau und Energie in NRW",
+  "city": "Dortmund",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
   "key": "regionalverband ruhr rvr|Essen",
   "c_name": "Regionalverband Ruhr (RVR)",
   "city": "Essen",
@@ -290,105 +443,6 @@
  {
   "key": "stadt essen amt für geoinformation vermessung und kataster|Essen",
   "c_name": "Stadt Essen – Amt für Geoinformation, Vermessung und Kataster",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "rwe|Essen",
-  "c_name": "RWE AG",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "e on|Essen",
-  "c_name": "E.ON SE",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "westenergie|Essen",
-  "c_name": "Westenergie AG",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "open grid europe|Essen",
-  "c_name": "Open Grid Europe GmbH",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "dmt|Essen",
-  "c_name": "DMT GmbH & Co. KG",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "cadmap consulting ingenieurgesellschaft|Essen",
-  "c_name": "CADMAP Consulting Ingenieurgesellschaft mbH",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "hochtief|Essen",
-  "c_name": "HOCHTIEF AG",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "aldi einkauf aldi nord|Essen",
-  "c_name": "ALDI Einkauf SE & Co. oHG (ALDI Nord)",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "universität duisburg essen institut für geographie|Essen",
-  "c_name": "Universität Duisburg-Essen – Institut für Geographie",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "ruhrbahn|Essen",
-  "c_name": "Ruhrbahn GmbH",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 0,
-  "job_titles": null,
-  "job_links": null
- },
- {
-  "key": "stadtwerke essen|Essen",
-  "c_name": "Stadtwerke Essen AG",
   "city": "Essen",
   "address_from_job_ad": null,
   "open_jobs": 0,
