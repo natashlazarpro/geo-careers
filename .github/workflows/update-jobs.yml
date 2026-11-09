@@ -14,6 +14,9 @@ on:
       enrich_credits:
         description: "Max SocialCrawl credits for filling empty columns from LinkedIn (5 per company)"
         default: "100"
+      sector_updates:
+        description: "Branch per employer as JSON {\"berlin:1\": \"6+11\"} (numbers from scraper/branchen.py); usually empty"
+        default: ""
       enrich_cities:
         description: "Only fill these city sheets (comma-separated, e.g. cologne,frankfurt,stuttgart); empty = all"
         default: ""
@@ -43,6 +46,12 @@ jobs:
 
       - name: Load data from Cloudflare
         run: python -m scraper.store pull
+
+      - name: Set employer branches
+        if: inputs.sector_updates != ''
+        env:
+          SECTOR_UPDATES: ${{ inputs.sector_updates }}
+        run: python -m scraper.branchen apply
 
       - name: Add research results handed off by the Claude task
         run: python -m scraper.research ingest

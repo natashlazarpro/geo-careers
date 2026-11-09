@@ -37,9 +37,9 @@ EXTRA_COLUMNS = ["lat", "lon", "open_jobs", "job_titles", "job_links", "first_se
 # Allowed values (from the "Reference Lists" sheet)
 SIZES = ["1-10", "11-50", "51-200", "201-500", "500+"]
 G_ROLES = ["Core product", "Dedicated team", "Side tool"]
-SECTORS = ["Urban Planning", "Logistics", "Mobility", "Real Estate", "Environment", "Defense / Security",
-           "Public Sector", "Tech / Consulting", "Architecture", "Surveying", "Agriculture", "Infrastructure",
-           "Energy", "Engineering", "Earth Observation", "Insurance", "Tech / GIS", "Other"]
+SECTORS = ["Renewable Energy", "Development & Social", "Climate", "Surveying & Geodesy",
+           "Environment & Conservation", "GIS", "Geoinformatics", "Remote Sensing", "Hydrology", "Geology",
+           "Transport Planning", "Urban & Spatial Planning", "Other"]   # = scraper/branchen.py
 LANGS = ["DE", "ENG", "DE/ENG"]
 
 # --- Bundesagentur für Arbeit (free) ---------------------------------------

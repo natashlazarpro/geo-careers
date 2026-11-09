@@ -6,7 +6,7 @@ from datetime import datetime
 
 import pandas as pd
 
-from . import config
+from . import branchen, config
 
 # Canonical tool names, in the order they are listed in g_stack (GIS first, then CAD, surveying,
 # databases, languages, web, cloud/data). Unknown tools are kept and placed at the end.
@@ -150,6 +150,10 @@ def clean_frame(df):
         df[col] = df[col].map(lambda v, c=col: url(v, c))
     for col in ("sector", "adress", "c_name"):
         df[col] = df[col].map(lambda v: v.strip() if isinstance(v, str) else v)
+    # sort into the GeoCareers branches (rows with neither sector nor name are left alone)
+    df["sector"] = [branchen.classify(None if pd.isna(s) else s, n, None if pd.isna(d) else d)
+                    if not (pd.isna(s) and pd.isna(n)) else s
+                    for s, n, d in zip(df["sector"], df["c_name"], df["eng"])]
     df["postal_code"] = df["postal_code"].map(
         lambda v: None if v is None or (isinstance(v, float) and pd.isna(v))
         else str(int(v)).zfill(5) if isinstance(v, (int, float)) else str(v).strip())
