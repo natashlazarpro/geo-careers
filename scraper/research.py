@@ -4,12 +4,13 @@
     python -m scraper.research check results.json  # only validate a results file (used by the research task)
     python -m scraper.research add results.json    # validate researched records and store them in data/agent_cache.json
     python -m scraper.research ingest             # add every file in research/inbox/, then delete them (GitHub job)
+    python -m scraper.research new                # add new employers from $NEW_EMPLOYERS (JSON list, GitHub job input)
 """
 import json
 import sys
 
 from . import agent, config, excel
-from .build import blank, company_key
+from .build import apply_research, blank, company_key, domain, same_company
 
 
 def pending(limit=25):
@@ -85,6 +86,44 @@ def ingest():
     return len(files)
 
 
+def add_new_employers(records):
+    """Add employers found by research (not from a job ad) as new rows; existing ones only get empty cells filled."""
+    from datetime import date
+    import pandas as pd
+    frames = excel.read_city_sheets()
+    sheet_of = {city: sheet for city, (sheet, _, _) in config.CITIES.items()}
+    added = filled = skipped = 0
+    for rec in records:
+        rec.setdefault("key", f"{company_key(rec.get('c_name'))}|{rec.get('city')}")
+        problems = validate(rec)
+        sheet = sheet_of.get(rec.get("city"))
+        if problems or sheet is None:
+            skipped += 1
+            print(f"SKIPPED {rec.get('c_name')}: {'; '.join(problems) or 'unknown city'}")
+            continue
+        df = frames[sheet]
+        key, dom = company_key(rec["c_name"]), domain(rec.get("c_url"))
+        match = next((i for i in df.index if same_company(company_key(df.at[i, "c_name"]), key)
+                      or (dom and domain(df.at[i, "c_url"]) == dom)), None)
+        if match is None:
+            max_id = pd.to_numeric(df["id"], errors="coerce").max()
+            row = {c: None for c in df.columns}
+            row.update(id=(0 if pd.isna(max_id) else int(max_id)) + 1, c_name=rec["c_name"], city=rec["city"],
+                       open_jobs=0, first_seen=date.today().isoformat(), source="research")
+            df.loc[len(df)] = row
+            match = len(df) - 1
+            added += 1
+        else:
+            filled += 1
+        if rec.get("adress") and not blank(df.at[match, "adress"]) and df.at[match, "source"] != "research":
+            rec = {k: v for k, v in rec.items() if k not in ("adress", "postal_code")}   # keep known address
+        apply_research(df, match, rec)
+        frames[sheet] = df
+    excel.write_city_sheets(frames)
+    print(f"[research] {added} new employers added, {filled} existing ones filled, {skipped} skipped")
+    return skipped == 0
+
+
 def add(path):
     records = json.loads(open(path, encoding="utf-8").read())
     if isinstance(records, dict):
@@ -114,6 +153,10 @@ if __name__ == "__main__":
         sys.exit(0 if check(sys.argv[2]) else 1)
     elif cmd == "add":
         sys.exit(0 if add(sys.argv[2]) else 1)
+    elif cmd == "new":
+        import os
+        spec = os.environ.get("NEW_EMPLOYERS", "").strip()
+        sys.exit(0 if not spec or add_new_employers(json.loads(spec)) else 1)
     elif cmd == "ingest":
         print(f"{ingest()} file(s) ingested")
     else:

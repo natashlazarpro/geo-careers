@@ -17,6 +17,9 @@ on:
       sector_updates:
         description: "Branch per employer as JSON {\"berlin:1\": \"6+11\"} (numbers from scraper/branchen.py); usually empty"
         default: ""
+      new_employers:
+        description: "New employers found by research, as a JSON list (see RESEARCH.md fields); usually empty"
+        default: ""
       enrich_cities:
         description: "Only fill these city sheets (comma-separated, e.g. cologne,frankfurt,stuttgart); empty = all"
         default: ""
@@ -52,6 +55,12 @@ jobs:
         env:
           SECTOR_UPDATES: ${{ inputs.sector_updates }}
         run: python -m scraper.branchen apply
+
+      - name: Add new employers
+        if: inputs.new_employers != ''
+        env:
+          NEW_EMPLOYERS: ${{ inputs.new_employers }}
+        run: python -m scraper.research new
 
       - name: Add research results handed off by the Claude task
         run: python -m scraper.research ingest
