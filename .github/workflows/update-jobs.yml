@@ -91,11 +91,15 @@ jobs:
         run: |
           git config user.name "geocareers-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A research/
+          # start from the latest main so a run that started earlier can't conflict
+          INGESTED=$(git ls-files --deleted research/inbox)        # inbox files added to the workbook this run
+          cp research/pending.json /tmp/pending.json
+          git fetch -q origin main && git reset -q --hard origin/main
+          mkdir -p research && cp /tmp/pending.json research/pending.json
+          git add research/pending.json
+          [ -z "$INGESTED" ] || git rm -q --ignore-unmatch $INGESTED
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
             git add -f data/                              # no Cloudflare yet: keep data in the repo
-          else
-            git rm -r -q --cached data/ 2>/dev/null || true   # data is in Cloudflare: make sure none is left here
           fi
           git diff --staged --quiet || git commit -m "Update GIS employers $(date -u +%F)"
-          git pull --rebase -q origin main && git push
+          git push origin HEAD:main
