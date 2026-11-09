@@ -1,0 +1,27 @@
+name: Export workbook
+
+# Downloads the workbook from Cloudflare as a short-lived artifact (deleted after download / 1 day).
+on:
+  workflow_dispatch:
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT_ID: c0692e0b23a25270623944360c717438
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python -m scraper.store pull
+      - uses: actions/upload-artifact@v4
+        with:
+          name: geocareers-data
+          path: |
+            data/gis_employers.xlsx
+            data/companies.geojson
+            data/companies.gpkg
+          retention-days: 1
