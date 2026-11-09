@@ -573,6 +573,44 @@ function renderFilters() {
   $('#city-options').innerHTML = CITIES.map(c => `<option value="${esc(c[LANG])}"></option>`).join('');
 }
 
+// One row per employer in the directory: offices of the same company in different cities are merged.
+// (The map and the city pages keep every office separately.)
+const LEGAL = /\b(gmbh|mbh|ggmbh|se|ag|kg|kgaa|ohg|co|e\.?\s?v|partgmbb|mbb|ug|gbr|holding|group|gruppe|deutschland|germany|niederlassung|standort)\b/g;
+const employerKey = c => {
+  const base = norm(c.name).replace(/\(.*?\)/g, ' ').replace(/[&+.,|–-]/g, ' ').replace(LEGAL, ' ').replace(/\s+/g, ' ').trim();
+  return base || norm(c.name);
+};
+const domainOf = u => { try { return new URL(safeUrl(u)).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+const SHARED_DOMAINS = new Set(['l.de', 'dortmund.de', 'essen.de', 'leipzig.de', 'muenchen.de', 'hamburg.de', 'berlin.de', 'stadt-koeln.de', 'frankfurt.de', 'stuttgart.de', 'duesseldorf.de']);
+
+function groupEmployers(list) {
+  const groups = [], byKey = new Map(), byDomain = new Map();
+  for (const c of list) {
+    const key = employerKey(c), dom = domainOf(c.website);
+    let g = byKey.get(key) || (dom && !SHARED_DOMAINS.has(dom) ? byDomain.get(dom) : undefined);
+    if (!g) { g = { items: [] }; groups.push(g); }
+    g.items.push(c);
+    byKey.set(key, g);
+    if (dom) byDomain.set(dom, g);
+  }
+  return groups.map(({ items }) => {
+    // the cleanest name: no "(… office)" part, then the shortest
+    const names = items.map(c => c.name);
+    const name = [...names].sort((a, b) => (/\(/.test(a) - /\(/.test(b)) || a.length - b.length)[0];
+    const cities = [...new Set(items.map(c => cityText(c.city)).filter(Boolean))];
+    const sectors = [...new Set(items.flatMap(c => sectorParts(c.sector)))];
+    const roles = items.map(c => c.role).filter(Boolean);
+    const role = roles.sort((a, b) => roles.filter(r => r === b).length - roles.filter(r => r === a).length)[0] || '';
+    const langs = items.map(c => c.lang || '');
+    const lang = langs.some(l => l === 'DE/ENG') || (langs.some(l => /ENG/.test(l)) && langs.some(l => /DE/.test(l))) ? 'DE/ENG'
+      : langs.find(l => l) || '';
+    const ratings = items.map(c => c.rating).filter(r => r);
+    const rating = ratings.length ? Math.max(...ratings.map(Number)) : null;
+    const careers = items.map(c => c.careers).find(u => safeUrl(u)) || '';
+    return { id: items[0].id, name, cities, sector: sectors.join(' / '), role, lang, rating, careers, n: items.length };
+  });
+}
+
 function renderDirectory() {
   const body = $('#dir-body');
   if (loadState !== 'ready') {
@@ -582,7 +620,7 @@ function renderDirectory() {
     $('#dir-count').textContent = '';
     return;
   }
-  const v = visible();
+  const v = sortByRating(groupEmployers(visible()));
   $('#dir-count').textContent = t('employers_n')(v.length);
   $('#dir-empty').hidden = v.length > 0;
   $('#dir-empty').textContent = t('no_results');
@@ -590,7 +628,7 @@ function renderDirectory() {
     const jobs = safeUrl(c.careers);
     return `<tr>
       <td><button type="button" class="t-name" data-open="${c.id}">${esc(c.name)}</button></td>
-      <td>${esc(cityText(c.city))}</td>
+      <td>${esc(c.cities.join(', '))}</td>
       <td class="muted">${esc(sectorText(c.sector))}</td>
       <td class="muted">${esc(roleText(c.role))}</td>
       <td class="muted">${esc(c.lang === 'DE/ENG' ? 'EN / DE' : c.lang === 'ENG' ? 'EN' : c.lang || '')}</td>
