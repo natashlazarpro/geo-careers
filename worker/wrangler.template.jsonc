@@ -4,5 +4,8 @@
   "name": "data-schield",
   "main": "src/index.js",
   "compatibility_date": "2026-11-01",
-  "kv_namespaces": [{ "binding": "DATA", "id": "__KV_ID__" }]
+  "kv_namespaces": [{ "binding": "DATA", "id": "__KV_ID__" }],
+  // Emails each new employer suggestion. The recipient is the Worker secret NOTIFY_TO
+  // (must be a verified Email Routing destination address); without it no email is sent.
+  "send_email": [{ "name": "NOTIFY" }]
 }

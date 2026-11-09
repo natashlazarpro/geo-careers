@@ -34,6 +34,17 @@ in Cloudflare and deletes the file. A company is only researched once.
 **Your edits are safe:** only empty cells are filled and rows are added; nothing you typed is overwritten or deleted.
 Rows with `agent_check = done (low)` are worth a quick manual look.
 
+## Employer suggestions from the website
+
+The site's **Vorschlagen / Suggest** page posts to `data-schield` at `/suggest`. Each suggestion is saved in the same
+KV namespace as `suggestions/<time>-<id>` (company, city, careers_url, tools, note, lang, status `new`).
+Only geocareers.app may post; a hidden honeypot field drops bots, and each visitor can send 10 per day
+(IPs are stored only as a daily hash under `ratelimit/suggest/…`, which expires after ~26 h).
+Read them in Cloudflare → Storage & Databases → KV → `geocareers-data`, filtered by the prefix `suggestions/`.
+Each new suggestion is also emailed to the address in the Worker secret `NOTIFY_TO`
+(data-schield → Settings → Variables and Secrets); it must be a verified Email Routing destination address.
+The sender is `suggestions@geocareers.app`.
+
 ## Setup
 
 - Secret `CLOUDFLARE_API_TOKEN` (Cloudflare token from the "Edit Cloudflare Workers" template) — reads/writes the data
