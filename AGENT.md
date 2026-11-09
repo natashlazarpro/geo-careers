@@ -41,6 +41,9 @@ KV namespace as `suggestions/<time>-<id>` (company, city, careers_url, tools, no
 Only geocareers.app may post; a hidden honeypot field drops bots, and each visitor can send 10 per day
 (IPs are stored only as a daily hash under `ratelimit/suggest/…`, which expires after ~26 h).
 Read them in Cloudflare → Storage & Databases → KV → `geocareers-data`, filtered by the prefix `suggestions/`.
+Each new suggestion is also emailed to the address in the Worker secret `NOTIFY_TO`
+(data-schield → Settings → Variables and Secrets); it must be a verified Email Routing destination address.
+The sender is `suggestions@geocareers.app`.
 
 ## Setup
 

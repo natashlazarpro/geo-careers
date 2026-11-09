@@ -96,8 +96,36 @@ async function handleSuggestion(request, env, cors) {
 
   const now = new Date().toISOString();
   const id = `${now.replace(/[:.]/g, "-")}-${crypto.randomUUID().slice(0, 8)}`;
-  await env.DATA.put(SUGGESTION_PREFIX + id, JSON.stringify({ id, received_at: now, status: "new", ...s }));
+  const record = { id, received_at: now, status: "new", ...s };
+  await env.DATA.put(SUGGESTION_PREFIX + id, JSON.stringify(record));
+  await notify(env, record);
   return json({ ok: true, id }, 201, cors);
+}
+
+// Emails the suggestion to the inbox in the NOTIFY_TO secret (a verified Email Routing
+// destination address). A failed email never loses the suggestion: it is already saved in KV.
+async function notify(env, r) {
+  if (!env.NOTIFY || !env.NOTIFY_TO) return;
+  const lines = [
+    `Company:      ${r.company}`,
+    `City:         ${r.city}`,
+    `Careers page: ${r.careers_url || "-"}`,
+    `Tools:        ${r.tools || "-"}`,
+    `Note:         ${r.note || "-"}`,
+    `Page language: ${r.lang.toUpperCase()}`,
+    "",
+    `Received ${r.received_at}. Saved in KV as ${SUGGESTION_PREFIX}${r.id}`,
+  ];
+  try {
+    await env.NOTIFY.send({
+      from: env.NOTIFY_FROM || "suggestions@geocareers.app",
+      to: env.NOTIFY_TO,
+      subject: `GeoCareers suggestion: ${r.company} (${r.city})`.slice(0, 180),
+      text: lines.join("\n"),
+    });
+  } catch (err) {
+    console.error("Suggestion email failed:", err && err.message ? err.message : err);
+  }
 }
 
 async function sha256(text) {
