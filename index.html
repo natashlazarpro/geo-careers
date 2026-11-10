@@ -92,6 +92,9 @@
     .map-box { flex: 999 1 560px; min-width: 0; height: 620px; border: 1px solid var(--line); background: var(--surface); position: relative; }
     #map { position: absolute; inset: 0; }
     .panel { flex: 1 1 300px; height: 620px; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); min-width: 0; }
+    .ph-left { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .city-chip { height: 28px; padding: 0 8px 0 12px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--text); background: var(--text); color: #fff; border-radius: 999px; font-size: 12px; cursor: pointer; }
+    .city-chip span { font-size: 15px; line-height: 1; opacity: .8; }
     .panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--muted); }
     .list { flex: 1; overflow-y: auto; }
     .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; padding: 16px 20px; border: 0; border-bottom: 1px solid var(--line-2); background: var(--surface); text-align: left; cursor: pointer; }
@@ -292,7 +295,7 @@
         <div class="map-box"><div id="map" aria-label="Map of GIS employers"></div></div>
         <aside class="panel" aria-live="polite">
           <div id="panel-list" style="display:flex;flex-direction:column;flex:1;min-height:0">
-            <div class="panel-head"><span id="list-count"></span><a href="#employers" data-i18n="all_filters">All filters →</a></div>
+            <div class="panel-head"><span class="ph-left"><span id="list-count"></span><span id="city-chip"></span></span><a href="#employers" data-i18n="all_filters">All filters →</a></div>
             <div class="list" id="list"></div>
           </div>
           <div class="detail" id="panel-detail" hidden></div>
@@ -458,7 +461,7 @@ const T = {
     hero_title: 'Where maps get <em>made</em>',
     hero_lead: 'Every company doing GIS and geodata work, pinned to the map, one click from your next career move.',
     search_label: 'Search a tool, city or employer', search_ph: 'Search a tool, city or employer', explore: 'Explore',
-    all_filters: 'All filters →', employers_n: n => `${n} ${n === 1 ? 'employer' : 'employers'}`,
+    all_filters: 'All filters →', show_all_cities: 'Show all cities', employers_n: n => `${n} ${n === 1 ? 'employer' : 'employers'}`,
     dir_eyebrow: 'Directory', dir_title: 'Employers', dir_sub: 'Every GIS and geodata employer we track.',
     city_label: 'Search the city', f_sector: 'Sector', f_hint: 'GIS role, language, company size and tech',
     filters: 'Filters', f_role: 'GIS role', f_lang: 'Language', f_size: 'Size', f_tech: 'Tech',
@@ -491,7 +494,7 @@ const T = {
     hero_title: 'Wo Karten <em>entstehen</em>',
     hero_lead: 'Alle Unternehmen, die mit GIS und Geodaten arbeiten – auf der Karte, einen Klick von deinem nächsten Karriereschritt entfernt.',
     search_label: 'Tool, Stadt oder Arbeitgeber suchen', search_ph: 'Tool, Stadt oder Arbeitgeber suchen', explore: 'Entdecken',
-    all_filters: 'Alle Filter →', employers_n: n => `${n} Arbeitgeber`,
+    all_filters: 'Alle Filter →', show_all_cities: 'Alle Städte zeigen', employers_n: n => `${n} Arbeitgeber`,
     dir_eyebrow: 'Verzeichnis', dir_title: 'Arbeitgeber', dir_sub: 'Alle GIS- und Geodaten-Arbeitgeber, die wir erfassen.',
     city_label: 'Stadt suchen', f_sector: 'Branche', f_hint: 'GIS-Rolle, Sprache, Unternehmensgröße und Tech',
     filters: 'Filter', f_role: 'GIS-Rolle', f_lang: 'Sprache', f_size: 'Größe', f_tech: 'Tech',
@@ -657,6 +660,8 @@ function renderPanel() {
   }
   const v = visible();
   $('#list-count').textContent = t('employers_n')(v.length);
+  $('#city-chip').innerHTML = F.city
+    ? `<button type="button" class="city-chip" data-act="clear-city" aria-label="${esc(t('show_all_cities'))}">${esc(cityText(F.city) || F.city)} <span aria-hidden="true">×</span></button>` : '';
   list.innerHTML = v.length ? v.map(c => `
     <button type="button" class="row" data-id="${c.id}">
       <span><span class="row-name">${esc(c.name)}</span>
@@ -889,10 +894,24 @@ $('#dir-body').addEventListener('click', e => {
 $('#city-grid').addEventListener('click', e => {
   const b = e.target.closest('.city-card');
   if (!b || b.disabled) return;
+  // Open the map zoomed to this city, with only its employers in the list.
   F.city = b.dataset.city;
   $('#city').value = F.city;
+  select(null);
   onFilterChange();
-  location.hash = '#employers';
+  location.hash = '#map';
+  setTimeout(() => {
+    map.resize();
+    fitTo(COMPANIES.filter(matches));
+    $('#explorer').scrollIntoView({ block: 'start' });
+  }, 80);
+});
+$('#city-chip').addEventListener('click', e => {
+  if (!e.target.closest('[data-act="clear-city"]')) return;
+  F.city = '';
+  $('#city').value = '';
+  onFilterChange();
+  fitTo(COMPANIES.filter(matches));
 });
 
 // ─── Suggest an employer ──────────────────────────────────────────────────────
