@@ -1,1 +1,38 @@
-[]
+[
+ {
+  "key": "fh münster fachbereich bauingenieurwesen vermessung|Münster",
+  "c_name": "FH Münster – Fachbereich Bauingenieurwesen (Vermessung)",
+  "city": "Münster",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "regierungspräsidium freiburg|Freiburg im Breisgau",
+  "c_name": "Regierungspräsidium Freiburg",
+  "city": "Freiburg im Breisgau",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "faktorgruen landschaftsarchitekten|Freiburg im Breisgau",
+  "c_name": "faktorgruen Landschaftsarchitekten",
+  "city": "Freiburg im Breisgau",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ },
+ {
+  "key": "landesbetrieb straßenbau und verkehr schleswig holstein lbv sh|Kiel",
+  "c_name": "Landesbetrieb Straßenbau und Verkehr Schleswig-Holstein (LBV.SH)",
+  "city": "Kiel",
+  "address_from_job_ad": null,
+  "open_jobs": 0,
+  "job_titles": null,
+  "job_links": null
+ }
+]
