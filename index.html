@@ -595,6 +595,7 @@ const visible = () => sortByRating(COMPANIES.filter(matches));
 mapboxgl.accessToken = MAPBOX_TOKEN;
 const map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/mapbox/light-v11', center: [10.4, 51.1], zoom: 4.6 });
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
+map.on('moveend', () => { if (loadState === 'ready' && selectedId === null) renderPanel(); });
 map.on('click', e => {
   if (selectedId !== null && !e.originalEvent.target.closest('.mk')) select(null);
 });
@@ -676,8 +677,11 @@ function renderPanel() {
     $('#list-count').textContent = '';
     return;
   }
-  const v = visible();
+  // the list next to the map shows the employers currently visible on the map
+  const b = map.getBounds();
+  const v = visible().filter(c => isFinite(c.lat) && isFinite(c.lng) && (!b || b.contains([c.lng, c.lat])));
   $('#list-count').textContent = t('employers_n')(v.length);
+  $('#list').scrollTop = 0;
   $('#city-chip').innerHTML = F.city
     ? `<button type="button" class="city-chip" data-act="clear-city" aria-label="${esc(t('show_all_cities'))}">${esc(cityText(F.city) || F.city)} <span aria-hidden="true">×</span></button>` : '';
   list.innerHTML = v.length ? v.map(c => `
