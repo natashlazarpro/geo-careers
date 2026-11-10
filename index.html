@@ -201,6 +201,12 @@
     .city-card[disabled] { cursor: default; opacity: .55; }
     .city-top { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
     .city-name { font-family: var(--serif); font-size: 34px; line-height: 1; }
+    .city-map { position: relative; display: block; aspect-ratio: 480 / 200; overflow: hidden; border: 1px solid var(--line-2); background: #f6f6f3; }
+    .city-map img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .city-dot { position: absolute; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: #fff; border: 1.2px solid var(--text); }
+    .city-card:hover .city-dot { border-color: var(--accent); }
+    .map-credit { margin-top: 14px; font-size: 11px; color: var(--muted); }
+    .map-credit a { color: var(--muted); }
 
     /* ── Footer ─────────────────────────────────────────────────────────────── */
     .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; padding-top: 40px; padding-bottom: 40px; font-size: 12px; color: var(--muted); }
@@ -345,6 +351,7 @@
         <p class="sub" data-i18n="cities_sub">Germany's ten largest cities. Pick one to see its GIS employers.</p>
       </div>
       <div class="city-grid" id="city-grid"></div>
+      <p class="map-credit">© <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">Mapbox</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></p>
     </div>
   </section>
 
@@ -417,16 +424,16 @@ const DATA_URL = 'https://data-schield.natashlazar-pro.workers.dev';
 
 // Germany's ten largest cities (same list as scraper/config.py)
 const CITIES = [
-  { de: 'Berlin',     en: 'Berlin',     keys: ['berlin'] },
-  { de: 'Hamburg',    en: 'Hamburg',    keys: ['hamburg'] },
-  { de: 'München',    en: 'Munich',     keys: ['münchen', 'munchen', 'muenchen', 'munich'] },
-  { de: 'Köln',       en: 'Cologne',    keys: ['köln', 'koln', 'koeln', 'cologne'] },
-  { de: 'Frankfurt',  en: 'Frankfurt',  keys: ['frankfurt', 'frankfurt am main'] },
-  { de: 'Stuttgart',  en: 'Stuttgart',  keys: ['stuttgart'] },
-  { de: 'Düsseldorf', en: 'Düsseldorf', keys: ['düsseldorf', 'dusseldorf', 'duesseldorf'] },
-  { de: 'Leipzig',    en: 'Leipzig',    keys: ['leipzig'] },
-  { de: 'Dortmund',   en: 'Dortmund',   keys: ['dortmund'] },
-  { de: 'Essen',      en: 'Essen',      keys: ['essen'] },
+  { de: 'Berlin',     en: 'Berlin',     keys: ['berlin'], lat: 52.52, lon: 13.405, zoom: 9.4 },
+  { de: 'Hamburg',    en: 'Hamburg',    keys: ['hamburg'], lat: 53.5511, lon: 9.9937, zoom: 9.6 },
+  { de: 'München',    en: 'Munich',     keys: ['münchen', 'munchen', 'muenchen', 'munich'], lat: 48.1351, lon: 11.582, zoom: 9.7 },
+  { de: 'Köln',       en: 'Cologne',    keys: ['köln', 'koln', 'koeln', 'cologne'], lat: 50.9375, lon: 6.9603, zoom: 9.8 },
+  { de: 'Frankfurt',  en: 'Frankfurt',  keys: ['frankfurt', 'frankfurt am main'], lat: 50.1109, lon: 8.6821, zoom: 10.0 },
+  { de: 'Stuttgart',  en: 'Stuttgart',  keys: ['stuttgart'], lat: 48.7758, lon: 9.1829, zoom: 10.0 },
+  { de: 'Düsseldorf', en: 'Düsseldorf', keys: ['düsseldorf', 'dusseldorf', 'duesseldorf'], lat: 51.2277, lon: 6.7735, zoom: 10.0 },
+  { de: 'Leipzig',    en: 'Leipzig',    keys: ['leipzig'], lat: 51.3397, lon: 12.3731, zoom: 10.0 },
+  { de: 'Dortmund',   en: 'Dortmund',   keys: ['dortmund'], lat: 51.5136, lon: 7.4653, zoom: 10.0 },
+  { de: 'Essen',      en: 'Essen',      keys: ['essen'], lat: 51.4556, lon: 7.0116, zoom: 10.0 },
 ];
 const SIZES = ['1-10', '11-50', '51-200', '201-500', '500+'];
 const ROLES = ['Core product', 'Dedicated team', 'Side tool'];
@@ -565,7 +572,7 @@ const visible = () => sortByRating(COMPANIES.filter(matches));
 
 // ─── Map ──────────────────────────────────────────────────────────────────────
 mapboxgl.accessToken = MAPBOX_TOKEN;
-const map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/mapbox/light-v11', center: [10.4, 51.1], zoom: 5.2 });
+const map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/mapbox/light-v11', center: [10.4, 51.1], zoom: 4.6 });
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
 map.on('click', e => {
   if (selectedId !== null && !e.originalEvent.target.closest('.mk')) select(null);
@@ -770,6 +777,23 @@ function renderDirectory() {
   }).join('');
 }
 
+// Mapbox Static Images preview per city, with the city's employers drawn on top as dots.
+const PREVIEW_W = 480, PREVIEW_H = 200;
+function mercator(lon, lat, zoom) {
+  const world = 512 * 2 ** zoom, s = Math.sin(lat * Math.PI / 180);
+  return [(lon + 180) / 360 * world, (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * world];
+}
+function cityMap(city) {
+  const src = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/${city.lon},${city.lat},${city.zoom},0/${PREVIEW_W}x${PREVIEW_H}@2x?logo=false&attribution=false&access_token=${MAPBOX_TOKEN}`;
+  const [cx, cy] = mercator(city.lon, city.lat, city.zoom);
+  const dots = COMPANIES.filter(c => cityOf(c.city) === city && isFinite(c.lat) && isFinite(c.lng)).map(c => {
+    const [x, y] = mercator(c.lng, c.lat, city.zoom);
+    const left = (x - cx) / PREVIEW_W * 100 + 50, top = (y - cy) / PREVIEW_H * 100 + 50;
+    return left < 0 || left > 100 || top < 0 || top > 100 ? '' : `<span class="city-dot" style="left:${left.toFixed(2)}%;top:${top.toFixed(2)}%"></span>`;
+  }).join('');
+  return `<span class="city-map" aria-hidden="true"><img src="${src}" alt="" loading="lazy" width="${PREVIEW_W}" height="${PREVIEW_H}" />${dots}</span>`;
+}
+
 function renderCities() {
   $('#city-grid').innerHTML = CITIES.map((city, i) => {
     const n = COMPANIES.filter(c => cityOf(c.city) === city).length;
@@ -777,6 +801,7 @@ function renderCities() {
     const off = loadState === 'ready' && n === 0;
     return `<button type="button" class="city-card" data-city="${esc(city[LANG])}" ${off ? 'disabled' : ''}>
       <span class="city-top"><span>${String(i + 1).padStart(2, '0')}</span><span>${esc(label)}</span></span>
+      ${cityMap(city)}
       <span class="city-name">${esc(city[LANG])}</span>
     </button>`;
   }).join('');
