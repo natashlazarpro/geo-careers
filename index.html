@@ -359,7 +359,6 @@
           <span class="label" data-i18n="sg_rules">What counts</span>
           <p data-i18n="sg_rule1">Any company that works with GIS or geodata — whether or not it's hiring right now.</p>
           <p data-i18n="sg_rule2">The careers link should be the company's own careers page, not a LinkedIn or job-board listing.</p>
-          <p data-i18n="sg_rule3">Any city in Germany — not only the ten on the map today.</p>
         </div>
       </div>
 
@@ -370,7 +369,7 @@
               <input name="company" type="text" required maxlength="150" autocomplete="organization" />
             </label>
             <label class="sg-field"><span data-i18n="sg_city">City</span>
-              <input name="city" type="text" required maxlength="80" data-i18n-ph="sg_city_ph" placeholder="Any city in Germany, e.g. Potsdam" />
+              <input name="city" type="text" required maxlength="80" />
             </label>
           </div>
           <label class="sg-field"><span data-i18n="sg_url">Careers page URL</span>
@@ -441,8 +440,7 @@ const T = {
     sg_sub: "Know a company doing GIS or geodata work that isn't on the map yet? Send it in.",
     sg_rules: 'What counts', sg_rule1: "Any company that works with GIS or geodata — whether or not it's hiring right now.",
     sg_rule2: "The careers link should be the company's own careers page, not a LinkedIn or job-board listing.",
-    sg_rule3: 'Any city in Germany — not only the ten on the map today.',
-    sg_company: 'Company name', sg_city: 'City', sg_city_ph: 'Any city in Germany, e.g. Potsdam',
+    sg_company: 'Company name', sg_city: 'City',
     sg_url: 'Careers page URL', sg_url_hint: "The company's own site, please.", sg_tools: 'GIS tools they use',
     sg_note: 'Anything else', sg_optional: '(optional)', sg_privacy: 'No account needed. Nothing is published without review.',
     sg_send: 'Send suggestion', sg_sending: 'Sending…', sg_thanks: "Thank you — it's in the queue.",
@@ -475,8 +473,7 @@ const T = {
     sg_sub: 'Du kennst ein Unternehmen, das mit GIS oder Geodaten arbeitet und noch nicht auf der Karte ist? Schick es uns.',
     sg_rules: 'Was zählt', sg_rule1: 'Jedes Unternehmen, das mit GIS oder Geodaten arbeitet – egal, ob es gerade einstellt.',
     sg_rule2: 'Der Karriere-Link sollte auf die eigene Karriereseite des Unternehmens führen, nicht auf LinkedIn oder eine Jobbörse.',
-    sg_rule3: 'Jede Stadt in Deutschland – nicht nur die zehn, die heute auf der Karte sind.',
-    sg_company: 'Unternehmen', sg_city: 'Stadt', sg_city_ph: 'Jede Stadt in Deutschland, z. B. Potsdam',
+    sg_company: 'Unternehmen', sg_city: 'Stadt',
     sg_url: 'Link zur Karriereseite', sg_url_hint: 'Bitte die eigene Website des Unternehmens.', sg_tools: 'Genutzte GIS-Tools',
     sg_note: 'Sonstiges', sg_optional: '(optional)', sg_privacy: 'Kein Konto nötig. Nichts wird ohne Prüfung veröffentlicht.',
     sg_send: 'Vorschlag senden', sg_sending: 'Wird gesendet…', sg_thanks: 'Danke – dein Vorschlag ist eingegangen.',
