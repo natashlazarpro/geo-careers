@@ -23,9 +23,21 @@ CITIES = {
     "Leipzig": ("leipzig", 51.3397, 12.3731),
     "Dortmund": ("dortmund", 51.5136, 7.4653),
     "Essen": ("essen", 51.4556, 7.0116),
+    # GIS hubs (added Nov 2026)
+    "Potsdam": ("potsdam", 52.3906, 13.0645),
+    "Bonn": ("bonn", 50.7374, 7.0982),
+    "Karlsruhe": ("karlsruhe", 49.0069, 8.4037),
+    "Darmstadt": ("darmstadt", 49.8728, 8.6512),
+    "Dresden": ("dresden", 51.0504, 13.7373),
+    "Hannover": ("hannover", 52.3759, 9.7320),
+    "Bremen": ("bremen", 53.0793, 8.8017),
+    "Münster": ("muenster", 51.9607, 7.6261),
+    "Freiburg im Breisgau": ("freiburg", 47.9990, 7.8421),
+    "Kiel": ("kiel", 54.3233, 10.1228),
 }
 CITY_ALIASES = {"munich": "München", "cologne": "Köln", "frankfurt": "Frankfurt am Main",
-                "dusseldorf": "Düsseldorf", "duesseldorf": "Düsseldorf"}
+                "dusseldorf": "Düsseldorf", "duesseldorf": "Düsseldorf", "hanover": "Hannover",
+                "munster": "Münster", "muenster": "Münster", "freiburg": "Freiburg im Breisgau"}
 CITY_RADIUS_KM = 25
 
 # Columns of the employer table, in order (same as Natasha's workbook)

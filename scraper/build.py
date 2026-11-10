@@ -76,6 +76,12 @@ def collect(use_linkedin):
 
 
 def merge_jobs(store, found, today):
+    # a job found around one city but located in another configured city belongs to that city
+    names = {n.lower(): n for n in config.CITIES} | {k: v for k, v in config.CITY_ALIASES.items()}
+    for job in found:
+        loc = str(job.get("location_text") or "").split(",")[0].strip().lower()
+        if loc in names:
+            job["city"] = names[loc]
     seen_now = set()
     for job in found:
         if not job.get("company") or not is_gis_job(job["title"]) or job["id"] in seen_now:

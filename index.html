@@ -356,9 +356,9 @@
   <section id="view-cities" data-view="cities" hidden>
     <div class="wrap">
       <div class="page-head cities-head">
-        <p class="eyebrow" data-i18n="cities_eyebrow">Ten cities</p>
+        <p class="eyebrow" data-i18n="cities_eyebrow">Twenty cities</p>
         <h1 class="title" data-i18n-html="cities_title">Pick a <em>city</em></h1>
-        <p class="sub" data-i18n="cities_sub">Germany's ten largest cities. Pick one to see its GIS employers.</p>
+        <p class="sub" data-i18n="cities_sub">Germany's ten largest cities and ten GIS hubs. Pick one to see its GIS employers.</p>
       </div>
       <div class="city-grid" id="city-grid"></div>
       <p class="map-credit">© <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">Mapbox</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></p>
@@ -432,7 +432,7 @@
 const MAPBOX_TOKEN = '__MAPBOX_TOKEN__';
 const DATA_URL = 'https://data-schield.natashlazar-pro.workers.dev';
 
-// Germany's ten largest cities (same list as scraper/config.py)
+// Germany's ten largest cities + ten GIS hubs (same list as scraper/config.py)
 const CITIES = [
   { de: 'Berlin',     en: 'Berlin',     keys: ['berlin'], lat: 52.52, lon: 13.405, zoom: 9.4 },
   { de: 'Hamburg',    en: 'Hamburg',    keys: ['hamburg'], lat: 53.5511, lon: 9.9937, zoom: 9.6 },
@@ -444,6 +444,17 @@ const CITIES = [
   { de: 'Leipzig',    en: 'Leipzig',    keys: ['leipzig'], lat: 51.3397, lon: 12.3731, zoom: 10.0 },
   { de: 'Dortmund',   en: 'Dortmund',   keys: ['dortmund'], lat: 51.5136, lon: 7.4653, zoom: 10.0 },
   { de: 'Essen',      en: 'Essen',      keys: ['essen'], lat: 51.4556, lon: 7.0116, zoom: 10.0 },
+  // GIS hubs
+  { de: 'Potsdam',    en: 'Potsdam',    keys: ['potsdam'], lat: 52.3906, lon: 13.0645, zoom: 10.5 },
+  { de: 'Bonn',       en: 'Bonn',       keys: ['bonn'], lat: 50.7374, lon: 7.0982, zoom: 10.5 },
+  { de: 'Karlsruhe',  en: 'Karlsruhe',  keys: ['karlsruhe'], lat: 49.0069, lon: 8.4037, zoom: 10.5 },
+  { de: 'Darmstadt',  en: 'Darmstadt',  keys: ['darmstadt'], lat: 49.8728, lon: 8.6512, zoom: 10.5 },
+  { de: 'Dresden',    en: 'Dresden',    keys: ['dresden'], lat: 51.0504, lon: 13.7373, zoom: 10.0 },
+  { de: 'Hannover',   en: 'Hanover',    keys: ['hannover', 'hanover'], lat: 52.3759, lon: 9.732, zoom: 10.0 },
+  { de: 'Bremen',     en: 'Bremen',     keys: ['bremen'], lat: 53.0793, lon: 8.8017, zoom: 10.0 },
+  { de: 'Münster',    en: 'Münster',    keys: ['münster', 'munster', 'muenster'], lat: 51.9607, lon: 7.6261, zoom: 10.5 },
+  { de: 'Freiburg',   en: 'Freiburg',   keys: ['freiburg', 'freiburg im breisgau'], lat: 47.999, lon: 7.8421, zoom: 10.5 },
+  { de: 'Kiel',       en: 'Kiel',       keys: ['kiel'], lat: 54.3233, lon: 10.1228, zoom: 10.5 },
 ];
 const SIZES = ['1-10', '11-50', '51-200', '201-500', '500+'];
 const ROLES = ['Core product', 'Dedicated team', 'Side tool'];
@@ -476,7 +487,7 @@ const T = {
     clear: 'Clear filters', done: 'Done', sorted: 'Sorted by rating',
     th_employer: 'Employer', th_city: 'City', th_sector: 'Sector', th_role: 'GIS role', th_lang: 'Language', th_rating: 'Rating', th_jobs: 'Jobs',
     no_results: 'No employers match these filters.', loading: 'Loading employers…', load_error: 'The employer data could not be loaded. Please try again later.',
-    cities_eyebrow: 'Ten cities', cities_title: 'Pick a <em>city</em>', cities_sub: "Germany's ten largest cities. Pick one to see its GIS employers.",
+    cities_eyebrow: 'Twenty cities', cities_title: 'Pick a <em>city</em>', cities_sub: "Germany's ten largest cities and ten GIS hubs. Pick one to see its GIS employers.",
     coming: 'Coming soon',
     all: 'All', role: { 'Core product': 'Core product', 'Dedicated team': 'Dedicated team', 'Side tool': 'Side tool' },
     lang: { ENG: 'English', DE: 'German', 'DE/ENG': 'English / German' }, lang_short: { all: 'All', en: 'EN', de: 'DE' },
@@ -509,7 +520,7 @@ const T = {
     clear: 'Filter zurücksetzen', done: 'Fertig', sorted: 'Nach Bewertung sortiert',
     th_employer: 'Arbeitgeber', th_city: 'Stadt', th_sector: 'Branche', th_role: 'GIS-Rolle', th_lang: 'Sprache', th_rating: 'Bewertung', th_jobs: 'Stellen',
     no_results: 'Keine Arbeitgeber entsprechen diesen Filtern.', loading: 'Arbeitgeber werden geladen…', load_error: 'Die Daten konnten nicht geladen werden. Bitte später erneut versuchen.',
-    cities_eyebrow: 'Zehn Städte', cities_title: 'Wähle eine <em>Stadt</em>', cities_sub: 'Die zehn größten Städte Deutschlands. Wähle eine, um ihre GIS-Arbeitgeber zu sehen.',
+    cities_eyebrow: 'Zwanzig Städte', cities_title: 'Wähle eine <em>Stadt</em>', cities_sub: 'Die zehn größten Städte Deutschlands und zehn GIS-Standorte. Wähle eine, um ihre GIS-Arbeitgeber zu sehen.',
     coming: 'Demnächst',
     all: 'Alle', role: { 'Core product': 'Kernprodukt', 'Dedicated team': 'GIS-Team', 'Side tool': 'Nebentool' },
     lang: { ENG: 'Englisch', DE: 'Deutsch', 'DE/ENG': 'Englisch / Deutsch' }, lang_short: { all: 'Alle', en: 'EN', de: 'DE' },
