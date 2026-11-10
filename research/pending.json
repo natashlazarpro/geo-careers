@@ -1,1 +1,20 @@
-[]
+[
+ {
+  "key": "scherer staffing|Berlin",
+  "c_name": "Scherer Staffing GmbH",
+  "city": "Berlin",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Spezialist GIS-Produktkonfiguration & Testing (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003993057-S"
+ },
+ {
+  "key": "stromnetz berlin|Berlin",
+  "c_name": "Stromnetz Berlin GmbH",
+  "city": "Berlin",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Geomatiker*in",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/16617-1549-1802912-0-S"
+ }
+]
