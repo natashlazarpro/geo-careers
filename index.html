@@ -873,7 +873,8 @@ $('#pills').addEventListener('click', e => {
   }
   const act = e.target.closest('[data-act]');
   if (!act) return;
-  if (act.dataset.act === 'clear') { draft.clear(); renderFilters(); }
+  // Clear all takes effect at once (no Apply needed); the list stays open for a new choice.
+  if (act.dataset.act === 'clear') { draft.clear(); F[openPill].clear(); onFilterChange(); }
   if (act.dataset.act === 'apply') { F[openPill] = new Set(draft); openPill = null; onFilterChange(); }
   if (act.dataset.act === 'reset') { ['sectors', 'roles', 'langs', 'sizes', 'techs'].forEach(k => F[k].clear()); openPill = null; onFilterChange(); }
 });
