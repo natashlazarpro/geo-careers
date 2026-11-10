@@ -1025,8 +1025,10 @@ async function loadData() {
   try {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    COMPANIES = (await res.json()).map(c => ({
-      id:       Number(c.id),
+    // ids in the workbook restart in every city sheet, so give each office its own unique id here
+    COMPANIES = (await res.json()).map((c, i) => ({
+      id:       i,
+      rowId:    Number(c.id),
       name:     c.c_name || '',
       website:  c.c_url,
       address:  c.adress,
