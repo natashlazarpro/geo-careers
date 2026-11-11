@@ -8,13 +8,27 @@ to `research/pending.json`. This task researches them and hands the results back
 ## Steps
 
 1. `pip install -r requirements.txt`
-2. Read `research/pending.json` — the companies still waiting (most open jobs first).
-   If it is empty or missing, stop: nothing to do.
-3. Research each company with web search / web fetch (rules below) and write all results to
-   `research/inbox/YYYY-MM-DD.json` (a JSON list, one object per company, `key` copied from the list).
-4. `python -m scraper.research check research/inbox/YYYY-MM-DD.json` — fix anything it reports as PROBLEM.
+2. Read `research/pending.json`. Each entry has a `task`:
+   - `"research"`: an employer nobody has researched yet. Fill **all** fields below.
+   - `"fill"`: an already researched employer with empty columns, listed in `missing`. Research only
+     those columns (e.g. `g_stack`, `li_url`, `kp_url`, `adress`) and return just them plus `task`, `key`,
+     `c_name`, `city`, `notes`. Leave a column out if you can't verify it.
+   Work through the whole list (up to 50 entries).
+3. Then read `research/targets.json`: cities that still have fewer than 30 employers, with how many are
+   missing. Use the remaining time to **find new GIS employers** in those cities (biggest gaps first):
+   search GIS job ads, Esri/QGIS partner lists, ÖbVI (Vermessung) lists, state and city geodata offices,
+   universities, research institutes, utilities, planning and engineering offices. Only real employers
+   with an office in or right next to that city that do GIS/geodata work. Research each fully and add it
+   with `"task": "new"` (all fields, `key` = `"<name>|<city>"`). Aim for 10–20 new employers per run.
+   Before adding one, make sure it isn't already in the city: check `research/employers.json`.
+4. Write everything to `research/inbox/YYYY-MM-DD.json` (add `-2`, `-3` … if that file exists),
+   then `python -m scraper.research check research/inbox/<file>.json` and fix anything reported.
 5. Commit only that file and push to `main`. If the push is rejected: `git pull --rebase origin main`, push again.
    The push starts the GitHub job, which writes the results into the workbook within a few minutes.
+
+**g_stack** matters: look at the employer's GIS job ads (Arbeitsagentur, StepStone, their careers page)
+and tech pages and list the tools they name (ArcGIS Pro, QGIS, PostGIS, FME, Python, ALKIS, …).
+**li_url**: search "<company> LinkedIn" and use the `linkedin.com/company/...` URL from the results.
 
 ## Fields
 

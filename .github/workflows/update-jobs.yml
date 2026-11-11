@@ -83,6 +83,8 @@ jobs:
         run: |
           mkdir -p research
           python -m scraper.research list 50 > research/pending.json
+          python -m scraper.research targets > research/targets.json
+          python -m scraper.research names > research/employers.json
 
       - name: Save data to Cloudflare
         run: python -m scraper.store push
@@ -93,10 +95,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # start from the latest main so a run that started earlier can't conflict
           INGESTED=$(git ls-files --deleted research/inbox)        # inbox files added to the workbook this run
-          cp research/pending.json /tmp/pending.json
+          cp research/pending.json research/targets.json research/employers.json /tmp/
           git fetch -q origin main && git reset -q --hard origin/main
-          mkdir -p research && cp /tmp/pending.json research/pending.json
-          git add research/pending.json
+          mkdir -p research && cp /tmp/pending.json /tmp/targets.json /tmp/employers.json research/
+          git add research/pending.json research/targets.json research/employers.json
           [ -z "$INGESTED" ] || git rm -q --ignore-unmatch $INGESTED
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
             git add -f data/                              # no Cloudflare yet: keep data in the repo
