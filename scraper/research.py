@@ -21,7 +21,7 @@ def pending(limit=25):
     """Work list for the research task: employers to research (task "research"), then researched
     employers with empty columns (task "fill"), newest cities first."""
     cache = agent.load_cache()
-    rows, fill = [], []
+    rows, verify, fill = [], [], []
     order = {city: i for i, city in enumerate(reversed(list(config.CITIES)))}   # newest cities first
     for sheet, df in excel.read_city_sheets().items():
         for _, r in df.iterrows():
@@ -36,6 +36,12 @@ def pending(limit=25):
                     "job_titles": None if blank(r["job_titles"]) else r["job_titles"],
                     "job_links": None if blank(r["job_links"]) else r["job_links"],
                 })
+            elif (str(r["agent_check"]).startswith("done") and "general knowledge" in str(r.get("agent_notes"))
+                  and str(r.get("source")) == "research"):
+                verify.append({"task": "verify", "key": key, "c_name": r["c_name"], "city": r["city"],
+                               **{c: (None if blank(r.get(c)) else r.get(c))
+                                  for c in ("c_url", "adress", "postal_code", "sector", "g_role", "g_stack", "size", "kp_url", "li_url")},
+                               "_order": order.get(r["city"], 99)})
             elif str(r["agent_check"]).startswith("done") and "low" not in str(r["agent_check"]):
                 missing = [c for c in FILL_COLUMNS if blank(r.get(c))]
                 if missing:
@@ -44,7 +50,8 @@ def pending(limit=25):
                                  "_order": (order.get(r["city"], 99), -len(missing))})
     rows.sort(key=lambda x: -x["open_jobs"])
     fill.sort(key=lambda x: x.pop("_order"))
-    return (rows + fill)[:limit]
+    verify.sort(key=lambda x: x.pop("_order"))
+    return (rows + verify + fill)[:limit]
 
 
 def targets():
@@ -60,7 +67,9 @@ def targets():
 def validate(rec):
     """Return a list of problems with one research record (empty list = OK)."""
     problems = []
-    required = ("key", "c_name", "city") if rec.get("task") == "fill" else ("key", "c_name", "city", "eng", "de", "confidence")
+    required = (("key", "c_name", "city") if rec.get("task") == "fill"
+                else ("key", "c_name", "city", "confidence") if rec.get("task") == "verify"
+                else ("key", "c_name", "city", "eng", "de", "confidence"))
     for f in required:
         if blank(rec.get(f)):
             problems.append(f"missing {f}")
@@ -109,8 +118,8 @@ def ingest():
         print(f"[research] ingesting {f.name}")
         records = json.loads(f.read_text(encoding="utf-8"))
         records = [records] if isinstance(records, dict) else records
-        direct = [r for r in records if r.get("task") in ("fill", "new")]
-        cached = [r for r in records if r.get("task") not in ("fill", "new")]
+        direct = [r for r in records if r.get("task") in ("fill", "new", "verify")]
+        cached = [r for r in records if r.get("task") not in ("fill", "new", "verify")]
         if cached:
             tmp = f.with_suffix(".research.tmp")
             tmp.write_text(json.dumps(cached, ensure_ascii=False), encoding="utf-8")
@@ -120,6 +129,27 @@ def ingest():
             add_new_employers(direct)
         f.unlink()
     return len(files)
+
+
+def match_existing_overwrite(frames, sheet, rec):
+    """task "verify": correct a row that was filled from general knowledge. Values the research
+    confirmed or corrected overwrite the row; null means "could not verify" and leaves it as is."""
+    if sheet is None:
+        return False
+    df = frames[sheet]
+    key = company_key(rec["c_name"])
+    hit = next((i for i in df.index if same_company(company_key(df.at[i, "c_name"]), key)), None)
+    if hit is None:
+        return False
+    for col in ("c_url", "adress", "postal_code", "sector", "g_role", "g_stack", "size", "kp_url", "li_url", "eng", "de", "sprach"):
+        if not blank(rec.get(col)) and rec[col] != df.at[hit, col]:
+            df.at[hit, col] = rec[col]
+            if col == "adress":
+                df.at[hit, "lat"], df.at[hit, "lon"] = None, None
+    df.at[hit, "agent_check"] = f"done ({rec.get('confidence', '?')})"
+    df.at[hit, "agent_notes"] = rec.get("notes") or "Verified on official pages."
+    frames[sheet] = df
+    return True
 
 
 def add_new_employers(records):
@@ -133,7 +163,11 @@ def add_new_employers(records):
         rec.setdefault("key", f"{company_key(rec.get('c_name'))}|{rec.get('city')}")
         to_research = bool(rec.pop("pending", False))      # only name + city known: the research task fills the rest
         problems = [] if to_research and rec.get("c_name") else validate(rec)
-        is_fill = rec.pop("task", None) == "fill"
+        task = rec.pop("task", None)
+        is_fill = task == "fill"
+        if task == "verify" and match_existing_overwrite(frames, sheet_of.get(rec.get("city")), rec):
+            filled += 1
+            continue
         rec.pop("missing", None)
         sheet = sheet_of.get(rec.get("city"))
         if problems or sheet is None:

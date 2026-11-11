@@ -8,18 +8,30 @@ to `research/pending.json`. This task researches them and hands the results back
 ## Steps
 
 1. `pip install -r requirements.txt`
+**Quality first.** Every value must come from a source you actually opened: the employer's own website
+(Impressum/Kontakt, Karriere, job ads) or an official register. Fewer employers with correct data are
+better than many uncertain ones. Never fill a field from memory.
+
 2. Read `research/pending.json`. Each entry has a `task`:
    - `"research"`: an employer nobody has researched yet. Fill **all** fields below.
    - `"fill"`: an already researched employer with empty columns, listed in `missing`. Research only
      those columns (e.g. `g_stack`, `li_url`, `kp_url`, `adress`) and return just them plus `task`, `key`,
      `c_name`, `city`, `notes`. Leave a column out if you can't verify it.
+   - `"verify"`: an employer whose data was entered from general knowledge. Check every given value
+     (address of the office in that city, website, careers page, size, tools, LinkedIn, sector) on official
+     pages. Return the record with the correct values (corrected or confirmed), `confidence` (`high` only
+     if the address is confirmed on the employer's own site), and `notes` saying what you checked.
+     Use null for a value you could not check; it then stays as it is. If the employer has no office in
+     that city or does no GIS work, return `confidence: "low"` with the reason (it is then hidden from the map).
    Work through the whole list (up to 50 entries).
 3. Then read `research/targets.json`: cities that still have fewer than 30 employers, with how many are
    missing. Use the remaining time to **find new GIS employers** in those cities (biggest gaps first):
    search GIS job ads, Esri/QGIS partner lists, ÖbVI (Vermessung) lists, state and city geodata offices,
    universities, research institutes, utilities, planning and engineering offices. Only real employers
-   with an office in or right next to that city that do GIS/geodata work. Research each fully and add it
-   with `"task": "new"` (all fields, `key` = `"<name>|<city>"`). Aim for 10–20 new employers per run.
+   with an office in or right next to that city that do GIS/geodata work. Add one only if you confirmed
+   its address on its own website and found evidence of GIS work (a GIS job ad, GIS services, geodata
+   products); add it with `"task": "new"`, all fields, `key` = `"<name>|<city>"`. Up to 10 per run;
+   adding none is fine. Reaching 30 per city is a goal, not a requirement.
    Before adding one, make sure it isn't already in the city: check `research/employers.json`.
 4. Write everything to `research/inbox/YYYY-MM-DD.json` (add `-2`, `-3` … if that file exists),
    then `python -m scraper.research check research/inbox/<file>.json` and fix anything reported.

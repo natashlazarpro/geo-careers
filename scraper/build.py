@@ -243,8 +243,9 @@ def apply_research(df, idx, r):
 def write_map_files(frames):
     allrows = pd.concat([df.assign(sheet=s) for s, df in frames.items()], ignore_index=True)
     gdf = geocode.to_geodataframe(allrows)
-    features = []
+    features, low = [], []
     for _, r in gdf.iterrows():
+        low.append("low" in str(r.get("agent_check")))
         props = {c: excel._clean(r[c]) for c in config.COLUMNS + ["open_jobs", "job_titles", "job_links", "first_seen", "last_seen"]}
         props = {k: (v.isoformat() if hasattr(v, "isoformat") else v) for k, v in props.items()}
         features.append({"type": "Feature",
@@ -253,8 +254,10 @@ def write_map_files(frames):
     config.GEOJSON_FILE.write_text(json.dumps({"type": "FeatureCollection", "updated": date.today().isoformat(),
                                                "features": features}, ensure_ascii=False, default=str), encoding="utf-8")
     # flat list for the website: your 17 columns + first_seen (for "Newest") + coordinates
+    # the website shows only reliable rows: low-confidence research (agencies, unverified offices) stays in the workbook only
     site = [{**{c: f["properties"][c] for c in config.COLUMNS}, "first_seen": f["properties"].get("first_seen"),
-             "lon": f["geometry"]["coordinates"][0], "lat": f["geometry"]["coordinates"][1]} for f in features]
+             "lon": f["geometry"]["coordinates"][0], "lat": f["geometry"]["coordinates"][1]}
+            for f, is_low in zip(features, low) if not is_low]
     config.MAP_JSON_FILE.write_text(json.dumps(site, ensure_ascii=False, default=str), encoding="utf-8")
     try:
         out = gdf.copy()
