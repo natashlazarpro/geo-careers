@@ -1,1 +1,20 @@
-[]
+[
+ {
+  "key": "hays professional solutions|Berlin",
+  "c_name": "Hays Professional Solutions GmbH",
+  "city": "Berlin",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Operations Engineer GIS Enabling Platform (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/13319-901266/1_6478CS-S"
+ },
+ {
+  "key": "schmitt|Berlin",
+  "c_name": "Schmitt GmbH",
+  "city": "Berlin",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "GIS Konfiguration & Test Spezialist (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/19821-EZ7HJ7W0YRCJPY0I-S"
+ }
+]
