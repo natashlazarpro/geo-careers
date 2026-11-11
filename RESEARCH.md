@@ -23,7 +23,7 @@ better than many uncertain ones. Never fill a field from memory.
      if the address is confirmed on the employer's own site), and `notes` saying what you checked.
      Use null for a value you could not check; it then stays as it is. If the employer has no office in
      that city or does no GIS work, return `confidence: "low"` with the reason (it is then hidden from the map).
-   Work through the whole list (up to 50 entries).
+   Work through the whole list, or only the cities your run was given (parallel runs split the list by city).
 3. Then read `research/targets.json`: cities that still have fewer than 30 employers, with how many are
    missing. Use the remaining time to **find new GIS employers** in those cities (biggest gaps first):
    search GIS job ads, Esri/QGIS partner lists, ÖbVI (Vermessung) lists, state and city geodata offices,

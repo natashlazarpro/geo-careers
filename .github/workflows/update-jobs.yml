@@ -82,7 +82,7 @@ jobs:
       - name: List employers waiting for research
         run: |
           mkdir -p research
-          python -m scraper.research list 50 > research/pending.json
+          python -m scraper.research list 400 > research/pending.json
           python -m scraper.research targets > research/targets.json
           python -m scraper.research names > research/employers.json
 
