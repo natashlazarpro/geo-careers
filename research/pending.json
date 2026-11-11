@@ -1,5 +1,6 @@
 [
  {
+  "task": "research",
   "key": "hays professional solutions|Berlin",
   "c_name": "Hays Professional Solutions GmbH",
   "city": "Berlin",
@@ -9,6 +10,7 @@
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/13319-901266/1_6478CS-S"
  },
  {
+  "task": "research",
   "key": "schmitt|Berlin",
   "c_name": "Schmitt GmbH",
   "city": "Berlin",
@@ -16,5 +18,577 @@
   "open_jobs": 1,
   "job_titles": "GIS Konfiguration & Test Spezialist (m/w/d)",
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/19821-EZ7HJ7W0YRCJPY0I-S"
+ },
+ {
+  "task": "fill",
+  "key": "ingenieurbüro dipl ing g jonasson|Kiel",
+  "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
+  "city": "Kiel",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "adress",
+   "postal_code",
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für umwelt schleswig holstein lfu|Kiel",
+  "c_name": "Landesamt für Umwelt Schleswig-Holstein (LfU)",
+  "city": "Kiel",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "neumann baugrunduntersuchung|Kiel",
+  "c_name": "Neumann Baugrunduntersuchung GmbH & Co. KG",
+  "city": "Kiel",
+  "c_url": "https://www.neumann-baugrund.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für vermessung und geoinformation schleswig holstein lvermgeo|Kiel",
+  "c_name": "Landesamt für Vermessung und Geoinformation Schleswig-Holstein (LVermGeo)",
+  "city": "Kiel",
+  "c_url": "https://www.schleswig-holstein.de/LVERMGEOSH",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "geomar helmholtz zentrum für ozeanforschung kiel|Kiel",
+  "c_name": "GEOMAR Helmholtz-Zentrum für Ozeanforschung Kiel",
+  "city": "Kiel",
+  "c_url": "https://www.geomar.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
+  "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
+  "city": "Kiel",
+  "c_url": "https://www.geographie.uni-kiel.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landeshauptstadt kiel vermessungsamt|Kiel",
+  "c_name": "Landeshauptstadt Kiel – Vermessungsamt",
+  "city": "Kiel",
+  "c_url": "https://www.kiel.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stadtwerke kiel|Kiel",
+  "c_name": "Stadtwerke Kiel AG",
+  "city": "Kiel",
+  "c_url": "https://www.stadtwerke-kiel.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dataport aör|Kiel",
+  "c_name": "Dataport AöR",
+  "city": "Kiel",
+  "c_url": "https://www.dataport.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "kvg kieler verkehrsgesellschaft|Kiel",
+  "c_name": "KVG Kieler Verkehrsgesellschaft mbH",
+  "city": "Kiel",
+  "c_url": "https://www.kvg-kiel.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer institut für solare energiesysteme ise|Freiburg im Breisgau",
+  "c_name": "Fraunhofer-Institut für Solare Energiesysteme ISE",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.ise.fraunhofer.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "öko institut|Freiburg im Breisgau",
+  "c_name": "Öko-Institut e.V.",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.oeko.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "forstliche versuchs und forschungsanstalt baden württemberg fva|Freiburg im Breisgau",
+  "c_name": "Forstliche Versuchs- und Forschungsanstalt Baden-Württemberg (FVA)",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.fva-bw.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "universität freiburg professur für fernerkundung und landschaftsinformationssysteme|Freiburg im Breisgau",
+  "c_name": "Universität Freiburg – Professur für Fernerkundung und Landschaftsinformationssysteme",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.felis.uni-freiburg.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für geologie rohstoffe und bergbau lgrb|Freiburg im Breisgau",
+  "c_name": "Landesamt für Geologie, Rohstoffe und Bergbau (LGRB)",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://lgrb-bw.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stadt freiburg vermessungsamt|Freiburg im Breisgau",
+  "c_name": "Stadt Freiburg – Vermessungsamt",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.freiburg.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "badenova|Freiburg im Breisgau",
+  "c_name": "badenova AG & Co. KG",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.badenova.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "freiburger verkehrs vag|Freiburg im Breisgau",
+  "c_name": "Freiburger Verkehrs AG (VAG)",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.vag-freiburg.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "faktorgruen partnerschaftsgesellschaft mbb|Freiburg im Breisgau",
+  "c_name": "faktorgruen Partnerschaftsgesellschaft mbB",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://faktorgruen.de/",
+  "missing": [
+   "size",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "regierungspräsidium freiburg|Freiburg im Breisgau",
+  "c_name": "Regierungspräsidium Freiburg",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://rpf.baden-wuerttemberg.de/",
+  "missing": [
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "fh münster fachbereich bauingenieurwesen|Münster",
+  "c_name": "FH Münster – Fachbereich Bauingenieurwesen",
+  "city": "Münster",
+  "c_url": "https://www.fh-muenster.de/bau/",
+  "missing": [
+   "adress",
+   "postal_code",
+   "g_stack",
+   "size",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hansa luftbild|Münster",
+  "c_name": "Hansa Luftbild AG",
+  "city": "Münster",
+  "c_url": "https://www.hansaluftbild.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "universität münster institut für geoinformatik|Münster",
+  "c_name": "Universität Münster – Institut für Geoinformatik",
+  "city": "Münster",
+  "c_url": "https://www.uni-muenster.de/Geoinformatics",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landschaftsverband westfalen lippe lwl|Münster",
+  "c_name": "Landschaftsverband Westfalen-Lippe (LWL)",
+  "city": "Münster",
+  "c_url": "https://www.lwl.org",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bezirksregierung münster|Münster",
+  "c_name": "Bezirksregierung Münster",
+  "city": "Münster",
+  "c_url": "https://www.bezreg-muenster.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "con terra|Münster",
+  "c_name": "con terra GmbH",
+  "city": "Münster",
+  "c_url": "https://www.conterra.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "eftas fernerkundung technologietransfer|Münster",
+  "c_name": "EFTAS Fernerkundung Technologietransfer GmbH",
+  "city": "Münster",
+  "c_url": "https://www.eftas.com",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "52 north spatial information research|Münster",
+  "c_name": "52°North Spatial Information Research GmbH",
+  "city": "Münster",
+  "c_url": "https://52north.org",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stadt münster vermessungs und katasteramt|Münster",
+  "c_name": "Stadt Münster – Vermessungs- und Katasteramt",
+  "city": "Münster",
+  "c_url": "https://www.stadt-muenster.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stadtwerke münster|Münster",
+  "c_name": "Stadtwerke Münster GmbH",
+  "city": "Münster",
+  "c_url": "https://www.stadtwerke-muenster.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "netz zentrum für innovative technologie|Bremen",
+  "c_name": "NETZ-Zentrum für innovative Technologie GmbH",
+  "city": "Bremen",
+  "c_url": "https://www.netz-zentrum.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ohb|Bremen",
+  "c_name": "OHB SE",
+  "city": "Bremen",
+  "c_url": "https://www.ohb.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "universität bremen institut für geographie|Bremen",
+  "c_name": "Universität Bremen – Institut für Geographie",
+  "city": "Bremen",
+  "c_url": "https://www.uni-bremen.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "swb|Bremen",
+  "c_name": "swb AG",
+  "city": "Bremen",
+  "c_url": "https://www.swb-gruppe.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hansewasser bremen|Bremen",
+  "c_name": "hanseWasser Bremen GmbH",
+  "city": "Bremen",
+  "c_url": "https://www.hansewasser.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "btc|Bremen",
+  "c_name": "BTC AG",
+  "city": "Bremen",
+  "c_url": "https://www.btc-ag.com",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt geoinformation bremen|Bremen",
+  "c_name": "Landesamt GeoInformation Bremen",
+  "city": "Bremen",
+  "c_url": "https://www.geo.bremen.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "airbus defence and space bremen|Bremen",
+  "c_name": "Airbus Defence and Space Bremen",
+  "city": "Bremen",
+  "c_url": "https://www.airbus.com",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dlr institut für raumfahrtsysteme|Bremen",
+  "c_name": "DLR – Institut für Raumfahrtsysteme",
+  "city": "Bremen",
+  "c_url": "https://www.dlr.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "marum zentrum für marine umweltwissenschaften|Bremen",
+  "c_name": "MARUM – Zentrum für Marine Umweltwissenschaften",
+  "city": "Bremen",
+  "c_url": "https://www.marum.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bremer straßenbahn bsag|Bremen",
+  "c_name": "Bremer Straßenbahn AG (BSAG)",
+  "city": "Bremen",
+  "c_url": "https://www.bsag.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "blg logistics group|Bremen",
+  "c_name": "BLG Logistics Group",
+  "city": "Bremen",
+  "c_url": "https://www.blg-logistics.com",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "de engineering|Hannover",
+  "c_name": "de engineering gmbh",
+  "city": "Hannover",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "adress",
+   "postal_code",
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "blom|Hannover",
+  "c_name": "BLOM Deutschland GmbH",
+  "city": "Hannover",
+  "c_url": "https://www.blomasa.com",
+  "missing": [
+   "adress",
+   "postal_code",
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "region hannover|Hannover",
+  "c_name": "Region Hannover",
+  "city": "Hannover",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "servicezentrum landentwicklung und agrarförderung|Hannover",
+  "c_name": "Servicezentrum Landentwicklung und Agrarförderung",
+  "city": "Hannover",
+  "c_url": "https://www.ml.niedersachsen.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ggis|Hannover",
+  "c_name": "gGIS mbH",
+  "city": "Hannover",
+  "c_url": "https://www.ggis.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "allterra|Hannover",
+  "c_name": "AllTerra Deutschland GmbH",
+  "city": "Hannover",
+  "c_url": "https://www.allterra-ds.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
  }
 ]
