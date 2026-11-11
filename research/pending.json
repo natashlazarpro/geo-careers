@@ -1,25 +1,5 @@
 [
  {
-  "task": "research",
-  "key": "hays professional solutions|Berlin",
-  "c_name": "Hays Professional Solutions GmbH",
-  "city": "Berlin",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "Operations Engineer GIS Enabling Platform (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/13319-901266/1_6478CS-S"
- },
- {
-  "task": "research",
-  "key": "schmitt|Berlin",
-  "c_name": "Schmitt GmbH",
-  "city": "Berlin",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "GIS Konfiguration & Test Spezialist (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/19821-EZ7HJ7W0YRCJPY0I-S"
- },
- {
   "task": "verify",
   "key": "geomar helmholtz zentrum für ozeanforschung kiel|Kiel",
   "c_name": "GEOMAR Helmholtz-Zentrum für Ozeanforschung Kiel",
@@ -31,8 +11,8 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.geomar.de/en/karriere/open-positions",
+  "li_url": "https://www.linkedin.com/company/ifm-geomar/"
  },
  {
   "task": "verify",
@@ -46,7 +26,7 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://www.uni-kiel.de/personal/de/stellen/extern/tech-adm",
   "li_url": null
  },
  {
@@ -61,8 +41,8 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.kiel.de/de/wirtschaft_arbeit/jobs_und_ausbildung/index.php",
+  "li_url": "https://www.linkedin.com/company/landeshauptstadt-kiel/"
  },
  {
   "task": "verify",
@@ -77,7 +57,7 @@
   "g_stack": null,
   "size": "500+",
   "kp_url": null,
-  "li_url": null
+  "li_url": "https://www.linkedin.com/company/stadtwerke-kiel-ag/"
  },
  {
   "task": "verify",
@@ -106,8 +86,8 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://karriere.dataport.de/stellenangebote.html",
+  "li_url": "https://www.linkedin.com/company/dataport-a%C3%B6r/"
  },
  {
   "task": "verify",
@@ -121,8 +101,8 @@
   "g_role": "Side tool",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.kvg-kiel.de/fuer-bewerber-innen/jobs",
+  "li_url": "https://www.linkedin.com/company/kvg-kieler-verkehrsgesellschaft/"
  },
  {
   "task": "verify",
@@ -136,8 +116,8 @@
   "g_role": "Side tool",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.ise.fraunhofer.de/de/studium-jobs-und-karriere.html",
+  "li_url": "https://www.linkedin.com/company/fraunhofer-ise-freiburg/"
  },
  {
   "task": "verify",
@@ -149,10 +129,10 @@
   "postal_code": "79100",
   "sector": "Environment & Conservation / Climate",
   "g_role": "Side tool",
-  "g_stack": null,
+  "g_stack": "QGIS",
   "size": "201-500",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.oeko.de/das-institut/stellenangebote/",
+  "li_url": "https://www.linkedin.com/company/oeko-institut-e.v./"
  },
  {
   "task": "verify",
@@ -164,10 +144,10 @@
   "postal_code": "79100",
   "sector": "Environment & Conservation / Remote Sensing",
   "g_role": "Dedicated team",
-  "g_stack": null,
+  "g_stack": "QGIS, Python, R",
   "size": "201-500",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.fva-bw.de/top-meta-navigation/karriere",
+  "li_url": "https://www.linkedin.com/company/fva-bw/"
  },
  {
   "task": "verify",
@@ -181,7 +161,7 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://www.felis.uni-freiburg.de/de/professur/stellenangebote",
   "li_url": null
  },
  {
@@ -194,9 +174,9 @@
   "postal_code": "79104",
   "sector": "Geology",
   "g_role": "Dedicated team",
-  "g_stack": null,
+  "g_stack": "ArcGIS, QGIS, PostgreSQL",
   "size": "201-500",
-  "kp_url": null,
+  "kp_url": "https://rp.baden-wuerttemberg.de/rpf/ueber-uns/karriere/stellenangebote/",
   "li_url": null
  },
  {
@@ -211,8 +191,8 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.freiburg.de/pb/208945.html",
+  "li_url": "https://www.linkedin.com/company/stadtfreiburg/"
  },
  {
   "task": "verify",
@@ -224,10 +204,10 @@
   "postal_code": "79108",
   "sector": "Renewable Energy / Hydrology",
   "g_role": "Dedicated team",
-  "g_stack": null,
+  "g_stack": "WebGIS, PostgreSQL, Oracle, SQL, Python, JavaScript, PHP, React, HTML",
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.badenova.de/karriere",
+  "li_url": "https://www.linkedin.com/company/badenova-ag-&-co-kg/"
  },
  {
   "task": "verify",
@@ -241,8 +221,8 @@
   "g_role": "Side tool",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.vag-freiburg.de/karriere/aktuelle-stellenangebote",
+  "li_url": "https://www.linkedin.com/company/freiburger-verkehrs-ag/"
  },
  {
   "task": "verify",
@@ -254,9 +234,9 @@
   "postal_code": "48155",
   "sector": "GIS / Geoinformatics",
   "g_role": "Core product",
-  "g_stack": null,
+  "g_stack": "ArcGIS, ArcGIS Pro, PostGIS, FME, FME Flow, FME Form, Oracle, Microsoft SQL Server, SQL, Python, Java, C#, JavaScript, TypeScript, Bash, Spring, HTML, CSS, Azure, Azure DevOps, Google Cloud, Docker, Kubernetes, Terraform, Git, GitHub, Linux",
   "size": "201-500",
-  "kp_url": null,
+  "kp_url": "https://www.conterra.de/jobs",
   "li_url": "https://www.linkedin.com/company/con-terra-gmbh/"
  },
  {
@@ -269,9 +249,9 @@
   "postal_code": "48145",
   "sector": "Remote Sensing / GIS",
   "g_role": "Core product",
-  "g_stack": null,
+  "g_stack": "ArcGIS, QGIS",
   "size": "51-200",
-  "kp_url": null,
+  "kp_url": "https://www.eftas.com/karriere/",
   "li_url": "https://www.linkedin.com/company/eftas-fernerkundung-technologietransfer-gmbh/"
  },
  {
@@ -284,9 +264,9 @@
   "postal_code": "48155",
   "sector": "Geoinformatics / GIS",
   "g_role": "Core product",
-  "g_stack": null,
+  "g_stack": "PostgreSQL, Python, Java, Bash, Docker, Kubernetes, Git, Linux",
   "size": "11-50",
-  "kp_url": null,
+  "kp_url": "https://52north.org/about-us/career-opportunities/",
   "li_url": "https://www.linkedin.com/company/52-north-gmbh/"
  },
  {
@@ -314,9 +294,9 @@
   "postal_code": "48155",
   "sector": "Surveying & Geodesy / GIS",
   "g_role": "Dedicated team",
-  "g_stack": null,
+  "g_stack": "ALKIS",
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://www.stadt-muenster.de/gute-einstellung/stellenangebote",
   "li_url": "https://www.linkedin.com/company/stadt-muenster/"
  },
  {
@@ -331,7 +311,7 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://www.stadtwerke-muenster.de/karriere/stellenangebote",
   "li_url": "https://www.linkedin.com/company/stadtwerke-münster-gmbh/"
  },
  {
@@ -374,9 +354,9 @@
   "postal_code": "28217",
   "sector": "Surveying & Geodesy / GIS",
   "g_role": "Dedicated team",
-  "g_stack": null,
+  "g_stack": "GEOgraf, GNSS, Total station, Laser scanning, Drones/UAV, ALKIS",
   "size": "201-500",
-  "kp_url": null,
+  "kp_url": "https://www.geo.bremen.de/karriere/stellenangebote-12014",
   "li_url": "https://www.linkedin.com/company/geoinformation-bremen/"
  },
  {
@@ -391,8 +371,8 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://career-ohb.csod.com/ux/ats/careersite/4/home?c=career-ohb&lang=de-DE",
+  "li_url": "https://www.linkedin.com/company/ohb-se/"
  },
  {
   "task": "verify",
@@ -406,7 +386,7 @@
   "g_role": "Side tool",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://airbus.com/careers/search-and-apply/search-for-vacancies.html?filters=&textsearch=",
   "li_url": "https://www.linkedin.com/company/airbusgroup/"
  },
  {
@@ -421,7 +401,7 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "201-500",
-  "kp_url": null,
+  "kp_url": "https://www.dlr.de/en/irs/career-young-professionals/jobs",
   "li_url": "https://www.linkedin.com/company/dlr/"
  },
  {
@@ -436,7 +416,7 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://www.uni-bremen.de/en/university/the-university-as-an-employer/job-vacancies-1",
   "li_url": null
  },
  {
@@ -451,7 +431,7 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "201-500",
-  "kp_url": null,
+  "kp_url": "https://www.marum.de/en/career/open-positions-at-MARUM.html",
   "li_url": "https://www.linkedin.com/company/university-of-bremen-marum/"
  },
  {
@@ -466,8 +446,8 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://jobs.swb.de/",
+  "li_url": "https://www.linkedin.com/company/swb-ag/"
  },
  {
   "task": "verify",
@@ -481,7 +461,7 @@
   "g_role": "Side tool",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://www.bsag.de/unternehmen/karriere",
   "li_url": "https://www.linkedin.com/company/bremer-straßenbahn-ag/"
  },
  {
@@ -496,7 +476,7 @@
   "g_role": "Side tool",
   "g_stack": null,
   "size": "500+",
-  "kp_url": null,
+  "kp_url": "https://www.blg-logistics.com/alle-stellenangebote",
   "li_url": "https://www.linkedin.com/company/blg-logistics-group/"
  },
  {
@@ -511,8 +491,8 @@
   "g_role": "Dedicated team",
   "g_stack": null,
   "size": "201-500",
-  "kp_url": null,
-  "li_url": null
+  "kp_url": "https://www.hansewasser.de/unternehmen/karriere",
+  "li_url": "https://www.linkedin.com/company/hansewasser-bremen-gmbh/"
  },
  {
   "task": "verify",
@@ -2121,17 +2101,44 @@
  },
  {
   "task": "fill",
-  "key": "ingenieurbüro dipl ing g jonasson|Kiel",
-  "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
+  "key": "north io|Kiel",
+  "c_name": "north.io GmbH",
   "city": "Kiel",
   "c_url": null,
   "missing": [
    "c_url",
    "adress",
    "postal_code",
-   "g_stack",
+   "size",
    "kp_url",
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "wasserstraßen und schifffahrtsamt nord ostsee kanal|Kiel",
+  "c_name": "Wasserstraßen- und Schifffahrtsamt Nord-Ostsee-Kanal",
+  "city": "Kiel",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "adress",
+   "postal_code",
+   "size",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ingenieurbüro dipl ing g jonasson|Kiel",
+  "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
+  "city": "Kiel",
+  "c_url": "https://g-jonasson.de",
+  "missing": [
+   "adress",
+   "postal_code",
+   "g_stack",
+   "kp_url"
   ]
  },
  {
@@ -2142,39 +2149,38 @@
   "c_url": "https://www.neumann-baugrund.de",
   "missing": [
    "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "regiodata|Freiburg im Breisgau",
+  "c_name": "regioDATA GmbH",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://www.regiodata-gmbh.de/",
+  "missing": [
+   "postal_code",
    "kp_url",
    "li_url"
   ]
  },
  {
   "task": "fill",
-  "key": "landesamt für vermessung und geoinformation schleswig holstein lvermgeo|Kiel",
-  "c_name": "Landesamt für Vermessung und Geoinformation Schleswig-Holstein (LVermGeo)",
-  "city": "Kiel",
-  "c_url": "https://www.schleswig-holstein.de/LVERMGEOSH",
+  "key": "unique land use|Freiburg im Breisgau",
+  "c_name": "unique land use GmbH",
+  "city": "Freiburg im Breisgau",
+  "c_url": "https://unique-landuse.de",
   "missing": [
-   "g_stack",
    "kp_url",
    "li_url"
   ]
  },
  {
   "task": "fill",
-  "key": "faktorgruen partnerschaftsgesellschaft mbb|Freiburg im Breisgau",
-  "c_name": "faktorgruen Partnerschaftsgesellschaft mbB",
+  "key": "greenventory|Freiburg im Breisgau",
+  "c_name": "greenventory GmbH",
   "city": "Freiburg im Breisgau",
-  "c_url": "https://faktorgruen.de/",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "regierungspräsidium freiburg|Freiburg im Breisgau",
-  "c_name": "Regierungspräsidium Freiburg",
-  "city": "Freiburg im Breisgau",
-  "c_url": "https://rpf.baden-wuerttemberg.de/",
+  "c_url": "https://greenventory.de",
   "missing": [
    "li_url"
   ]
@@ -2195,12 +2201,52 @@
  },
  {
   "task": "fill",
+  "key": "landesbetrieb wald und holz nordrhein westfalen|Münster",
+  "c_name": "Landesbetrieb Wald und Holz Nordrhein-Westfalen",
+  "city": "Münster",
+  "c_url": "https://www.wald-und-holz.nrw.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "hansa luftbild|Münster",
   "c_name": "Hansa Luftbild AG",
   "city": "Münster",
   "c_url": "https://www.hansaluftbild.de",
   "missing": [
    "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hanseatische naturentwicklung|Bremen",
+  "c_name": "Hanseatische Naturentwicklung GmbH",
+  "city": "Bremen",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "adress",
+   "g_stack",
+   "size",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "die senatorin für umwelt klima und wissenschaft sukw|Bremen",
+  "c_name": "Die Senatorin für Umwelt, Klima und Wissenschaft (SUKW)",
+  "city": "Bremen",
+  "c_url": "https://umwelt.bremen.de",
+  "missing": [
+   "adress",
+   "postal_code",
+   "size",
    "kp_url",
    "li_url"
   ]
@@ -2213,19 +2259,28 @@
   "c_url": "https://www.netz-zentrum.de",
   "missing": [
    "g_stack",
-   "kp_url",
-   "li_url"
+   "kp_url"
   ]
  },
  {
   "task": "fill",
-  "key": "btc|Bremen",
-  "c_name": "BTC AG",
+  "key": "sweco|Bremen",
+  "c_name": "Sweco GmbH",
   "city": "Bremen",
-  "c_url": "https://www.btc-ag.com",
+  "c_url": "https://www.sweco-gmbh.de/",
   "missing": [
-   "g_stack",
-   "kp_url"
+   "adress",
+   "postal_code"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "planungsgruppe grün|Bremen",
+  "c_name": "planungsgruppe grün gmbh",
+  "city": "Bremen",
+  "c_url": "https://pgg.de",
+  "missing": [
+   "li_url"
   ]
  },
  {
@@ -2233,9 +2288,8 @@
   "key": "de engineering|Hannover",
   "c_name": "de engineering gmbh",
   "city": "Hannover",
-  "c_url": null,
+  "c_url": "https://de-engineering.com",
   "missing": [
-   "c_url",
    "adress",
    "postal_code",
    "g_stack",
@@ -2258,42 +2312,6 @@
  },
  {
   "task": "fill",
-  "key": "servicezentrum landentwicklung und agrarförderung|Hannover",
-  "c_name": "Servicezentrum Landentwicklung und Agrarförderung",
-  "city": "Hannover",
-  "c_url": "https://www.ml.niedersachsen.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ggis|Hannover",
-  "c_name": "gGIS mbH",
-  "city": "Hannover",
-  "c_url": "https://www.ggis.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "allterra|Hannover",
-  "c_name": "AllTerra Deutschland GmbH",
-  "city": "Hannover",
-  "c_url": "https://www.allterra-ds.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "landesamt für bergbau energie und geologie|Hannover",
   "c_name": "Landesamt für Bergbau Energie und Geologie",
   "city": "Hannover",
@@ -2301,6 +2319,17 @@
   "missing": [
    "g_stack",
    "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "servicezentrum landentwicklung und agrarförderung|Hannover",
+  "c_name": "Servicezentrum Landentwicklung und Agrarförderung",
+  "city": "Hannover",
+  "c_url": "https://www.ml.niedersachsen.de",
+  "missing": [
+   "g_stack",
    "li_url"
   ]
  },
@@ -2317,17 +2346,6 @@
  },
  {
   "task": "fill",
-  "key": "landeshauptstadt hannover|Hannover",
-  "c_name": "Landeshauptstadt Hannover",
-  "city": "Hannover",
-  "c_url": "https://www.hannover.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "die autobahn des bundes niederlassung nordwest hannover|Hannover",
   "c_name": "Die Autobahn GmbH des Bundes Niederlassung Nordwest (Hannover)",
   "city": "Hannover",
@@ -2335,6 +2353,37 @@
   "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ggis|Hannover",
+  "c_name": "gGIS mbH",
+  "city": "Hannover",
+  "c_url": "https://www.ggis.de",
+  "missing": [
+   "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landeshauptstadt hannover|Hannover",
+  "c_name": "Landeshauptstadt Hannover",
+  "city": "Hannover",
+  "c_url": "https://www.hannover.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "allterra|Hannover",
+  "c_name": "AllTerra Deutschland GmbH",
+  "city": "Hannover",
+  "c_url": "https://www.allterra-ds.de",
+  "missing": [
+   "li_url"
   ]
  },
  {
@@ -2420,6 +2469,49 @@
   "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "staatliches hochbauamt karlsruhe bundesbau baden württemberg|Karlsruhe",
+  "c_name": "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
+  "city": "Karlsruhe",
+  "c_url": "https://www.bundesbau-bw.de",
+  "missing": [
+   "adress",
+   "postal_code",
+   "g_stack",
+   "size",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für geoinformation und landentwicklung baden württemberg lgl|Karlsruhe",
+  "c_name": "Landesamt für Geoinformation und Landentwicklung Baden-Württemberg (LGL)",
+  "city": "Karlsruhe",
+  "c_url": "https://www.lgl-bw.de/index.html",
+  "missing": [
+   "adress",
+   "postal_code",
+   "size",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "arcadis|Karlsruhe",
+  "c_name": "Arcadis Germany GmbH",
+  "city": "Karlsruhe",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "adress",
+   "postal_code",
+   "kp_url",
+   "li_url"
   ]
  },
  {

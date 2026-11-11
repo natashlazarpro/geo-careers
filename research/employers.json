@@ -375,6 +375,7 @@
   "WhereGroup GmbH"
  ],
  "Karlsruhe": [
+  "Arcadis Germany GmbH",
   "Bundesanstalt für Wasserbau (BAW)",
   "EnBW Energie Baden-Württemberg AG",
   "Fraunhofer IOSB",
@@ -382,7 +383,9 @@
   "INIT SE",
   "Karlsruher Institut für Technologie (KIT) – Institut für Photogrammetrie und Fernerkundung",
   "LUBW Landesanstalt für Umwelt Baden-Württemberg",
+  "Landesamt für Geoinformation und Landentwicklung Baden-Württemberg (LGL)",
   "PTV Group",
+  "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
   "Stadt Karlsruhe – Liegenschaftsamt (Vermessung)",
   "Stadtwerke Karlsruhe GmbH",
   "arguplan GmbH",
@@ -444,12 +447,16 @@
   "BTC AG",
   "Bremer Straßenbahn AG (BSAG)",
   "DLR – Institut für Raumfahrtsysteme",
+  "Die Senatorin für Umwelt, Klima und Wissenschaft (SUKW)",
+  "Hanseatische Naturentwicklung GmbH",
   "Landesamt GeoInformation Bremen",
   "MARUM – Zentrum für Marine Umweltwissenschaften",
   "NETZ-Zentrum für innovative Technologie GmbH",
   "OHB SE",
+  "Sweco GmbH",
   "Universität Bremen – Institut für Geographie",
   "hanseWasser Bremen GmbH",
+  "planungsgruppe grün gmbh",
   "swb AG"
  ],
  "Münster": [
@@ -458,10 +465,13 @@
   "EFTAS Fernerkundung Technologietransfer GmbH",
   "FH Münster – Fachbereich Bauingenieurwesen",
   "Hansa Luftbild AG",
+  "Landesbetrieb Wald und Holz Nordrhein-Westfalen",
   "Landschaftsverband Westfalen-Lippe (LWL)",
+  "Reedu GmbH & Co. KG",
   "Stadt Münster – Vermessungs- und Katasteramt",
   "Stadtwerke Münster GmbH",
   "Universität Münster – Institut für Geoinformatik",
+  "WiR Solutions GmbH",
   "con terra GmbH"
  ],
  "Freiburg im Breisgau": [
@@ -474,6 +484,9 @@
   "Universität Freiburg – Professur für Fernerkundung und Landschaftsinformationssysteme",
   "badenova AG & Co. KG",
   "faktorgruen Partnerschaftsgesellschaft mbB",
+  "greenventory GmbH",
+  "regioDATA GmbH",
+  "unique land use GmbH",
   "Öko-Institut e.V."
  ],
  "Kiel": [
@@ -482,10 +495,12 @@
   "GEOMAR Helmholtz-Zentrum für Ozeanforschung Kiel",
   "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
   "KVG Kieler Verkehrsgesellschaft mbH",
+  "Landesamt für Landwirtschaft und nachhaltige Landentwicklung Schleswig-Holstein (LLnL)",
   "Landesamt für Umwelt Schleswig-Holstein (LfU)",
-  "Landesamt für Vermessung und Geoinformation Schleswig-Holstein (LVermGeo)",
   "Landeshauptstadt Kiel – Vermessungsamt",
   "Neumann Baugrunduntersuchung GmbH & Co. KG",
-  "Stadtwerke Kiel AG"
+  "Stadtwerke Kiel AG",
+  "Wasserstraßen- und Schifffahrtsamt Nord-Ostsee-Kanal",
+  "north.io GmbH"
  ]
 }
