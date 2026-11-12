@@ -1,5 +1,25 @@
 [
  {
+  "task": "research",
+  "key": "bertrandt services|Berlin",
+  "c_name": "Bertrandt Services GmbH",
+  "city": "Berlin",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Spezialist GIS-Produktkonfiguration & Testing (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-4995244014-S"
+ },
+ {
+  "task": "research",
+  "key": "akg software consulting|Berlin",
+  "c_name": "AKG Software Consulting GmbH",
+  "city": "Berlin",
+  "address_from_job_ad": "Stralauer Platz 34, 10243",
+  "open_jobs": 1,
+  "job_titles": "CAD-Trainer und Anwendungsberater für Tiefbau- und Vermessung (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004001514-S"
+ },
+ {
   "task": "verify",
   "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
   "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
@@ -252,7 +272,7 @@
   "g_stack": null,
   "size": "500+",
   "kp_url": null,
-  "li_url": null
+  "li_url": "https://www.linkedin.com/company/landschaftsverbandwestfalenlippe/"
  },
  {
   "task": "verify",
@@ -1060,17 +1080,6 @@
  },
  {
   "task": "fill",
-  "key": "neumann baugrunduntersuchung|Kiel",
-  "c_name": "Neumann Baugrunduntersuchung GmbH & Co. KG",
-  "city": "Kiel",
-  "c_url": "https://www.neumann-baugrund.de",
-  "missing": [
-   "g_stack",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "stadtwerke kiel|Kiel",
   "c_name": "Stadtwerke Kiel AG",
   "city": "Kiel",
@@ -1078,6 +1087,16 @@
   "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "neumann baugrunduntersuchung|Kiel",
+  "c_name": "Neumann Baugrunduntersuchung GmbH & Co. KG",
+  "city": "Kiel",
+  "c_url": "https://www.neumann-baugrund.de",
+  "missing": [
+   "g_stack"
   ]
  },
  {
@@ -1112,18 +1131,6 @@
  },
  {
   "task": "fill",
-  "key": "regiodata|Freiburg im Breisgau",
-  "c_name": "regioDATA GmbH",
-  "city": "Freiburg im Breisgau",
-  "c_url": "https://www.regiodata-gmbh.de/",
-  "missing": [
-   "postal_code",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "unique land use|Freiburg im Breisgau",
   "c_name": "unique land use GmbH",
   "city": "Freiburg im Breisgau",
@@ -1135,38 +1142,13 @@
  },
  {
   "task": "fill",
-  "key": "greenventory|Freiburg im Breisgau",
-  "c_name": "greenventory GmbH",
+  "key": "regiodata|Freiburg im Breisgau",
+  "c_name": "regioDATA GmbH",
   "city": "Freiburg im Breisgau",
-  "c_url": "https://greenventory.de",
+  "c_url": "https://www.regiodata-gmbh.de/",
   "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "fh münster fachbereich bauingenieurwesen|Münster",
-  "c_name": "FH Münster – Fachbereich Bauingenieurwesen",
-  "city": "Münster",
-  "c_url": "https://www.fh-muenster.de/bau/",
-  "missing": [
-   "adress",
    "postal_code",
-   "g_stack",
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landesbetrieb wald und holz nordrhein westfalen|Münster",
-  "c_name": "Landesbetrieb Wald und Holz Nordrhein-Westfalen",
-  "city": "Münster",
-  "c_url": "https://www.wald-und-holz.nrw.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
+   "kp_url"
   ]
  },
  {
@@ -1182,6 +1164,28 @@
  },
  {
   "task": "fill",
+  "key": "fh münster fachbereich bauingenieurwesen|Münster",
+  "c_name": "FH Münster – Fachbereich Bauingenieurwesen",
+  "city": "Münster",
+  "c_url": "https://www.fh-muenster.de/bau/",
+  "missing": [
+   "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesbetrieb wald und holz nordrhein westfalen|Münster",
+  "c_name": "Landesbetrieb Wald und Holz Nordrhein-Westfalen",
+  "city": "Münster",
+  "c_url": "https://www.wald-und-holz.nrw.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "hanseatische naturentwicklung|Bremen",
   "c_name": "Hanseatische Naturentwicklung GmbH",
   "city": "Bremen",
@@ -1190,20 +1194,6 @@
    "c_url",
    "adress",
    "g_stack",
-   "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "die senatorin für umwelt klima und wissenschaft sukw|Bremen",
-  "c_name": "Die Senatorin für Umwelt, Klima und Wissenschaft (SUKW)",
-  "city": "Bremen",
-  "c_url": "https://umwelt.bremen.de",
-  "missing": [
-   "adress",
-   "postal_code",
    "size",
    "kp_url",
    "li_url"
@@ -1229,17 +1219,6 @@
   "missing": [
    "g_stack",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "sweco|Bremen",
-  "c_name": "Sweco GmbH",
-  "city": "Bremen",
-  "c_url": "https://www.sweco-gmbh.de/",
-  "missing": [
-   "adress",
-   "postal_code"
   ]
  },
  {
@@ -1314,12 +1293,12 @@
  },
  {
   "task": "fill",
-  "key": "planungsgruppe grün|Bremen",
-  "c_name": "planungsgruppe grün gmbh",
+  "key": "die senatorin für umwelt klima und wissenschaft sukw|Bremen",
+  "c_name": "Die Senatorin für Umwelt, Klima und Wissenschaft (SUKW)",
   "city": "Bremen",
-  "c_url": "https://pgg.de",
+  "c_url": "https://umwelt.bremen.de",
   "missing": [
-   "li_url"
+   "kp_url"
   ]
  },
  {
@@ -1630,18 +1609,6 @@
  },
  {
   "task": "fill",
-  "key": "regierungspräsidium darmstadt|Darmstadt",
-  "c_name": "Regierungspräsidium Darmstadt",
-  "city": "Darmstadt",
-  "c_url": "https://rp-darmstadt.hessen.de",
-  "missing": [
-   "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "sydro consult|Darmstadt",
   "c_name": "SYDRO Consult GmbH",
   "city": "Darmstadt",
@@ -1686,17 +1653,6 @@
  },
  {
   "task": "fill",
-  "key": "wetransform|Darmstadt",
-  "c_name": "wetransform GmbH",
-  "city": "Darmstadt",
-  "c_url": "https://wetransform.to",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "esa european space operations centre esoc|Darmstadt",
   "c_name": "ESA – European Space Operations Centre (ESOC)",
   "city": "Darmstadt",
@@ -1737,17 +1693,12 @@
  },
  {
   "task": "fill",
-  "key": "staatliches hochbauamt karlsruhe bundesbau baden württemberg|Karlsruhe",
-  "c_name": "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
-  "city": "Karlsruhe",
-  "c_url": "https://www.bundesbau-bw.de",
+  "key": "regierungspräsidium darmstadt|Darmstadt",
+  "c_name": "Regierungspräsidium Darmstadt",
+  "city": "Darmstadt",
+  "c_url": "https://rp-darmstadt.hessen.de",
   "missing": [
-   "adress",
-   "postal_code",
-   "g_stack",
-   "size",
-   "kp_url",
-   "li_url"
+   "kp_url"
   ]
  },
  {
@@ -1784,6 +1735,17 @@
   "c_name": "arguplan GmbH",
   "city": "Karlsruhe",
   "c_url": "https://www.arguplan.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "staatliches hochbauamt karlsruhe bundesbau baden württemberg|Karlsruhe",
+  "c_name": "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
+  "city": "Karlsruhe",
+  "c_url": "https://www.bundesbau-bw.de",
   "missing": [
    "g_stack",
    "kp_url"
@@ -1912,16 +1874,6 @@
   "c_url": "https://group.dhl.com",
   "missing": [
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "terrestris|Bonn",
-  "c_name": "terrestris GmbH & Co. KG",
-  "city": "Bonn",
-  "c_url": "https://www.terrestris.de",
-  "missing": [
-   "size"
   ]
  },
  {
@@ -2586,28 +2538,6 @@
  },
  {
   "task": "fill",
-  "key": "ministerium des innern des landes nordrhein westfalen|Düsseldorf",
-  "c_name": "Ministerium des Innern des Landes Nordrhein-Westfalen",
-  "city": "Düsseldorf",
-  "c_url": "https://www.im.nrw",
-  "missing": [
-   "g_stack",
-   "size"
-  ]
- },
- {
-  "task": "fill",
-  "key": "allterra|Düsseldorf",
-  "c_name": "AllTerra Deutschland GmbH",
-  "city": "Düsseldorf",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "vermessungsbüro düsseldorf dipl ing h büchel|Düsseldorf",
   "c_name": "Vermessungsbüro Düsseldorf Dipl.-Ing. H. Büchel",
   "city": "Düsseldorf",
@@ -2637,6 +2567,26 @@
   "missing": [
    "size",
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ministerium des innern des landes nordrhein westfalen|Düsseldorf",
+  "c_name": "Ministerium des Innern des Landes Nordrhein-Westfalen",
+  "city": "Düsseldorf",
+  "c_url": "https://www.im.nrw",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "allterra|Düsseldorf",
+  "c_name": "AllTerra Deutschland GmbH",
+  "city": "Düsseldorf",
+  "c_url": "https://allterra.de/",
+  "missing": [
+   "kp_url"
   ]
  },
  {
