@@ -1,21 +1,6 @@
 [
  {
   "task": "verify",
-  "key": "geomar helmholtz zentrum für ozeanforschung kiel|Kiel",
-  "c_name": "GEOMAR Helmholtz-Zentrum für Ozeanforschung Kiel",
-  "city": "Kiel",
-  "c_url": "https://www.geomar.de",
-  "adress": "Wischhofstraße 1-3",
-  "postal_code": "24148",
-  "sector": "Geology / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://www.geomar.de/en/karriere/open-positions",
-  "li_url": "https://www.linkedin.com/company/ifm-geomar/"
- },
- {
-  "task": "verify",
   "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
   "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
   "city": "Kiel",
@@ -27,51 +12,6 @@
   "g_stack": null,
   "size": "500+",
   "kp_url": "https://www.uni-kiel.de/personal/de/stellen/extern/tech-adm",
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "landeshauptstadt kiel vermessungsamt|Kiel",
-  "c_name": "Landeshauptstadt Kiel – Vermessungsamt",
-  "city": "Kiel",
-  "c_url": "https://www.kiel.de",
-  "adress": "Fleethörn 9",
-  "postal_code": "24103",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://www.kiel.de/de/wirtschaft_arbeit/jobs_und_ausbildung/index.php",
-  "li_url": "https://www.linkedin.com/company/landeshauptstadt-kiel/"
- },
- {
-  "task": "verify",
-  "key": "stadtwerke kiel|Kiel",
-  "c_name": "Stadtwerke Kiel AG",
-  "city": "Kiel",
-  "c_url": "https://www.stadtwerke-kiel.de",
-  "adress": "Uhlenkrog 32",
-  "postal_code": "24113",
-  "sector": "Renewable Energy / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/stadtwerke-kiel-ag/"
- },
- {
-  "task": "verify",
-  "key": "landesamt für umwelt schleswig holstein lfu|Kiel",
-  "c_name": "Landesamt für Umwelt Schleswig-Holstein (LfU)",
-  "city": "Kiel",
-  "c_url": null,
-  "adress": "Hamburger Chaussee 25",
-  "postal_code": "24220",
-  "sector": "Environment & Conservation / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
   "li_url": null
  },
  {
@@ -88,21 +28,6 @@
   "size": "500+",
   "kp_url": "https://karriere.dataport.de/stellenangebote.html",
   "li_url": "https://www.linkedin.com/company/dataport-a%C3%B6r/"
- },
- {
-  "task": "verify",
-  "key": "kvg kieler verkehrsgesellschaft|Kiel",
-  "c_name": "KVG Kieler Verkehrsgesellschaft mbH",
-  "city": "Kiel",
-  "c_url": "https://www.kvg-kiel.de",
-  "adress": "Werftstraße 233",
-  "postal_code": "24143",
-  "sector": "Transport Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://www.kvg-kiel.de/fuer-bewerber-innen/jobs",
-  "li_url": "https://www.linkedin.com/company/kvg-kieler-verkehrsgesellschaft/"
  },
  {
   "task": "verify",
@@ -346,36 +271,6 @@
  },
  {
   "task": "verify",
-  "key": "landesamt geoinformation bremen|Bremen",
-  "c_name": "Landesamt GeoInformation Bremen",
-  "city": "Bremen",
-  "c_url": "https://www.geo.bremen.de",
-  "adress": "Lloydstraße 4",
-  "postal_code": "28217",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": "GEOgraf, GNSS, Total station, Laser scanning, Drones/UAV, ALKIS",
-  "size": "201-500",
-  "kp_url": "https://www.geo.bremen.de/karriere/stellenangebote-12014",
-  "li_url": "https://www.linkedin.com/company/geoinformation-bremen/"
- },
- {
-  "task": "verify",
-  "key": "ohb|Bremen",
-  "c_name": "OHB SE",
-  "city": "Bremen",
-  "c_url": "https://www.ohb.de",
-  "adress": "Manfred-Fuchs-Platz 2-4",
-  "postal_code": "28359",
-  "sector": "Remote Sensing",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://career-ohb.csod.com/ux/ats/careersite/4/home?c=career-ohb&lang=de-DE",
-  "li_url": "https://www.linkedin.com/company/ohb-se/"
- },
- {
-  "task": "verify",
   "key": "airbus defence and space bremen|Bremen",
   "c_name": "Airbus Defence and Space Bremen",
   "city": "Bremen",
@@ -388,126 +283,6 @@
   "size": "500+",
   "kp_url": "https://airbus.com/careers/search-and-apply/search-for-vacancies.html?filters=&textsearch=",
   "li_url": "https://www.linkedin.com/company/airbusgroup/"
- },
- {
-  "task": "verify",
-  "key": "dlr institut für raumfahrtsysteme|Bremen",
-  "c_name": "DLR – Institut für Raumfahrtsysteme",
-  "city": "Bremen",
-  "c_url": "https://www.dlr.de",
-  "adress": "Robert-Hooke-Straße 7",
-  "postal_code": "28359",
-  "sector": "Remote Sensing",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": "https://www.dlr.de/en/irs/career-young-professionals/jobs",
-  "li_url": "https://www.linkedin.com/company/dlr/"
- },
- {
-  "task": "verify",
-  "key": "universität bremen institut für geographie|Bremen",
-  "c_name": "Universität Bremen – Institut für Geographie",
-  "city": "Bremen",
-  "c_url": "https://www.uni-bremen.de",
-  "adress": "Celsiusstraße 2",
-  "postal_code": "28359",
-  "sector": "Environment & Conservation / Remote Sensing",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://www.uni-bremen.de/en/university/the-university-as-an-employer/job-vacancies-1",
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "marum zentrum für marine umweltwissenschaften|Bremen",
-  "c_name": "MARUM – Zentrum für Marine Umweltwissenschaften",
-  "city": "Bremen",
-  "c_url": "https://www.marum.de",
-  "adress": "Leobener Straße 8",
-  "postal_code": "28359",
-  "sector": "Geology / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": "https://www.marum.de/en/career/open-positions-at-MARUM.html",
-  "li_url": "https://www.linkedin.com/company/university-of-bremen-marum/"
- },
- {
-  "task": "verify",
-  "key": "swb|Bremen",
-  "c_name": "swb AG",
-  "city": "Bremen",
-  "c_url": "https://www.swb-gruppe.de",
-  "adress": "Theodor-Heuss-Allee 20",
-  "postal_code": "28215",
-  "sector": "Renewable Energy / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://jobs.swb.de/",
-  "li_url": "https://www.linkedin.com/company/swb-ag/"
- },
- {
-  "task": "verify",
-  "key": "bremer straßenbahn bsag|Bremen",
-  "c_name": "Bremer Straßenbahn AG (BSAG)",
-  "city": "Bremen",
-  "c_url": "https://www.bsag.de",
-  "adress": "Flughafendamm 12",
-  "postal_code": "28199",
-  "sector": "Transport Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://www.bsag.de/unternehmen/karriere",
-  "li_url": "https://www.linkedin.com/company/bremer-straßenbahn-ag/"
- },
- {
-  "task": "verify",
-  "key": "blg logistics group|Bremen",
-  "c_name": "BLG Logistics Group",
-  "city": "Bremen",
-  "c_url": "https://www.blg-logistics.com",
-  "adress": "Präsident-Kennedy-Platz 1",
-  "postal_code": "28203",
-  "sector": "Transport Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://www.blg-logistics.com/alle-stellenangebote",
-  "li_url": "https://www.linkedin.com/company/blg-logistics-group/"
- },
- {
-  "task": "verify",
-  "key": "hansewasser bremen|Bremen",
-  "c_name": "hanseWasser Bremen GmbH",
-  "city": "Bremen",
-  "c_url": "https://www.hansewasser.de",
-  "adress": "Schiffbauerweg 2",
-  "postal_code": "28237",
-  "sector": "Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": "https://www.hansewasser.de/unternehmen/karriere",
-  "li_url": "https://www.linkedin.com/company/hansewasser-bremen-gmbh/"
- },
- {
-  "task": "verify",
-  "key": "landesamt für geoinformation und landesvermessung niedersachsen lgln|Hannover",
-  "c_name": "Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)",
-  "city": "Hannover",
-  "c_url": "https://www.lgln.niedersachsen.de",
-  "adress": "Podbielskistraße 331",
-  "postal_code": "30659",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
  },
  {
   "task": "verify",
@@ -601,126 +376,6 @@
  },
  {
   "task": "verify",
-  "key": "sächsisches landesamt für umwelt landwirtschaft und geologie lfulg|Dresden",
-  "c_name": "Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie (LfULG)",
-  "city": "Dresden",
-  "c_url": "https://www.lfulg.sachsen.de",
-  "adress": "Pillnitzer Platz 3",
-  "postal_code": "01326",
-  "sector": "Environment & Conservation / Geology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/lfulg/"
- },
- {
-  "task": "verify",
-  "key": "leibniz institut für ökologische raumentwicklung iör|Dresden",
-  "c_name": "Leibniz-Institut für ökologische Raumentwicklung (IÖR)",
-  "city": "Dresden",
-  "c_url": "https://www.ioer.de",
-  "adress": "Weberplatz 1",
-  "postal_code": "01217",
-  "sector": "Urban & Spatial Planning / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/leibniz-ioer/"
- },
- {
-  "task": "verify",
-  "key": "tu dresden institut für kartographie|Dresden",
-  "c_name": "TU Dresden – Institut für Kartographie",
-  "city": "Dresden",
-  "c_url": "https://tu-dresden.de",
-  "adress": "Helmholtzstraße 10",
-  "postal_code": "01069",
-  "sector": "GIS / Geoinformatics",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "htw dresden geoinformation|Dresden",
-  "c_name": "HTW Dresden – Geoinformation",
-  "city": "Dresden",
-  "c_url": "https://www.htw-dresden.de",
-  "adress": "Friedrich-List-Platz 1",
-  "postal_code": "01069",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/htw-dresden/"
- },
- {
-  "task": "verify",
-  "key": "landeshauptstadt dresden amt für geodaten und kataster|Dresden",
-  "c_name": "Landeshauptstadt Dresden – Amt für Geodaten und Kataster",
-  "city": "Dresden",
-  "c_url": "https://www.dresden.de",
-  "adress": "Ammonstraße 74",
-  "postal_code": "01067",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/landeshauptstadt-dresden/"
- },
- {
-  "task": "verify",
-  "key": "sachsenenergie|Dresden",
-  "c_name": "SachsenEnergie AG",
-  "city": "Dresden",
-  "c_url": "https://www.sachsenenergie.de",
-  "adress": "Friedrich-List-Platz 2",
-  "postal_code": "01069",
-  "sector": "Renewable Energy / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/sachsenenergie/"
- },
- {
-  "task": "verify",
-  "key": "gicon großmann ingenieur consult|Dresden",
-  "c_name": "GICON – Großmann Ingenieur Consult GmbH",
-  "city": "Dresden",
-  "c_url": "https://www.gicon.de",
-  "adress": "Tiergartenstraße 48",
-  "postal_code": "01219",
-  "sector": "Environment & Conservation / Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/gicon-großmann-ingenieur-consult-gmbh/"
- },
- {
-  "task": "verify",
-  "key": "fraunhofer ivi|Dresden",
-  "c_name": "Fraunhofer IVI",
-  "city": "Dresden",
-  "c_url": "https://www.ivi.fraunhofer.de",
-  "adress": "Zeunerstraße 38",
-  "postal_code": "01069",
-  "sector": "Transport Planning / Geoinformatics",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/fraunhofer-institute-for-transportation-and-infrastructure-systems-ivi/"
- },
- {
-  "task": "verify",
   "key": "dresdner verkehrsbetriebe dvb|Dresden",
   "c_name": "Dresdner Verkehrsbetriebe AG (DVB)",
   "city": "Dresden",
@@ -733,141 +388,6 @@
   "size": "500+",
   "kp_url": null,
   "li_url": "https://www.linkedin.com/company/dresdner-verkehrsbetriebe-ag/"
- },
- {
-  "task": "verify",
-  "key": "esa european space operations centre esoc|Darmstadt",
-  "c_name": "ESA – European Space Operations Centre (ESOC)",
-  "city": "Darmstadt",
-  "c_url": "https://www.esa.int",
-  "adress": "Robert-Bosch-Straße 5",
-  "postal_code": "64293",
-  "sector": "Remote Sensing",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/european-space-agency/"
- },
- {
-  "task": "verify",
-  "key": "eumetsat|Darmstadt",
-  "c_name": "EUMETSAT",
-  "city": "Darmstadt",
-  "c_url": "https://www.eumetsat.int",
-  "adress": "Eumetsat-Allee 1",
-  "postal_code": "64295",
-  "sector": "Remote Sensing / Climate",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/eumetsat/"
- },
- {
-  "task": "verify",
-  "key": "fraunhofer igd|Darmstadt",
-  "c_name": "Fraunhofer IGD",
-  "city": "Darmstadt",
-  "c_url": "https://www.igd.fraunhofer.de",
-  "adress": "Fraunhoferstraße 5",
-  "postal_code": "64283",
-  "sector": "Geoinformatics / Urban & Spatial Planning",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/fraunhofer-igd/"
- },
- {
-  "task": "verify",
-  "key": "tu darmstadt institut für geodäsie|Darmstadt",
-  "c_name": "TU Darmstadt – Institut für Geodäsie",
-  "city": "Darmstadt",
-  "c_url": "https://www.geod.tu-darmstadt.de",
-  "adress": "Franziska-Braun-Straße 7",
-  "postal_code": "64287",
-  "sector": "Surveying & Geodesy / Geoinformatics",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "telespazio|Darmstadt",
-  "c_name": "Telespazio Germany GmbH",
-  "city": "Darmstadt",
-  "c_url": "https://www.telespazio.de",
-  "adress": "Europaplatz 5",
-  "postal_code": "64293",
-  "sector": "Remote Sensing / Geoinformatics",
-  "g_role": "Core product",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/telespazio-vega-deutschland/"
- },
- {
-  "task": "verify",
-  "key": "cgi space|Darmstadt",
-  "c_name": "CGI Deutschland – Space",
-  "city": "Darmstadt",
-  "c_url": "https://www.cgi.com/de",
-  "adress": "Mornewegstraße 30",
-  "postal_code": "64293",
-  "sector": "Remote Sensing / Geoinformatics",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/cgi/"
- },
- {
-  "task": "verify",
-  "key": "entega|Darmstadt",
-  "c_name": "ENTEGA AG",
-  "city": "Darmstadt",
-  "c_url": "https://www.entega.ag",
-  "adress": "Frankfurter Straße 110",
-  "postal_code": "64293",
-  "sector": "Renewable Energy / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/entega-ag/"
- },
- {
-  "task": "verify",
-  "key": "wissenschaftsstadt darmstadt vermessungsamt|Darmstadt",
-  "c_name": "Wissenschaftsstadt Darmstadt – Vermessungsamt",
-  "city": "Darmstadt",
-  "c_url": "https://www.darmstadt.de",
-  "adress": "Bessunger Straße 125",
-  "postal_code": "64295",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/wissenschaftsstadt-darmstadt/"
- },
- {
-  "task": "verify",
-  "key": "hochschule darmstadt h_da|Darmstadt",
-  "c_name": "Hochschule Darmstadt (h_da)",
-  "city": "Darmstadt",
-  "c_url": "https://h-da.de",
-  "adress": "Haardtring 100",
-  "postal_code": "64295",
-  "sector": "Surveying & Geodesy / Geoinformatics",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
  },
  {
   "task": "verify",
@@ -1033,171 +553,6 @@
   "size": "500+",
   "kp_url": null,
   "li_url": "https://www.linkedin.com/company/stadtwerke-karlsruhe/"
- },
- {
-  "task": "verify",
-  "key": "wheregroup|Bonn",
-  "c_name": "WhereGroup GmbH",
-  "city": "Bonn",
-  "c_url": "https://wheregroup.com",
-  "adress": "Eifelstraße 7",
-  "postal_code": "53119",
-  "sector": "GIS / Geoinformatics",
-  "g_role": "Core product",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/wheregroup-gmbh/"
- },
- {
-  "task": "verify",
-  "key": "bundesinstitut für bau stadt und raumforschung bbsr|Bonn",
-  "c_name": "Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR)",
-  "city": "Bonn",
-  "c_url": "https://www.bbsr.bund.de",
-  "adress": "Deichmanns Aue 31-37",
-  "postal_code": "53179",
-  "sector": "Urban & Spatial Planning / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bbsr/"
- },
- {
-  "task": "verify",
-  "key": "bundesamt für naturschutz bfn|Bonn",
-  "c_name": "Bundesamt für Naturschutz (BfN)",
-  "city": "Bonn",
-  "c_url": "https://www.bfn.de",
-  "adress": "Konstantinstraße 110",
-  "postal_code": "53179",
-  "sector": "Environment & Conservation",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bundesamt-für-naturschutz/"
- },
- {
-  "task": "verify",
-  "key": "deutsche gesellschaft für internationale zusammenarbeit giz|Bonn",
-  "c_name": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
-  "city": "Bonn",
-  "c_url": "https://www.giz.de",
-  "adress": "Friedrich-Ebert-Allee 32+36",
-  "postal_code": "53113",
-  "sector": "Development & Social / Climate",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/gizgmbh/"
- },
- {
-  "task": "verify",
-  "key": "universität bonn institut für geodäsie und geoinformation|Bonn",
-  "c_name": "Universität Bonn – Institut für Geodäsie und Geoinformation",
-  "city": "Bonn",
-  "c_url": "https://www.igg.uni-bonn.de",
-  "adress": "Nussallee 17",
-  "postal_code": "53115",
-  "sector": "Surveying & Geodesy / Remote Sensing",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "united nations university institute for environment and human security unu ehs|Bonn",
-  "c_name": "United Nations University – Institute for Environment and Human Security (UNU-EHS)",
-  "city": "Bonn",
-  "c_url": "https://unu.edu/ehs",
-  "adress": "Platz der Vereinten Nationen 1",
-  "postal_code": "53113",
-  "sector": "Climate / Development & Social",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/united-nations-university/"
- },
- {
-  "task": "verify",
-  "key": "deutsche telekom|Bonn",
-  "c_name": "Deutsche Telekom AG",
-  "city": "Bonn",
-  "c_url": "https://www.telekom.com",
-  "adress": "Friedrich-Ebert-Allee 140",
-  "postal_code": "53113",
-  "sector": "Other / Geoinformatics",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/telekom/"
- },
- {
-  "task": "verify",
-  "key": "dhl group|Bonn",
-  "c_name": "DHL Group",
-  "city": "Bonn",
-  "c_url": "https://group.dhl.com",
-  "adress": "Charles-de-Gaulle-Straße 20",
-  "postal_code": "53113",
-  "sector": "Transport Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/dhl/"
- },
- {
-  "task": "verify",
-  "key": "bundesnetzagentur|Bonn",
-  "c_name": "Bundesnetzagentur",
-  "city": "Bonn",
-  "c_url": "https://www.bundesnetzagentur.de",
-  "adress": "Tulpenfeld 4",
-  "postal_code": "53113",
-  "sector": "Renewable Energy / Other",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bundesnetzagentur/"
- },
- {
-  "task": "verify",
-  "key": "bundesanstalt für immobilienaufgaben bima|Bonn",
-  "c_name": "Bundesanstalt für Immobilienaufgaben (BImA)",
-  "city": "Bonn",
-  "c_url": "https://www.bundesimmobilien.de",
-  "adress": "Ellerstraße 56",
-  "postal_code": "53119",
-  "sector": "Urban & Spatial Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bundesanstalt-für-immobilienaufgaben/"
- },
- {
-  "task": "verify",
-  "key": "bundesstadt bonn kataster und vermessungsamt|Bonn",
-  "c_name": "Bundesstadt Bonn – Kataster- und Vermessungsamt",
-  "city": "Bonn",
-  "c_url": "https://www.bonn.de",
-  "adress": "Berliner Platz 2",
-  "postal_code": "53111",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bundesstadt-bonn/"
  },
  {
   "task": "verify",
@@ -1381,126 +736,6 @@
  },
  {
   "task": "verify",
-  "key": "regionalverband ruhr rvr|Essen",
-  "c_name": "Regionalverband Ruhr (RVR)",
-  "city": "Essen",
-  "c_url": "https://www.rvr.ruhr",
-  "adress": "Kronprinzenstraße 35",
-  "postal_code": "45128",
-  "sector": "Urban & Spatial Planning / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/regionalverband-ruhr/"
- },
- {
-  "task": "verify",
-  "key": "emschergenossenschaft und lippeverband eglv|Essen",
-  "c_name": "Emschergenossenschaft und Lippeverband (EGLV)",
-  "city": "Essen",
-  "c_url": "https://www.eglv.de",
-  "adress": "Kronprinzenstraße 24",
-  "postal_code": "45128",
-  "sector": "Hydrology / Environment & Conservation",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "ruhrverband|Essen",
-  "c_name": "Ruhrverband",
-  "city": "Essen",
-  "c_url": "https://www.ruhrverband.de",
-  "adress": "Kronprinzenstraße 37",
-  "postal_code": "45128",
-  "sector": "Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/ruhrverband/"
- },
- {
-  "task": "verify",
-  "key": "rwe|Essen",
-  "c_name": "RWE AG",
-  "city": "Essen",
-  "c_url": "https://www.rwe.com",
-  "adress": "RWE Platz 1",
-  "postal_code": "45141",
-  "sector": "Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/rwe-/"
- },
- {
-  "task": "verify",
-  "key": "e on|Essen",
-  "c_name": "E.ON SE",
-  "city": "Essen",
-  "c_url": "https://www.eon.com",
-  "adress": "Brüsseler Platz 1",
-  "postal_code": "45131",
-  "sector": "Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/e-on/"
- },
- {
-  "task": "verify",
-  "key": "open grid europe|Essen",
-  "c_name": "Open Grid Europe GmbH",
-  "city": "Essen",
-  "c_url": "https://oge.net",
-  "adress": "Kallenbergstraße 5",
-  "postal_code": "45141",
-  "sector": "Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://oge.net/en/career",
-  "li_url": "https://www.linkedin.com/company/open-grid-service-gmbh/"
- },
- {
-  "task": "verify",
-  "key": "dmt|Essen",
-  "c_name": "DMT GmbH & Co. KG",
-  "city": "Essen",
-  "c_url": "https://www.dmt-group.com",
-  "adress": "Am TÜV 1",
-  "postal_code": "45307",
-  "sector": "Geology / Surveying & Geodesy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/dmt_3/"
- },
- {
-  "task": "verify",
-  "key": "hochtief|Essen",
-  "c_name": "HOCHTIEF AG",
-  "city": "Essen",
-  "c_url": "https://www.hochtief.de",
-  "adress": "Alfredstraße 236",
-  "postal_code": "45133",
-  "sector": "Other",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/hochtief/"
- },
- {
-  "task": "verify",
   "key": "aldi einkauf aldi nord|Essen",
   "c_name": "ALDI Einkauf SE & Co. oHG (ALDI Nord)",
   "city": "Essen",
@@ -1666,306 +901,6 @@
  },
  {
   "task": "verify",
-  "key": "stadt dortmund vermessungs und katasteramt|Dortmund",
-  "c_name": "Stadt Dortmund – Vermessungs- und Katasteramt",
-  "city": "Dortmund",
-  "c_url": "https://www.dortmund.de",
-  "adress": "Märkische Straße 24-26",
-  "postal_code": "44141",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": "ALKIS",
-  "size": "500+",
-  "kp_url": "https://www.dortmund.de/rathaus-und-verwaltung/karriere/aktuelle-stellenangebote/",
-  "li_url": "https://www.linkedin.com/company/stadt-dortmund/"
- },
- {
-  "task": "verify",
-  "key": "amprion|Dortmund",
-  "c_name": "Amprion GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.amprion.net",
-  "adress": "Robert-Schuman-Straße 7",
-  "postal_code": "44263",
-  "sector": "Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/amprion-gmbh/"
- },
- {
-  "task": "verify",
-  "key": "westnetz|Dortmund",
-  "c_name": "Westnetz GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.westnetz.de",
-  "adress": "Florianstraße 15-21",
-  "postal_code": "44139",
-  "sector": "Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/westnetz/"
- },
- {
-  "task": "verify",
-  "key": "adesso|Dortmund",
-  "c_name": "adesso SE",
-  "city": "Dortmund",
-  "c_url": "https://www.adesso.de",
-  "adress": "Adessoplatz 1",
-  "postal_code": "44269",
-  "sector": "Geoinformatics / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/adesso-se/"
- },
- {
-  "task": "verify",
-  "key": "tu dortmund fakultät raumplanung|Dortmund",
-  "c_name": "TU Dortmund – Fakultät Raumplanung",
-  "city": "Dortmund",
-  "c_url": "https://raumplanung.tu-dortmund.de",
-  "adress": "August-Schmidt-Straße 10",
-  "postal_code": "44227",
-  "sector": "Urban & Spatial Planning / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/raumplanung/"
- },
- {
-  "task": "verify",
-  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
-  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
-  "city": "Dortmund",
-  "c_url": "https://www.ils-forschung.de",
-  "adress": "Brüderweg 22-24",
-  "postal_code": "44135",
-  "sector": "Urban & Spatial Planning / Transport Planning",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "planersocietät|Dortmund",
-  "c_name": "Planersocietät",
-  "city": "Dortmund",
-  "c_url": "https://www.planersocietaet.de",
-  "adress": "Gutenbergstraße 34",
-  "postal_code": "44139",
-  "sector": "Transport Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/planersocietät/"
- },
- {
-  "task": "verify",
-  "key": "dsw21 dortmunder stadtwerke|Dortmund",
-  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
-  "city": "Dortmund",
-  "c_url": "https://www.dsw21.de",
-  "adress": "Deggingstraße 40",
-  "postal_code": "44141",
-  "sector": "Transport Planning / Renewable Energy",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/dsw21/"
- },
- {
-  "task": "verify",
-  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
-  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.dew21.de",
-  "adress": "Günter-Samtlebe-Platz 1",
-  "postal_code": "44135",
-  "sector": "Renewable Energy / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/dew21/"
- },
- {
-  "task": "verify",
-  "key": "thyssengas|Dortmund",
-  "c_name": "Thyssengas GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.thyssengas.com",
-  "adress": "Emil-Moog-Platz 13",
-  "postal_code": "44137",
-  "sector": "Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/thyssengas/"
- },
- {
-  "task": "verify",
-  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
-  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
-  "city": "Dortmund",
-  "c_url": "https://www.iml.fraunhofer.de",
-  "adress": "Joseph-von-Fraunhofer-Straße 2-4",
-  "postal_code": "44227",
-  "sector": "Transport Planning / Geoinformatics",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/fraunhofer-iml/"
- },
- {
-  "task": "verify",
-  "key": "dokom gesellschaft für telekommunikation dokom21|Dortmund",
-  "c_name": "DOKOM Gesellschaft für Telekommunikation mbH (DOKOM21)",
-  "city": "Dortmund",
-  "c_url": "https://www.dokom21.de",
-  "adress": "Stockholmer Allee 24",
-  "postal_code": "44269",
-  "sector": "Other",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/dokom21/"
- },
- {
-  "task": "verify",
-  "key": "kreis unna|Dortmund",
-  "c_name": "Kreis Unna",
-  "city": "Dortmund",
-  "c_url": "https://www.kreis-unna.de",
-  "adress": "Friedrich-Ebert-Straße 17",
-  "postal_code": "59425",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": "ALKIS",
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/kreis-unna/"
- },
- {
-  "task": "verify",
-  "key": "bezirksregierung arnsberg abteilung bergbau und energie in nrw|Dortmund",
-  "c_name": "Bezirksregierung Arnsberg – Abteilung Bergbau und Energie in NRW",
-  "city": "Dortmund",
-  "c_url": "https://www.bra.nrw.de",
-  "adress": "Goebenstraße 25",
-  "postal_code": "44135",
-  "sector": "Geology / Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bezirksregierung-arnsberg/"
- },
- {
-  "task": "verify",
-  "key": "stadt leipzig amt für geoinformation und bodenordnung|Leipzig",
-  "c_name": "Stadt Leipzig – Amt für Geoinformation und Bodenordnung",
-  "city": "Leipzig",
-  "c_url": "https://www.leipzig.de",
-  "adress": "Prager Straße 118-136",
-  "postal_code": "04317",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": "ALKIS",
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "leibniz institut für länderkunde ifl|Leipzig",
-  "c_name": "Leibniz-Institut für Länderkunde (IfL)",
-  "city": "Leipzig",
-  "c_url": "https://leibniz-ifl.de",
-  "adress": "Schongauerstraße 9",
-  "postal_code": "04328",
-  "sector": "GIS / Urban & Spatial Planning",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/leibniz-institut-fuer-laenderkunde/"
- },
- {
-  "task": "verify",
-  "key": "universität leipzig institut für geographie|Leipzig",
-  "c_name": "Universität Leipzig – Institut für Geographie",
-  "city": "Leipzig",
-  "c_url": "https://www.uni-leipzig.de",
-  "adress": "Johannisallee 19a",
-  "postal_code": "04103",
-  "sector": "Remote Sensing / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig",
-  "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur",
-  "city": "Leipzig",
-  "c_url": "https://www.htwk-leipzig.de",
-  "adress": "Karl-Liebknecht-Straße 132",
-  "postal_code": "04277",
-  "sector": "Surveying & Geodesy / Geoinformatics",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "ontras gastransport|Leipzig",
-  "c_name": "ONTRAS Gastransport GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.ontras.com",
-  "adress": "Maximilianallee 4",
-  "postal_code": "04129",
-  "sector": "Renewable Energy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/ontras-gastransport-gmbh/"
- },
- {
-  "task": "verify",
-  "key": "leipziger verkehrsbetriebe lvb|Leipzig",
-  "c_name": "Leipziger Verkehrsbetriebe (LVB) GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.l.de",
-  "adress": "Georgiring 3",
-  "postal_code": "04103",
-  "sector": "Transport Planning",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/leipzigerwasserwerke/"
- },
- {
-  "task": "verify",
   "key": "kommunale wasserwerke leipzig|Leipzig",
   "c_name": "Kommunale Wasserwerke Leipzig GmbH",
   "city": "Leipzig",
@@ -2070,36 +1005,6 @@
   "li_url": "https://www.linkedin.com/company/mitteldeutsche-flughafen-ag/"
  },
  {
-  "task": "verify",
-  "key": "senckenberg gesellschaft für naturforschung|Frankfurt am Main",
-  "c_name": "Senckenberg Gesellschaft für Naturforschung",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.senckenberg.de",
-  "adress": "Senckenberganlage 25",
-  "postal_code": "60325",
-  "sector": "Environment & Conservation",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": "https://www.senckenberg.de/de/karriere/",
-  "li_url": "https://www.linkedin.com/company/senckenberg/"
- },
- {
-  "task": "verify",
-  "key": "frankfurt university of applied sciences|Frankfurt am Main",
-  "c_name": "Frankfurt University of Applied Sciences",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.frankfurt-university.de",
-  "adress": "Nibelungenplatz 1",
-  "postal_code": "60318",
-  "sector": "Surveying & Geodesy",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
   "task": "fill",
   "key": "north io|Kiel",
   "c_name": "north.io GmbH",
@@ -2143,6 +1048,18 @@
  },
  {
   "task": "fill",
+  "key": "breitband kompetenzzentrum schleswig holstein bkz sh|Kiel",
+  "c_name": "Breitband-Kompetenzzentrum Schleswig-Holstein e.V. (BKZ.SH)",
+  "city": "Kiel",
+  "c_url": "https://www.bkzsh.de",
+  "missing": [
+   "size",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "neumann baugrunduntersuchung|Kiel",
   "c_name": "Neumann Baugrunduntersuchung GmbH & Co. KG",
   "city": "Kiel",
@@ -2150,6 +1067,47 @@
   "missing": [
    "g_stack",
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stadtwerke kiel|Kiel",
+  "c_name": "Stadtwerke Kiel AG",
+  "city": "Kiel",
+  "c_url": "https://www.stadtwerke-kiel.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "geomar helmholtz zentrum für ozeanforschung kiel|Kiel",
+  "c_name": "GEOMAR Helmholtz-Zentrum für Ozeanforschung Kiel",
+  "city": "Kiel",
+  "c_url": "https://www.geomar.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landeshauptstadt kiel amt für bauordnung vermessung und geoinformation|Kiel",
+  "c_name": "Landeshauptstadt Kiel – Amt für Bauordnung, Vermessung und Geoinformation",
+  "city": "Kiel",
+  "c_url": "https://www.kiel.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "kvg kieler verkehrsgesellschaft|Kiel",
+  "c_name": "KVG Kieler Verkehrsgesellschaft mbH",
+  "city": "Kiel",
+  "c_url": "https://www.kvg-kiel.de",
+  "missing": [
+   "g_stack"
   ]
  },
  {
@@ -2264,6 +1222,17 @@
  },
  {
   "task": "fill",
+  "key": "universität bremen institut für geographie|Bremen",
+  "c_name": "Universität Bremen – Institut für Geographie",
+  "city": "Bremen",
+  "c_url": "https://www.uni-bremen.de",
+  "missing": [
+   "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "sweco|Bremen",
   "c_name": "Sweco GmbH",
   "city": "Bremen",
@@ -2271,6 +1240,76 @@
   "missing": [
    "adress",
    "postal_code"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ohb|Bremen",
+  "c_name": "OHB SE",
+  "city": "Bremen",
+  "c_url": "https://www.ohb.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dlr institut für raumfahrtsysteme|Bremen",
+  "c_name": "DLR – Institut für Raumfahrtsysteme",
+  "city": "Bremen",
+  "c_url": "https://www.dlr.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "marum zentrum für marine umweltwissenschaften|Bremen",
+  "c_name": "MARUM – Zentrum für Marine Umweltwissenschaften",
+  "city": "Bremen",
+  "c_url": "https://www.marum.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "swb|Bremen",
+  "c_name": "swb AG",
+  "city": "Bremen",
+  "c_url": "https://www.swb-gruppe.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bremer straßenbahn bsag|Bremen",
+  "c_name": "Bremer Straßenbahn AG (BSAG)",
+  "city": "Bremen",
+  "c_url": "https://www.bsag.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "blg logistics group|Bremen",
+  "c_name": "BLG Logistics Group",
+  "city": "Bremen",
+  "c_url": "https://www.blg-logistics.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hansewasser bremen|Bremen",
+  "c_name": "hanseWasser Bremen GmbH",
+  "city": "Bremen",
+  "c_url": "https://www.hansewasser.de",
+  "missing": [
+   "g_stack"
   ]
  },
  {
@@ -2388,6 +1427,16 @@
  },
  {
   "task": "fill",
+  "key": "landesamt für geoinformation und landesvermessung niedersachsen lgln|Hannover",
+  "c_name": "Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)",
+  "city": "Hannover",
+  "c_url": "https://www.lgln.niedersachsen.de",
+  "missing": [
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "murphy geospatial|Dresden",
   "c_name": "Murphy Geospatial Germany GmbH",
   "city": "Dresden",
@@ -2451,6 +1500,18 @@
  },
  {
   "task": "fill",
+  "key": "tu dresden institut für kartographie|Dresden",
+  "c_name": "TU Dresden – Institut für Kartographie",
+  "city": "Dresden",
+  "c_url": "https://tu-dresden.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "geokart ingenieurvermessungs gesellschaft|Dresden",
   "c_name": "GEOKART Ingenieurvermessungs- gesellschaft mbH GmbH",
   "city": "Dresden",
@@ -2462,6 +1523,125 @@
  },
  {
   "task": "fill",
+  "key": "sächsisches landesamt für umwelt landwirtschaft und geologie lfulg|Dresden",
+  "c_name": "Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie (LfULG)",
+  "city": "Dresden",
+  "c_url": "https://www.lfulg.sachsen.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landeshauptstadt dresden amt für geodaten und kataster|Dresden",
+  "c_name": "Landeshauptstadt Dresden – Amt für Geodaten und Kataster",
+  "city": "Dresden",
+  "c_url": "https://www.dresden.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für geobasisinformation sachsen geosn|Dresden",
+  "c_name": "Landesamt für Geobasisinformation Sachsen (GeoSN)",
+  "city": "Dresden",
+  "c_url": "https://www.geosn.sachsen.de",
+  "missing": [
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "leibniz institut für ökologische raumentwicklung iör|Dresden",
+  "c_name": "Leibniz-Institut für ökologische Raumentwicklung (IÖR)",
+  "city": "Dresden",
+  "c_url": "https://www.ioer.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "htw dresden fakultät geoinformation|Dresden",
+  "c_name": "HTW Dresden – Fakultät Geoinformation",
+  "city": "Dresden",
+  "c_url": "https://www.htw-dresden.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "sachsenenergie|Dresden",
+  "c_name": "SachsenEnergie AG",
+  "city": "Dresden",
+  "c_url": "https://www.sachsenenergie.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "gicon großmann ingenieur consult|Dresden",
+  "c_name": "GICON – Großmann Ingenieur Consult GmbH",
+  "city": "Dresden",
+  "c_url": "https://www.gicon.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer institut für verkehrs und infrastruktursysteme ivi|Dresden",
+  "c_name": "Fraunhofer-Institut für Verkehrs- und Infrastruktursysteme IVI",
+  "city": "Dresden",
+  "c_url": "https://www.ivi.fraunhofer.de",
+  "missing": [
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "tu darmstadt institut für geodäsie|Darmstadt",
+  "c_name": "TU Darmstadt – Institut für Geodäsie",
+  "city": "Darmstadt",
+  "c_url": "https://www.geodesy.tu-darmstadt.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hochschule darmstadt h_da|Darmstadt",
+  "c_name": "Hochschule Darmstadt (h_da)",
+  "city": "Darmstadt",
+  "c_url": "https://h-da.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "regierungspräsidium darmstadt|Darmstadt",
+  "c_name": "Regierungspräsidium Darmstadt",
+  "city": "Darmstadt",
+  "c_url": "https://rp-darmstadt.hessen.de",
+  "missing": [
+   "size",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "sydro consult|Darmstadt",
   "c_name": "SYDRO Consult GmbH",
   "city": "Darmstadt",
@@ -2469,6 +1649,90 @@
   "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "telespazio|Darmstadt",
+  "c_name": "Telespazio Germany GmbH",
+  "city": "Darmstadt",
+  "c_url": "https://www.telespazio.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "entega|Darmstadt",
+  "c_name": "ENTEGA AG",
+  "city": "Darmstadt",
+  "c_url": "https://www.entega.ag",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "wissenschaftsstadt darmstadt vermessungsamt|Darmstadt",
+  "c_name": "Wissenschaftsstadt Darmstadt – Vermessungsamt",
+  "city": "Darmstadt",
+  "c_url": "https://www.darmstadt.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "wetransform|Darmstadt",
+  "c_name": "wetransform GmbH",
+  "city": "Darmstadt",
+  "c_url": "https://wetransform.to",
+  "missing": [
+   "size",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "esa european space operations centre esoc|Darmstadt",
+  "c_name": "ESA – European Space Operations Centre (ESOC)",
+  "city": "Darmstadt",
+  "c_url": "https://www.esa.int",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "eumetsat|Darmstadt",
+  "c_name": "EUMETSAT",
+  "city": "Darmstadt",
+  "c_url": "https://www.eumetsat.int",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer igd|Darmstadt",
+  "c_name": "Fraunhofer IGD",
+  "city": "Darmstadt",
+  "c_url": "https://www.igd.fraunhofer.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "cgi space|Darmstadt",
+  "c_name": "CGI Deutschland – Space",
+  "city": "Darmstadt",
+  "c_url": "https://www.cgi.com/de",
+  "missing": [
+   "g_stack"
   ]
  },
  {
@@ -2527,13 +1791,137 @@
  },
  {
   "task": "fill",
+  "key": "universität bonn institut für geodäsie und geoinformation|Bonn",
+  "c_name": "Universität Bonn – Institut für Geodäsie und Geoinformation",
+  "city": "Bonn",
+  "c_url": "https://www.igg.uni-bonn.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bundesnetzagentur|Bonn",
+  "c_name": "Bundesnetzagentur",
+  "city": "Bonn",
+  "c_url": "https://www.bundesnetzagentur.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bundesanstalt für immobilienaufgaben bima|Bonn",
+  "c_name": "Bundesanstalt für Immobilienaufgaben (BImA)",
+  "city": "Bonn",
+  "c_url": "https://www.bundesimmobilien.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bundesstadt bonn amt für bodenmanagement und geoinformation|Bonn",
+  "c_name": "Bundesstadt Bonn – Amt für Bodenmanagement und Geoinformation",
+  "city": "Bonn",
+  "c_url": "https://www.bonn.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "bundesamt für das personalmanagement der bundeswehr|Bonn",
   "c_name": "Bundesamt für das Personalmanagement der Bundeswehr",
   "city": "Bonn",
   "c_url": "https://www.bundeswehr.de",
   "missing": [
-   "g_stack",
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "wheregroup|Bonn",
+  "c_name": "WhereGroup GmbH",
+  "city": "Bonn",
+  "c_url": "https://wheregroup.com",
+  "missing": [
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bundesinstitut für bau stadt und raumforschung bbsr|Bonn",
+  "c_name": "Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR)",
+  "city": "Bonn",
+  "c_url": "https://www.bbsr.bund.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bundesamt für naturschutz bfn|Bonn",
+  "c_name": "Bundesamt für Naturschutz (BfN)",
+  "city": "Bonn",
+  "c_url": "https://www.bfn.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "deutsche gesellschaft für internationale zusammenarbeit giz|Bonn",
+  "c_name": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
+  "city": "Bonn",
+  "c_url": "https://www.giz.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "united nations university institute for environment and human security unu ehs|Bonn",
+  "c_name": "United Nations University – Institute for Environment and Human Security (UNU-EHS)",
+  "city": "Bonn",
+  "c_url": "https://unu.edu/ehs",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "deutsche telekom|Bonn",
+  "c_name": "Deutsche Telekom AG",
+  "city": "Bonn",
+  "c_url": "https://www.telekom.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dhl group|Bonn",
+  "c_name": "DHL Group",
+  "city": "Bonn",
+  "c_url": "https://group.dhl.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "terrestris|Bonn",
+  "c_name": "terrestris GmbH & Co. KG",
+  "city": "Bonn",
+  "c_url": "https://www.terrestris.de",
+  "missing": [
+   "size"
   ]
  },
  {
@@ -2611,17 +1999,6 @@
  },
  {
   "task": "fill",
-  "key": "stadt essen amt für geoinformation vermessung und kataster|Essen",
-  "c_name": "Stadt Essen – Amt für Geoinformation, Vermessung und Kataster",
-  "city": "Essen",
-  "c_url": "https://www.essen.de",
-  "missing": [
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "westenergie|Essen",
   "c_name": "Westenergie AG",
   "city": "Essen",
@@ -2662,6 +2039,86 @@
   "missing": [
    "kp_url",
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "regionalverband ruhr rvr|Essen",
+  "c_name": "Regionalverband Ruhr (RVR)",
+  "city": "Essen",
+  "c_url": "https://www.rvr.ruhr",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "emschergenossenschaft und lippeverband eglv|Essen",
+  "c_name": "Emschergenossenschaft und Lippeverband (EGLV)",
+  "city": "Essen",
+  "c_url": "https://www.eglv.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ruhrverband|Essen",
+  "c_name": "Ruhrverband",
+  "city": "Essen",
+  "c_url": "https://www.ruhrverband.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stadt essen amt für geoinformation vermessung und kataster|Essen",
+  "c_name": "Stadt Essen – Amt für Geoinformation, Vermessung und Kataster",
+  "city": "Essen",
+  "c_url": "https://www.essen.de",
+  "missing": [
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "e on|Essen",
+  "c_name": "E.ON SE",
+  "city": "Essen",
+  "c_url": "https://www.eon.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "open grid europe|Essen",
+  "c_name": "Open Grid Europe GmbH",
+  "city": "Essen",
+  "c_url": "https://oge.net",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dmt|Essen",
+  "c_name": "DMT GmbH & Co. KG",
+  "city": "Essen",
+  "c_url": "https://www.dmt-group.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hochtief|Essen",
+  "c_name": "HOCHTIEF AG",
+  "city": "Essen",
+  "c_url": "https://www.hochtief.de",
+  "missing": [
+   "g_stack"
   ]
  },
  {
@@ -2707,6 +2164,18 @@
  },
  {
   "task": "fill",
+  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
+  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
+  "city": "Dortmund",
+  "c_url": "https://www.ils-forschung.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "schamp partner architekten stadtplaner|Dortmund",
   "c_name": "Schamp & Partner Architekten Stadtplaner PartGmbB",
   "city": "Dortmund",
@@ -2715,6 +2184,72 @@
    "g_stack",
    "kp_url",
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "westnetz|Dortmund",
+  "c_name": "Westnetz GmbH",
+  "city": "Dortmund",
+  "c_url": "https://www.westnetz.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "tu dortmund fakultät raumplanung|Dortmund",
+  "c_name": "TU Dortmund – Fakultät Raumplanung",
+  "city": "Dortmund",
+  "c_url": "https://raumplanung.tu-dortmund.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dsw21 dortmunder stadtwerke|Dortmund",
+  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
+  "city": "Dortmund",
+  "c_url": "https://www.dsw21.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
+  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
+  "city": "Dortmund",
+  "c_url": "https://www.dew21.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "thyssengas|Dortmund",
+  "c_name": "Thyssengas GmbH",
+  "city": "Dortmund",
+  "c_url": "https://thyssengas.com",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
+  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
+  "city": "Dortmund",
+  "c_url": "https://www.iml.fraunhofer.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
   ]
  },
  {
@@ -2752,12 +2287,64 @@
  },
  {
   "task": "fill",
+  "key": "dokom gesellschaft für telekommunikation dokom21|Dortmund",
+  "c_name": "DOKOM Gesellschaft für Telekommunikation mbH (DOKOM21)",
+  "city": "Dortmund",
+  "c_url": "https://www.dokom21.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bezirksregierung arnsberg abteilung bergbau und energie in nrw|Dortmund",
+  "c_name": "Bezirksregierung Arnsberg – Abteilung Bergbau und Energie in NRW",
+  "city": "Dortmund",
+  "c_url": "https://www.bra.nrw.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "rag aktiengesellschaft|Dortmund",
   "c_name": "RAG Aktiengesellschaft",
   "city": "Dortmund",
   "c_url": "https://www.rag.de",
   "missing": [
    "adress"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "amprion|Dortmund",
+  "c_name": "Amprion GmbH",
+  "city": "Dortmund",
+  "c_url": "https://www.amprion.net",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "adesso|Dortmund",
+  "c_name": "adesso SE",
+  "city": "Dortmund",
+  "c_url": "https://www.adesso.de",
+  "missing": [
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "kreis unna|Dortmund",
+  "c_name": "Kreis Unna",
+  "city": "Dortmund",
+  "c_url": "https://www.kreis-unna.de",
+  "missing": [
+   "kp_url"
   ]
  },
  {
@@ -2816,6 +2403,30 @@
  },
  {
   "task": "fill",
+  "key": "universität leipzig institut für geographie|Leipzig",
+  "c_name": "Universität Leipzig – Institut für Geographie",
+  "city": "Leipzig",
+  "c_url": "https://www.uni-leipzig.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig",
+  "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur",
+  "city": "Leipzig",
+  "c_url": "https://www.htwk-leipzig.de",
+  "missing": [
+   "g_stack",
+   "kp_url",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "sweco|Leipzig",
   "c_name": "Sweco GmbH",
   "city": "Leipzig",
@@ -2823,6 +2434,17 @@
   "missing": [
    "adress",
    "postal_code"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stadt leipzig amt für geoinformation und bodenordnung|Leipzig",
+  "c_name": "Stadt Leipzig – Amt für Geoinformation und Bodenordnung",
+  "city": "Leipzig",
+  "c_url": "https://www.leipzig.de",
+  "missing": [
+   "kp_url",
+   "li_url"
   ]
  },
  {
@@ -2902,10 +2524,30 @@
  },
  {
   "task": "fill",
+  "key": "leibniz institut für länderkunde ifl|Leipzig",
+  "c_name": "Leibniz-Institut für Länderkunde (IfL)",
+  "city": "Leipzig",
+  "c_url": "https://leibniz-ifl.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "dbfz deutsches biomasseforschungszentrum ggmbh|Leipzig",
   "c_name": "DBFZ Deutsches Biomasseforschungszentrum gGmbH",
   "city": "Leipzig",
   "c_url": "https://www.dbfz.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ontras gastransport|Leipzig",
+  "c_name": "ONTRAS Gastransport GmbH",
+  "city": "Leipzig",
+  "c_url": "https://www.ontras.com",
   "missing": [
    "g_stack"
   ]
@@ -2922,28 +2564,12 @@
  },
  {
   "task": "fill",
-  "key": "ministerium des innern des landes nordrhein westfalen|Düsseldorf",
-  "c_name": "Ministerium des Innern des Landes Nordrhein-Westfalen",
-  "city": "Düsseldorf",
-  "c_url": null,
+  "key": "leipziger verkehrsbetriebe lvb|Leipzig",
+  "c_name": "Leipziger Verkehrsbetriebe (LVB) GmbH",
+  "city": "Leipzig",
+  "c_url": "https://www.l.de",
   "missing": [
-   "c_url",
-   "g_stack",
-   "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "allterra|Düsseldorf",
-  "c_name": "AllTerra Deutschland GmbH",
-  "city": "Düsseldorf",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "kp_url",
-   "li_url"
+   "g_stack"
   ]
  },
  {
@@ -2960,14 +2586,24 @@
  },
  {
   "task": "fill",
-  "key": "landeshauptstadt düsseldorf|Düsseldorf",
-  "c_name": "Landeshauptstadt Düsseldorf",
+  "key": "ministerium des innern des landes nordrhein westfalen|Düsseldorf",
+  "c_name": "Ministerium des Innern des Landes Nordrhein-Westfalen",
   "city": "Düsseldorf",
-  "c_url": "https://www.duesseldorf.de",
+  "c_url": "https://www.im.nrw",
   "missing": [
-   "size",
-   "kp_url",
-   "li_url"
+   "g_stack",
+   "size"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "allterra|Düsseldorf",
+  "c_name": "AllTerra Deutschland GmbH",
+  "city": "Düsseldorf",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "kp_url"
   ]
  },
  {
@@ -3185,18 +2821,6 @@
  },
  {
   "task": "fill",
-  "key": "goethe universität frankfurt am main|Frankfurt am Main",
-  "c_name": "Goethe-Universität Frankfurt am Main",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.uni-frankfurt.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "ingenieurgesellschaft gemmer und leber|Frankfurt am Main",
   "c_name": "Ingenieurgesellschaft Gemmer und Leber mbH",
   "city": "Frankfurt am Main",
@@ -3212,6 +2836,17 @@
   "c_name": "DB InfraGO AG",
   "city": "Frankfurt am Main",
   "c_url": "https://www.dbinfrago.com",
+  "missing": [
+   "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "goethe universität frankfurt am main|Frankfurt am Main",
+  "c_name": "Goethe-Universität Frankfurt am Main",
+  "city": "Frankfurt am Main",
+  "c_url": "https://www.uni-frankfurt.de",
   "missing": [
    "g_stack",
    "li_url"
@@ -3335,6 +2970,16 @@
   "c_url": "https://syna.de",
   "missing": [
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "frankfurt university of applied sciences|Frankfurt am Main",
+  "c_name": "Frankfurt University of Applied Sciences",
+  "city": "Frankfurt am Main",
+  "c_url": "https://www.frankfurt-university.de",
+  "missing": [
+   "li_url"
   ]
  },
  {
