@@ -1,25 +1,5 @@
 [
  {
-  "task": "research",
-  "key": "bertrandt services|Berlin",
-  "c_name": "Bertrandt Services GmbH",
-  "city": "Berlin",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "Spezialist GIS-Produktkonfiguration & Testing (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-4995244014-S"
- },
- {
-  "task": "research",
-  "key": "akg software consulting|Berlin",
-  "c_name": "AKG Software Consulting GmbH",
-  "city": "Berlin",
-  "address_from_job_ad": "Stralauer Platz 34, 10243",
-  "open_jobs": 1,
-  "job_titles": "CAD-Trainer und Anwendungsberater für Tiefbau- und Vermessung (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004001514-S"
- },
- {
   "task": "verify",
   "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
   "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
@@ -2752,20 +2732,6 @@
   "city": "Berlin",
   "c_url": "https://www.abbugbr.de/",
   "missing": [
-   "adress",
-   "postal_code",
-   "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "wgi service|Berlin",
-  "c_name": "WGI Service GmbH",
-  "city": "Berlin",
-  "c_url": "https://www.wgi-service.de/",
-  "missing": [
    "size",
    "kp_url",
    "li_url"
@@ -2784,13 +2750,12 @@
  },
  {
   "task": "fill",
-  "key": "stromnetz berlin|Berlin",
-  "c_name": "Stromnetz Berlin GmbH",
+  "key": "wgi service|Berlin",
+  "c_name": "WGI Service GmbH",
   "city": "Berlin",
-  "c_url": "https://www.stromnetz.berlin",
+  "c_url": "https://www.wgi-service.de/",
   "missing": [
-   "g_stack",
-   "kp_url"
+   "size"
   ]
  },
  {
@@ -2801,6 +2766,36 @@
   "c_url": "https://www.geo-metrik.de",
   "missing": [
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "stromnetz berlin|Berlin",
+  "c_name": "Stromnetz Berlin GmbH",
+  "city": "Berlin",
+  "c_url": "https://www.stromnetz.berlin",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bertrandt services|Berlin",
+  "c_name": "Bertrandt Services GmbH",
+  "city": "Berlin",
+  "c_url": "https://www.bertrandt.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "akg software consulting|Berlin",
+  "c_name": "AKG Software Consulting GmbH",
+  "city": "Berlin",
+  "c_url": "https://www.akgsoftware.com",
+  "missing": [
+   "kp_url"
   ]
  }
 ]
