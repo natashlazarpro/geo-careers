@@ -2489,32 +2489,10 @@
  },
  {
   "task": "fill",
-  "key": "ingenieurgesellschaft gemmer und leber|Frankfurt am Main",
-  "c_name": "Ingenieurgesellschaft Gemmer und Leber mbH",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.igl-online.de",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "db infrago|Frankfurt am Main",
   "c_name": "DB InfraGO AG",
   "city": "Frankfurt am Main",
   "c_url": "https://www.dbinfrago.com",
-  "missing": [
-   "g_stack",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "goethe universität frankfurt am main|Frankfurt am Main",
-  "c_name": "Goethe-Universität Frankfurt am Main",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.uni-frankfurt.de",
   "missing": [
    "g_stack",
    "li_url"
@@ -2532,16 +2510,6 @@
  },
  {
   "task": "fill",
-  "key": "bundesamt für kartographie und geodäsie|Frankfurt am Main",
-  "c_name": "Bundesamt für Kartographie und Geodäsie",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.bkg.bund.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "dorsch global|Frankfurt am Main",
   "c_name": "Dorsch Global GmbH",
   "city": "Frankfurt am Main",
@@ -2552,60 +2520,10 @@
  },
  {
   "task": "fill",
-  "key": "fichtner|Frankfurt am Main",
-  "c_name": "Fichtner GmbH & Co. KG",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.fichtner.de",
-  "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "aecom|Frankfurt am Main",
   "c_name": "AECOM Deutschland GmbH",
   "city": "Frankfurt am Main",
   "c_url": "https://aecom.com/de-de/",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ramboll|Frankfurt am Main",
-  "c_name": "Ramboll Deutschland GmbH",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.ramboll.com/de-de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "fraport|Frankfurt am Main",
-  "c_name": "Fraport AG",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.fraport.com",
-  "missing": [
-   "adress"
-  ]
- },
- {
-  "task": "fill",
-  "key": "regionalverband frankfurtrheinmain|Frankfurt am Main",
-  "c_name": "Regionalverband FrankfurtRheinMain",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.region-frankfurt.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ioki|Frankfurt am Main",
-  "c_name": "ioki GmbH",
-  "city": "Frankfurt am Main",
-  "c_url": "https://ioki.com",
   "missing": [
    "g_stack"
   ]
@@ -2622,22 +2540,22 @@
  },
  {
   "task": "fill",
-  "key": "alexander thamm|Frankfurt am Main",
-  "c_name": "Alexander Thamm GmbH",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.alexanderthamm.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "syna|Frankfurt am Main",
   "c_name": "Syna GmbH",
   "city": "Frankfurt am Main",
   "c_url": "https://syna.de",
   "missing": [
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "goethe universität frankfurt am main|Frankfurt am Main",
+  "c_name": "Goethe-Universität Frankfurt am Main",
+  "city": "Frankfurt am Main",
+  "c_url": "https://www.uni-frankfurt.de",
+  "missing": [
+   "li_url"
   ]
  },
  {
