@@ -1902,160 +1902,13 @@
  },
  {
   "task": "fill",
-  "key": "scheuvens wachten plus|Dortmund",
-  "c_name": "scheuvens + wachten plus",
-  "city": "Dortmund",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
-  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
-  "city": "Dortmund",
-  "c_url": "https://www.ils-forschung.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "schamp partner architekten stadtplaner|Dortmund",
   "c_name": "Schamp & Partner Architekten Stadtplaner PartGmbB",
   "city": "Dortmund",
   "c_url": "https://www.schamp-partner.de",
   "missing": [
    "g_stack",
-   "kp_url",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "westnetz|Dortmund",
-  "c_name": "Westnetz GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.westnetz.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "tu dortmund fakultät raumplanung|Dortmund",
-  "c_name": "TU Dortmund – Fakultät Raumplanung",
-  "city": "Dortmund",
-  "c_url": "https://raumplanung.tu-dortmund.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dsw21 dortmunder stadtwerke|Dortmund",
-  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
-  "city": "Dortmund",
-  "c_url": "https://www.dsw21.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
-  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.dew21.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "thyssengas|Dortmund",
-  "c_name": "Thyssengas GmbH",
-  "city": "Dortmund",
-  "c_url": "https://thyssengas.com",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
-  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
-  "city": "Dortmund",
-  "c_url": "https://www.iml.fraunhofer.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "pp a s pesch partner architekten stadtplaner|Dortmund",
-  "c_name": "pp a|s pesch partner architekten stadtplaner",
-  "city": "Dortmund",
-  "c_url": "https://www.pesch-partner.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "postwelters partner mbb architektur stadtplanung|Dortmund",
-  "c_name": "postwelters + partner mbB Architektur & Stadtplanung",
-  "city": "Dortmund",
-  "c_url": "https://www.post-welters.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dortmunder netz donetz|Dortmund",
-  "c_name": "Dortmunder Netz GmbH (DONETZ)",
-  "city": "Dortmund",
-  "c_url": "https://www.do-netz.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dokom gesellschaft für telekommunikation dokom21|Dortmund",
-  "c_name": "DOKOM Gesellschaft für Telekommunikation mbH (DOKOM21)",
-  "city": "Dortmund",
-  "c_url": "https://www.dokom21.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bezirksregierung arnsberg abteilung bergbau und energie in nrw|Dortmund",
-  "c_name": "Bezirksregierung Arnsberg – Abteilung Bergbau und Energie in NRW",
-  "city": "Dortmund",
-  "c_url": "https://www.bra.nrw.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
   ]
  },
  {
@@ -2070,32 +1923,102 @@
  },
  {
   "task": "fill",
-  "key": "amprion|Dortmund",
-  "c_name": "Amprion GmbH",
+  "key": "westnetz|Dortmund",
+  "c_name": "Westnetz GmbH",
   "city": "Dortmund",
-  "c_url": "https://www.amprion.net",
+  "c_url": "https://www.westnetz.de",
   "missing": [
    "g_stack"
   ]
  },
  {
   "task": "fill",
-  "key": "adesso|Dortmund",
-  "c_name": "adesso SE",
+  "key": "tu dortmund fakultät raumplanung|Dortmund",
+  "c_name": "TU Dortmund – Fakultät Raumplanung",
   "city": "Dortmund",
-  "c_url": "https://www.adesso.de",
+  "c_url": "https://raumplanung.tu-dortmund.de",
   "missing": [
-   "kp_url"
+   "g_stack"
   ]
  },
  {
   "task": "fill",
-  "key": "kreis unna|Dortmund",
-  "c_name": "Kreis Unna",
+  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
+  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
   "city": "Dortmund",
-  "c_url": "https://www.kreis-unna.de",
+  "c_url": "https://www.ils-forschung.de",
   "missing": [
-   "kp_url"
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dsw21 dortmunder stadtwerke|Dortmund",
+  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
+  "city": "Dortmund",
+  "c_url": "https://www.dsw21.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
+  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
+  "city": "Dortmund",
+  "c_url": "https://www.dew21.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
+  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
+  "city": "Dortmund",
+  "c_url": "https://www.iml.fraunhofer.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "pp a s pesch partner architekten stadtplaner|Dortmund",
+  "c_name": "pp a|s pesch partner architekten stadtplaner",
+  "city": "Dortmund",
+  "c_url": "https://www.pesch-partner.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "postwelters partner mbb architektur stadtplanung|Dortmund",
+  "c_name": "postwelters + partner mbB Architektur & Stadtplanung",
+  "city": "Dortmund",
+  "c_url": "https://www.post-welters.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dortmunder netz donetz|Dortmund",
+  "c_name": "Dortmunder Netz GmbH (DONETZ)",
+  "city": "Dortmund",
+  "c_url": "https://www.do-netz.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dokom gesellschaft für telekommunikation dokom21|Dortmund",
+  "c_name": "DOKOM Gesellschaft für Telekommunikation mbH (DOKOM21)",
+  "city": "Dortmund",
+  "c_url": "https://www.dokom21.de",
+  "missing": [
+   "g_stack"
   ]
  },
  {
