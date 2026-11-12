@@ -920,111 +920,6 @@
   "li_url": null
  },
  {
-  "task": "verify",
-  "key": "kommunale wasserwerke leipzig|Leipzig",
-  "c_name": "Kommunale Wasserwerke Leipzig GmbH",
-  "city": "Leipzig",
-  "c_url": null,
-  "adress": "Johannisgasse 7/9",
-  "postal_code": "04103",
-  "sector": "Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
-  "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
-  "city": "Leipzig",
-  "c_url": "https://www.mdv.de",
-  "adress": "Prager Straße 8",
-  "postal_code": "04103",
-  "sector": "Transport Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/mitteldeutscher-verkehrsverbund-gmbh/"
- },
- {
-  "task": "verify",
-  "key": "leipziger institut für energie|Leipzig",
-  "c_name": "Leipziger Institut für Energie GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.ie-leipzig.com",
-  "adress": "Lessingstraße 2",
-  "postal_code": "04109",
-  "sector": "Renewable Energy / Climate",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "landesdirektion sachsen|Leipzig",
-  "c_name": "Landesdirektion Sachsen",
-  "city": "Leipzig",
-  "c_url": "https://www.lds.sachsen.de",
-  "adress": "Braustraße 2",
-  "postal_code": "04107",
-  "sector": "Urban & Spatial Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/lds-sachsen/"
- },
- {
-  "task": "verify",
-  "key": "regionaler planungsverband leipzig westsachsen|Leipzig",
-  "c_name": "Regionaler Planungsverband Leipzig-Westsachsen",
-  "city": "Leipzig",
-  "c_url": "https://www.rpv-westsachsen.de",
-  "adress": "Bautzner Straße 67a",
-  "postal_code": "04347",
-  "sector": "Urban & Spatial Planning / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "11-50",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "dbi gas und umwelttechnik|Leipzig",
-  "c_name": "DBI Gas- und Umwelttechnik GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.dbi-gruppe.de",
-  "adress": "Karl-Heine-Straße 109/111",
-  "postal_code": "04229",
-  "sector": "Renewable Energy / Geology",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/dbigruppe/"
- },
- {
-  "task": "verify",
-  "key": "mitteldeutsche flughafen flughafen leipzig halle|Leipzig",
-  "c_name": "Mitteldeutsche Flughafen AG (Flughafen Leipzig/Halle)",
-  "city": "Leipzig",
-  "c_url": "https://www.mdf-ag.com",
-  "adress": "Terminalring 11",
-  "postal_code": "04435",
-  "sector": "Transport Planning",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/mitteldeutsche-flughafen-ag/"
- },
- {
   "task": "fill",
   "key": "north io|Kiel",
   "c_name": "north.io GmbH",
@@ -2301,13 +2196,11 @@
  },
  {
   "task": "fill",
-  "key": "db infrago|Leipzig",
-  "c_name": "DB InfraGO AG",
+  "key": "universität leipzig institut für geographie|Leipzig",
+  "c_name": "Universität Leipzig – Institut für Geographie",
   "city": "Leipzig",
-  "c_url": "https://www.dbinfrago.com",
+  "c_url": "https://www.uni-leipzig.de",
   "missing": [
-   "adress",
-   "postal_code",
    "g_stack",
    "kp_url",
    "li_url"
@@ -2315,13 +2208,11 @@
  },
  {
   "task": "fill",
-  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
-  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
+  "key": "db infrago|Leipzig",
+  "c_name": "DB InfraGO AG",
   "city": "Leipzig",
-  "c_url": "https://mellon-gesellschaft.de",
+  "c_url": "https://www.dbinfrago.com",
   "missing": [
-   "adress",
-   "postal_code",
    "g_stack",
    "kp_url",
    "li_url"
@@ -2336,8 +2227,40 @@
   "missing": [
    "adress",
    "postal_code",
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
+  "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
+  "city": "Leipzig",
+  "c_url": "https://www.mdv.de",
+  "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "leipziger institut für energie|Leipzig",
+  "c_name": "Leipziger Institut für Energie GmbH",
+  "city": "Leipzig",
+  "c_url": "https://www.ie-leipzig.com",
+  "missing": [
+   "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "regionaler planungsverband leipzig westsachsen|Leipzig",
+  "c_name": "Regionaler Planungsverband Leipzig-Westsachsen",
+  "city": "Leipzig",
+  "c_url": "https://www.rpv-westsachsen.de",
+  "missing": [
+   "kp_url",
+   "li_url"
   ]
  },
  {
@@ -2348,107 +2271,15 @@
   "c_url": "https://www.arcadis.com/de-de",
   "missing": [
    "adress",
-   "postal_code",
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "universität leipzig institut für geographie|Leipzig",
-  "c_name": "Universität Leipzig – Institut für Geographie",
-  "city": "Leipzig",
-  "c_url": "https://www.uni-leipzig.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig",
-  "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur",
-  "city": "Leipzig",
-  "c_url": "https://www.htwk-leipzig.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "sweco|Leipzig",
-  "c_name": "Sweco GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.sweco-gmbh.de/",
-  "missing": [
-   "adress",
    "postal_code"
   ]
  },
  {
   "task": "fill",
-  "key": "stadt leipzig amt für geoinformation und bodenordnung|Leipzig",
-  "c_name": "Stadt Leipzig – Amt für Geoinformation und Bodenordnung",
+  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
+  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
   "city": "Leipzig",
-  "c_url": "https://www.leipzig.de",
-  "missing": [
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "helmholtz zentrum für umweltforschung ufz|Leipzig",
-  "c_name": "Helmholtz-Zentrum für Umweltforschung – UFZ",
-  "city": "Leipzig",
-  "c_url": "https://www.ufz.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "netz leipzig|Leipzig",
-  "c_name": "Netz Leipzig GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.netz-leipzig.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ggd gesellschaft für geowissenschaftliche dienste|Leipzig",
-  "c_name": "GGD Gesellschaft für Geowissenschaftliche Dienste mbH",
-  "city": "Leipzig",
-  "c_url": "https://www.geophysik-ggd.com",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "iproconsult|Leipzig",
-  "c_name": "IPROconsult GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.iproconsult.com",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "tilia|Leipzig",
-  "c_name": "Tilia GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.tilia.info",
+  "c_url": "https://mellon-gesellschaft.de",
   "missing": [
    "g_stack",
    "kp_url"
@@ -2466,12 +2297,12 @@
  },
  {
   "task": "fill",
-  "key": "deutsches zentrum für integrative biodiversitätsforschung idiv|Leipzig",
-  "c_name": "Deutsches Zentrum für integrative Biodiversitätsforschung (iDiv)",
+  "key": "stadt leipzig amt für geoinformation und bodenordnung|Leipzig",
+  "c_name": "Stadt Leipzig – Amt für Geoinformation und Bodenordnung",
   "city": "Leipzig",
-  "c_url": "https://www.idiv.de",
+  "c_url": "https://www.leipzig.de",
   "missing": [
-   "g_stack"
+   "li_url"
   ]
  },
  {
@@ -2486,12 +2317,12 @@
  },
  {
   "task": "fill",
-  "key": "dbfz deutsches biomasseforschungszentrum ggmbh|Leipzig",
-  "c_name": "DBFZ Deutsches Biomasseforschungszentrum gGmbH",
+  "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig",
+  "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur",
   "city": "Leipzig",
-  "c_url": "https://www.dbfz.de",
+  "c_url": "https://www.htwk-leipzig.de",
   "missing": [
-   "g_stack"
+   "li_url"
   ]
  },
  {
@@ -2520,6 +2351,66 @@
   "c_name": "Leipziger Verkehrsbetriebe (LVB) GmbH",
   "city": "Leipzig",
   "c_url": "https://www.l.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "netz leipzig|Leipzig",
+  "c_name": "Netz Leipzig GmbH",
+  "city": "Leipzig",
+  "c_url": "https://www.netz-leipzig.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "ggd gesellschaft für geowissenschaftliche dienste|Leipzig",
+  "c_name": "GGD Gesellschaft für Geowissenschaftliche Dienste mbH",
+  "city": "Leipzig",
+  "c_url": "https://www.geophysik-ggd.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesdirektion sachsen|Leipzig",
+  "c_name": "Landesdirektion Sachsen",
+  "city": "Leipzig",
+  "c_url": "https://www.lds.sachsen.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "iproconsult|Leipzig",
+  "c_name": "IPROconsult GmbH",
+  "city": "Leipzig",
+  "c_url": "https://www.iproconsult.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "tilia|Leipzig",
+  "c_name": "Tilia GmbH",
+  "city": "Leipzig",
+  "c_url": "https://www.tilia.info",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "mitteldeutsche flughafen flughafen leipzig halle|Leipzig",
+  "c_name": "Mitteldeutsche Flughafen AG (Flughafen Leipzig/Halle)",
+  "city": "Leipzig",
+  "c_url": "https://www.mdf-ag.com",
   "missing": [
    "g_stack"
   ]
