@@ -2676,16 +2676,6 @@
  },
  {
   "task": "fill",
-  "key": "höpfinger dienstleistungen für infrastruktur|München",
-  "c_name": "Höpfinger GmbH & Co. KG Dienstleistungen für Infrastruktur",
-  "city": "München",
-  "c_url": "https://www.hoepfinger.de",
-  "missing": [
-   "size"
-  ]
- },
- {
-  "task": "fill",
   "key": "landesamt für digitalisierung breitband und vermessung ldbv|München",
   "c_name": "Landesamt für Digitalisierung, Breitband und Vermessung (LDBV)",
   "city": "München",
