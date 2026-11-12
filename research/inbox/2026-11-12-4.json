@@ -1,0 +1,151 @@
+[
+ {
+  "task": "fill",
+  "key": "scheuvens wachten plus|Dortmund",
+  "c_name": "scheuvens + wachten plus",
+  "city": "Dortmund",
+  "c_url": "https://www.scheuvens-wachten.de",
+  "kp_url": "https://www.scheuvens-wachten.de/jobs",
+  "li_url": "https://www.linkedin.com/company/sw-plus/",
+  "g_stack": "CAD",
+  "notes": "Website, jobs page and LinkedIn link from own homepage (Friedenstr. 18, 44139 Dortmund). g_stack from 2024 job ad PDF (TU Dortmund job board): CAD programs, Adobe InDesign/Illustrator/Photoshop; no GIS tool named."
+ },
+ {
+  "task": "fill",
+  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
+  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
+  "city": "Dortmund",
+  "kp_url": "https://www.ils-forschung.de/das-ils/arbeiten-im-ils/",
+  "li_url": "https://www.linkedin.com/company/ils-forschung/",
+  "notes": "Careers page and LinkedIn link from own homepage. Research area 'Geoinformation für die Stadtforschung' names no specific software; no open job ads, so g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "schamp partner architekten stadtplaner|Dortmund",
+  "c_name": "Schamp & Partner Architekten Stadtplaner PartGmbB",
+  "city": "Dortmund",
+  "kp_url": "https://www.schamp-partner.de/karriere",
+  "notes": "Careers page from own site (one architect job, no software named). No LinkedIn link on site; g_stack unverifiable."
+ },
+ {
+  "task": "fill",
+  "key": "thyssengas|Dortmund",
+  "c_name": "Thyssengas GmbH",
+  "city": "Dortmund",
+  "g_stack": "Smallworld GIS, ArcGIS, AutoCAD, ALKIS",
+  "kp_url": "https://karriere.thyssengas.com",
+  "notes": "g_stack from Thyssengas job ad 'Werkstudent GIS & Geodatenmanagement / Netzdokumentation' (Dortmund) on goausbildung.com: Smallworld, ArcGIS, AutoCAD, ALKIS data; ad links to own portal karriere.thyssengas.com."
+ },
+ {
+  "task": "fill",
+  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
+  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
+  "city": "Dortmund",
+  "kp_url": "https://www.dew21.de/ueber-uns/karriere",
+  "notes": "Careers page from own site (applications via umantis portal). No GIS-related job ad or software found; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "dsw21 dortmunder stadtwerke|Dortmund",
+  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
+  "city": "Dortmund",
+  "kp_url": "https://www.bus-und-bahn.de/karriere",
+  "notes": "dsw21.de redirects to bus-und-bahn.de (DSW21's own site); careers page there. No GIS software found; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "dortmunder netz donetz|Dortmund",
+  "c_name": "Dortmunder Netz GmbH (DONETZ)",
+  "city": "Dortmund",
+  "kp_url": "https://www.dew21.de/ueber-uns/karriere",
+  "notes": "do-netz.de/unternehmen points to parent DEW21's careers page for jobs (group portal). No GIS software named; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "dokom gesellschaft für telekommunikation dokom21|Dortmund",
+  "c_name": "DOKOM Gesellschaft für Telekommunikation mbH (DOKOM21)",
+  "city": "Dortmund",
+  "kp_url": "https://www.dokom21.de/ueber-dokom21/ueber-uns/karriere",
+  "notes": "Careers page on own site; no GIS jobs/software listed, g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
+  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
+  "city": "Dortmund",
+  "kp_url": "https://www.iml.fraunhofer.de/de/jobs_und_karriere.html",
+  "notes": "Careers page from own homepage. No GIS software found; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "pp a s pesch partner architekten stadtplaner|Dortmund",
+  "c_name": "pp a|s pesch partner architekten stadtplaner",
+  "city": "Dortmund",
+  "kp_url": "https://www.pesch-partner.de/buero#stellenangebote",
+  "notes": "Job section ('Stellenangebote') on own site. No software named; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "postwelters partner mbb architektur stadtplanung|Dortmund",
+  "c_name": "postwelters + partner mbB Architektur & Stadtplanung",
+  "city": "Dortmund",
+  "kp_url": "https://www.post-welters.de/karriere/",
+  "notes": "Careers page from own homepage. No software named; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "kreis unna|Dortmund",
+  "c_name": "Kreis Unna",
+  "city": "Dortmund",
+  "kp_url": "https://www.kreis-unna.de/Serviceportal/Karriere/",
+  "notes": "Careers page from own homepage (Stellenportal subpage). Note: Kreis Unna seat is Unna, not Dortmund."
+ },
+ {
+  "task": "fill",
+  "key": "adesso|Dortmund",
+  "c_name": "adesso SE",
+  "city": "Dortmund",
+  "kp_url": "https://jobs.adesso-group.com/",
+  "notes": "Job portal linked from adesso.de ('Unsere Stellenangebote')."
+ },
+ {
+  "task": "fill",
+  "key": "bezirksregierung arnsberg abteilung bergbau und energie in nrw|Dortmund",
+  "c_name": "Bezirksregierung Arnsberg – Abteilung Bergbau und Energie in NRW",
+  "city": "Dortmund",
+  "kp_url": "https://www.bra.nrw.de/karriere",
+  "notes": "Careers page from bra.nrw.de homepage. g_stack from own job ads with Dienstort Dortmund: Dez. 63 'Risikomanagement Altbergbau' (2025-08, GIS-Kenntnisse insbesondere ArcGIS, GIS-Layer) and Dez. 65 (Grundkenntnisse Geoinformationssystem).",
+  "g_stack": "ArcGIS, GIS"
+ },
+ {
+  "task": "fill",
+  "key": "tu dortmund fakultät raumplanung|Dortmund",
+  "c_name": "TU Dortmund – Fakultät Raumplanung",
+  "city": "Dortmund",
+  "kp_url": "https://raumplanung.tu-dortmund.de/fakultaet/stellen-praktika/",
+  "notes": "'Stellen & Praktika' page on faculty site. No GIS software named on homepage; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "westnetz|Dortmund",
+  "c_name": "Westnetz GmbH",
+  "city": "Dortmund",
+  "kp_url": "https://www.westnetz.de/de/karriere.html",
+  "notes": "Careers page on own site (job board jobs.westnetz.de showed 0 jobs at time of check). No GIS job ad with named software found; g_stack left empty."
+ },
+ {
+  "task": "fill",
+  "key": "amprion|Dortmund",
+  "c_name": "Amprion GmbH",
+  "city": "Dortmund",
+  "g_stack": "QGIS, ArcGIS, PostGIS",
+  "notes": "g_stack from Amprion job ad 'Werkstudent Geodatenmanagement' (Dortmund, 2022, TU Dortmund Raumplanung job board PDF): QGIS (ArcGIS accepted), PostGIS."
+ },
+ {
+  "task": "fill",
+  "key": "rag aktiengesellschaft|Dortmund",
+  "c_name": "RAG Aktiengesellschaft",
+  "city": "Dortmund",
+  "notes": "rag.de footer/Impressum gives HQ Im Welterbe 10, 45141 Essen - not Dortmund; no Dortmund office address found, so adress left empty. City assignment Dortmund may be wrong."
+ }
+]
