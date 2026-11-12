@@ -2696,17 +2696,6 @@
  },
  {
   "task": "fill",
-  "key": "db infrago|Hamburg",
-  "c_name": "DB InfraGO AG",
-  "city": "Hamburg",
-  "c_url": "https://www.deutschebahn.com/de",
-  "missing": [
-   "adress",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "dr hesse und partner ingenieure|Hamburg",
   "c_name": "Dr. Hesse und Partner Ingenieure",
   "city": "Hamburg",
@@ -2721,6 +2710,16 @@
   "c_name": "AllTerra Deutschland GmbH",
   "city": "Hamburg",
   "c_url": "https://allterra.de/",
+  "missing": [
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "db infrago|Hamburg",
+  "c_name": "DB InfraGO AG",
+  "city": "Hamburg",
+  "c_url": "https://www.deutschebahn.com/de",
   "missing": [
    "li_url"
   ]
