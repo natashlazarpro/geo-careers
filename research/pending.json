@@ -1,5 +1,45 @@
 [
  {
+  "task": "research",
+  "key": "yer|Berlin",
+  "c_name": "YER",
+  "city": "Berlin",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "GIS Configuration & Test Specialist (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-4996746281-S"
+ },
+ {
+  "task": "research",
+  "key": "brunel nl karlsuhe|Karlsruhe",
+  "c_name": "Brunel GmbH NL Karlsuhe",
+  "city": "Karlsruhe",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Software Engineer GIS (w/m/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12362-TR308608_6586CS-S"
+ },
+ {
+  "task": "research",
+  "key": "dmtech|Karlsruhe",
+  "c_name": "dmTECH GmbH",
+  "city": "Karlsruhe",
+  "address_from_job_ad": "Am dm-Platz 1, 76227",
+  "open_jobs": 1,
+  "job_titles": "Senior Solution Architect CAD / BIM / GIS (w/m/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12787-273932111126-S"
+ },
+ {
+  "task": "research",
+  "key": "via futuri|Dresden",
+  "c_name": "via Futuri GmbH",
+  "city": "Dresden",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "GIS-Entwickler / Geoinformatiker (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004009529-S"
+ },
+ {
   "task": "verify",
   "key": "leibniz universität hannover institut für kartographie und geoinformatik|Hannover",
   "c_name": "Leibniz Universität Hannover – Institut für Kartographie und Geoinformatik",
@@ -457,19 +497,6 @@
  },
  {
   "task": "fill",
-  "key": "hanseatische naturentwicklung|Bremen",
-  "c_name": "Hanseatische Naturentwicklung GmbH",
-  "city": "Bremen",
-  "c_url": "https://www.haneg.de",
-  "missing": [
-   "adress",
-   "g_stack",
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "netz zentrum für innovative technologie|Bremen",
   "c_name": "NETZ-Zentrum für innovative Technologie GmbH",
   "city": "Bremen",
@@ -477,6 +504,17 @@
   "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hanseatische naturentwicklung|Bremen",
+  "c_name": "Hanseatische Naturentwicklung GmbH",
+  "city": "Bremen",
+  "c_url": "https://www.haneg.de",
+  "missing": [
+   "adress",
+   "g_stack"
   ]
  },
  {
