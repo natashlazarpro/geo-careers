@@ -1,0 +1,641 @@
+[
+ {
+  "task": "fill",
+  "key": "bundesanstalt für wasserbau baw|Karlsruhe",
+  "c_name": "Bundesanstalt für Wasserbau (BAW)",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/bundesanstalt-fuer-wasserbau",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "disy informationssysteme|Karlsruhe",
+  "c_name": "disy Informationssysteme GmbH",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/disyinformationssysteme",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "enbw energie baden württemberg|Karlsruhe",
+  "c_name": "EnBW Energie Baden-Württemberg AG",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/enbw-energie-baden-wuerttemberg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer iosb|Karlsruhe",
+  "c_name": "Fraunhofer IOSB",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/fraunhofergesellschaft",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "hochschule karlsruhe geomatik|Karlsruhe",
+  "c_name": "Hochschule Karlsruhe – Geomatik",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/hochschule-karlsruhe-technik-und-wirtschaft-university-of-applied-sciences",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "init|Karlsruhe",
+  "c_name": "INIT SE",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/init",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "karlsruher institut für technologie kit institut für photogrammetrie und fernerkundung|Karlsruhe",
+  "c_name": "Karlsruher Institut für Technologie (KIT) – Institut für Photogrammetrie und Fernerkundung",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/karlsruher-institut-fuer-technologie-kit1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "lubw landesanstalt für umwelt baden württemberg|Karlsruhe",
+  "c_name": "LUBW Landesanstalt für Umwelt Baden-Württemberg",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/landesanstalt-fuer-umwelt-baden-wuerttemberg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "ptv group|Karlsruhe",
+  "c_name": "PTV Group",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/ptv",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "staatliches hochbauamt karlsruhe bundesbau baden württemberg|Karlsruhe",
+  "c_name": "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/staatliches-hochbauamt-karlsruhe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "stadt karlsruhe liegenschaftsamt vermessung|Karlsruhe",
+  "c_name": "Stadt Karlsruhe – Liegenschaftsamt (Vermessung)",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/stadt-karlsruhe1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "stadtwerke karlsruhe|Karlsruhe",
+  "c_name": "Stadtwerke Karlsruhe GmbH",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/stadtwerke-karlsruhe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "adesso|Dortmund",
+  "c_name": "adesso SE",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/adesso",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "amprion|Dortmund",
+  "c_name": "Amprion GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/amprion",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "bezirksregierung arnsberg abteilung bergbau und energie in nrw|Dortmund",
+  "c_name": "Bezirksregierung Arnsberg – Abteilung Bergbau und Energie in NRW",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/bezirksregierung-arnsberg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "christian sommerhoff vermessungsbüro|Dortmund",
+  "c_name": "Christian Sommerhoff Vermessungsbüro",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/vermessungsbuero-dipl-ing-christian-sommerhoff",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 2.6
+ },
+ {
+  "task": "fill",
+  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
+  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/dortmunder-energie-und-wasserversorgung-dew211",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "dortmunder netz donetz|Dortmund",
+  "c_name": "Dortmunder Netz GmbH (DONETZ)",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/dortmunder-netz1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "dsw21 dortmunder stadtwerke|Dortmund",
+  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/dsw21-dortmunder-stadtwerke",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
+  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/fraunhofer-iml",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
+  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/ils-institut-fuer-landes-und-stadtentwicklungsforschung-ggmbh",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "kreis unna|Dortmund",
+  "c_name": "Kreis Unna",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/kreis-unna",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "planersocietät|Dortmund",
+  "c_name": "Planersocietät",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/planersociett-frehn-steinberg-partner",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "postwelters partner mbb architektur stadtplanung|Dortmund",
+  "c_name": "postwelters + partner mbB Architektur & Stadtplanung",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/post-welters-partner-architekten-stadtplaner",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.8
+ },
+ {
+  "task": "fill",
+  "key": "schamp partner architekten stadtplaner|Dortmund",
+  "c_name": "Schamp & Partner Architekten Stadtplaner PartGmbB",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/schamp-und-schmaloeer1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "stadt dortmund vermessungs und katasteramt|Dortmund",
+  "c_name": "Stadt Dortmund – Vermessungs- und Katasteramt",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/stadt-dortmund2",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "sweco|Dortmund",
+  "c_name": "Sweco GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/sweco",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "thyssengas|Dortmund",
+  "c_name": "Thyssengas GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/thyssengas1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "tu dortmund fakultät raumplanung|Dortmund",
+  "c_name": "TU Dortmund – Fakultät Raumplanung",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/technische-universitaet-dortmund1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "westnetz|Dortmund",
+  "c_name": "Westnetz GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/westnetz",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "arcadis|Leipzig",
+  "c_name": "Arcadis Germany GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/arcadis-deutschland",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "db infrago|Leipzig",
+  "c_name": "DB InfraGO AG",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/deutsche-bahn",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "dbfz deutsches biomasseforschungszentrum ggmbh|Leipzig",
+  "c_name": "DBFZ Deutsches Biomasseforschungszentrum gGmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/dbfz-deutsches-biomasseforschungszentrum-gemeinnuetzige",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "dbi gas und umwelttechnik|Leipzig",
+  "c_name": "DBI Gas- und Umwelttechnik GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/dbi-gas-und-umwelttechnik1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.8
+ },
+ {
+  "task": "fill",
+  "key": "deutsches zentrum für integrative biodiversitätsforschung idiv|Leipzig",
+  "c_name": "Deutsches Zentrum für integrative Biodiversitätsforschung (iDiv)",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/idiv",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.1
+ },
+ {
+  "task": "fill",
+  "key": "geo metrik ingenieurgesellschaft leipzig|Leipzig",
+  "c_name": "GEO-METRIK-Ingenieurgesellschaft mbH Leipzig",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/geo-metrik3",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "helmholtz zentrum für umweltforschung ufz|Leipzig",
+  "c_name": "Helmholtz-Zentrum für Umweltforschung – UFZ",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/helmholtz-zentrum-fuer-umweltforschung-ufz",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig",
+  "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/hochschule-fuer-technik-wirtschaft-und-kultur-leipzig",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "iproconsult|Leipzig",
+  "c_name": "IPROconsult GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/iproconsult",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "landesdirektion sachsen|Leipzig",
+  "c_name": "Landesdirektion Sachsen",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/landesdirektion-sachsen-lds1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "leibniz institut für länderkunde ifl|Leipzig",
+  "c_name": "Leibniz-Institut für Länderkunde (IfL)",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/leibniz-institut-fuer-laenderkunde",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "leipziger institut für energie|Leipzig",
+  "c_name": "Leipziger Institut für Energie GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/leipziger-institut-fuer-energie",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "leipziger verkehrsbetriebe lvb|Leipzig",
+  "c_name": "Leipziger Verkehrsbetriebe (LVB) GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/leipziger-verkehrsbetriebe-lvb",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
+  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/mellon-gesellschaft-fuer-nachhaltige-infrastruktur-mbh1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "mitteldeutsche flughafen flughafen leipzig halle|Leipzig",
+  "c_name": "Mitteldeutsche Flughafen AG (Flughafen Leipzig/Halle)",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/mitteldeutsche-flughafen",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
+  "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/mitteldeutscher-verkehrsverbund-gesellschaft-mdv",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "ontras gastransport|Leipzig",
+  "c_name": "ONTRAS Gastransport GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/ontras-gastransport",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "stadt leipzig amt für geoinformation und bodenordnung|Leipzig",
+  "c_name": "Stadt Leipzig – Amt für Geoinformation und Bodenordnung",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/stadtverwaltung-leipzig1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "sweco|Leipzig",
+  "c_name": "Sweco GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/sweco",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "tilia|Leipzig",
+  "c_name": "Tilia GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/tilia1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "trigis geoservices|Leipzig",
+  "c_name": "TRIGIS GeoServices GmbH",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/trigis-geoservices",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "universität leipzig institut für geographie|Leipzig",
+  "c_name": "Universität Leipzig – Institut für Geographie",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/universitaet-leipzig50",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "vng|Leipzig",
+  "c_name": "VNG AG",
+  "city": "Leipzig",
+  "kununu_url": "https://www.kununu.com/de/vng",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "beiersdorf|Hamburg",
+  "c_name": "Beiersdorf AG",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/beiersdorf",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "carnival maritime|Hamburg",
+  "c_name": "Carnival Maritime GmbH",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/carnival-maritime",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.4
+ },
+ {
+  "task": "fill",
+  "key": "db infrago|Hamburg",
+  "c_name": "DB InfraGO AG",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/deutsche-bahn",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "dr hesse und partner ingenieure|Hamburg",
+  "c_name": "Dr. Hesse und Partner Ingenieure",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/dr-hesse-und-partner-ingenieure2",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "gfa consulting group|Hamburg",
+  "c_name": "GFA Consulting Group GmbH",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/gfa-consulting-group3",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "hamburg port authority hamburger hafenbehörde|Hamburg",
+  "c_name": "Hamburg Port Authority (Hamburger Hafenbehörde)",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/hpa-hamburg-port-authority",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "hamburg wasser|Hamburg",
+  "c_name": "HAMBURG WASSER",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/hamburg-wasser",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "hamburger energienetze stromnetz hamburg|Hamburg",
+  "c_name": "Hamburger Energienetze GmbH (Stromnetz Hamburg)",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/hamburgerenergienetzegmbh",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "hamburger hafen und logistik hhla|Hamburg",
+  "c_name": "Hamburger Hafen und Logistik AG (HHLA)",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/abakus-riesa",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "hapag lloyd|Hamburg",
+  "c_name": "Hapag-Lloyd AG",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/hapag-lloyd",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "kühne nagel|Hamburg",
+  "c_name": "Kühne + Nagel",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/kuehne-nagel-ag",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "röhlig logistics|Hamburg",
+  "c_name": "Röhlig Logistics",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/roehlig-logistics",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "sbi beratende ingenieure für bau verkehr vermessung|Hamburg",
+  "c_name": "SBI Beratende Ingenieure für Bau-Verkehr-Vermessung GmbH",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/sbi-beratende-ingenieure-fuer-bau-verkehr-vermessung1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.6
+ },
+ {
+  "task": "fill",
+  "key": "simufact engineering hexagon manufacturing intelligence|Hamburg",
+  "c_name": "Simufact Engineering GmbH (Hexagon Manufacturing Intelligence)",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/simufact-engineering1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "sweco hamburg office|Hamburg",
+  "c_name": "Sweco GmbH (Hamburg office)",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/sweco",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "unilever holding|Hamburg",
+  "c_name": "Unilever Deutschland Holding GmbH",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/unilever-deutschland-holding",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "vattenfall europe hamburg|Hamburg",
+  "c_name": "Vattenfall Europe (Hamburg)",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/vattenfall-europe5",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "vesseltracker comgmbh|Hamburg",
+  "c_name": "vesseltracker.comGmbH",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/vesseltrackercom",
+  "kununu_rate": 5.0,
+  "notes": "kununu from Natasha's kununu.xlsx."
+ }
+]
