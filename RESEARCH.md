@@ -66,6 +66,8 @@ and tech pages and list the tools they name (ArcGIS Pro, QGIS, PostGIS, FME, Pyt
 | confidence | `high` / `medium` / `low` — how sure you are it's the right company and office |
 | notes | anything uncertain, e.g. "several offices, chose the Berlin one" |
 
+To fix a typo in an existing name, hand in `{"task": "rename", "c_name": "<name as in the workbook>", "city": "<city>", "new_name": "<correct name>"}`.
+
 Use `null` for anything you can't verify. Never guess URLs.
 If a "company" is really a recruiting agency or the posting isn't a GIS job, still add a record with
 `confidence: "low"` and say so in `notes`, so it isn't researched again.

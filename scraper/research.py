@@ -68,6 +68,7 @@ def validate(rec):
     """Return a list of problems with one research record (empty list = OK)."""
     problems = []
     required = (("key", "c_name", "city") if rec.get("task") == "fill"
+                else ("c_name", "city", "new_name") if rec.get("task") == "rename"
                 else ("key", "c_name", "city", "confidence") if rec.get("task") == "verify"
                 else ("key", "c_name", "city", "eng", "de", "confidence"))
     for f in required:
@@ -118,8 +119,8 @@ def ingest():
         print(f"[research] ingesting {f.name}")
         records = json.loads(f.read_text(encoding="utf-8"))
         records = [records] if isinstance(records, dict) else records
-        direct = [r for r in records if r.get("task") in ("fill", "new", "verify")]
-        cached = [r for r in records if r.get("task") not in ("fill", "new", "verify")]
+        direct = [r for r in records if r.get("task") in ("fill", "new", "verify", "rename")]
+        cached = [r for r in records if r.get("task") not in ("fill", "new", "verify", "rename")]
         if cached:
             tmp = f.with_suffix(".research.tmp")
             tmp.write_text(json.dumps(cached, ensure_ascii=False), encoding="utf-8")
@@ -165,6 +166,16 @@ def add_new_employers(records):
         problems = [] if to_research and rec.get("c_name") else validate(rec)
         task = rec.pop("task", None)
         is_fill = task == "fill"
+        if task == "rename":                          # fix a typo in a name: {"task": "rename", "c_name": old, "city", "new_name"}
+            df = frames.get(sheet_of.get(rec.get("city")))
+            hit = None if df is None else next((i for i in df.index if str(df.at[i, "c_name"]).strip() == rec["c_name"].strip()), None)
+            if hit is None:
+                skipped += 1
+                print(f"SKIPPED rename {rec.get('c_name')}: not found in {rec.get('city')}")
+            else:
+                df.at[hit, "c_name"] = rec["new_name"].strip()
+                filled += 1
+            continue
         if task == "verify" and match_existing_overwrite(frames, sheet_of.get(rec.get("city")), rec):
             filled += 1
             continue
