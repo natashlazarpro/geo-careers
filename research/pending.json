@@ -724,16 +724,6 @@
  },
  {
   "task": "fill",
-  "key": "allterra|Hannover",
-  "c_name": "AllTerra Deutschland GmbH",
-  "city": "Hannover",
-  "c_url": "https://www.allterra-ds.de",
-  "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "landesamt für geoinformation und landesvermessung niedersachsen lgln|Hannover",
   "c_name": "Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)",
   "city": "Hannover",
@@ -1050,20 +1040,6 @@
  },
  {
   "task": "fill",
-  "key": "arcadis|Karlsruhe",
-  "c_name": "Arcadis Germany GmbH",
-  "city": "Karlsruhe",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "adress",
-   "postal_code",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "landesamt für geoinformation und landentwicklung baden württemberg lgl|Karlsruhe",
   "c_name": "Landesamt für Geoinformation und Landentwicklung Baden-Württemberg (LGL)",
   "city": "Karlsruhe",
@@ -1073,6 +1049,19 @@
    "postal_code",
    "size",
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "arcadis|Karlsruhe",
+  "c_name": "Arcadis Germany GmbH",
+  "city": "Karlsruhe",
+  "c_url": null,
+  "missing": [
+   "c_url",
+   "adress",
+   "postal_code",
+   "kp_url"
   ]
  },
  {
@@ -1843,17 +1832,6 @@
  },
  {
   "task": "fill",
-  "key": "i g l ingenieurvermessung|Stuttgart",
-  "c_name": "I.G.L. GmbH Ingenieurvermessung",
-  "city": "Stuttgart",
-  "c_url": "https://www.igl-online.de/",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "iwp ingenieurbüro winkler und partner|Stuttgart",
   "c_name": "IWP – Ingenieurbüro Winkler und Partner GmbH",
   "city": "Stuttgart",
@@ -1893,6 +1871,16 @@
   "c_url": "https://www.bertrandt.com/en/",
   "missing": [
    "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "i g l ingenieurvermessung|Stuttgart",
+  "c_name": "I.G.L. GmbH Ingenieurvermessung",
+  "city": "Stuttgart",
+  "c_url": "https://www.igl-online.de/",
+  "missing": [
+   "size"
   ]
  },
  {
@@ -1949,17 +1937,6 @@
  },
  {
   "task": "fill",
-  "key": "db infrago|Frankfurt am Main",
-  "c_name": "DB InfraGO AG",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.dbinfrago.com",
-  "missing": [
-   "g_stack",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "lao ingenieurgesellschaft|Frankfurt am Main",
   "c_name": "LAO Ingenieurgesellschaft mbH",
   "city": "Frankfurt am Main",
@@ -1984,6 +1961,16 @@
   "c_name": "AECOM Deutschland GmbH",
   "city": "Frankfurt am Main",
   "c_url": "https://aecom.com/de-de/",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "db infrago|Frankfurt am Main",
+  "c_name": "DB InfraGO AG",
+  "city": "Frankfurt am Main",
+  "c_url": "https://www.dbinfrago.com",
   "missing": [
    "g_stack"
   ]
