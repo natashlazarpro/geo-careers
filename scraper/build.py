@@ -219,6 +219,50 @@ def merge_duplicates(df):
     return df.drop(index=drop).reset_index(drop=True)
 
 
+# City websites are shared by unrelated city offices, so they never join two rows into one company.
+SHARED_DOMAINS = {"l.de", "dortmund.de", "essen.de", "leipzig.de", "muenchen.de", "hamburg.de", "berlin.de",
+                  "stadt-koeln.de", "frankfurt.de", "stuttgart.de", "duesseldorf.de"}
+COMPANY_WIDE = (("kununu_url", "kununu_rate"), ("li_url",))   # values that describe the whole company, not one office
+
+
+def share_company_values(frames):
+    """Offices of the same company in different cities share kununu and LinkedIn: an empty cell gets the
+    value another office of that company already has (the most common one). Filled cells are never changed."""
+    rows = [(sheet, i, company_key(df.at[i, "c_name"]), domain(df.at[i, "c_url"]))
+            for sheet, df in frames.items() for i in df.index]
+    parent = list(range(len(rows)))
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+    for a in range(len(rows)):
+        for b in range(a + 1, len(rows)):
+            ka, kb, da, db = rows[a][2], rows[b][2], rows[a][3], rows[b][3]
+            if same_company(ka, kb) or (da and da == db and da not in SHARED_DOMAINS):
+                parent[find(a)] = find(b)
+    groups = {}
+    for n, r in enumerate(rows):
+        groups.setdefault(find(n), []).append(r)
+    filled = 0
+    for members in groups.values():
+        if len({s for s, *_ in members}) < 2:
+            continue
+        for cols in COMPANY_WIDE:
+            have = [tuple(None if blank(frames[s].at[i, c]) else frames[s].at[i, c] for c in cols) for s, i, *_ in members if not blank(frames[s].at[i, cols[0]])]
+            if not have:
+                continue
+            best = max(set(have), key=have.count)
+            for s, i, *_ in members:
+                if blank(frames[s].at[i, cols[0]]):
+                    for c, v in zip(cols, best):
+                        frames[s].at[i, c] = v
+                    filled += 1
+    print(f"[build] {filled} empty kununu/LinkedIn cells filled from other offices of the same company")
+    return frames
+
+
 def apply_research(df, idx, r):
     """Copy agent results into empty cells only (never overwrite manual edits)."""
     for col in config.COLUMNS:
@@ -290,6 +334,7 @@ def main():
 
     frames = excel.read_city_sheets()
     frames = update_companies(frames, store, use_agent=not args.no_agent)
+    frames = share_company_values(frames)
     if not args.no_geocode:
         for sheet in frames:
             frames[sheet] = geocode.geocode_companies(frames[sheet])

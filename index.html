@@ -121,6 +121,8 @@
     .star { display: inline-flex; align-items: center; gap: 4px; }
     .star svg { fill: var(--accent); }
     .d-addr { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+    .d-also { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+    .d-also button { font: inherit; color: var(--text); background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
     .d-web { display: inline-block; margin-top: 6px; font-size: 13px; word-break: break-all; }
     .d-block { border-top: 1px solid var(--line); padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
     .d-about { margin: 0; font-family: var(--serif); font-size: 17px; line-height: 1.55; }
@@ -496,7 +498,7 @@ const T = {
     all: 'All', role: { 'Core product': 'Core product', 'Dedicated team': 'Dedicated team', 'Side tool': 'Side tool' },
     lang: { ENG: 'English', DE: 'German', 'DE/ENG': 'English / German' }, lang_short: { all: 'All', en: 'EN', de: 'DE' },
     view_jobs: 'View Jobs', view_jobs_row: 'View jobs →', reviews: 'Read Reviews', back: '← Back to list',
-    about: 'About the company', tech: 'Tech stack', no_jobs: 'No jobs page',
+    about: 'About the company', tech: 'Tech stack', also_in: 'Also in', no_jobs: 'No jobs page',
   },
   de: {
     nav_map: 'Karte', nav_employers: 'Arbeitgeber', nav_cities: 'Städte',
@@ -529,7 +531,7 @@ const T = {
     all: 'Alle', role: { 'Core product': 'Kernprodukt', 'Dedicated team': 'GIS-Team', 'Side tool': 'Nebentool' },
     lang: { ENG: 'Englisch', DE: 'Deutsch', 'DE/ENG': 'Englisch / Deutsch' }, lang_short: { all: 'Alle', en: 'EN', de: 'DE' },
     view_jobs: 'Stellen ansehen', view_jobs_row: 'Stellen →', reviews: 'Bewertungen', back: '← Zurück zur Liste',
-    about: 'Über das Unternehmen', tech: 'Tech-Stack', no_jobs: 'Keine Stellenseite',
+    about: 'Über das Unternehmen', tech: 'Tech-Stack', also_in: 'Auch in', no_jobs: 'Keine Stellenseite',
   },
 };
 const SECTOR_DE = {
@@ -643,9 +645,15 @@ function select(id, opts = {}) {
 
 function detailHTML(c) {
   const about = LANG === 'de' ? (c.about_de || c.about_en) : (c.about_en || c.about_de);
-  const web = safeUrl(c.website), jobs = safeUrl(c.careers), rev = safeUrl(c.kununu), li = safeUrl(c.linkedin);
+  // kununu and LinkedIn describe the whole company, so an office without them borrows them from another office
+  const sib = siblingsOf(c);
+  const pick = f => c[f] || (sib.find(x => x[f]) || {})[f];
+  const rating = c.rating || pick('rating');
+  const web = safeUrl(c.website), jobs = safeUrl(c.careers), rev = safeUrl(pick('kununu')), li = safeUrl(pick('linkedin'));
+  const elsewhere = [];
+  for (const x of sib) if (x.city !== c.city && !elsewhere.some(o => o.city === x.city)) elsewhere.push(x);
   const meta = [c.size, langText(c.lang)].filter(Boolean).map(esc);
-  if (c.rating) meta.push(`<span class="star">${starSvg}${esc(c.rating)}</span>`);
+  if (rating) meta.push(`<span class="star">${starSvg}${esc(rating)}</span>`);
   const second = [
     rev ? `<a class="btn btn-ghost" href="${esc(rev)}" target="_blank" rel="noopener">${esc(t('reviews'))}</a>` : '',
     li ? `<a class="btn btn-ghost" href="${esc(li)}" target="_blank" rel="noopener">LinkedIn</a>` : '',
@@ -657,6 +665,7 @@ function detailHTML(c) {
       ${c.sector ? `<p class="d-sector">${esc(sectorText(c.sector))}</p>` : ''}
       ${meta.length ? `<p class="d-meta">${meta.join('<span class="sep">·</span>')}</p>` : ''}
       ${c.address ? `<p class="d-addr">${esc(c.address)}</p>` : ''}
+      ${elsewhere.length ? `<p class="d-also">${esc(t('also_in'))}: ${elsewhere.map(x => `<button type="button" data-office="${x.id}">${esc(cityText(x.city))}</button>`).join(', ')}</p>` : ''}
       ${web ? `<a class="d-web" href="${esc(web)}" target="_blank" rel="noopener">${esc(web.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}
     </div>
     ${about ? `<div class="d-block"><span class="label">${esc(t('about'))}</span><p class="d-about">${esc(about)}</p></div>` : ''}
@@ -691,7 +700,7 @@ function renderPanel() {
   list.innerHTML = v.length ? v.map(c => `
     <button type="button" class="row" data-id="${c.id}">
       <span><span class="row-name">${esc(c.name)}</span>
-      <span class="row-meta" style="display:block">${esc([cityText(c.city), sectorText(c.sector)].filter(Boolean).join(' · '))}${c.rating ? ` · ★ ${esc(c.rating)}` : ''}</span></span>
+      <span class="row-meta" style="display:block">${esc([cityText(c.city), sectorText(c.sector)].filter(Boolean).join(' · '))}${ratingOf(c) ? ` · ★ ${esc(ratingOf(c))}` : ''}</span></span>
       <span class="row-dot"></span>
     </button>`).join('') : `<div class="empty">${esc(t('no_results'))}</div>`;
 }
@@ -773,9 +782,14 @@ function groupEmployers(list) {
     const size = sizeIdx >= 0 ? SIZES[sizeIdx] : '';
     const added = items.map(c => c.added).sort().pop() || '';
     const newest = Math.max(...items.map(c => c.id));
-    return { id: items[0].id, name, cities, sector: sectors.join(' / '), role, lang, size, rating, careers, added, newest, n: items.length };
+    return { id: items[0].id, items, name, cities, sector: sectors.join(' / '), role, lang, size, rating, careers, added, newest, n: items.length };
   });
 }
+
+// every office of the same company (across all cities), whatever the filters show
+let GROUP_OF = new Map();
+const ratingOf = c => c.rating || (siblingsOf(c).find(x => x.rating) || {}).rating || null;
+const siblingsOf = c => ((GROUP_OF.get(c.id) || {}).items || []).filter(x => x.id !== c.id);
 
 const PAGE_SIZE = 25;
 let dirPage = 1, dirKey = '';
@@ -796,7 +810,13 @@ function renderDirectory() {
     $('#dir-count').textContent = '';
     return;
   }
-  const groups = groupEmployers(visible());
+  // group over all offices so a row shows every city and the company's kununu rating, even with a city filter
+  const groups = groupEmployers(COMPANIES).flatMap(g => {
+    const hit = g.items.filter(matches);
+    if (!hit.length) return [];
+    const first = [...new Set(hit.map(c => cityText(c.city)).filter(Boolean))];
+    return [{ ...g, id: hit[0].id, cities: first.concat(g.cities.filter(x => !first.includes(x))) }];
+  });
   const v = F.sort === 'newest'
     ? groups.sort((a, b) => String(b.added).localeCompare(String(a.added)) || b.newest - a.newest)
     : sortByRating(groups);
@@ -908,7 +928,11 @@ $('#hero-search').addEventListener('submit', e => {
 $('#city').addEventListener('input', e => { F.city = e.target.value; renderMarkers(); renderPanel(); renderDirectory(); });
 
 $('#list').addEventListener('click', e => { const b = e.target.closest('.row'); if (b) select(+b.dataset.id, { fly: true }); });
-$('#panel-detail').addEventListener('click', e => { if (e.target.closest('[data-act="back"]')) select(null); });
+$('#panel-detail').addEventListener('click', e => {
+  if (e.target.closest('[data-act="back"]')) select(null);
+  const o = e.target.closest('[data-office]');
+  if (o) select(+o.dataset.office, { fly: true });
+});
 
 function toggleIn(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
 function onFilterChange() { renderFilters(); renderMarkers(); renderPanel(); renderDirectory(); }
@@ -1056,6 +1080,7 @@ async function loadData() {
       lat:      parseFloat(c.lat),
       lng:      parseFloat(c.lon),
     })).filter(c => c.name);
+    GROUP_OF = new Map(groupEmployers(COMPANIES).flatMap(g => g.items.map(c => [c.id, g])));
     loadState = 'ready';
   } catch (err) {
     console.error('Failed to load company data:', err);
