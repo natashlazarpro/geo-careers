@@ -1114,16 +1114,6 @@
  },
  {
   "task": "fill",
-  "key": "bundesamt für das personalmanagement der bundeswehr|Bonn",
-  "c_name": "Bundesamt für das Personalmanagement der Bundeswehr",
-  "city": "Bonn",
-  "c_url": "https://www.bundeswehr.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "wheregroup|Bonn",
   "c_name": "WhereGroup GmbH",
   "city": "Bonn",
