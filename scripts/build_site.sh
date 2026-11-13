@@ -8,3 +8,5 @@ if [ -z "$MAPBOX_TOKEN" ]; then
 fi
 mkdir -p public
 sed "s|__MAPBOX_TOKEN__|$MAPBOX_TOKEN|" index.html > public/index.html
+# Favicons (browser tab icon, iPhone home-screen icon)
+cp icons/* public/
