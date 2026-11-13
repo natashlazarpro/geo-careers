@@ -237,7 +237,7 @@
     .sg-field input, .sg-field textarea { border: 1px solid var(--field); background: var(--surface); padding: 0 14px; height: 46px; font: inherit; font-size: 14px; color: var(--text); border-radius: 8px; }
     .sg-field textarea { height: auto; padding: 12px 14px; resize: vertical; }
     .sg-field small { font-size: 12px; color: var(--muted); }
-    .sg-field .opt { font-style: normal; color: var(--muted); }
+    .sg-opt { font-style: normal; color: var(--muted); }
     .sg-field [aria-invalid="true"] { border-color: var(--accent); }
     .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
     .sg-error { margin: 0; font-size: 13px; color: var(--accent-ink); }
@@ -393,10 +393,10 @@
             <input name="careers_url" type="url" maxlength="400" inputmode="url" placeholder="https://company.de/karriere" />
             <small data-i18n="sg_url_hint">The company's own site, please.</small>
           </label>
-          <label class="sg-field"><span><span data-i18n="sg_tools">GIS tools they use</span> <em class="opt" data-i18n="sg_optional">(optional)</em></span>
+          <label class="sg-field"><span><span data-i18n="sg_tools">GIS tools they use</span> <em class="sg-opt" data-i18n="sg_optional">(optional)</em></span>
             <input name="tools" type="text" maxlength="300" placeholder="ArcGIS Pro, QGIS, PostGIS …" />
           </label>
-          <label class="sg-field"><span><span data-i18n="sg_note">Anything else</span> <em class="opt" data-i18n="sg_optional">(optional)</em></span>
+          <label class="sg-field"><span><span data-i18n="sg_note">Anything else</span> <em class="sg-opt" data-i18n="sg_optional">(optional)</em></span>
             <textarea name="note" rows="4" maxlength="1500"></textarea>
           </label>
           <label class="hp" aria-hidden="true">Website <input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
