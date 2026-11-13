@@ -573,7 +573,8 @@ const cityOf = name => {
   const n = norm(name);
   return CITIES.find(c => c.keys.some(k => norm(k) === n || n.startsWith(norm(k))));
 };
-const cityText = name => { const c = cityOf(name); return c ? c[LANG] : (name || ''); };
+// a town outside the big cities is shown by its own name, without notes like "(Hamburg area)"
+const cityText = name => { const c = cityOf(name); return c ? c[LANG] : String(name || '').replace(/\s*\(.*?\)\s*/g, ' ').trim(); };
 const sortByRating = list => [...list].sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1) || a.name.localeCompare(b.name));
 const starSvg = '<svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>';
 
