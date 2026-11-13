@@ -47,7 +47,7 @@ and tech pages and list the tools they name (ArcGIS Pro, QGIS, PostGIS, FME, Pyt
 | field | what to put |
 |---|---|
 | key | copy from the list |
-| c_name | official company name incl. legal form, e.g. `VISTA GmbH` |
+| c_name | official company name incl. legal form, e.g. `VISTA GmbH` — no city or office notes like `(Hamburg office)`; a city stays only if it is part of the official name (`Stadtwerke Essen AG`) |
 | c_url | company homepage (full URL) |
 | adress | street + house number of the office **in that city** (Impressum / contact page) |
 | postal_code | 5-digit PLZ of that office |

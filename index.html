@@ -574,6 +574,14 @@ const cityOf = name => {
   return CITIES.find(c => c.keys.some(k => norm(k) === n || n.startsWith(norm(k))));
 };
 // a town outside the big cities is shown by its own name, without notes like "(Hamburg area)"
+// "Sweco GmbH (Hamburg office)" → "Sweco GmbH": a note in brackets that only names a city or an office is dropped
+// (the city has its own column); a city that is part of the company's name, like "UNITAC Hamburg", stays.
+const OFFICE_WORDS = /\b(office|branch|area|region|site|location|hq|headquarters|standort|niederlassung|nl|büro|buero|filiale)\b/g;
+const cleanName = (name, city) => String(name || '').replace(/\s*\(([^)]*)\)/g, (m, inner) => {
+  let rest = ' ' + norm(inner) + ' ';
+  for (const k of CITIES.flatMap(c => c.keys.concat([c.de, c.en])).concat([city || '']).map(norm).filter(Boolean)) rest = rest.split(k).join(' ');
+  return rest.replace(OFFICE_WORDS, ' ').replace(/[\s,;:/&.–-]+/g, '') ? m : '';
+}).trim();
 const cityText = name => { const c = cityOf(name); return c ? c[LANG] : String(name || '').replace(/\s*\(.*?\)\s*/g, ' ').trim(); };
 const sortByRating = list => [...list].sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1) || a.name.localeCompare(b.name));
 const starSvg = '<svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>';
@@ -1062,7 +1070,7 @@ async function loadData() {
     COMPANIES = (await res.json()).map((c, i) => ({
       id:       i,
       rowId:    Number(c.id),
-      name:     c.c_name || '',
+      name:     cleanName(c.c_name, c.city),
       website:  c.c_url,
       address:  c.adress,
       city:     c.city,
