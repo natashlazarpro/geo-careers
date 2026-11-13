@@ -1,0 +1,946 @@
+[
+ {
+  "task": "fill",
+  "key": "52 north spatial information research|Münster",
+  "c_name": "52°North Spatial Information Research GmbH",
+  "city": "Münster",
+  "kununu_url": "https://www.kununu.com/de/52-north/kommentare",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "a p moller maersk|Hamburg",
+  "c_name": "A.P. Moller - Maersk (Germany)",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/maersk-deutschland-as1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "abg frankfurt holding wohnungsbau und beteiligungsgesellschaft|Frankfurt am Main",
+  "c_name": "ABG FRANKFURT HOLDING Wohnungsbau- und Beteiligungsgesellschaft mbH",
+  "city": "Frankfurt am Main",
+  "kununu_url": "https://www.kununu.com/de/abg-frankfurt-holding-wohnungsbau-und-beteiligungsgesellschaft",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "about you holding|Hamburg",
+  "c_name": "About You Holding SE",
+  "city": "Hamburg",
+  "kununu_url": "https://www.kununu.com/de/about-you",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "aecom|Frankfurt am Main",
+  "c_name": "AECOM Deutschland GmbH",
+  "city": "Frankfurt am Main",
+  "kununu_url": "https://www.kununu.com/de/aecom",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "airbus defence and space bremen|Bremen",
+  "c_name": "Airbus Defence and Space Bremen",
+  "city": "Bremen",
+  "kununu_url": "https://www.kununu.com/de/airbus",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "stadtwerke dinslaken|Essen",
+  "c_name": "Stadtwerke Dinslaken GmbH",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/stadtwerke-dinslaken",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "gelsenwasser|Essen",
+  "c_name": "GELSENWASSER AG",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/gelsenwasser",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "aldi einkauf aldi nord|Essen",
+  "c_name": "ALDI Einkauf SE & Co. oHG (ALDI Nord)",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/aldinord",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "allbau|Essen",
+  "c_name": "Allbau GmbH",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/allbau3",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 2.2
+ },
+ {
+  "task": "fill",
+  "key": "business metropole ruhr|Essen",
+  "c_name": "Business Metropole Ruhr GmbH",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/business-metropole-ruhr1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.0
+ },
+ {
+  "task": "fill",
+  "key": "dmt|Essen",
+  "c_name": "DMT GmbH & Co. KG",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/dmt-engineering-surveying",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "e on|Essen",
+  "c_name": "E.ON SE",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/eon-grid-solutions",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "entsorgungsbetriebe essen ebe|Essen",
+  "c_name": "Entsorgungsbetriebe Essen GmbH (EBE)",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/entsorgungsbetriebe-essen",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "hegmanns|Essen",
+  "c_name": "Hegmanns AG",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/hegmanns",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "hochtief|Essen",
+  "c_name": "HOCHTIEF AG",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/hochtief",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "iqony steag|Essen",
+  "c_name": "Iqony GmbH (STEAG)",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/iqony1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "iww rheinisch westfälisches institut für wasserforschung|Essen",
+  "c_name": "IWW Rheinisch-Westfälisches Institut für Wasserforschung",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/iww-rheinisch-westfaelisches-institut-fuer-wasserforschung-gemeinnuetzige",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "open grid europe|Essen",
+  "c_name": "Open Grid Europe GmbH",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/open-grid-europe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "rag montan immobilien|Essen",
+  "c_name": "RAG Montan Immobilien GmbH",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/rag-montan-immobilien1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "regionalverband ruhr rvr|Essen",
+  "c_name": "Regionalverband Ruhr (RVR)",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/regionalverband-ruhr",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "ruhrbahn|Essen",
+  "c_name": "Ruhrbahn GmbH",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/ruhrbahn3",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "ruhrverband|Essen",
+  "c_name": "Ruhrverband",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/ruhrverband",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "rwe|Essen",
+  "c_name": "RWE AG",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/rwe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "stadt essen amt für geoinformation vermessung und kataster|Essen",
+  "c_name": "Stadt Essen – Amt für Geoinformation, Vermessung und Kataster",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/stadt-essen1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "stadt gelsenkirchen vermessung und kataster|Essen",
+  "c_name": "Stadt Gelsenkirchen – Vermessung und Kataster",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/stadt-gelsenkirchen",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "stadt mülheim an der ruhr vermessung und kataster|Essen",
+  "c_name": "Stadt Mülheim an der Ruhr – Vermessung und Kataster",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/stadt-muelheim-an-der-ruhr",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "stadtwerke essen|Essen",
+  "c_name": "Stadtwerke Essen AG",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/stadtwerke-essen",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "universität duisburg essen institut für geographie|Essen",
+  "c_name": "Universität Duisburg-Essen – Institut für Geographie",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/universitaet-duisburg-essen",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "westenergie|Essen",
+  "c_name": "Westenergie AG",
+  "city": "Essen",
+  "kununu_url": "https://www.kununu.com/de/westenergie-ag",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.6
+ },
+ {
+  "task": "fill",
+  "key": "adesso|Köln",
+  "c_name": "adesso SE",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/adesso",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "bezirksregierung köln geobasis nrw|Köln",
+  "c_name": "Bezirksregierung Köln (Geobasis NRW)",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/bezirksregierung-koeln",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "björnsen beratende ingenieure|Köln",
+  "c_name": "Björnsen Beratende Ingenieure GmbH",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/bjoernsen-beratende-ingenieure",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "esri|Köln",
+  "c_name": "Esri Deutschland GmbH",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/esri-deutschland",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "fischer teamplan ingenieurbüro|Köln",
+  "c_name": "FISCHER TEAMPLAN Ingenieurbüro GmbH",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/fischer-teamplan-ingenieurbuero",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.7
+ },
+ {
+  "task": "fill",
+  "key": "gesis leibniz institut für sozialwissenschaften|Köln",
+  "c_name": "GESIS – Leibniz-Institut für Sozialwissenschaften e.V.",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/gesis-leibniz-institut-fuer-sozialwissenschaften",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "i g l ingenieurvermessung|Köln",
+  "c_name": "I.G.L. GmbH Ingenieurvermessung",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/iglgmbh-ingenieurvermessung",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.6
+ },
+ {
+  "task": "fill",
+  "key": "kölner verkehrs betriebe|Köln",
+  "c_name": "Kölner Verkehrs-Betriebe AG",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/koelner-verkehrsbetriebe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.4
+ },
+ {
+  "task": "fill",
+  "key": "landschaftsverband rheinland lvr|Köln",
+  "c_name": "Landschaftsverband Rheinland (LVR)",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/landschaftsverband-rheinland",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "planungsbüro via eg|Köln",
+  "c_name": "Planungsbüro VIA eG",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/planungsbuero-via-eg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 5.0
+ },
+ {
+  "task": "fill",
+  "key": "rheinnetz|Köln",
+  "c_name": "RheinNetz GmbH",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/rheinnetz",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "stadt kerpen kolpingstadt kerpen|Köln",
+  "c_name": "Stadt Kerpen (Kolpingstadt Kerpen)",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/kolpingstadt-kerpen",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.0
+ },
+ {
+  "task": "fill",
+  "key": "stadt köln|Köln",
+  "c_name": "Stadt Köln",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/stadt-koeln",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "stadtentwässerungsbetriebe köln aör steb köln|Köln",
+  "c_name": "Stadtentwässerungsbetriebe Köln, AöR (StEB Köln)",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/stadtentwaesserungsbetriebe-koeln",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "ströer|Köln",
+  "c_name": "Ströer SE & Co. KGaA",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/stroeer-out-of-home-media",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 2.9
+ },
+ {
+  "task": "fill",
+  "key": "sweco|Köln",
+  "c_name": "Sweco GmbH",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/sweco",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "th köln fakultät für raumentwicklung und infrastruktursysteme|Köln",
+  "c_name": "TH Köln – Fakultät für Raumentwicklung und Infrastruktursysteme",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/th-koeln",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "universität zu köln geographisches institut gis fernerkundung|Köln",
+  "c_name": "Universität zu Köln – Geographisches Institut, AG GIS & Fernerkundung",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/universitaet-zu-koeln",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "verkehrsverbund rhein sieg vrs|Köln",
+  "c_name": "Verkehrsverbund Rhein-Sieg GmbH (VRS)",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/verkehrsverbund-rhein-sieg2",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "vermessungsbüro gütz|Köln",
+  "c_name": "Vermessungsbüro Gütz",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/vermessungsbuero-guetz",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "vermessungsbüro ludwig und wettengel gbr|Köln",
+  "c_name": "Vermessungsbüro Ludwig und Wettengel GbR",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/vermessungsbuero-ludwig-und-wettengel",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.9
+ },
+ {
+  "task": "fill",
+  "key": "vermessungsbüro lühring sonntag gbr|Köln",
+  "c_name": "Vermessungsbüro Lühring Sonntag GbR",
+  "city": "Köln",
+  "kununu_url": "https://www.kununu.com/de/vermessungsbuero-rls",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "bundesamt für bevölkerungsschutz und katastrophenhilfe bbk|Bonn",
+  "c_name": "Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/bundesamt-fuer-bevoelkerungsschutz-und-katastrophenhilfe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "verify",
+  "key": "bundesamt für das personalmanagement der bundeswehr|Bonn",
+  "c_name": "Bundesamt für das Personalmanagement der Bundeswehr",
+  "city": "Bonn",
+  "confidence": "low",
+  "notes": "Removed from the list at Natasha's request (kununu.xlsx)."
+ },
+ {
+  "task": "fill",
+  "key": "bundesamt für naturschutz bfn|Bonn",
+  "c_name": "Bundesamt für Naturschutz (BfN)",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/bundesamt-fuer-naturschutz",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "bundesanstalt für immobilienaufgaben bima|Bonn",
+  "c_name": "Bundesanstalt für Immobilienaufgaben (BImA)",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/bundesanstalt-fuer-immobilienaufgaben",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "bundesinstitut für bau stadt und raumforschung bbsr|Bonn",
+  "c_name": "Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR)",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/bundesamt-fuer-bauwesen-und-raumordnung",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "bundesnetzagentur|Bonn",
+  "c_name": "Bundesnetzagentur",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/bundesnetzagentur",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "bundesstadt bonn amt für bodenmanagement und geoinformation|Bonn",
+  "c_name": "Bundesstadt Bonn – Amt für Bodenmanagement und Geoinformation",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/stadtverwaltung-bonn1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "deutsche gesellschaft für internationale zusammenarbeit giz|Bonn",
+  "c_name": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/giz",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "deutsche telekom|Bonn",
+  "c_name": "Deutsche Telekom AG",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/deutsche-telekom",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "dhl group|Bonn",
+  "c_name": "DHL Group",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/deutsche-post",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "terrestris|Bonn",
+  "c_name": "terrestris GmbH & Co. KG",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/terrestris",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.8
+ },
+ {
+  "task": "fill",
+  "key": "united nations university institute for environment and human security unu ehs|Bonn",
+  "c_name": "United Nations University – Institute for Environment and Human Security (UNU-EHS)",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/united-nations5",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "wheregroup|Bonn",
+  "c_name": "WhereGroup GmbH",
+  "city": "Bonn",
+  "kununu_url": "https://www.kununu.com/de/wheregroup",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "alfred wegener institut forschungsstelle potsdam|Potsdam",
+  "c_name": "Alfred-Wegener-Institut – Forschungsstelle Potsdam",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/alfred-wegener-institut-helmholtz-zentrum-fuer-polar-und-meeresforschung",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "gfz helmholtz zentrum für geoforschung|Potsdam",
+  "c_name": "GFZ Helmholtz-Zentrum für Geoforschung",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/helmholtz-zentrum-potsdam-deutsches-geoforschungszentrum",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "ihb lindschulte ingenieurgesellschaft|Potsdam",
+  "c_name": "IHB Lindschulte Ingenieurgesellschaft mbH",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/ihb-lindschulte",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für umwelt brandenburg lfu|Potsdam",
+  "c_name": "Landesamt für Umwelt Brandenburg (LfU)",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/landesamt-fuer-umwelt-brandenburg3",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "landesbetrieb forst brandenburg|Potsdam",
+  "c_name": "Landesbetrieb Forst Brandenburg",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/landesbetrieb-forst-brandenburg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 2.3
+ },
+ {
+  "task": "fill",
+  "key": "landesvermessung und geobasisinformation brandenburg lgb|Potsdam",
+  "c_name": "Landesvermessung und Geobasisinformation Brandenburg (LGB)",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/landesvermessung-und-geobasisinformation-brandenburg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "leibniz institut für agrartechnik und bioökonomie atb|Potsdam",
+  "c_name": "Leibniz-Institut für Agrartechnik und Bioökonomie (ATB)",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/leibniz-institut-fuer-agrartechnik-und-biooekonomie-e-v-atb",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "potsdam institut für klimafolgenforschung pik|Potsdam",
+  "c_name": "Potsdam-Institut für Klimafolgenforschung (PIK)",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/potsdam-institut-fuer-klimafolgenforschung3",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.5
+ },
+ {
+  "task": "fill",
+  "key": "trigis geoservices|Potsdam",
+  "c_name": "TRIGIS GeoServices GmbH",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/trigis-geoservices",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "universität potsdam institut für umweltwissenschaften und geographie|Potsdam",
+  "c_name": "Universität Potsdam – Institut für Umweltwissenschaften und Geographie",
+  "city": "Potsdam",
+  "kununu_url": "https://www.kununu.com/de/universitaet-potsdam",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "bundesanstalt für wasserbau baw|Karlsruhe",
+  "c_name": "Bundesanstalt für Wasserbau (BAW)",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/bundesanstalt-fuer-wasserbau",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "disy informationssysteme|Karlsruhe",
+  "c_name": "disy Informationssysteme GmbH",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/disyinformationssysteme",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.4
+ },
+ {
+  "task": "fill",
+  "key": "enbw energie baden württemberg|Karlsruhe",
+  "c_name": "EnBW Energie Baden-Württemberg AG",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/enbw-energie-baden-wuerttemberg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer iosb|Karlsruhe",
+  "c_name": "Fraunhofer IOSB",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/fraunhofergesellschaft",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "hochschule karlsruhe geomatik|Karlsruhe",
+  "c_name": "Hochschule Karlsruhe – Geomatik",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/hochschule-karlsruhe-technik-und-wirtschaft-university-of-applied-sciences",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "init|Karlsruhe",
+  "c_name": "INIT SE",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/init",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "karlsruher institut für technologie kit institut für photogrammetrie und fernerkundung|Karlsruhe",
+  "c_name": "Karlsruher Institut für Technologie (KIT) – Institut für Photogrammetrie und Fernerkundung",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/karlsruher-institut-fuer-technologie-kit1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "lubw landesanstalt für umwelt baden württemberg|Karlsruhe",
+  "c_name": "LUBW Landesanstalt für Umwelt Baden-Württemberg",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/landesanstalt-fuer-umwelt-baden-wuerttemberg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "ptv group|Karlsruhe",
+  "c_name": "PTV Group",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/ptv",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "staatliches hochbauamt karlsruhe bundesbau baden württemberg|Karlsruhe",
+  "c_name": "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/staatliches-hochbauamt-karlsruhe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.2
+ },
+ {
+  "task": "fill",
+  "key": "stadt karlsruhe liegenschaftsamt vermessung|Karlsruhe",
+  "c_name": "Stadt Karlsruhe – Liegenschaftsamt (Vermessung)",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/stadt-karlsruhe1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.7
+ },
+ {
+  "task": "fill",
+  "key": "stadtwerke karlsruhe|Karlsruhe",
+  "c_name": "Stadtwerke Karlsruhe GmbH",
+  "city": "Karlsruhe",
+  "kununu_url": "https://www.kununu.com/de/stadtwerke-karlsruhe",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "adesso|Dortmund",
+  "c_name": "adesso SE",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/adesso",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.8
+ },
+ {
+  "task": "fill",
+  "key": "amprion|Dortmund",
+  "c_name": "Amprion GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/amprion",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "bezirksregierung arnsberg abteilung bergbau und energie in nrw|Dortmund",
+  "c_name": "Bezirksregierung Arnsberg – Abteilung Bergbau und Energie in NRW",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/bezirksregierung-arnsberg",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "christian sommerhoff vermessungsbüro|Dortmund",
+  "c_name": "Christian Sommerhoff Vermessungsbüro",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/vermessungsbuero-dipl-ing-christian-sommerhoff",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 2.6
+ },
+ {
+  "task": "fill",
+  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
+  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/dortmunder-energie-und-wasserversorgung-dew211",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "dortmunder netz donetz|Dortmund",
+  "c_name": "Dortmunder Netz GmbH (DONETZ)",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/dortmunder-netz1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "dsw21 dortmunder stadtwerke|Dortmund",
+  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/dsw21-dortmunder-stadtwerke",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.3
+ },
+ {
+  "task": "fill",
+  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
+  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/fraunhofer-iml",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.1
+ },
+ {
+  "task": "fill",
+  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
+  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/ils-institut-fuer-landes-und-stadtentwicklungsforschung-ggmbh",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.3
+ },
+ {
+  "task": "fill",
+  "key": "kreis unna|Dortmund",
+  "c_name": "Kreis Unna",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/kreis-unna",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.6
+ },
+ {
+  "task": "fill",
+  "key": "planersocietät|Dortmund",
+  "c_name": "Planersocietät",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/planersociett-frehn-steinberg-partner",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "postwelters partner mbb architektur stadtplanung|Dortmund",
+  "c_name": "postwelters + partner mbB Architektur & Stadtplanung",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/post-welters-partner-architekten-stadtplaner",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.8
+ },
+ {
+  "task": "fill",
+  "key": "schamp partner architekten stadtplaner|Dortmund",
+  "c_name": "Schamp & Partner Architekten Stadtplaner PartGmbB",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/schamp-und-schmaloeer1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.2
+ },
+ {
+  "task": "fill",
+  "key": "stadt dortmund vermessungs und katasteramt|Dortmund",
+  "c_name": "Stadt Dortmund – Vermessungs- und Katasteramt",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/stadt-dortmund2",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "sweco|Dortmund",
+  "c_name": "Sweco GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/sweco",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 3.9
+ },
+ {
+  "task": "fill",
+  "key": "thyssengas|Dortmund",
+  "c_name": "Thyssengas GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/thyssengas1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ },
+ {
+  "task": "fill",
+  "key": "tu dortmund fakultät raumplanung|Dortmund",
+  "c_name": "TU Dortmund – Fakultät Raumplanung",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/technische-universitaet-dortmund1",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.0
+ },
+ {
+  "task": "fill",
+  "key": "westnetz|Dortmund",
+  "c_name": "Westnetz GmbH",
+  "city": "Dortmund",
+  "kununu_url": "https://www.kununu.com/de/westnetz",
+  "notes": "kununu from Natasha's kununu.xlsx.",
+  "kununu_rate": 4.5
+ }
+]
