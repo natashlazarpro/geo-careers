@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<style>
+.g{fill:none;stroke:#161616;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.d{fill:#DB3069;stroke:#fff;stroke-width:6}
+@media (prefers-color-scheme: dark){.g{stroke:#fff}.d{stroke:#161616}}
+</style>
+<g class="g"><circle cx="60" cy="60" r="50"/><ellipse cx="60" cy="60" rx="22" ry="50"/><line x1="10" y1="60" x2="110" y2="60"/><path d="M18 34 Q60 44 102 34"/><path d="M18 86 Q60 76 102 86"/></g>
+<circle class="d" cx="82" cy="60" r="12"/>
+</svg>
