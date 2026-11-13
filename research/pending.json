@@ -735,21 +735,6 @@
   "li_url": "https://www.linkedin.com/company/landesbetrieb-forst-brandenburg-revier-neuthymen/"
  },
  {
-  "task": "verify",
-  "key": "iww rheinisch westfälisches institut für wasserforschung|Essen",
-  "c_name": "IWW Rheinisch-Westfälisches Institut für Wasserforschung",
-  "city": "Essen",
-  "c_url": "https://www.iww-online.de",
-  "adress": "Moritzstraße 26",
-  "postal_code": "45476",
-  "sector": "Hydrology",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": null
- },
- {
   "task": "fill",
   "key": "north io|Kiel",
   "c_name": "north.io GmbH",
@@ -1653,23 +1638,9 @@
   "key": "hegmanns|Essen",
   "c_name": "Hegmanns AG",
   "city": "Essen",
-  "c_url": null,
+  "c_url": "https://www.hgh.de",
   "missing": [
-   "c_url",
    "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "universität duisburg essen institut für geographie|Essen",
-  "c_name": "Universität Duisburg-Essen – Institut für Geographie",
-  "city": "Essen",
-  "c_url": "https://www.uni-due.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
    "li_url"
   ]
  },
@@ -1680,54 +1651,8 @@
   "city": "Essen",
   "c_url": "https://www.ruhrbahn.de",
   "missing": [
-   "g_stack",
    "kp_url",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "iww institut für wasserforschung gemeinnützige|Essen",
-  "c_name": "IWW Institut für Wasserforschung gemeinnützige GmbH",
-  "city": "Essen",
-  "c_url": "https://iww-wasserforschung.de",
-  "missing": [
-   "g_stack",
-   "size",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "westenergie|Essen",
-  "c_name": "Westenergie AG",
-  "city": "Essen",
-  "c_url": "https://www.westenergie.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "aldi einkauf aldi nord|Essen",
-  "c_name": "ALDI Einkauf SE & Co. oHG (ALDI Nord)",
-  "city": "Essen",
-  "c_url": "https://www.aldi-nord.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "stadtwerke essen|Essen",
-  "c_name": "Stadtwerke Essen AG",
-  "city": "Essen",
-  "c_url": "https://www.stadtwerke-essen.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
   ]
  },
  {
@@ -1754,32 +1679,32 @@
  },
  {
   "task": "fill",
-  "key": "e on|Essen",
-  "c_name": "E.ON SE",
+  "key": "aldi einkauf aldi nord|Essen",
+  "c_name": "ALDI Einkauf SE & Co. oHG (ALDI Nord)",
   "city": "Essen",
-  "c_url": "https://www.eon.com",
+  "c_url": "https://www.aldi-nord.de",
   "missing": [
-   "g_stack"
+   "kp_url"
   ]
  },
  {
   "task": "fill",
-  "key": "open grid europe|Essen",
-  "c_name": "Open Grid Europe GmbH",
+  "key": "universität duisburg essen institut für geographie|Essen",
+  "c_name": "Universität Duisburg-Essen – Institut für Geographie",
   "city": "Essen",
-  "c_url": "https://oge.net",
+  "c_url": "https://www.uni-due.de",
   "missing": [
-   "g_stack"
+   "li_url"
   ]
  },
  {
   "task": "fill",
-  "key": "hochtief|Essen",
-  "c_name": "HOCHTIEF AG",
+  "key": "stadtwerke essen|Essen",
+  "c_name": "Stadtwerke Essen AG",
   "city": "Essen",
-  "c_url": "https://www.hochtief.de",
+  "c_url": "https://www.stadtwerke-essen.de",
   "missing": [
-   "g_stack"
+   "kp_url"
   ]
  },
  {
@@ -1804,52 +1729,22 @@
  },
  {
   "task": "fill",
-  "key": "allbau|Essen",
-  "c_name": "Allbau GmbH",
+  "key": "iww rheinisch westfälisches institut für wasserforschung|Essen",
+  "c_name": "IWW Rheinisch-Westfälisches Institut für Wasserforschung",
   "city": "Essen",
-  "c_url": "https://www.allbau.de",
+  "c_url": "https://www.iww-online.de",
   "missing": [
-   "g_stack"
+   "kp_url"
   ]
  },
  {
   "task": "fill",
-  "key": "entsorgungsbetriebe essen ebe|Essen",
-  "c_name": "Entsorgungsbetriebe Essen GmbH (EBE)",
+  "key": "iww institut für wasserforschung gemeinnützige|Essen",
+  "c_name": "IWW Institut für Wasserforschung gemeinnützige GmbH",
   "city": "Essen",
-  "c_url": "https://www.ebe-essen.de",
+  "c_url": "https://iww-wasserforschung.de",
   "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "gelsenwasser|Essen",
-  "c_name": "GELSENWASSER AG",
-  "city": "Essen",
-  "c_url": "https://www.gelsenwasser.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "business metropole ruhr|Essen",
-  "c_name": "Business Metropole Ruhr GmbH",
-  "city": "Essen",
-  "c_url": "https://www.business.ruhr",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "iqony steag|Essen",
-  "c_name": "Iqony GmbH (STEAG)",
-  "city": "Essen",
-  "c_url": "https://www.steag-iqony-group.com",
-  "missing": [
-   "g_stack"
+   "kp_url"
   ]
  },
  {
