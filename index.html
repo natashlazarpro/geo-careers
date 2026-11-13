@@ -31,6 +31,7 @@
       --line:     #e6e6e2;
       --line-2:   #f0f0ec;
       --field:    #d9d9d4;
+      --field-strong: #8f8f8b;   /* text field borders: ≥3:1 on white */
       --text:     #3c3c3b;   /* Gunmetal */
       --muted:    #6b6b69;
       --accent:   #db3069;   /* Razzmatazz */
@@ -58,6 +59,9 @@
     button { font: inherit; color: inherit; }
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     input:focus-visible { outline-offset: -1px; }
+    .skip { position: absolute; left: 16px; top: -60px; z-index: 50; padding: 10px 16px; background: var(--text); color: #fff; border-radius: 999px; font-size: 14px; text-decoration: none; }
+    main:focus { outline: none; }
+    .skip:focus { top: 12px; color: #fff; }
     .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .wrap { max-width: var(--wrap); width: 100%; margin: 0 auto; padding: 0 40px; }
     .eyebrow { margin: 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
@@ -68,7 +72,7 @@
     .logo { color: var(--text); text-decoration: none; font-family: var(--serif); font-size: 24px; }
     .logo:hover { color: var(--text); }
     .nav { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 13px; }
-    .nav a { color: var(--text); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+    .nav a { color: var(--text); text-decoration: none; padding: 4px 0 2px; border-bottom: 1px solid transparent; }
     .nav a[aria-current="page"] { border-bottom-color: var(--accent); }
     .nav a.nav-ghost { border: 1px solid var(--text); padding: 8px 14px; }
     .seg { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--surface); }
@@ -82,6 +86,7 @@
     .hero h1 em, .title em { color: var(--accent); }
     .hero p.lead { margin: 0; font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 480px; }
     .search { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 520px; }
+    .search input, .city-search input, .sg-field input, .sg-field textarea { border-color: var(--field-strong) !important; }
     .search input, .city-search input {
       flex: 1 1 260px; height: 48px; border: 1px solid var(--field); background: var(--surface);
       padding: 0 20px; font: inherit; font-size: 14px; color: var(--text); border-radius: 999px;
@@ -94,7 +99,7 @@
     /* ── Map + side panel ───────────────────────────────────────────────────── */
     .explorer { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 24px; }
     .map-box { flex: 999 1 560px; min-width: 0; height: 620px; border: 1px solid var(--line); background: var(--surface); position: relative; }
-    #map { position: absolute; inset: 0; }
+    #mapbox { position: absolute; inset: 0; }
     .panel { flex: 1 1 300px; height: 620px; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); min-width: 0; }
     .ph-left { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; }
     .city-chip { height: 28px; padding: 0 8px 0 12px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--text); background: var(--text); color: #fff; border-radius: 999px; font-size: 12px; cursor: pointer; }
@@ -114,6 +119,7 @@
     .detail { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 22px; }
     .back { align-self: flex-start; border: 0; background: none; padding: 0; color: var(--muted); font-size: 13px; cursor: pointer; }
     .back:hover { color: var(--text); }
+    .d-name:focus, .list:focus { outline: none; }
     .d-name { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.05; letter-spacing: -.01em; }
     .d-sector { margin: 8px 0 0; font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
     .d-meta { margin: 10px 0 0; font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
@@ -271,6 +277,7 @@
   </style>
 </head>
 <body>
+<a class="skip" href="#main" id="skip" data-i18n="skip">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap">
@@ -288,7 +295,7 @@
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <!-- ═══ MAP / HOME ═══ -->
   <section id="view-map" data-view="map">
     <div class="hero">
@@ -304,14 +311,14 @@
 
     <div class="wrap">
       <div class="explorer" id="explorer">
-        <div class="map-box"><div id="map" aria-label="Map of GIS employers"></div></div>
-        <aside class="panel" aria-live="polite">
+        <div class="map-box" role="region" aria-label="Map of GIS employers" data-i18n-aria="map_label"><div id="mapbox"></div></div>
+        <section class="panel" aria-label="Employers" data-i18n-aria="panel_label">
           <div id="panel-list" style="display:flex;flex-direction:column;flex:1;min-height:0">
-            <div class="panel-head"><span class="ph-left"><span id="list-count"></span><span id="city-chip"></span></span><a href="#employers" data-i18n="all_filters">All filters →</a></div>
-            <div class="list" id="list"></div>
+            <div class="panel-head"><span class="ph-left"><span id="list-count" aria-live="polite"></span><span id="city-chip"></span></span><a href="#employers" data-i18n="all_filters">All filters →</a></div>
+            <div class="list" id="list" tabindex="-1"></div>
           </div>
           <div class="detail" id="panel-detail" hidden></div>
-        </aside>
+        </section>
       </div>
     </div>
   </section>
@@ -336,7 +343,7 @@
 
       <div class="pills" id="pills"></div>
 
-      <div class="count-bar"><span id="dir-count"></span>
+      <div class="count-bar"><span id="dir-count" aria-live="polite"></span>
         <div class="sort"><span class="label" data-i18n="sort_by">Sort by</span>
           <div class="seg" role="group" aria-label="Sort" id="sort-seg">
             <button type="button" data-sort="rating" aria-pressed="true" data-i18n="sort_rating">Rating</button>
@@ -485,7 +492,7 @@ const T = {
     hero_title: 'Where maps get <em>made</em>',
     hero_lead: 'Every company doing GIS and geodata work, pinned to the map, one click from your next career move.',
     search_label: 'Search a tool, city or employer', search_ph: 'Search a tool, city or employer', explore: 'Explore',
-    all_filters: 'All filters →', show_all_cities: 'Show all cities', prev: '← Previous', next: 'Next →', employers_n: n => `${n} ${n === 1 ? 'employer' : 'employers'}`,
+    all_filters: 'All filters →', skip: 'Skip to content', map_label: 'Map of GIS employers', panel_label: 'Employers', rating_sr: 'kununu rating', show_all_cities: 'Show all cities', prev: '← Previous', next: 'Next →', employers_n: n => `${n} ${n === 1 ? 'employer' : 'employers'}`,
     dir_eyebrow: 'Directory', dir_title: 'Employers', dir_sub: 'Every GIS and geodata employer we track.',
     city_label: 'Search the city', f_sector: 'Sector', f_hint: 'GIS role, language, company size and tech',
     filters: 'Filters', f_role: 'GIS role', f_lang: 'Language', f_size: 'Size', f_tech: 'Tech',
@@ -518,7 +525,7 @@ const T = {
     hero_title: 'Wo Karten <em>entstehen</em>',
     hero_lead: 'Alle Unternehmen, die mit GIS und Geodaten arbeiten – auf der Karte, einen Klick von deinem nächsten Karriereschritt entfernt.',
     search_label: 'Tool, Stadt oder Arbeitgeber suchen', search_ph: 'Tool, Stadt oder Arbeitgeber suchen', explore: 'Entdecken',
-    all_filters: 'Alle Filter →', show_all_cities: 'Alle Städte zeigen', prev: '← Zurück', next: 'Weiter →', employers_n: n => `${n} Arbeitgeber`,
+    all_filters: 'Alle Filter →', skip: 'Zum Inhalt springen', map_label: 'Karte der GIS-Arbeitgeber', panel_label: 'Arbeitgeber', rating_sr: 'kununu-Bewertung', show_all_cities: 'Alle Städte zeigen', prev: '← Zurück', next: 'Weiter →', employers_n: n => `${n} Arbeitgeber`,
     dir_eyebrow: 'Verzeichnis', dir_title: 'Arbeitgeber', dir_sub: 'Alle GIS- und Geodaten-Arbeitgeber, die wir erfassen.',
     city_label: 'Stadt suchen', f_sector: 'Branche', f_hint: 'GIS-Rolle, Sprache, Unternehmensgröße und Tech',
     filters: 'Filter', f_role: 'GIS-Rolle', f_lang: 'Sprache', f_size: 'Größe', f_tech: 'Tech',
@@ -608,7 +615,7 @@ const visible = () => sortByRating(COMPANIES.filter(matches));
 
 // ─── Map ──────────────────────────────────────────────────────────────────────
 mapboxgl.accessToken = MAPBOX_TOKEN;
-const map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/mapbox/light-v11', center: [10.4, 51.1], zoom: 4.6 });
+const map = new mapboxgl.Map({ container: 'mapbox', style: 'mapbox://styles/mapbox/light-v11', center: [10.4, 51.1], zoom: 4.6 });
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
 map.on('moveend', () => { if (loadState === 'ready' && selectedId === null) renderPanel(); });
 map.on('click', e => {
@@ -618,12 +625,9 @@ map.on('click', e => {
 function createMarker(c) {
   const el = document.createElement('div');
   el.className = 'mk';
-  el.setAttribute('role', 'button');
-  el.setAttribute('tabindex', '0');
-  el.setAttribute('aria-label', c.name);
+  el.setAttribute('aria-hidden', 'true');   // the list beside the map offers the same employers to keyboard and screen readers
   el.innerHTML = '<span class="mk-dot"></span>';
   el.addEventListener('click', e => { e.stopPropagation(); select(c.id, { fly: true }); });
-  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(c.id, { fly: true }); } });
   el.addEventListener('mouseenter', () => {
     if (hoverPopup) hoverPopup.remove();
     hoverPopup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: 14 })
@@ -645,11 +649,14 @@ function fitTo(list) {
 
 // ─── Selection & detail ───────────────────────────────────────────────────────
 function select(id, opts = {}) {
+  const prev = selectedId;
   selectedId = id;
   Object.entries(markers).forEach(([cid, m]) => m.getElement().classList.toggle('on', +cid === id));
   const c = COMPANIES.find(x => x.id === id);
   if (c && opts.fly) map.flyTo({ center: [c.lng, c.lat], zoom: Math.max(map.getZoom(), 12), duration: 450 });
   renderPanel();
+  if (opts.focus && c) $('#panel-detail .d-name')?.focus({ preventScroll: true });
+  if (opts.focus && !c && prev !== null) ($(`#list .row[data-id="${prev}"]`) || $('#list .row'))?.focus({ preventScroll: true });
 }
 
 function detailHTML(c) {
@@ -662,7 +669,7 @@ function detailHTML(c) {
   const elsewhere = [];
   for (const x of sib) if (x.city !== c.city && !elsewhere.some(o => o.city === x.city)) elsewhere.push(x);
   const meta = [c.size, langText(c.lang)].filter(Boolean).map(esc);
-  if (rating) meta.push(`<span class="star">${starSvg}${esc(rating)}</span>`);
+  if (rating) meta.push(`<span class="star">${starSvg}<span class="sr-only">${esc(t('rating_sr'))} </span>${esc(rating)}</span>`);
   const second = [
     rev ? `<a class="btn btn-ghost" href="${esc(rev)}" target="_blank" rel="noopener">${esc(t('reviews'))}</a>` : '',
     li ? `<a class="btn btn-ghost" href="${esc(li)}" target="_blank" rel="noopener">LinkedIn</a>` : '',
@@ -670,7 +677,7 @@ function detailHTML(c) {
   return `
     <button type="button" class="back" data-act="back">${esc(t('back'))}</button>
     <div>
-      <h2 class="d-name">${esc(c.name)}</h2>
+      <h2 class="d-name" tabindex="-1">${esc(c.name)}</h2>
       ${c.sector ? `<p class="d-sector">${esc(sectorText(c.sector))}</p>` : ''}
       ${meta.length ? `<p class="d-meta">${meta.join('<span class="sep">·</span>')}</p>` : ''}
       ${c.address ? `<p class="d-addr">${esc(c.address)}</p>` : ''}
@@ -854,7 +861,7 @@ function renderDirectory() {
       <td class="muted">${esc(roleText(c.role))}</td>
       <td class="muted">${esc(c.lang === 'DE/ENG' ? 'EN / DE' : c.lang === 'ENG' ? 'EN' : c.lang || '')}</td>
       <td class="muted">${esc(c.size.replace('-', '–'))}</td>
-      <td class="muted">${c.rating ? `<span class="star">${starSvg}${esc(c.rating)}</span>` : '–'}</td>
+      <td class="muted">${c.rating ? `<span class="star">${starSvg}<span class="sr-only">${esc(t('rating_sr'))} </span>${esc(c.rating)}</span>` : '–'}</td>
       <td class="right">${jobs ? `<a href="${esc(jobs)}" target="_blank" rel="noopener">${esc(t('view_jobs_row'))}</a>` : '<span style="color:var(--muted)">–</span>'}</td>
     </tr>`;
   }).join('');
@@ -895,6 +902,7 @@ function renderStatic() {
   document.querySelectorAll('[data-i18n]').forEach(el => { const v = t(el.dataset.i18n); if (typeof v === 'string') el.textContent = v; });
   document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
   document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
   document.querySelectorAll('[data-setlang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setlang === LANG)));
 }
 
@@ -919,6 +927,17 @@ function route() {
 }
 window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); });
 
+$('#skip').addEventListener('click', e => {
+  e.preventDefault();
+  const view = document.querySelector('[data-view]:not([hidden])');
+  const target = view && view.dataset.view === 'map'
+    ? ($('#panel-detail:not([hidden]) .d-name') || $('#list'))
+    : view && view.querySelector('h1');
+  if (!target) return;
+  if (target.tagName === 'H1') target.setAttribute('tabindex', '-1');
+  target.focus();
+});
+
 // ─── Events ───────────────────────────────────────────────────────────────────
 function setLang(l) {
   LANG = l;
@@ -936,9 +955,9 @@ $('#hero-search').addEventListener('submit', e => {
 });
 $('#city').addEventListener('input', e => { F.city = e.target.value; renderMarkers(); renderPanel(); renderDirectory(); });
 
-$('#list').addEventListener('click', e => { const b = e.target.closest('.row'); if (b) select(+b.dataset.id, { fly: true }); });
+$('#list').addEventListener('click', e => { const b = e.target.closest('.row'); if (b) select(+b.dataset.id, { fly: true, focus: true }); });
 $('#panel-detail').addEventListener('click', e => {
-  if (e.target.closest('[data-act="back"]')) select(null);
+  if (e.target.closest('[data-act="back"]')) select(null, { focus: true });
   const o = e.target.closest('[data-office]');
   if (o) select(+o.dataset.office, { fly: true });
 });
@@ -965,7 +984,7 @@ $('#pills').addEventListener('change', e => {
   if (box) box.checked ? draft.add(box.value) : draft.delete(box.value);
 });
 document.addEventListener('click', e => { if (openPill && !e.target.closest('.pill-wrap')) { openPill = null; renderFilters(); } });
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && openPill) { const k = openPill; openPill = null; renderFilters(); $(`[data-pill="${k}"]`)?.focus(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !openPill && selectedId !== null && e.target.closest?.('#panel-detail')) { select(null, { focus: true }); return; } if (e.key === 'Escape' && openPill) { const k = openPill; openPill = null; renderFilters(); $(`[data-pill="${k}"]`)?.focus(); } });
 $('#pager').addEventListener('click', e => {
   const b = e.target.closest('[data-page]');
   if (!b || b.disabled) return;
