@@ -11,21 +11,6 @@
  },
  {
   "task": "verify",
-  "key": "stadt karlsruhe liegenschaftsamt vermessung|Karlsruhe",
-  "c_name": "Stadt Karlsruhe – Liegenschaftsamt (Vermessung)",
-  "city": "Karlsruhe",
-  "c_url": "https://www.karlsruhe.de",
-  "adress": "Lammstraße 7a",
-  "postal_code": "76133",
-  "sector": "Surveying & Geodesy / GIS",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/stadtverwaltung-karlsruhe/"
- },
- {
-  "task": "verify",
   "key": "lup luftbild umwelt planung|Potsdam",
   "c_name": "LUP – Luftbild Umwelt Planung GmbH",
   "city": "Potsdam",
@@ -603,99 +588,12 @@
  },
  {
   "task": "fill",
-  "key": "arcadis|Karlsruhe",
-  "c_name": "Arcadis Germany GmbH",
-  "city": "Karlsruhe",
-  "c_url": "http://www.arcadis.com",
-  "missing": [
-   "adress",
-   "postal_code",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "arguplan|Karlsruhe",
-  "c_name": "arguplan GmbH",
-  "city": "Karlsruhe",
-  "c_url": "https://www.arguplan.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "lubw landesanstalt für umwelt baden württemberg|Karlsruhe",
-  "c_name": "LUBW Landesanstalt für Umwelt Baden-Württemberg",
-  "city": "Karlsruhe",
-  "c_url": "https://www.lubw.baden-wuerttemberg.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "karlsruher institut für technologie kit institut für photogrammetrie und fernerkundung|Karlsruhe",
   "c_name": "Karlsruher Institut für Technologie (KIT) – Institut für Photogrammetrie und Fernerkundung",
   "city": "Karlsruhe",
   "c_url": "https://www.ipf.kit.edu",
   "missing": [
-   "g_stack",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bundesanstalt für wasserbau baw|Karlsruhe",
-  "c_name": "Bundesanstalt für Wasserbau (BAW)",
-  "city": "Karlsruhe",
-  "c_url": "https://www.baw.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "staatliches hochbauamt karlsruhe bundesbau baden württemberg|Karlsruhe",
-  "c_name": "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
-  "city": "Karlsruhe",
-  "c_url": "https://www.bundesbau-bw.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "fraunhofer iosb|Karlsruhe",
-  "c_name": "Fraunhofer IOSB",
-  "city": "Karlsruhe",
-  "c_url": "https://www.iosb.fraunhofer.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hochschule karlsruhe geomatik|Karlsruhe",
-  "c_name": "Hochschule Karlsruhe – Geomatik",
-  "city": "Karlsruhe",
-  "c_url": "https://www.h-ka.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "init|Karlsruhe",
-  "c_name": "INIT SE",
-  "city": "Karlsruhe",
-  "c_url": "https://www.initse.com",
-  "missing": [
-   "g_stack"
   ]
  },
  {
