@@ -297,16 +297,6 @@
  },
  {
   "task": "fill",
-  "key": "swb|Bremen",
-  "c_name": "swb AG",
-  "city": "Bremen",
-  "c_url": "https://www.swb-gruppe.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "bremer straßenbahn bsag|Bremen",
   "c_name": "Bremer Straßenbahn AG (BSAG)",
   "city": "Bremen",
@@ -323,26 +313,6 @@
   "c_url": "https://www.blg-logistics.com",
   "missing": [
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hansewasser bremen|Bremen",
-  "c_name": "hanseWasser Bremen GmbH",
-  "city": "Bremen",
-  "c_url": "https://www.hansewasser.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "die senatorin für umwelt klima und wissenschaft sukw|Bremen",
-  "c_name": "Die Senatorin für Umwelt, Klima und Wissenschaft (SUKW)",
-  "city": "Bremen",
-  "c_url": "https://umwelt.bremen.de",
-  "missing": [
-   "kp_url"
   ]
  },
  {
