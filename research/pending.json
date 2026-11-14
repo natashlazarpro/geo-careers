@@ -1176,7 +1176,6 @@
   "c_url": null,
   "missing": [
    "c_url",
-   "g_stack",
    "kp_url",
    "li_url"
   ]
@@ -1194,63 +1193,12 @@
  },
  {
   "task": "fill",
-  "key": "plan lokal|Dortmund",
-  "c_name": "plan-lokal",
-  "city": "Dortmund",
-  "c_url": "https://plan-lokal.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "rag aktiengesellschaft|Dortmund",
   "c_name": "RAG Aktiengesellschaft",
   "city": "Dortmund",
   "c_url": "https://www.rag.de",
   "missing": [
    "adress"
-  ]
- },
- {
-  "task": "fill",
-  "key": "westnetz|Dortmund",
-  "c_name": "Westnetz GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.westnetz.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dsw21 dortmunder stadtwerke|Dortmund",
-  "c_name": "DSW21 – Dortmunder Stadtwerke AG",
-  "city": "Dortmund",
-  "c_url": "https://www.dsw21.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dew21 dortmunder energie und wasserversorgung|Dortmund",
-  "c_name": "DEW21 – Dortmunder Energie- und Wasserversorgung GmbH",
-  "city": "Dortmund",
-  "c_url": "https://www.dew21.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "fraunhofer institut für materialfluss und logistik iml|Dortmund",
-  "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
-  "city": "Dortmund",
-  "c_url": "https://www.iml.fraunhofer.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
