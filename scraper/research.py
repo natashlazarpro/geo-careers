@@ -142,7 +142,7 @@ def match_existing_overwrite(frames, sheet, rec):
     hit = next((i for i in df.index if same_company(company_key(df.at[i, "c_name"]), key)), None)
     if hit is None:
         return False
-    for col in ("c_url", "adress", "postal_code", "sector", "g_role", "g_stack", "size", "kp_url", "li_url", "eng", "de", "sprach"):
+    for col in ("c_url", "adress", "postal_code", "sector", "g_role", "g_stack", "size", "kp_url", "kununu_url", "kununu_rate", "li_url", "eng", "de", "sprach"):
         if not blank(rec.get(col)) and rec[col] != df.at[hit, col]:
             df.at[hit, col] = rec[col]
             if col == "adress":
