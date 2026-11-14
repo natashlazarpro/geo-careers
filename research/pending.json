@@ -377,19 +377,6 @@
  },
  {
   "task": "fill",
-  "key": "blom|Hannover",
-  "c_name": "BLOM Deutschland GmbH",
-  "city": "Hannover",
-  "c_url": "https://www.blomasa.com",
-  "missing": [
-   "adress",
-   "postal_code",
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "de engineering|Hannover",
   "c_name": "de engineering gmbh",
   "city": "Hannover",
@@ -398,17 +385,6 @@
    "adress",
    "postal_code",
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "servicezentrum landentwicklung und agrarförderung|Hannover",
-  "c_name": "Servicezentrum Landentwicklung und Agrarförderung",
-  "city": "Hannover",
-  "c_url": "https://www.ml.niedersachsen.de",
-  "missing": [
-   "g_stack",
-   "li_url"
   ]
  },
  {
@@ -424,55 +400,12 @@
  },
  {
   "task": "fill",
-  "key": "bundesanstalt für geowissenschaften und rohstoffe bgr|Hannover",
-  "c_name": "Bundesanstalt für Geowissenschaften und Rohstoffe (BGR)",
+  "key": "servicezentrum landentwicklung und agrarförderung|Hannover",
+  "c_name": "Servicezentrum Landentwicklung und Agrarförderung",
   "city": "Hannover",
-  "c_url": "https://www.bgr.bund.de",
+  "c_url": "https://www.ml.niedersachsen.de",
   "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "leibniz universität hannover institut für kartographie und geoinformatik|Hannover",
-  "c_name": "Leibniz Universität Hannover – Institut für Kartographie und Geoinformatik",
-  "city": "Hannover",
-  "c_url": "https://www.ikg.uni-hannover.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "üstra hannoversche verkehrsbetriebe|Hannover",
-  "c_name": "ÜSTRA Hannoversche Verkehrsbetriebe AG",
-  "city": "Hannover",
-  "c_url": "https://www.uestra.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landeshauptstadt hannover|Hannover",
-  "c_name": "Landeshauptstadt Hannover",
-  "city": "Hannover",
-  "c_url": "https://www.hannover.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "die autobahn des bundes niederlassung nordwest hannover|Hannover",
-  "c_name": "Die Autobahn GmbH des Bundes Niederlassung Nordwest (Hannover)",
-  "city": "Hannover",
-  "c_url": "https://www.autobahn.de",
-  "missing": [
-   "g_stack"
+   "li_url"
   ]
  },
  {
@@ -483,26 +416,6 @@
   "c_url": "https://www.lbeg.niedersachsen.de",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landesamt für geoinformation und landesvermessung niedersachsen lgln|Hannover",
-  "c_name": "Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)",
-  "city": "Hannover",
-  "c_url": "https://www.lgln.niedersachsen.de",
-  "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "enercity|Hannover",
-  "c_name": "enercity AG",
-  "city": "Hannover",
-  "c_url": "https://www.enercity.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
