@@ -10,16 +10,6 @@
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004015185-S"
  },
  {
-  "task": "research",
-  "key": "via futuri|Dresden",
-  "c_name": "via Futuri GmbH",
-  "city": "Dresden",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "GIS-Entwickler / Geoinformatiker (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004009529-S"
- },
- {
   "task": "verify",
   "key": "stadt karlsruhe liegenschaftsamt vermessung|Karlsruhe",
   "c_name": "Stadt Karlsruhe – Liegenschaftsamt (Vermessung)",
@@ -530,35 +520,10 @@
  },
  {
   "task": "fill",
-  "key": "murphy geospatial|Dresden",
-  "c_name": "Murphy Geospatial Germany GmbH",
-  "city": "Dresden",
-  "c_url": "https://www.murphygeospatial.com",
-  "missing": [
-   "adress",
-   "postal_code",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "ivw verkehrs und wasserwirtschaftsplanung|Dresden",
   "c_name": "IVW Verkehrs- und Wasserwirtschaftsplanung GmbH",
   "city": "Dresden",
   "c_url": "https://www.ivw-dresden.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "tu dresden institut für kartographie|Dresden",
-  "c_name": "TU Dresden – Institut für Kartographie",
-  "city": "Dresden",
-  "c_url": "https://tu-dresden.de",
   "missing": [
    "g_stack",
    "kp_url",
@@ -572,30 +537,7 @@
   "city": "Dresden",
   "c_url": "https://www.sbs.sachsen.de",
   "missing": [
-   "kp_url",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "geokart ingenieurvermessungs gesellschaft|Dresden",
-  "c_name": "GEOKART Ingenieurvermessungs- gesellschaft mbH GmbH",
-  "city": "Dresden",
-  "c_url": "https://www.geokart.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landeshauptstadt dresden amt für geodaten und kataster|Dresden",
-  "c_name": "Landeshauptstadt Dresden – Amt für Geodaten und Kataster",
-  "city": "Dresden",
-  "c_url": "https://www.dresden.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
   ]
  },
  {
@@ -610,82 +552,22 @@
  },
  {
   "task": "fill",
-  "key": "staatsbetrieb geobasisinformation und vermessung sachsen geosn|Dresden",
-  "c_name": "Staatsbetrieb Geobasisinformation und Vermessung Sachsen (GeoSN)",
+  "key": "murphy geospatial|Dresden",
+  "c_name": "Murphy Geospatial Germany GmbH",
   "city": "Dresden",
-  "c_url": "https://www.geosn.sachsen.de",
+  "c_url": "https://www.murphygeospatial.com",
   "missing": [
-   "g_stack"
+   "adress"
   ]
  },
  {
   "task": "fill",
-  "key": "sächsisches landesamt für umwelt landwirtschaft und geologie lfulg|Dresden",
-  "c_name": "Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie (LfULG)",
+  "key": "tu dresden institut für kartographie|Dresden",
+  "c_name": "TU Dresden – Institut für Kartographie",
   "city": "Dresden",
-  "c_url": "https://www.lfulg.sachsen.de",
+  "c_url": "https://tu-dresden.de",
   "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "leibniz institut für ökologische raumentwicklung iör|Dresden",
-  "c_name": "Leibniz-Institut für ökologische Raumentwicklung (IÖR)",
-  "city": "Dresden",
-  "c_url": "https://www.ioer.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "htw dresden fakultät geoinformation|Dresden",
-  "c_name": "HTW Dresden – Fakultät Geoinformation",
-  "city": "Dresden",
-  "c_url": "https://www.htw-dresden.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "sachsenenergie|Dresden",
-  "c_name": "SachsenEnergie AG",
-  "city": "Dresden",
-  "c_url": "https://www.sachsenenergie.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "gicon großmann ingenieur consult|Dresden",
-  "c_name": "GICON – Großmann Ingenieur Consult GmbH",
-  "city": "Dresden",
-  "c_url": "https://www.gicon.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "fraunhofer institut für verkehrs und infrastruktursysteme ivi|Dresden",
-  "c_name": "Fraunhofer-Institut für Verkehrs- und Infrastruktursysteme IVI",
-  "city": "Dresden",
-  "c_url": "https://www.ivi.fraunhofer.de",
-  "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dresdner verkehrsbetriebe dvb|Dresden",
-  "c_name": "Dresdner Verkehrsbetriebe AG (DVB)",
-  "city": "Dresden",
-  "c_url": "https://www.dvb.de",
-  "missing": [
-   "g_stack"
+   "li_url"
   ]
  },
  {
