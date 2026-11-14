@@ -1497,18 +1497,6 @@
  },
  {
   "task": "fill",
-  "key": "cdm smith|Leipzig",
-  "c_name": "CDM Smith SE",
-  "city": "Leipzig",
-  "c_url": "https://www.cdmsmith.com/de",
-  "missing": [
-   "adress",
-   "postal_code",
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
   "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
   "city": "Leipzig",
@@ -1520,13 +1508,13 @@
  },
  {
   "task": "fill",
-  "key": "db infrago|Leipzig",
-  "c_name": "DB InfraGO AG",
+  "key": "cdm smith|Leipzig",
+  "c_name": "CDM Smith SE",
   "city": "Leipzig",
-  "c_url": "https://www.dbinfrago.com",
+  "c_url": "https://www.cdmsmith.com/de",
   "missing": [
-   "g_stack",
-   "kp_url"
+   "adress",
+   "postal_code"
   ]
  },
  {
@@ -1542,33 +1530,12 @@
  },
  {
   "task": "fill",
-  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
-  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
-  "city": "Leipzig",
-  "c_url": "https://mellon-gesellschaft.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "geo metrik ingenieurgesellschaft leipzig|Leipzig",
   "c_name": "GEO-METRIK-Ingenieurgesellschaft mbH Leipzig",
   "city": "Leipzig",
   "c_url": "https://www.geo-metrik.de",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "leibniz institut für länderkunde ifl|Leipzig",
-  "c_name": "Leibniz-Institut für Länderkunde (IfL)",
-  "city": "Leipzig",
-  "c_url": "https://leibniz-ifl.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -1589,46 +1556,6 @@
   "c_url": "https://www.htwk-leipzig.de",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ontras gastransport|Leipzig",
-  "c_name": "ONTRAS Gastransport GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.ontras.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "vng|Leipzig",
-  "c_name": "VNG AG",
-  "city": "Leipzig",
-  "c_url": "https://www.vng.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "leipziger verkehrsbetriebe lvb|Leipzig",
-  "c_name": "Leipziger Verkehrsbetriebe (LVB) GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.l.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "netz leipzig|Leipzig",
-  "c_name": "Netz Leipzig GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.netz-leipzig.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -1663,32 +1590,22 @@
  },
  {
   "task": "fill",
-  "key": "iproconsult|Leipzig",
-  "c_name": "IPROconsult GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.iproconsult.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "tilia|Leipzig",
-  "c_name": "Tilia GmbH",
-  "city": "Leipzig",
-  "c_url": "https://www.tilia.info",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "mitteldeutsche flughafen flughafen leipzig halle|Leipzig",
   "c_name": "Mitteldeutsche Flughafen AG (Flughafen Leipzig/Halle)",
   "city": "Leipzig",
   "c_url": "https://www.mdf-ag.com",
   "missing": [
    "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
+  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
+  "city": "Leipzig",
+  "c_url": "https://mellon-gesellschaft.de",
+  "missing": [
+   "kp_url"
   ]
  },
  {
