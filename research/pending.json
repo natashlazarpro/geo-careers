@@ -10,21 +10,6 @@
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004015185-S"
  },
  {
-  "task": "verify",
-  "key": "lup luftbild umwelt planung|Potsdam",
-  "c_name": "LUP – Luftbild Umwelt Planung GmbH",
-  "city": "Potsdam",
-  "c_url": "https://www.lup-umwelt.de",
-  "adress": "Große Weinmeisterstraße 3a",
-  "postal_code": "14469",
-  "sector": "Remote Sensing / Environment & Conservation",
-  "g_role": "Core product",
-  "g_stack": null,
-  "size": "11-50",
-  "kp_url": null,
-  "li_url": null
- },
- {
   "task": "fill",
   "key": "ingenieurbüro dipl ing g jonasson|Kiel",
   "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
@@ -700,24 +685,11 @@
  },
  {
   "task": "fill",
-  "key": "forschungsinstitut für nachhaltigkeit rifs iass potsdam|Potsdam",
-  "c_name": "Forschungsinstitut für Nachhaltigkeit (RIFS/IASS Potsdam)",
-  "city": "Potsdam",
-  "c_url": "https://www.rifs-potsdam.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "gemeinsame landesplanungsabteilung berlin brandenburg|Potsdam",
   "c_name": "Gemeinsame Landesplanungsabteilung Berlin-Brandenburg",
   "city": "Potsdam",
   "c_url": "https://gl.berlin-brandenburg.de",
   "missing": [
-   "g_stack",
    "kp_url",
    "li_url"
   ]
@@ -729,19 +701,7 @@
   "city": "Potsdam",
   "c_url": "https://www.lindschulte.de",
   "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "trigis geoservices|Potsdam",
-  "c_name": "TRIGIS GeoServices GmbH",
-  "city": "Potsdam",
-  "c_url": "https://www.trigis.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
+   "g_stack"
   ]
  },
  {
@@ -751,7 +711,6 @@
   "city": "Potsdam",
   "c_url": "https://www.uni-potsdam.de",
   "missing": [
-   "g_stack",
    "li_url"
   ]
  },
@@ -762,39 +721,17 @@
   "city": "Potsdam",
   "c_url": "https://www.potsdam.de",
   "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "leibniz institut für agrartechnik und bioökonomie atb|Potsdam",
-  "c_name": "Leibniz-Institut für Agrartechnik und Bioökonomie (ATB)",
-  "city": "Potsdam",
-  "c_url": "https://www.atb-potsdam.de",
-  "missing": [
-   "g_stack",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "alfred wegener institut forschungsstelle potsdam|Potsdam",
-  "c_name": "Alfred-Wegener-Institut – Forschungsstelle Potsdam",
-  "city": "Potsdam",
-  "c_url": "https://www.awi.de",
-  "missing": [
    "g_stack"
   ]
  },
  {
   "task": "fill",
-  "key": "landesamt für umwelt brandenburg lfu|Potsdam",
-  "c_name": "Landesamt für Umwelt Brandenburg (LfU)",
+  "key": "forschungsinstitut für nachhaltigkeit rifs iass potsdam|Potsdam",
+  "c_name": "Forschungsinstitut für Nachhaltigkeit (RIFS/IASS Potsdam)",
   "city": "Potsdam",
-  "c_url": "https://lfu.brandenburg.de",
+  "c_url": "https://www.rifs-potsdam.de",
   "missing": [
-   "kp_url"
+   "g_stack"
   ]
  },
  {
