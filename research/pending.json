@@ -598,59 +598,7 @@
   "city": "Bonn",
   "c_url": "https://www.igg.uni-bonn.de",
   "missing": [
-   "g_stack",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bundesamt für bevölkerungsschutz und katastrophenhilfe bbk|Bonn",
-  "c_name": "Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)",
-  "city": "Bonn",
-  "c_url": "https://www.bbk.bund.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "wheregroup|Bonn",
-  "c_name": "WhereGroup GmbH",
-  "city": "Bonn",
-  "c_url": "https://wheregroup.com",
-  "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bundesinstitut für bau stadt und raumforschung bbsr|Bonn",
-  "c_name": "Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR)",
-  "city": "Bonn",
-  "c_url": "https://www.bbsr.bund.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bundesamt für naturschutz bfn|Bonn",
-  "c_name": "Bundesamt für Naturschutz (BfN)",
-  "city": "Bonn",
-  "c_url": "https://www.bfn.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "deutsche gesellschaft für internationale zusammenarbeit giz|Bonn",
-  "c_name": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
-  "city": "Bonn",
-  "c_url": "https://www.giz.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -659,26 +607,6 @@
   "c_name": "DHL Group",
   "city": "Bonn",
   "c_url": "https://group.dhl.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bundesnetzagentur|Bonn",
-  "c_name": "Bundesnetzagentur",
-  "city": "Bonn",
-  "c_url": "https://www.bundesnetzagentur.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bundesstadt bonn amt für bodenmanagement und geoinformation|Bonn",
-  "c_name": "Bundesstadt Bonn – Amt für Bodenmanagement und Geoinformation",
-  "city": "Bonn",
-  "c_url": "https://www.bonn.de",
   "missing": [
    "g_stack"
   ]
