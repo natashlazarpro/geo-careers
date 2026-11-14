@@ -425,74 +425,6 @@
  },
  {
   "task": "fill",
-  "key": "tu darmstadt institut für geodäsie|Darmstadt",
-  "c_name": "TU Darmstadt – Institut für Geodäsie",
-  "city": "Darmstadt",
-  "c_url": "https://www.geodesy.tu-darmstadt.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hochschule darmstadt h_da|Darmstadt",
-  "c_name": "Hochschule Darmstadt (h_da)",
-  "city": "Darmstadt",
-  "c_url": "https://h-da.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "sydro consult|Darmstadt",
-  "c_name": "SYDRO Consult GmbH",
-  "city": "Darmstadt",
-  "c_url": "https://www.sydro.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "telespazio|Darmstadt",
-  "c_name": "Telespazio Germany GmbH",
-  "city": "Darmstadt",
-  "c_url": "https://www.telespazio.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "entega|Darmstadt",
-  "c_name": "ENTEGA AG",
-  "city": "Darmstadt",
-  "c_url": "https://www.entega.ag",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "wissenschaftsstadt darmstadt vermessungsamt|Darmstadt",
-  "c_name": "Wissenschaftsstadt Darmstadt – Vermessungsamt",
-  "city": "Darmstadt",
-  "c_url": "https://www.darmstadt.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "esa european space operations centre esoc|Darmstadt",
   "c_name": "ESA – European Space Operations Centre (ESOC)",
   "city": "Darmstadt",
@@ -503,42 +435,22 @@
  },
  {
   "task": "fill",
-  "key": "eumetsat|Darmstadt",
-  "c_name": "EUMETSAT",
+  "key": "tu darmstadt institut für geodäsie|Darmstadt",
+  "c_name": "TU Darmstadt – Institut für Geodäsie",
   "city": "Darmstadt",
-  "c_url": "https://www.eumetsat.int",
+  "c_url": "https://www.geodesy.tu-darmstadt.de",
   "missing": [
-   "g_stack"
+   "li_url"
   ]
  },
  {
   "task": "fill",
-  "key": "fraunhofer igd|Darmstadt",
-  "c_name": "Fraunhofer IGD",
+  "key": "hochschule darmstadt h_da|Darmstadt",
+  "c_name": "Hochschule Darmstadt (h_da)",
   "city": "Darmstadt",
-  "c_url": "https://www.igd.fraunhofer.de",
+  "c_url": "https://h-da.de",
   "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "cgi space|Darmstadt",
-  "c_name": "CGI Deutschland – Space",
-  "city": "Darmstadt",
-  "c_url": "https://www.cgi.com/de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "regierungspräsidium darmstadt|Darmstadt",
-  "c_name": "Regierungspräsidium Darmstadt",
-  "city": "Darmstadt",
-  "c_url": "https://rp-darmstadt.hessen.de",
-  "missing": [
-   "kp_url"
+   "li_url"
   ]
  },
  {
