@@ -1,36 +1,6 @@
 [
  {
   "task": "research",
-  "key": "yer|Berlin",
-  "c_name": "YER",
-  "city": "Berlin",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "GIS Configuration & Test Specialist (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-4996746281-S"
- },
- {
-  "task": "research",
-  "key": "brunel nl karlsuhe|Karlsruhe",
-  "c_name": "Brunel GmbH NL Karlsuhe",
-  "city": "Karlsruhe",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "Software Engineer GIS (w/m/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12362-TR308608_6586CS-S"
- },
- {
-  "task": "research",
-  "key": "dmtech|Karlsruhe",
-  "c_name": "dmTECH GmbH",
-  "city": "Karlsruhe",
-  "address_from_job_ad": "Am dm-Platz 1, 76227",
-  "open_jobs": 1,
-  "job_titles": "Senior Solution Architect CAD / BIM / GIS (w/m/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12787-273932111126-S"
- },
- {
-  "task": "research",
   "key": "via futuri|Dresden",
   "c_name": "via Futuri GmbH",
   "city": "Dresden",
@@ -38,51 +8,6 @@
   "open_jobs": 1,
   "job_titles": "GIS-Entwickler / Geoinformatiker (m/w/d)",
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004009529-S"
- },
- {
-  "task": "verify",
-  "key": "leibniz universität hannover institut für kartographie und geoinformatik|Hannover",
-  "c_name": "Leibniz Universität Hannover – Institut für Kartographie und Geoinformatik",
-  "city": "Hannover",
-  "c_url": "https://www.ikg.uni-hannover.de",
-  "adress": "Appelstraße 9a",
-  "postal_code": "30167",
-  "sector": "GIS / Geoinformatics",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/institut-für-kartographie-und-geoinformatik/"
- },
- {
-  "task": "verify",
-  "key": "bundesanstalt für wasserbau baw|Karlsruhe",
-  "c_name": "Bundesanstalt für Wasserbau (BAW)",
-  "city": "Karlsruhe",
-  "c_url": "https://www.baw.de",
-  "adress": "Kußmaulstraße 17",
-  "postal_code": "76187",
-  "sector": "Hydrology / Transport Planning",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bundesanstalt-für-wasserbau/"
- },
- {
-  "task": "verify",
-  "key": "init|Karlsruhe",
-  "c_name": "INIT SE",
-  "city": "Karlsruhe",
-  "c_url": "https://www.initse.com",
-  "adress": "Käppelestraße 4-10",
-  "postal_code": "76131",
-  "sector": "Transport Planning / Geoinformatics",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/init-mena/"
  },
  {
   "task": "verify",
@@ -101,96 +26,6 @@
  },
  {
   "task": "verify",
-  "key": "stadtwerke karlsruhe|Karlsruhe",
-  "c_name": "Stadtwerke Karlsruhe GmbH",
-  "city": "Karlsruhe",
-  "c_url": "https://www.stadtwerke-karlsruhe.de",
-  "adress": "Daxlander Straße 72",
-  "postal_code": "76185",
-  "sector": "Renewable Energy / Hydrology",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/stadtwerke-karlsruhe/"
- },
- {
-  "task": "verify",
-  "key": "bundesamt für bevölkerungsschutz und katastrophenhilfe bbk|Bonn",
-  "c_name": "Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)",
-  "city": "Bonn",
-  "c_url": "https://www.bbk.bund.de",
-  "adress": "Provinzialstraße 93",
-  "postal_code": "53127",
-  "sector": "Climate / GIS",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/bundesamt-fuer-bevoelkerungsschutz-und-katastrophenhilfe-bbk/"
- },
- {
-  "task": "verify",
-  "key": "landeshauptstadt potsdam bereich geoinformation|Potsdam",
-  "c_name": "Landeshauptstadt Potsdam – Bereich Geoinformation",
-  "city": "Potsdam",
-  "c_url": "https://www.potsdam.de",
-  "adress": "Friedrich-Ebert-Straße 79/81",
-  "postal_code": "14469",
-  "sector": "Surveying & Geodesy / Urban & Spatial Planning",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/landeshauptstadt-potsdam/"
- },
- {
-  "task": "verify",
-  "key": "leibniz institut für agrartechnik und bioökonomie atb|Potsdam",
-  "c_name": "Leibniz-Institut für Agrartechnik und Bioökonomie (ATB)",
-  "city": "Potsdam",
-  "c_url": "https://www.atb-potsdam.de",
-  "adress": "Max-Eyth-Allee 100",
-  "postal_code": "14469",
-  "sector": "Environment & Conservation / Remote Sensing",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "201-500",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "forschungsinstitut für nachhaltigkeit rifs iass potsdam|Potsdam",
-  "c_name": "Forschungsinstitut für Nachhaltigkeit (RIFS/IASS Potsdam)",
-  "city": "Potsdam",
-  "c_url": "https://www.rifs-potsdam.de",
-  "adress": "Berliner Straße 130",
-  "postal_code": "14467",
-  "sector": "Climate / Development & Social",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
-  "key": "gemeinsame landesplanungsabteilung berlin brandenburg|Potsdam",
-  "c_name": "Gemeinsame Landesplanungsabteilung Berlin-Brandenburg",
-  "city": "Potsdam",
-  "c_url": "https://gl.berlin-brandenburg.de",
-  "adress": "Henning-von-Tresckow-Straße 2-8",
-  "postal_code": "14467",
-  "sector": "Urban & Spatial Planning",
-  "g_role": "Dedicated team",
-  "g_stack": null,
-  "size": "51-200",
-  "kp_url": null,
-  "li_url": null
- },
- {
-  "task": "verify",
   "key": "lup luftbild umwelt planung|Potsdam",
   "c_name": "LUP – Luftbild Umwelt Planung GmbH",
   "city": "Potsdam",
@@ -203,50 +38,6 @@
   "size": "11-50",
   "kp_url": null,
   "li_url": null
- },
- {
-  "task": "verify",
-  "key": "landesbetrieb forst brandenburg|Potsdam",
-  "c_name": "Landesbetrieb Forst Brandenburg",
-  "city": "Potsdam",
-  "c_url": "https://forst.brandenburg.de",
-  "adress": "Heinrich-Mann-Allee 103",
-  "postal_code": "14473",
-  "sector": "Environment & Conservation",
-  "g_role": "Side tool",
-  "g_stack": null,
-  "size": "500+",
-  "kp_url": null,
-  "li_url": "https://www.linkedin.com/company/landesbetrieb-forst-brandenburg-revier-neuthymen/"
- },
- {
-  "task": "fill",
-  "key": "north io|Kiel",
-  "c_name": "north.io GmbH",
-  "city": "Kiel",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "adress",
-   "postal_code",
-   "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "wasserstraßen und schifffahrtsamt nord ostsee kanal|Kiel",
-  "c_name": "Wasserstraßen- und Schifffahrtsamt Nord-Ostsee-Kanal",
-  "city": "Kiel",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "adress",
-   "postal_code",
-   "size",
-   "li_url"
-  ]
  },
  {
   "task": "fill",
@@ -263,18 +54,6 @@
  },
  {
   "task": "fill",
-  "key": "breitband kompetenzzentrum schleswig holstein bkz sh|Kiel",
-  "c_name": "Breitband-Kompetenzzentrum Schleswig-Holstein e.V. (BKZ.SH)",
-  "city": "Kiel",
-  "c_url": "https://www.bkzsh.de",
-  "missing": [
-   "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
   "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
   "city": "Kiel",
@@ -286,13 +65,13 @@
  },
  {
   "task": "fill",
-  "key": "stadtwerke kiel|Kiel",
-  "c_name": "Stadtwerke Kiel AG",
+  "key": "wasserstraßen und schifffahrtsamt nord ostsee kanal|Kiel",
+  "c_name": "Wasserstraßen- und Schifffahrtsamt Nord-Ostsee-Kanal",
   "city": "Kiel",
-  "c_url": "https://www.stadtwerke-kiel.de",
+  "c_url": "https://www.wsa-nord-ostsee-kanal.wsv.de/",
   "missing": [
-   "g_stack",
-   "kp_url"
+   "size",
+   "li_url"
   ]
  },
  {
@@ -301,16 +80,6 @@
   "c_name": "Neumann Baugrunduntersuchung GmbH & Co. KG",
   "city": "Kiel",
   "c_url": "https://www.neumann-baugrund.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "geomar helmholtz zentrum für ozeanforschung kiel|Kiel",
-  "c_name": "GEOMAR Helmholtz-Zentrum für Ozeanforschung Kiel",
-  "city": "Kiel",
-  "c_url": "https://www.geomar.de",
   "missing": [
    "g_stack"
   ]
@@ -343,6 +112,16 @@
   "c_url": "https://www.kvg-kiel.de",
   "missing": [
    "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "north io|Kiel",
+  "c_name": "north.io GmbH",
+  "city": "Kiel",
+  "c_url": "https://www.north.io",
+  "missing": [
+   "size"
   ]
  },
  {
@@ -508,17 +287,6 @@
  },
  {
   "task": "fill",
-  "key": "hanseatische naturentwicklung|Bremen",
-  "c_name": "Hanseatische Naturentwicklung GmbH",
-  "city": "Bremen",
-  "c_url": "https://www.haneg.de",
-  "missing": [
-   "adress",
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "ohb|Bremen",
   "c_name": "OHB SE",
   "city": "Bremen",
@@ -609,20 +377,6 @@
  },
  {
   "task": "fill",
-  "key": "de engineering|Hannover",
-  "c_name": "de engineering gmbh",
-  "city": "Hannover",
-  "c_url": "https://de-engineering.com",
-  "missing": [
-   "adress",
-   "postal_code",
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "blom|Hannover",
   "c_name": "BLOM Deutschland GmbH",
   "city": "Hannover",
@@ -636,14 +390,14 @@
  },
  {
   "task": "fill",
-  "key": "landesamt für bergbau energie und geologie|Hannover",
-  "c_name": "Landesamt für Bergbau Energie und Geologie",
+  "key": "de engineering|Hannover",
+  "c_name": "de engineering gmbh",
   "city": "Hannover",
-  "c_url": "https://www.lbeg.niedersachsen.de",
+  "c_url": "https://de-engineering.com",
   "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
+   "adress",
+   "postal_code",
+   "g_stack"
   ]
  },
  {
@@ -655,28 +409,6 @@
   "missing": [
    "g_stack",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ip syscon|Hannover",
-  "c_name": "IP SYSCON GmbH",
-  "city": "Hannover",
-  "c_url": "https://www.ipsyscon.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "die autobahn des bundes niederlassung nordwest hannover|Hannover",
-  "c_name": "Die Autobahn GmbH des Bundes Niederlassung Nordwest (Hannover)",
-  "city": "Hannover",
-  "c_url": "https://www.autobahn.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
   ]
  },
  {
@@ -696,6 +428,17 @@
   "c_name": "Bundesanstalt für Geowissenschaften und Rohstoffe (BGR)",
   "city": "Hannover",
   "c_url": "https://www.bgr.bund.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "leibniz universität hannover institut für kartographie und geoinformatik|Hannover",
+  "c_name": "Leibniz Universität Hannover – Institut für Kartographie und Geoinformatik",
+  "city": "Hannover",
+  "c_url": "https://www.ikg.uni-hannover.de",
   "missing": [
    "g_stack",
    "kp_url"
@@ -724,6 +467,26 @@
  },
  {
   "task": "fill",
+  "key": "die autobahn des bundes niederlassung nordwest hannover|Hannover",
+  "c_name": "Die Autobahn GmbH des Bundes Niederlassung Nordwest (Hannover)",
+  "city": "Hannover",
+  "c_url": "https://www.autobahn.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für bergbau energie und geologie|Hannover",
+  "c_name": "Landesamt für Bergbau Energie und Geologie",
+  "city": "Hannover",
+  "c_url": "https://www.lbeg.niedersachsen.de",
+  "missing": [
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "landesamt für geoinformation und landesvermessung niedersachsen lgln|Hannover",
   "c_name": "Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)",
   "city": "Hannover",
@@ -744,20 +507,6 @@
  },
  {
   "task": "fill",
-  "key": "murphy geospatial|Dresden",
-  "c_name": "Murphy Geospatial Germany GmbH",
-  "city": "Dresden",
-  "c_url": "https://www.murphygeospatial.com",
-  "missing": [
-   "adress",
-   "postal_code",
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "christian holz tecfa|Dresden",
   "c_name": "Christian Holz TECFA",
   "city": "Dresden",
@@ -771,24 +520,13 @@
  },
  {
   "task": "fill",
-  "key": "staatsbetrieb sachsenforst geschäftsleitung|Dresden",
-  "c_name": "Staatsbetrieb Sachsenforst Geschäftsleitung",
+  "key": "murphy geospatial|Dresden",
+  "c_name": "Murphy Geospatial Germany GmbH",
   "city": "Dresden",
-  "c_url": "https://www.sbs.sachsen.de",
+  "c_url": "https://www.murphygeospatial.com",
   "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "gil ganzheitliche ingenieurleistungen|Dresden",
-  "c_name": "GIL Ganzheitliche Ingenieurleistungen GmbH",
-  "city": "Dresden",
-  "c_url": "https://www.gil-dresden.de",
-  "missing": [
-   "g_stack",
+   "adress",
+   "postal_code",
    "kp_url",
    "li_url"
   ]
@@ -819,21 +557,21 @@
  },
  {
   "task": "fill",
-  "key": "geokart ingenieurvermessungs gesellschaft|Dresden",
-  "c_name": "GEOKART Ingenieurvermessungs- gesellschaft mbH GmbH",
+  "key": "staatsbetrieb sachsenforst geschäftsleitung|Dresden",
+  "c_name": "Staatsbetrieb Sachsenforst Geschäftsleitung",
   "city": "Dresden",
-  "c_url": "https://www.geokart.de",
+  "c_url": "https://www.sbs.sachsen.de",
   "missing": [
-   "g_stack",
-   "kp_url"
+   "kp_url",
+   "li_url"
   ]
  },
  {
   "task": "fill",
-  "key": "sächsisches landesamt für umwelt landwirtschaft und geologie lfulg|Dresden",
-  "c_name": "Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie (LfULG)",
+  "key": "geokart ingenieurvermessungs gesellschaft|Dresden",
+  "c_name": "GEOKART Ingenieurvermessungs- gesellschaft mbH GmbH",
   "city": "Dresden",
-  "c_url": "https://www.lfulg.sachsen.de",
+  "c_url": "https://www.geokart.de",
   "missing": [
    "g_stack",
    "kp_url"
@@ -852,12 +590,32 @@
  },
  {
   "task": "fill",
+  "key": "gil ganzheitliche ingenieurleistungen|Dresden",
+  "c_name": "GIL Ganzheitliche Ingenieurleistungen GmbH",
+  "city": "Dresden",
+  "c_url": "https://www.gil-dresden.de",
+  "missing": [
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "staatsbetrieb geobasisinformation und vermessung sachsen geosn|Dresden",
   "c_name": "Staatsbetrieb Geobasisinformation und Vermessung Sachsen (GeoSN)",
   "city": "Dresden",
   "c_url": "https://www.geosn.sachsen.de",
   "missing": [
    "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "sächsisches landesamt für umwelt landwirtschaft und geologie lfulg|Dresden",
+  "c_name": "Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie (LfULG)",
+  "city": "Dresden",
+  "c_url": "https://www.lfulg.sachsen.de",
+  "missing": [
+   "kp_url"
   ]
  },
  {
@@ -1040,19 +798,6 @@
  },
  {
   "task": "fill",
-  "key": "landesamt für geoinformation und landentwicklung baden württemberg lgl|Karlsruhe",
-  "c_name": "Landesamt für Geoinformation und Landentwicklung Baden-Württemberg (LGL)",
-  "city": "Karlsruhe",
-  "c_url": "https://www.lgl-bw.de/index.html",
-  "missing": [
-   "adress",
-   "postal_code",
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "arcadis|Karlsruhe",
   "c_name": "Arcadis Germany GmbH",
   "city": "Karlsruhe",
@@ -1099,6 +844,17 @@
  },
  {
   "task": "fill",
+  "key": "bundesanstalt für wasserbau baw|Karlsruhe",
+  "c_name": "Bundesanstalt für Wasserbau (BAW)",
+  "city": "Karlsruhe",
+  "c_url": "https://www.baw.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "staatliches hochbauamt karlsruhe bundesbau baden württemberg|Karlsruhe",
   "c_name": "Staatliches Hochbauamt Karlsruhe – Bundesbau Baden-Württemberg",
   "city": "Karlsruhe",
@@ -1106,6 +862,17 @@
   "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "dmtech|Karlsruhe",
+  "c_name": "dmTECH GmbH",
+  "city": "Karlsruhe",
+  "c_url": "https://www.dmtech.tech/de/",
+  "missing": [
+   "g_stack",
+   "li_url"
   ]
  },
  {
@@ -1130,6 +897,16 @@
  },
  {
   "task": "fill",
+  "key": "init|Karlsruhe",
+  "c_name": "INIT SE",
+  "city": "Karlsruhe",
+  "c_url": "https://www.initse.com",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "universität bonn institut für geodäsie und geoinformation|Bonn",
   "c_name": "Universität Bonn – Institut für Geodäsie und Geoinformation",
   "city": "Bonn",
@@ -1137,6 +914,17 @@
   "missing": [
    "g_stack",
    "li_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "bundesamt für bevölkerungsschutz und katastrophenhilfe bbk|Bonn",
+  "c_name": "Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)",
+  "city": "Bonn",
+  "c_url": "https://www.bbk.bund.de",
+  "missing": [
+   "g_stack",
+   "kp_url"
   ]
  },
  {
@@ -1211,10 +999,10 @@
  },
  {
   "task": "fill",
-  "key": "gfz helmholtz zentrum für geoforschung|Potsdam",
-  "c_name": "GFZ Helmholtz-Zentrum für Geoforschung",
+  "key": "forschungsinstitut für nachhaltigkeit rifs iass potsdam|Potsdam",
+  "c_name": "Forschungsinstitut für Nachhaltigkeit (RIFS/IASS Potsdam)",
   "city": "Potsdam",
-  "c_url": "https://www.gfz.de",
+  "c_url": "https://www.rifs-potsdam.de",
   "missing": [
    "g_stack",
    "kp_url",
@@ -1223,10 +1011,10 @@
  },
  {
   "task": "fill",
-  "key": "landesamt für umwelt brandenburg lfu|Potsdam",
-  "c_name": "Landesamt für Umwelt Brandenburg (LfU)",
+  "key": "gemeinsame landesplanungsabteilung berlin brandenburg|Potsdam",
+  "c_name": "Gemeinsame Landesplanungsabteilung Berlin-Brandenburg",
   "city": "Potsdam",
-  "c_url": "https://lfu.brandenburg.de",
+  "c_url": "https://gl.berlin-brandenburg.de",
   "missing": [
    "g_stack",
    "kp_url",
@@ -1268,11 +1056,23 @@
  },
  {
   "task": "fill",
-  "key": "landesvermessung und geobasisinformation brandenburg lgb|Potsdam",
-  "c_name": "Landesvermessung und Geobasisinformation Brandenburg (LGB)",
+  "key": "landeshauptstadt potsdam bereich geoinformation|Potsdam",
+  "c_name": "Landeshauptstadt Potsdam – Bereich Geoinformation",
   "city": "Potsdam",
-  "c_url": "https://geobasis-bb.de",
+  "c_url": "https://www.potsdam.de",
   "missing": [
+   "g_stack",
+   "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "leibniz institut für agrartechnik und bioökonomie atb|Potsdam",
+  "c_name": "Leibniz-Institut für Agrartechnik und Bioökonomie (ATB)",
+  "city": "Potsdam",
+  "c_url": "https://www.atb-potsdam.de",
+  "missing": [
+   "g_stack",
    "li_url"
   ]
  },
@@ -1284,6 +1084,16 @@
   "c_url": "https://www.awi.de",
   "missing": [
    "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "landesamt für umwelt brandenburg lfu|Potsdam",
+  "c_name": "Landesamt für Umwelt Brandenburg (LfU)",
+  "city": "Potsdam",
+  "c_url": "https://lfu.brandenburg.de",
+  "missing": [
+   "kp_url"
   ]
  },
  {
@@ -1407,26 +1217,6 @@
  },
  {
   "task": "fill",
-  "key": "tu dortmund fakultät raumplanung|Dortmund",
-  "c_name": "TU Dortmund – Fakultät Raumplanung",
-  "city": "Dortmund",
-  "c_url": "https://raumplanung.tu-dortmund.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "ils institut für landes und stadtentwicklungsforschung|Dortmund",
-  "c_name": "ILS – Institut für Landes- und Stadtentwicklungsforschung",
-  "city": "Dortmund",
-  "c_url": "https://www.ils-forschung.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "dsw21 dortmunder stadtwerke|Dortmund",
   "c_name": "DSW21 – Dortmunder Stadtwerke AG",
   "city": "Dortmund",
@@ -1451,36 +1241,6 @@
   "c_name": "Fraunhofer-Institut für Materialfluss und Logistik IML",
   "city": "Dortmund",
   "c_url": "https://www.iml.fraunhofer.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "pp a s pesch partner architekten stadtplaner|Dortmund",
-  "c_name": "pp a|s pesch partner architekten stadtplaner",
-  "city": "Dortmund",
-  "c_url": "https://www.pesch-partner.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "postwelters partner mbb architektur stadtplanung|Dortmund",
-  "c_name": "postwelters + partner mbB Architektur & Stadtplanung",
-  "city": "Dortmund",
-  "c_url": "https://www.post-welters.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dortmunder netz donetz|Dortmund",
-  "c_name": "Dortmunder Netz GmbH (DONETZ)",
-  "city": "Dortmund",
-  "c_url": "https://www.do-netz.de",
   "missing": [
    "g_stack"
   ]
@@ -1615,41 +1375,7 @@
   "city": "Düsseldorf",
   "c_url": "https://t-t.nrw/",
   "missing": [
-   "size",
    "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "vermessungsbüro düsseldorf dipl ing h büchel|Düsseldorf",
-  "c_name": "Vermessungsbüro Düsseldorf Dipl.-Ing. H. Büchel",
-  "city": "Düsseldorf",
-  "c_url": "https://www.buechel-kitzhoefer.de/",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bezirksregierung düsseldorf|Düsseldorf",
-  "c_name": "Bezirksregierung Düsseldorf",
-  "city": "Düsseldorf",
-  "c_url": "https://www.brd.nrw.de",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "flughafen düsseldorf|Düsseldorf",
-  "c_name": "Flughafen Düsseldorf GmbH",
-  "city": "Düsseldorf",
-  "c_url": "https://www.dus.com",
-  "missing": [
-   "size",
    "li_url"
   ]
  },
@@ -1665,12 +1391,12 @@
  },
  {
   "task": "fill",
-  "key": "allterra|Düsseldorf",
-  "c_name": "AllTerra Deutschland GmbH",
+  "key": "vermessungsbüro düsseldorf dipl ing h büchel|Düsseldorf",
+  "c_name": "Vermessungsbüro Düsseldorf Dipl.-Ing. H. Büchel",
   "city": "Düsseldorf",
-  "c_url": "https://allterra.de/",
+  "c_url": "https://www.buechel-kitzhoefer.de/",
   "missing": [
-   "kp_url"
+   "li_url"
   ]
  },
  {
@@ -1695,6 +1421,16 @@
  },
  {
   "task": "fill",
+  "key": "bezirksregierung düsseldorf|Düsseldorf",
+  "c_name": "Bezirksregierung Düsseldorf",
+  "city": "Düsseldorf",
+  "c_url": "https://www.brd.nrw.de",
+  "missing": [
+   "size"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "geoinformatikbüro dassau|Düsseldorf",
   "c_name": "Geoinformatikbüro Dassau GmbH",
   "city": "Düsseldorf",
@@ -1705,12 +1441,12 @@
  },
  {
   "task": "fill",
-  "key": "vodafone|Düsseldorf",
-  "c_name": "Vodafone GmbH",
+  "key": "flughafen düsseldorf|Düsseldorf",
+  "c_name": "Flughafen Düsseldorf GmbH",
   "city": "Düsseldorf",
-  "c_url": "https://www.vodafone.de",
+  "c_url": "https://www.dus.com",
   "missing": [
-   "kp_url"
+   "size"
   ]
  },
  {
@@ -1738,50 +1474,6 @@
  },
  {
   "task": "fill",
-  "key": "gefaö gesellschaft für angewandte ökologie und umweltplanung|Stuttgart",
-  "c_name": "GefaÖ – Gesellschaft für angewandte Ökologie und Umweltplanung mbH",
-  "city": "Stuttgart",
-  "c_url": "https://www.gefaoe.de",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "iwp ingenieurbüro winkler und partner|Stuttgart",
-  "c_name": "IWP – Ingenieurbüro Winkler und Partner GmbH",
-  "city": "Stuttgart",
-  "c_url": "https://www.iwp-online.de",
-  "missing": [
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landesamt für geoinformation und landentwicklung baden württemberg lgl|Stuttgart",
-  "c_name": "Landesamt für Geoinformation und Landentwicklung Baden-Württemberg (LGL)",
-  "city": "Stuttgart",
-  "c_url": "https://www.lgl-bw.de",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hochschule für technik stuttgart hft stuttgart|Stuttgart",
-  "c_name": "Hochschule für Technik Stuttgart (HFT Stuttgart)",
-  "city": "Stuttgart",
-  "c_url": "https://www.hft-stuttgart.com",
-  "missing": [
-   "size",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "bertrandt|Stuttgart",
   "c_name": "Bertrandt AG",
   "city": "Stuttgart",
@@ -1792,52 +1484,22 @@
  },
  {
   "task": "fill",
-  "key": "i g l ingenieurvermessung|Stuttgart",
-  "c_name": "I.G.L. GmbH Ingenieurvermessung",
+  "key": "gefaö gesellschaft für angewandte ökologie und umweltplanung|Stuttgart",
+  "c_name": "GefaÖ – Gesellschaft für angewandte Ökologie und Umweltplanung mbH",
   "city": "Stuttgart",
-  "c_url": "https://www.igl-online.de/",
+  "c_url": "https://www.gefaoe.de",
   "missing": [
    "size"
   ]
  },
  {
   "task": "fill",
-  "key": "esri r d center stuttgart formerly nframes|Stuttgart",
-  "c_name": "Esri R&D Center Stuttgart (formerly nFrames GmbH)",
+  "key": "hochschule für technik stuttgart hft stuttgart|Stuttgart",
+  "c_name": "Hochschule für Technik Stuttgart (HFT Stuttgart)",
   "city": "Stuttgart",
-  "c_url": "https://www.esri.com",
+  "c_url": "https://www.hft-stuttgart.com",
   "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "stuttgart netze|Stuttgart",
-  "c_name": "Stuttgart Netze GmbH",
-  "city": "Stuttgart",
-  "c_url": "https://www.stuttgart-netze.de",
-  "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "nvbw nahverkehrsgesellschaft baden württemberg|Stuttgart",
-  "c_name": "NVBW - Nahverkehrsgesellschaft Baden-Württemberg mbH",
-  "city": "Stuttgart",
-  "c_url": "https://www.nvbw.de",
-  "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landeshauptstadt stuttgart stadtmessungsamt|Stuttgart",
-  "c_name": "Landeshauptstadt Stuttgart - Stadtmessungsamt",
-  "city": "Stuttgart",
-  "c_url": "https://www.stuttgart.de",
-  "missing": [
-   "kp_url"
+   "li_url"
   ]
  },
  {
