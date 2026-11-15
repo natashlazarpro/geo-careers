@@ -1,15 +1,5 @@
 [
  {
-  "task": "research",
-  "key": "hamburger friedhöfe aör|Hamburg",
-  "c_name": "Hamburger Friedhöfe AöR",
-  "city": "Hamburg",
-  "address_from_job_ad": "Fuhlsbüttler Str. 756, 22337",
-  "open_jobs": 1,
-  "job_titles": "Sachgebietsleitung Vermessung und Geodaten (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004015185-S"
- },
- {
   "task": "fill",
   "key": "ingenieurbüro dipl ing g jonasson|Kiel",
   "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
@@ -114,16 +104,6 @@
  },
  {
   "task": "fill",
-  "key": "unique land use|Freiburg im Breisgau",
-  "c_name": "unique land use GmbH",
-  "city": "Freiburg im Breisgau",
-  "c_url": "https://unique-landuse.de",
-  "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "universität münster institut für geoinformatik|Münster",
   "c_name": "Universität Münster – Institut für Geoinformatik",
   "city": "Münster",
@@ -143,17 +123,6 @@
   "missing": [
    "g_stack",
    "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hansa luftbild|Münster",
-  "c_name": "Hansa Luftbild AG",
-  "city": "Münster",
-  "c_url": "https://www.hansaluftbild.de",
-  "missing": [
-   "g_stack",
    "li_url"
   ]
  },
@@ -188,6 +157,16 @@
   "missing": [
    "g_stack",
    "kp_url"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "hansa luftbild|Münster",
+  "c_name": "Hansa Luftbild AG",
+  "city": "Münster",
+  "c_url": "https://www.hansaluftbild.de",
+  "missing": [
+   "li_url"
   ]
  },
  {
@@ -296,34 +275,11 @@
  },
  {
   "task": "fill",
-  "key": "servicezentrum landentwicklung und agrarförderung|Hannover",
-  "c_name": "Servicezentrum Landentwicklung und Agrarförderung",
-  "city": "Hannover",
-  "c_url": "https://www.ml.niedersachsen.de",
-  "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "landesamt für bergbau energie und geologie|Hannover",
   "c_name": "Landesamt für Bergbau Energie und Geologie",
   "city": "Hannover",
   "c_url": "https://www.lbeg.niedersachsen.de",
   "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "christian holz tecfa|Dresden",
-  "c_name": "Christian Holz TECFA",
-  "city": "Dresden",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "g_stack",
-   "kp_url",
    "li_url"
   ]
  },
@@ -341,21 +297,12 @@
  },
  {
   "task": "fill",
-  "key": "staatsbetrieb sachsenforst geschäftsleitung|Dresden",
-  "c_name": "Staatsbetrieb Sachsenforst Geschäftsleitung",
+  "key": "christian holz tecfa|Dresden",
+  "c_name": "Christian Holz TECFA",
   "city": "Dresden",
-  "c_url": "https://www.sbs.sachsen.de",
+  "c_url": "https://tecfa.de/",
   "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "gil ganzheitliche ingenieurleistungen|Dresden",
-  "c_name": "GIL Ganzheitliche Ingenieurleistungen GmbH",
-  "city": "Dresden",
-  "c_url": "https://www.gil-dresden.de",
-  "missing": [
+   "kp_url",
    "li_url"
   ]
  },
@@ -367,16 +314,6 @@
   "c_url": "https://www.murphygeospatial.com",
   "missing": [
    "adress"
-  ]
- },
- {
-  "task": "fill",
-  "key": "tu dresden institut für kartographie|Dresden",
-  "c_name": "TU Dresden – Institut für Kartographie",
-  "city": "Dresden",
-  "c_url": "https://tu-dresden.de",
-  "missing": [
-   "li_url"
   ]
  },
  {
@@ -427,16 +364,6 @@
   "c_url": "https://www.dmtech.tech/de/",
   "missing": [
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "universität bonn institut für geodäsie und geoinformation|Bonn",
-  "c_name": "Universität Bonn – Institut für Geodäsie und Geoinformation",
-  "city": "Bonn",
-  "c_url": "https://www.igg.uni-bonn.de",
-  "missing": [
-   "li_url"
   ]
  },
  {
@@ -498,19 +425,6 @@
   "c_url": "https://www.rifs-potsdam.de",
   "missing": [
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "spitthöver köhncke|Essen",
-  "c_name": "Spitthöver Köhncke",
-  "city": "Essen",
-  "c_url": null,
-  "missing": [
-   "c_url",
-   "size",
-   "kp_url",
-   "li_url"
   ]
  },
  {
@@ -631,17 +545,6 @@
  },
  {
   "task": "fill",
-  "key": "regionaler planungsverband leipzig westsachsen|Leipzig",
-  "c_name": "Regionaler Planungsverband Leipzig-Westsachsen",
-  "city": "Leipzig",
-  "c_url": "https://www.rpv-westsachsen.de",
-  "missing": [
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "geo metrik ingenieurgesellschaft leipzig|Leipzig",
   "c_name": "GEO-METRIK-Ingenieurgesellschaft mbH Leipzig",
   "city": "Leipzig",
@@ -698,6 +601,16 @@
   "c_url": "https://www.lds.sachsen.de",
   "missing": [
    "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "regionaler planungsverband leipzig westsachsen|Leipzig",
+  "c_name": "Regionaler Planungsverband Leipzig-Westsachsen",
+  "city": "Leipzig",
+  "c_url": "https://www.rpv-westsachsen.de",
+  "missing": [
+   "li_url"
   ]
  },
  {
@@ -898,16 +811,6 @@
  },
  {
   "task": "fill",
-  "key": "db infrago|Frankfurt am Main",
-  "c_name": "DB InfraGO AG",
-  "city": "Frankfurt am Main",
-  "c_url": "https://www.dbinfrago.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "trassify|Frankfurt am Main",
   "c_name": "Trassify GmbH",
   "city": "Frankfurt am Main",
@@ -972,17 +875,6 @@
  },
  {
   "task": "fill",
-  "key": "arcadis b v|Köln",
-  "c_name": "Arcadis Germany B.V. & Co. KG",
-  "city": "Köln",
-  "c_url": "https://www.arcadis.com/de-de",
-  "missing": [
-   "adress",
-   "postal_code"
-  ]
- },
- {
-  "task": "fill",
   "key": "vermessungsbüro gütz|Köln",
   "c_name": "Vermessungsbüro Gütz",
   "city": "Köln",
@@ -990,16 +882,6 @@
   "missing": [
    "kp_url",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "stadt köln|Köln",
-  "c_name": "Stadt Köln",
-  "city": "Köln",
-  "c_url": "https://www.stadt-koeln.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -1020,16 +902,6 @@
   "c_url": "https://www.viakoeln.de/",
   "missing": [
    "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "björnsen beratende ingenieure|Köln",
-  "c_name": "Björnsen Beratende Ingenieure GmbH",
-  "city": "Köln",
-  "c_url": "https://www.bjoernsen.de/",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -1058,16 +930,6 @@
   "c_name": "Deutsches Zentrum für Luft- und Raumfahrt e.V.",
   "city": "Köln",
   "c_url": "https://www.dlr.de/",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dr hesse und partner ingenieure|Hamburg",
-  "c_name": "Dr. Hesse und Partner Ingenieure",
-  "city": "Hamburg",
-  "c_url": "https://www.dhpi.com",
   "missing": [
    "g_stack"
   ]
@@ -1117,32 +979,12 @@
  },
  {
   "task": "fill",
-  "key": "stromnetz berlin|Berlin",
-  "c_name": "Stromnetz Berlin GmbH",
-  "city": "Berlin",
-  "c_url": "https://www.stromnetz.berlin",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "bertrandt services|Berlin",
   "c_name": "Bertrandt Services GmbH",
   "city": "Berlin",
   "c_url": "https://www.bertrandt.com",
   "missing": [
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "akg software consulting|Berlin",
-  "c_name": "AKG Software Consulting GmbH",
-  "city": "Berlin",
-  "c_url": "https://www.akgsoftware.com",
-  "missing": [
-   "kp_url"
   ]
  }
 ]
