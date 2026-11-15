@@ -42,38 +42,6 @@
  },
  {
   "task": "fill",
-  "key": "universität freiburg professur für fernerkundung und landschaftsinformationssysteme|Freiburg im Breisgau",
-  "c_name": "Universität Freiburg – Professur für Fernerkundung und Landschaftsinformationssysteme",
-  "city": "Freiburg im Breisgau",
-  "c_url": "https://www.felis.uni-freiburg.de",
-  "missing": [
-   "g_stack",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "regiodata|Freiburg im Breisgau",
-  "c_name": "regioDATA GmbH",
-  "city": "Freiburg im Breisgau",
-  "c_url": "https://www.regiodata-gmbh.de/",
-  "missing": [
-   "postal_code",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "fraunhofer institut für solare energiesysteme ise|Freiburg im Breisgau",
-  "c_name": "Fraunhofer-Institut für Solare Energiesysteme ISE",
-  "city": "Freiburg im Breisgau",
-  "c_url": "https://www.ise.fraunhofer.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "landesamt für geologie rohstoffe und bergbau lgrb|Freiburg im Breisgau",
   "c_name": "Landesamt für Geologie, Rohstoffe und Bergbau (LGRB)",
   "city": "Freiburg im Breisgau",
@@ -84,22 +52,12 @@
  },
  {
   "task": "fill",
-  "key": "stadt freiburg vermessungsamt|Freiburg im Breisgau",
-  "c_name": "Stadt Freiburg – Vermessungsamt",
+  "key": "regiodata|Freiburg im Breisgau",
+  "c_name": "regioDATA GmbH",
   "city": "Freiburg im Breisgau",
-  "c_url": "https://www.freiburg.de",
+  "c_url": "https://www.regiodata-gmbh.de/",
   "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "freiburger verkehrs vag|Freiburg im Breisgau",
-  "c_name": "Freiburger Verkehrs AG (VAG)",
-  "city": "Freiburg im Breisgau",
-  "c_url": "https://www.vag-freiburg.de",
-  "missing": [
-   "g_stack"
+   "postal_code"
   ]
  },
  {
