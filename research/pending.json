@@ -109,32 +109,7 @@
   "city": "Münster",
   "c_url": "https://www.uni-muenster.de/Geoinformatics",
   "missing": [
-   "g_stack",
-   "kp_url",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "bezirksregierung münster|Münster",
-  "c_name": "Bezirksregierung Münster",
-  "city": "Münster",
-  "c_url": "https://www.bezreg-muenster.de",
-  "missing": [
-   "g_stack",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landschaftsverband westfalen lippe lwl|Münster",
-  "c_name": "Landschaftsverband Westfalen-Lippe (LWL)",
-  "city": "Münster",
-  "c_url": "https://www.lwl.org",
-  "missing": [
-   "g_stack",
-   "kp_url"
   ]
  },
  {
@@ -144,39 +119,7 @@
   "city": "Münster",
   "c_url": "https://www.fh-muenster.de/bau/",
   "missing": [
-   "g_stack",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landesbetrieb wald und holz nordrhein westfalen|Münster",
-  "c_name": "Landesbetrieb Wald und Holz Nordrhein-Westfalen",
-  "city": "Münster",
-  "c_url": "https://www.wald-und-holz.nrw.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hansa luftbild|Münster",
-  "c_name": "Hansa Luftbild AG",
-  "city": "Münster",
-  "c_url": "https://www.hansaluftbild.de",
-  "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "stadtwerke münster|Münster",
-  "c_name": "Stadtwerke Münster GmbH",
-  "city": "Münster",
-  "c_url": "https://www.stadtwerke-muenster.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
