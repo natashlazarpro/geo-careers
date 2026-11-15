@@ -17,31 +17,7 @@
   "c_url": "https://g-jonasson.de",
   "missing": [
    "adress",
-   "postal_code",
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
-  "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
-  "city": "Kiel",
-  "c_url": "https://www.geographie.uni-kiel.de",
-  "missing": [
-   "g_stack",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "wasserstraßen und schifffahrtsamt nord ostsee kanal|Kiel",
-  "c_name": "Wasserstraßen- und Schifffahrtsamt Nord-Ostsee-Kanal",
-  "city": "Kiel",
-  "c_url": "https://www.wsa-nord-ostsee-kanal.wsv.de/",
-  "missing": [
-   "size",
-   "li_url"
+   "postal_code"
   ]
  },
  {
@@ -56,22 +32,12 @@
  },
  {
   "task": "fill",
-  "key": "landeshauptstadt kiel amt für bauordnung vermessung und geoinformation|Kiel",
-  "c_name": "Landeshauptstadt Kiel – Amt für Bauordnung, Vermessung und Geoinformation",
+  "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
+  "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
   "city": "Kiel",
-  "c_url": "https://www.kiel.de",
+  "c_url": "https://www.geographie.uni-kiel.de",
   "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dataport aör|Kiel",
-  "c_name": "Dataport AöR",
-  "city": "Kiel",
-  "c_url": "https://www.dataport.de",
-  "missing": [
-   "g_stack"
+   "li_url"
   ]
  },
  {
@@ -82,16 +48,6 @@
   "c_url": "https://www.kvg-kiel.de",
   "missing": [
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "north io|Kiel",
-  "c_name": "north.io GmbH",
-  "city": "Kiel",
-  "c_url": "https://www.north.io",
-  "missing": [
-   "size"
   ]
  },
  {
