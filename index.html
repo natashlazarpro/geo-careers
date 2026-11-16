@@ -71,7 +71,8 @@
     .site-header .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-top: 28px; padding-bottom: 28px; }
     .logo { color: var(--text); text-decoration: none; font-family: var(--serif); font-size: 24px; }
     .logo:hover { color: var(--text); }
-    .nav { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 13px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 13px; margin-left: auto; }
+    .site-header .wrap { column-gap: 28px; }
     .nav a { color: var(--text); text-decoration: none; padding: 4px 0 2px; border-bottom: 1px solid transparent; }
     .nav a[aria-current="page"] { border-bottom-color: var(--accent); }
     .nav a.nav-ghost { border: 1px solid var(--text); padding: 8px 14px; }
@@ -270,7 +271,8 @@
       .suggest-card { padding: 20px; }
       .wrap { padding: 0 16px; }
       .hero { padding: 32px 16px 24px; }
-      .nav { gap: 16px; }
+      .nav { gap: 16px; order: 3; width: 100%; margin-left: 0; }
+      .lang-switch { order: 2; }
       .map-box, .panel { height: 440px; }
       .f-row .label, .more .label { width: 100%; padding-top: 0; }
     }
@@ -287,11 +289,11 @@
       <a href="#employers" data-route="employers" data-i18n="nav_employers">Employers</a>
       <a href="#cities" data-route="cities" data-i18n="nav_cities">Cities</a>
       <a class="nav-ghost" href="#suggest" data-route="suggest" data-i18n="nav_suggest">Suggest</a>
-      <div class="seg small" role="group" aria-label="Language">
-        <button type="button" data-setlang="en" aria-pressed="false">EN</button>
-        <button type="button" data-setlang="de" aria-pressed="true">DE</button>
-      </div>
     </nav>
+    <div class="seg small lang-switch" role="group" aria-label="Language">
+      <button type="button" data-setlang="en" aria-pressed="false">EN</button>
+      <button type="button" data-setlang="de" aria-pressed="true">DE</button>
+    </div>
   </div>
 </header>
 
