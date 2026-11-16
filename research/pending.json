@@ -787,16 +787,6 @@
  },
  {
   "task": "fill",
-  "key": "sweco|Köln",
-  "c_name": "Sweco GmbH",
-  "city": "Köln",
-  "c_url": "https://www.sweco-gmbh.de/",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "planungsbüro via eg|Köln",
   "c_name": "Planungsbüro VIA eG",
   "city": "Köln",
@@ -823,16 +813,6 @@
   "c_url": "https://geographie.uni-koeln.de/en",
   "missing": [
    "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "deutsches zentrum für luft und raumfahrt|Köln",
-  "c_name": "Deutsches Zentrum für Luft- und Raumfahrt e.V.",
-  "city": "Köln",
-  "c_url": "https://www.dlr.de/",
-  "missing": [
-   "g_stack"
   ]
  },
  {
