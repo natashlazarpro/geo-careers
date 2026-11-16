@@ -567,16 +567,6 @@
  },
  {
   "task": "fill",
-  "key": "vössing ingenieurgesellschaft|Düsseldorf",
-  "c_name": "Vössing Ingenieurgesellschaft mbH",
-  "city": "Düsseldorf",
-  "c_url": "https://www.voessing.de/",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "hydro ingenieure planungsgesellschaft für siedlungswasserwirtschaft|Düsseldorf",
   "c_name": "Hydro-Ingenieure Planungsgesellschaft für Siedlungswasserwirtschaft mbH",
   "city": "Düsseldorf",
@@ -587,32 +577,12 @@
  },
  {
   "task": "fill",
-  "key": "bezirksregierung düsseldorf|Düsseldorf",
-  "c_name": "Bezirksregierung Düsseldorf",
-  "city": "Düsseldorf",
-  "c_url": "https://www.brd.nrw.de",
-  "missing": [
-   "size"
-  ]
- },
- {
-  "task": "fill",
   "key": "geoinformatikbüro dassau|Düsseldorf",
   "c_name": "Geoinformatikbüro Dassau GmbH",
   "city": "Düsseldorf",
   "c_url": "https://www.gbd-consult.de",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "flughafen düsseldorf|Düsseldorf",
-  "c_name": "Flughafen Düsseldorf GmbH",
-  "city": "Düsseldorf",
-  "c_url": "https://www.dus.com",
-  "missing": [
-   "size"
   ]
  },
  {
