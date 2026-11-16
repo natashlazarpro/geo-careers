@@ -282,6 +282,32 @@
       .nav a[aria-current="page"] { color: var(--accent-ink); border: 0; }
       .nav-ic { display: block; }
       .site-header .wrap { padding-top: 20px; padding-bottom: 20px; }
+      /* Arbeitgeber page on phones */
+      .page-head { padding-top: 16px; gap: 8px; }
+      .title { font-size: 44px; }
+      .sub { font-size: 14px; }
+      .city-search { margin-top: 20px; }
+      .city-search input { height: 50px; }
+      .city-search svg { top: 16px; }
+      .pills { gap: 8px; margin-top: 16px; }
+      .pill { height: 38px; padding: 0 12px 0 14px; font-size: 13px; gap: 6px; }
+      .count-bar { flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+      .sort .label { display: none; }
+      /* table rows become cards */
+      .table-box { overflow: visible; }
+      .table, .table tbody { display: block; min-width: 0; width: 100%; }
+      .table thead { display: none; }
+      .table tr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 0; padding: 16px; border-bottom: 1px solid var(--line-2); }
+      .table td { display: block; padding: 0; border: 0; font-size: 13px; }
+      .table td:nth-child(1) { width: 100%; margin-bottom: 4px; }
+      .table td:nth-child(1) .t-name { font-size: 21px; line-height: 1.15; }
+      .table td:nth-child(2) { width: 100%; color: var(--text); }
+      .table td:nth-child(3) { width: 100%; margin-bottom: 6px; }
+      .table td:nth-child(4), .table td:nth-child(5), .table td:nth-child(6), .table td:nth-child(7) { white-space: nowrap; }
+      .table td:nth-child(5)::before, .table td:nth-child(6)::before, .table td:nth-child(7)::before { content: '·'; margin: 0 7px; color: #c9c9c4; }
+      .table td:nth-child(8) { width: 100%; text-align: left; margin-top: 10px; font-size: 14px; }
+      .pager { gap: 2px; }
+      .pager button { min-width: 36px; height: 40px; padding: 0 8px; }
       .map-box, .panel { height: 440px; }
       .f-row .label, .more .label { width: 100%; padding-top: 0; }
     }
