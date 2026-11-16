@@ -476,16 +476,6 @@
  },
  {
   "task": "fill",
-  "key": "ggd gesellschaft für geowissenschaftliche dienste|Leipzig",
-  "c_name": "GGD Gesellschaft für Geowissenschaftliche Dienste mbH",
-  "city": "Leipzig",
-  "c_url": "https://www.geophysik-ggd.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "leipziger institut für energie|Leipzig",
   "c_name": "Leipziger Institut für Energie GmbH",
   "city": "Leipzig",
@@ -646,16 +636,6 @@
    "g_stack",
    "size",
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "lao ingenieurgesellschaft|Frankfurt am Main",
-  "c_name": "LAO Ingenieurgesellschaft mbH",
-  "city": "Frankfurt am Main",
-  "c_url": "https://leitungsauskunft-online.de/",
-  "missing": [
-   "size"
   ]
  },
  {
