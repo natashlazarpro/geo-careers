@@ -787,32 +787,12 @@
  },
  {
   "task": "fill",
-  "key": "planungsbüro via eg|Köln",
-  "c_name": "Planungsbüro VIA eG",
-  "city": "Köln",
-  "c_url": "https://www.viakoeln.de/",
-  "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "rheinnetz|Köln",
   "c_name": "RheinNetz GmbH",
   "city": "Köln",
   "c_url": "https://www.rheinnetz.de",
   "missing": [
    "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "universität zu köln geographisches institut gis fernerkundung|Köln",
-  "c_name": "Universität zu Köln – Geographisches Institut, AG GIS & Fernerkundung",
-  "city": "Köln",
-  "c_url": "https://geographie.uni-koeln.de/en",
-  "missing": [
-   "kp_url"
   ]
  },
  {
