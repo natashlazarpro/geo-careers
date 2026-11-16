@@ -617,18 +617,6 @@
  },
  {
   "task": "fill",
-  "key": "aichinger ingenieurbüro für vermessung|Stuttgart",
-  "c_name": "AICHINGER – Ingenieurbüro für Vermessung PartG",
-  "city": "Stuttgart",
-  "c_url": "http://www.aichinger-vermessung.de",
-  "missing": [
-   "size",
-   "kp_url",
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "stadt sachsenheim|Stuttgart",
   "c_name": "Stadt Sachsenheim",
   "city": "Stuttgart",
@@ -656,6 +644,16 @@
   "c_url": "https://www.gefaoe.de",
   "missing": [
    "size"
+  ]
+ },
+ {
+  "task": "fill",
+  "key": "aichinger ingenieurbüro für vermessung|Stuttgart",
+  "c_name": "AICHINGER – Ingenieurbüro für Vermessung PartG",
+  "city": "Stuttgart",
+  "c_url": "http://www.aichinger-vermessung.de",
+  "missing": [
+   "kp_url"
   ]
  },
  {
