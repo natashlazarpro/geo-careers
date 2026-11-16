@@ -72,6 +72,11 @@
     .logo { color: var(--text); text-decoration: none; font-family: var(--serif); font-size: 24px; }
     .logo:hover { color: var(--text); }
     .nav-ic { display: none; }
+    /* Buy Me a Coffee button, sized down to fit the header */
+    .support { display: flex; align-items: center; line-height: 0; }
+    .support .bmc-btn { height: 38px !important; min-width: 0 !important; padding: 0 16px !important; border-radius: 999px !important; font-size: 14px !important; font-weight: 500 !important; line-height: 1 !important; }
+    .support .bmc-btn svg { height: 20px !important; }
+    .support .bmc-btn-text { margin-left: 6px !important; }
     .nav { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 13px; margin-left: auto; }
     .site-header .wrap { column-gap: 28px; }
     .nav a { color: var(--text); text-decoration: none; padding: 4px 0 2px; border-bottom: 1px solid transparent; }
@@ -232,7 +237,7 @@
     .map-credit a { color: var(--muted); }
 
     /* ── Footer ─────────────────────────────────────────────────────────────── */
-    .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-top: 40px; padding-bottom: 40px; font-size: 12px; color: var(--muted); }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 12px; padding-top: 40px; padding-bottom: 40px; font-size: 12px; color: var(--muted); }
     .site-footer a { color: var(--muted); text-decoration: none; }
     .site-footer a:hover { color: var(--text); }
     .footer-mark { font-family: var(--serif); font-size: 16px; color: var(--text); }
@@ -282,6 +287,8 @@
       .nav a[aria-current="page"] { color: var(--accent-ink); border: 0; }
       .nav-ic { display: block; }
       .site-header .wrap { padding-top: 20px; padding-bottom: 20px; }
+      .support { order: 3; width: 100%; }
+      .support .bmc-btn { height: 34px !important; font-size: 13px !important; }
       /* Arbeitgeber page on phones */
       .page-head { padding-top: 16px; gap: 8px; }
       .title { font-size: 44px; }
@@ -319,6 +326,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="#map">GeoCareers</a>
+    <div class="support"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="natashlazarpro" data-color="#db3169" data-emoji="🐍" data-font="Poppins" data-text="Support GeoCareers" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script></div>
     <nav class="nav" aria-label="Main">
       <a href="#map" data-route="map"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span data-i18n="nav_map">Map</span></a>
       <a href="#employers" data-route="employers"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg><span data-i18n="nav_employers">Employers</span></a>
@@ -470,7 +478,6 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="support"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="natashlazarpro" data-color="#db3169" data-emoji="🐍" data-font="Poppins" data-text="Support GeoCareers" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script></div>
     <span class="footer-mark">geocareers.app</span>
   </div>
 </footer>
