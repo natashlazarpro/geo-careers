@@ -1,5 +1,35 @@
 [
  {
+  "task": "research",
+  "key": "yer staffing|Essen",
+  "c_name": "YER Staffing GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 3,
+  "job_titles": "GIS-Spezialist (m/w/d) | Referent (m/w/d) Geodatenmanagement | Geomatiker (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004021703-S | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004021779-S | https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004021712-S"
+ },
+ {
+  "task": "research",
+  "key": "vertigis|Berlin",
+  "c_name": "VertiGIS",
+  "city": "Berlin",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Consultant Geoinformationssysteme (GIS) (m/w/x)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/13644-220302-S"
+ },
+ {
+  "task": "research",
+  "key": "cabo personal|Essen",
+  "c_name": "Cabo Personal GmbH",
+  "city": "Essen",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "GIS-/CAD-Spezialist für Glasfaser-Bestandsnetze (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/18866-4M8ECOAH6XSE7F3E-S"
+ },
+ {
   "task": "fill",
   "key": "ingenieurbüro dipl ing g jonasson|Kiel",
   "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
