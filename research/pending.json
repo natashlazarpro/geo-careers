@@ -93,36 +93,6 @@
  },
  {
   "task": "fill",
-  "key": "ohb|Bremen",
-  "c_name": "OHB SE",
-  "city": "Bremen",
-  "c_url": "https://www.ohb.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "airbus defence and space bremen|Bremen",
-  "c_name": "Airbus Defence and Space Bremen",
-  "city": "Bremen",
-  "c_url": "https://www.airbus.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dlr institut für raumfahrtsysteme|Bremen",
-  "c_name": "DLR – Institut für Raumfahrtsysteme",
-  "city": "Bremen",
-  "c_url": "https://www.dlr.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "universität bremen institut für geographie|Bremen",
   "c_name": "Universität Bremen – Institut für Geographie",
   "city": "Bremen",
@@ -137,16 +107,6 @@
   "c_name": "Bremer Straßenbahn AG (BSAG)",
   "city": "Bremen",
   "c_url": "https://www.bsag.de",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "blg logistics group|Bremen",
-  "c_name": "BLG Logistics Group",
-  "city": "Bremen",
-  "c_url": "https://www.blg-logistics.com",
   "missing": [
    "g_stack"
   ]
@@ -170,8 +130,7 @@
   "city": "Hannover",
   "c_url": "https://www.ggis.de",
   "missing": [
-   "g_stack",
-   "li_url"
+   "g_stack"
   ]
  },
  {
@@ -259,26 +218,6 @@
  },
  {
   "task": "fill",
-  "key": "dmtech|Karlsruhe",
-  "c_name": "dmTECH GmbH",
-  "city": "Karlsruhe",
-  "c_url": "https://www.dmtech.tech/de/",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
-  "key": "dhl group|Bonn",
-  "c_name": "DHL Group",
-  "city": "Bonn",
-  "c_url": "https://group.dhl.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "gemeinsame landesplanungsabteilung berlin brandenburg|Potsdam",
   "c_name": "Gemeinsame Landesplanungsabteilung Berlin-Brandenburg",
   "city": "Potsdam",
@@ -306,16 +245,6 @@
   "c_url": "https://www.uni-potsdam.de",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "landeshauptstadt potsdam bereich geoinformation|Potsdam",
-  "c_name": "Landeshauptstadt Potsdam – Bereich Geoinformation",
-  "city": "Potsdam",
-  "c_url": "https://www.potsdam.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -506,16 +435,6 @@
  },
  {
   "task": "fill",
-  "key": "mitteldeutsche flughafen flughafen leipzig halle|Leipzig",
-  "c_name": "Mitteldeutsche Flughafen AG (Flughafen Leipzig/Halle)",
-  "city": "Leipzig",
-  "c_url": "https://www.mdf-ag.com",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
   "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
   "city": "Leipzig",
@@ -537,32 +456,12 @@
  },
  {
   "task": "fill",
-  "key": "ministerium des innern des landes nordrhein westfalen|Düsseldorf",
-  "c_name": "Ministerium des Innern des Landes Nordrhein-Westfalen",
-  "city": "Düsseldorf",
-  "c_url": "https://www.im.nrw",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "vermessungsbüro düsseldorf dipl ing h büchel|Düsseldorf",
   "c_name": "Vermessungsbüro Düsseldorf Dipl.-Ing. H. Büchel",
   "city": "Düsseldorf",
   "c_url": "https://www.buechel-kitzhoefer.de/",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hydro ingenieure planungsgesellschaft für siedlungswasserwirtschaft|Düsseldorf",
-  "c_name": "Hydro-Ingenieure Planungsgesellschaft für Siedlungswasserwirtschaft mbH",
-  "city": "Düsseldorf",
-  "c_url": "https://www.hydro-ingenieure.de/",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -604,16 +503,6 @@
   "c_url": "https://www.gefaoe.de",
   "missing": [
    "size"
-  ]
- },
- {
-  "task": "fill",
-  "key": "aichinger ingenieurbüro für vermessung|Stuttgart",
-  "c_name": "AICHINGER – Ingenieurbüro für Vermessung PartG",
-  "city": "Stuttgart",
-  "c_url": "http://www.aichinger-vermessung.de",
-  "missing": [
-   "kp_url"
   ]
  },
  {
