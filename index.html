@@ -286,7 +286,7 @@
       .hero { padding: 32px 16px 24px; }
       /* phones: the main nav becomes a tab bar pinned to the bottom of the screen */
       body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
-      .nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; margin: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0;
+      .nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
              padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); background: rgba(255, 255, 255, .96); border-top: 1px solid var(--line);
              -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
       .nav a, .nav a.nav-ghost { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 52px; padding: 4px 2px;
@@ -338,7 +338,6 @@
       <a href="#map" data-route="map"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span data-i18n="nav_map">Map</span></a>
       <a href="#employers" data-route="employers"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg><span data-i18n="nav_employers">Employers</span></a>
       <a href="#cities" data-route="cities"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l5-3v15M10 21V4l9 4v13"/><path d="M13 10h3M13 14h3"/></svg><span data-i18n="nav_cities">Cities</span></a>
-      <a href="#suggest" data-route="suggest"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span data-i18n="nav_suggest">Suggest</span></a>
       <a class="nav-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLScQqgBiL9dsYR1wd1e3cI4jZoqLTO1dZvytucIfulvQEOIaEw/viewform" target="_blank" rel="noopener"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5z"/><path d="M8 9h8M8 12h5"/></svg><span data-i18n="nav_feedback">Feedback</span></a>
     </nav>
     <div class="seg small lang-switch" role="group" aria-label="Language">
