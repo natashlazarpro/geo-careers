@@ -240,9 +240,16 @@
     .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 12px; padding-top: 40px; padding-bottom: 40px; font-size: 12px; color: var(--muted); }
     .site-footer a { color: var(--muted); text-decoration: none; }
     .site-footer a:hover { color: var(--text); }
+    .site-footer .fb-link { margin-right: auto; }
     .footer-mark { font-family: var(--serif); font-size: 16px; color: var(--text); }
 
     [hidden] { display: none !important; }
+
+    /* ── Launch feedback strip (under the map) ──────────────────────────────── */
+    .feedback { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); }
+    .feedback p { margin: 0; display: flex; align-items: center; gap: 12px; font-size: 14px; flex: 1 1 320px; }
+    .fb-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+    .fb-btn { height: 44px; padding: 0 20px; gap: 6px; white-space: nowrap; }
 
     /* ── Suggest ────────────────────────────────────────────────────────────── */
     .suggest { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; padding-top: 40px; }
@@ -364,6 +371,10 @@
           <div class="detail" id="panel-detail" hidden></div>
         </section>
       </div>
+      <aside class="feedback" aria-label="Feedback" data-i18n-aria="fb_aria">
+        <p><span class="fb-dot" aria-hidden="true"></span><span data-i18n="fb_text">GeoCareers just launched. Tell us what worked and what’s missing. It takes 2 minutes.</span></p>
+        <a class="btn btn-ghost fb-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScQqgBiL9dsYR1wd1e3cI4jZoqLTO1dZvytucIfulvQEOIaEw/viewform" target="_blank" rel="noopener"><span data-i18n="fb_btn">Give feedback</span> <span aria-hidden="true">↗</span></a>
+      </aside>
     </div>
   </section>
 
@@ -478,6 +489,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
+    <a class="fb-link" href="https://docs.google.com/forms/d/e/1FAIpQLScQqgBiL9dsYR1wd1e3cI4jZoqLTO1dZvytucIfulvQEOIaEw/viewform" target="_blank" rel="noopener" data-i18n="fb_footer">Feedback</a>
     <span class="footer-mark">geocareers.app</span>
   </div>
 </footer>
@@ -530,6 +542,7 @@ const T = {
     sg_thanks_sub: 'Every suggestion is checked by hand before it goes on the map.', sg_again: 'Suggest another', sg_back: 'Back to the map',
     sg_err_required: 'Please fill in the company name and the city.', sg_err_url: 'That careers link doesn’t look like a web address.',
     sg_err_rate: 'Thanks — you’ve sent a lot today. Please try again tomorrow.', sg_err_generic: 'Sending didn’t work. Please try again in a moment.',
+    fb_aria: 'Feedback', fb_text: 'GeoCareers just launched. Tell us what worked and what’s missing. It takes 2 minutes.', fb_btn: 'Give feedback', fb_footer: 'Feedback',
     hero_eyebrow: 'An index of GIS employers',
     hero_title: 'Where maps get <em>made</em>',
     search_label: 'Search a tool, city or employer', search_ph: 'Search a tool, city or employer', explore: 'Explore',
@@ -562,6 +575,7 @@ const T = {
     sg_thanks_sub: 'Jeder Vorschlag wird von Hand geprüft, bevor er auf die Karte kommt.', sg_again: 'Weiteren vorschlagen', sg_back: 'Zurück zur Karte',
     sg_err_required: 'Bitte Unternehmen und Stadt ausfüllen.', sg_err_url: 'Der Karriere-Link sieht nicht wie eine Webadresse aus.',
     sg_err_rate: 'Danke – du hast heute schon viele geschickt. Bitte morgen erneut versuchen.', sg_err_generic: 'Das Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.',
+    fb_aria: 'Feedback', fb_text: 'GeoCareers ist gerade gestartet. Sag uns, was gut war und was fehlt. Dauert 2 Minuten.', fb_btn: 'Feedback geben', fb_footer: 'Feedback',
     hero_eyebrow: 'Ein Verzeichnis der GIS-Arbeitgeber',
     hero_title: 'Wo Karten <em>entstehen</em>',
     search_label: 'Tool, Stadt oder Arbeitgeber suchen', search_ph: 'Tool, Stadt oder Arbeitgeber suchen', explore: 'Entdecken',
