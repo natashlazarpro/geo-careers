@@ -1,0 +1,578 @@
+[
+  {
+    "task": "research",
+    "key": "vertigis|Berlin",
+    "c_name": "VertiGIS GmbH",
+    "c_url": "https://www.vertigis.com",
+    "adress": "Eichenstraße 3b",
+    "postal_code": "12435",
+    "city": "Berlin",
+    "sector": "GIS / Geoinformatics",
+    "g_role": "Core product",
+    "g_stack": "ArcGIS, Python",
+    "size": null,
+    "kp_url": "https://vertigis.recruitee.com/l/en",
+    "kununu_url": null,
+    "kununu_rate": null,
+    "li_url": null,
+    "eng": "VertiGIS GmbH develops geographic information system software and solutions built on Esri technology, for utilities, telecom networks and public administration. Its professional services consultants configure and customise the GIS products and run customer projects. The Berlin office is one of six German locations.",
+    "de": "Die VertiGIS GmbH entwickelt Software und Lösungen für Geoinformationssysteme auf Basis von Esri-Technologie, für Versorger, Telekommunikationsnetze und die öffentliche Verwaltung. Die Berater im Bereich Professional Services konfigurieren und passen die GIS-Produkte an und betreuen Kundenprojekte. Das Berliner Büro ist einer von sechs deutschen Standorten.",
+    "sprach": "DE/ENG",
+    "confidence": "high",
+    "notes": "Berlin address from vertigis.com/contact-us (German offices list). Job 'Consultant Geoinformationssysteme (GIS)' via get-in-it.de/jobsuche/p220302: locations Berlin/Bonn/Dresden/Hamburg/München, names Esri + VertiGIS technologies, Python and relational databases (nice-to-have), very good German + solid English. kp_url = VertiGIS Recruitee careers portal (lists Berlin jobs). li_url left null: linkedin.com/company URL only seen on theorg.com, not in search results. Size not set: sources conflict (vaia 50-100, theorg 201-500). Arbeitsagentur job link could not be fetched (permission not granted)."
+  },
+  {
+    "task": "fill",
+    "key": "ingenieurbüro dipl ing g jonasson|Kiel",
+    "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
+    "city": "Kiel",
+    "adress": null,
+    "postal_code": null,
+    "notes": "Could not verify a Kiel office: g-jonasson.de fetch not permitted; werkenntdenbesten.de gives HQ Schöllinger Feld 30, 58300 Wetter (Ruhr); a job ad on remotely.de lists locations Dahn, Wetter, Werl, Kreuztal, Karben, Bad Frankenhausen, Magdeburg, Sömmerda, Hamburg, Leipzig, but not Kiel. Worth re-checking whether this employer really has a Kiel office."
+  },
+  {
+    "task": "fill",
+    "key": "neumann baugrunduntersuchung|Kiel",
+    "c_name": "Neumann Baugrunduntersuchung GmbH & Co. KG",
+    "city": "Kiel",
+    "g_stack": null,
+    "notes": "No job ad or tech page naming tools found; own site fetch not permitted; StepStone company page shows no open jobs."
+  },
+  {
+    "task": "fill",
+    "key": "christian albrechts universität zu kiel geographisches institut|Kiel",
+    "c_name": "Christian-Albrechts-Universität zu Kiel – Geographisches Institut",
+    "city": "Kiel",
+    "li_url": null,
+    "notes": "Searches for the CAU/Kiel University LinkedIn company page only returned personal profiles; no linkedin.com/company URL seen."
+  },
+  {
+    "task": "fill",
+    "key": "kvg kieler verkehrsgesellschaft|Kiel",
+    "c_name": "KVG Kieler Verkehrsgesellschaft mbH",
+    "city": "Kiel",
+    "g_stack": null,
+    "notes": "No KVG job ad naming GIS tools found; kvg-kiel.de fetch not permitted."
+  },
+  {
+    "task": "fill",
+    "key": "gemeinsame landesplanungsabteilung berlin brandenburg|Potsdam",
+    "c_name": "Gemeinsame Landesplanungsabteilung Berlin-Brandenburg",
+    "city": "Potsdam",
+    "kp_url": null,
+    "li_url": null,
+    "notes": "GL job ads (e.g. Referent GL 3/GL 5) are posted on the Land Berlin portal karriereportal-stellen.berlin.de and karriere.brandenburg.de. These are state portals, not the GL's own careers page, so kp_url was left empty. No LinkedIn company page found."
+  },
+  {
+    "task": "fill",
+    "key": "ihb lindschulte ingenieurgesellschaft|Potsdam",
+    "c_name": "IHB Lindschulte Ingenieurgesellschaft mbH",
+    "city": "Potsdam",
+    "g_stack": null,
+    "notes": "No Lindschulte job ad naming GIS tools found in search results; own site not fetched."
+  },
+  {
+    "task": "fill",
+    "key": "universität potsdam institut für umweltwissenschaften und geographie|Potsdam",
+    "c_name": "Universität Potsdam – Institut für Umweltwissenschaften und Geographie",
+    "city": "Potsdam",
+    "li_url": null,
+    "notes": "No linkedin.com/company URL for Universität Potsdam or the institute appeared in search results."
+  },
+  {
+    "task": "fill",
+    "key": "forschungsinstitut für nachhaltigkeit rifs iass potsdam|Potsdam",
+    "c_name": "Forschungsinstitut für Nachhaltigkeit (RIFS/IASS Potsdam)",
+    "city": "Potsdam",
+    "g_stack": "GDAL, SQL, Python, R",
+    "notes": "From the RIFS job ad 'Postdoctoral researcher Urban Air Quality, Mobility, and Health' (ref. 10065, rifs-potsdam.de/en/node/11155). It names GDAL/OGR for raster/vector data, R, Python and SQL, plus generic 'GIS tools'."
+  },
+  {
+    "task": "fill",
+    "key": "abbu r methner l ruhnow gbr|Berlin",
+    "c_name": "ABBU R. Methner & L. Ruhnow GbR",
+    "city": "Berlin",
+    "size": null,
+    "kp_url": null,
+    "li_url": null,
+    "notes": "No source with employee count, careers page or LinkedIn found; own site not fetched."
+  },
+  {
+    "task": "fill",
+    "key": "dipl ing thomas glaubitz|Berlin",
+    "c_name": "Dipl.-Ing. Thomas Glaubitz",
+    "city": "Berlin",
+    "size": null,
+    "li_url": null,
+    "notes": "No employee count or LinkedIn company page found. A unser-stadtplan.de listing shows the office at Rosa-Luxemburg-Damm 9 A, Hoppegarten, so check that the Berlin city assignment is right."
+  },
+  {
+    "task": "fill",
+    "key": "wgi service|Berlin",
+    "c_name": "WGI Service GmbH",
+    "city": "Berlin",
+    "size": null,
+    "notes": "No source stating employee count found."
+  },
+  {
+    "task": "fill",
+    "key": "geo metrik ingenieurgesellschaft berlin|Berlin",
+    "c_name": "GEO-METRIK-Ingenieurgesellschaft mbH Berlin",
+    "city": "Berlin",
+    "li_url": null,
+    "notes": "Search for GEO-METRIK LinkedIn returned only job ads and resumegeni pages, no linkedin.com/company URL."
+  },
+  {
+    "task": "fill",
+    "key": "bertrandt services|Berlin",
+    "c_name": "Bertrandt Services GmbH",
+    "city": "Berlin",
+    "g_stack": null,
+    "notes": "No Bertrandt GIS job ad naming tools found. The Berlin GIS ads found were from other firms (e.g. Akkodis), so Bertrandt may be a staffing/engineering-services firm, not a GIS employer."
+  },
+  {
+    "task": "fill",
+    "key": "ivw verkehrs und wasserwirtschaftsplanung|Dresden",
+    "c_name": "IVW Verkehrs- und Wasserwirtschaftsplanung GmbH",
+    "city": "Dresden",
+    "g_stack": null,
+    "kp_url": null,
+    "li_url": null,
+    "notes": "Own site ivw-dresden.de could not be fetched (blocked); no job ads naming tools and no careers page found via search. LinkedIn search shows only an employee profile, no company page."
+  },
+  {
+    "task": "fill",
+    "key": "christian holz tecfa|Dresden",
+    "c_name": "Christian Holz TECFA",
+    "city": "Dresden",
+    "kp_url": null,
+    "li_url": null,
+    "notes": "tecfa.de could not be fetched (blocked); no careers page found in search. LinkedIn shows only personal profiles of the owner (Christian Holz - TECFA), no company page."
+  },
+  {
+    "task": "fill",
+    "key": "murphy geospatial|Dresden",
+    "c_name": "Murphy Geospatial Germany GmbH",
+    "city": "Dresden",
+    "adress": null,
+    "notes": "Arbeitsagentur ads (10001-1003745749-S, 10001-1003414211-S) and rosinenpicker list Dresden as work location (PLZ 01109) but no street; HQ given as Cologne. Street not verifiable."
+  },
+  {
+    "task": "fill",
+    "key": "karlsruher institut für technologie kit institut für photogrammetrie und fernerkundung|Karlsruhe",
+    "c_name": "Karlsruher Institut für Technologie (KIT) – Institut für Photogrammetrie und Fernerkundung",
+    "city": "Karlsruhe",
+    "li_url": "https://www.linkedin.com/school/kit/",
+    "notes": "li_url is the KIT university-level LinkedIn page (a /school/ page, from LinkedIn search results); no own IPF page found."
+  },
+  {
+    "task": "fill",
+    "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
+    "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
+    "city": "Leipzig",
+    "g_stack": null,
+    "kp_url": null,
+    "notes": "mdv.de could not be fetched (blocked). Only job ad found (mdv.de PDF, Sekretariat) names just MS Office, not a GIS ad; it links no careers page (applications to bewerbungen@mdv.de)."
+  },
+  {
+    "task": "fill",
+    "key": "cdm smith|Leipzig",
+    "c_name": "CDM Smith SE",
+    "city": "Leipzig",
+    "adress": null,
+    "postal_code": null,
+    "notes": "cdmsmith.com office pages list only HQ (Am Umweltpark 3-5, 44793 Bochum). Job ads confirm a Leipzig location (04xxx) but no street/PLZ found."
+  },
+  {
+    "task": "fill",
+    "key": "geo metrik ingenieurgesellschaft leipzig|Leipzig",
+    "c_name": "GEO-METRIK-Ingenieurgesellschaft mbH Leipzig",
+    "city": "Leipzig",
+    "li_url": null,
+    "notes": "LinkedIn search shows only 'GEO-METRIK Vermessungs GmbH' (linkedin.com/company/geo-metrik-vermessungs-gmbh), not clearly this Leipzig entity; left null."
+  },
+  {
+    "task": "fill",
+    "key": "universität leipzig institut für geographie|Leipzig",
+    "c_name": "Universität Leipzig – Institut für Geographie",
+    "city": "Leipzig",
+    "li_url": "https://de.linkedin.com/school/university-of-leipzig/",
+    "notes": "li_url is the university-level LinkedIn page (/school/, from LinkedIn search results); no institute page found."
+  },
+  {
+    "task": "fill",
+    "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig",
+    "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur",
+    "city": "Leipzig",
+    "li_url": "https://www.linkedin.com/school/htwk-leipzig/",
+    "notes": "li_url is the HTWK's own LinkedIn /school/ page from search results (posts appear under htwk-leipzig)."
+  },
+  {
+    "task": "fill",
+    "key": "leipziger institut für energie|Leipzig",
+    "c_name": "Leipziger Institut für Energie GmbH",
+    "city": "Leipzig",
+    "g_stack": null,
+    "notes": "No job ads or tech pages naming GIS tools found in search; own site not checked (fetching blocked)."
+  },
+  {
+    "task": "fill",
+    "key": "landesdirektion sachsen|Leipzig",
+    "c_name": "Landesdirektion Sachsen",
+    "city": "Leipzig",
+    "g_stack": null,
+    "notes": "Search found only GeoSN / other Saxon agency GIS ads, none from Landesdirektion Sachsen naming tools."
+  },
+  {
+    "task": "fill",
+    "key": "regionaler planungsverband leipzig westsachsen|Leipzig",
+    "c_name": "Regionaler Planungsverband Leipzig-Westsachsen",
+    "city": "Leipzig",
+    "li_url": null,
+    "notes": "No LinkedIn company page found in search results."
+  },
+  {
+    "task": "fill",
+    "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
+    "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
+    "city": "Leipzig",
+    "kp_url": null,
+    "notes": "Job ads exist as PDFs under mellon-gesellschaft.de/wp-content/uploads (applications to bewerbungen@mellon-gesellschaft.de); no dedicated careers page URL seen (site fetch blocked)."
+  },
+  {
+    "task": "fill",
+    "key": "landesamt für geologie rohstoffe und bergbau lgrb|Freiburg im Breisgau",
+    "c_name": "Landesamt für Geologie, Rohstoffe und Bergbau (LGRB)",
+    "city": "Freiburg im Breisgau",
+    "li_url": null,
+    "notes": "LinkedIn searches (3) returned only personal profiles of LGRB staff, no linkedin.com/company page for LGRB; lgrb-bw.de pages show no LinkedIn link. li_url left null."
+  },
+  {
+    "task": "fill",
+    "key": "regiodata|Freiburg im Breisgau",
+    "c_name": "regioDATA GmbH",
+    "city": "Freiburg im Breisgau",
+    "postal_code": "79108",
+    "notes": "regiodata-gmbh.de/de/kontakt lists Freiburg office: Tullastr. 61, 79108 Freiburg im Breisgau (HQ is Lörrach)."
+  },
+  {
+    "task": "fill",
+    "key": "esa european space operations centre esoc|Darmstadt",
+    "c_name": "ESA – European Space Operations Centre (ESOC)",
+    "city": "Darmstadt",
+    "g_stack": "GIS, Python, JavaScript, Java, C++, Node.js, Docker, HTML, CSS",
+    "notes": "g_stack from an (expired) ESA YGT ad at ESOC Darmstadt 'Development and Integration of Tools for Supporting Field Science Activities' (untalent.org mirror), which names these tools and 'GIS systems maps'; no ESOC ad naming ArcGIS/QGIS found. Medium confidence."
+  },
+  {
+    "task": "fill",
+    "key": "tu darmstadt institut für geodäsie|Darmstadt",
+    "c_name": "TU Darmstadt – Institut für Geodäsie",
+    "city": "Darmstadt",
+    "li_url": "https://de.linkedin.com/school/technische-universitat-darmstadt/",
+    "notes": "No institute-level LinkedIn page found; li_url is the university's own LinkedIn school page (Technische Universität Darmstadt) from search results."
+  },
+  {
+    "task": "fill",
+    "key": "hochschule darmstadt h_da|Darmstadt",
+    "c_name": "Hochschule Darmstadt (h_da)",
+    "city": "Darmstadt",
+    "li_url": "https://de.linkedin.com/company/hochschule-darmstadt-hda",
+    "notes": "Several h_da LinkedIn pages exist in search results (hochschule-darmstadt, hochschuledarmstadt, www.h-da.com, hochschule-darmstadt-hda); chose 'Hochschule Darmstadt hda' because staff profiles link it as current company. h-da.de pages show no LinkedIn link, so medium confidence."
+  },
+  {
+    "task": "fill",
+    "key": "vermessungsbüro seeger und kollegen gbr|Frankfurt am Main",
+    "c_name": "Vermessungsbüro Seeger und Kollegen GbR",
+    "city": "Frankfurt am Main",
+    "g_stack": "Total station, CAD",
+    "size": null,
+    "li_url": null,
+    "notes": "g_stack from their Ingenieurvermessung service page (electro-optical Tachymeter, CAD-Bestands-Lageplan); no brand/software named and no job ads found. No headcount stated on site (two partners, Seeger and Blaurock). No LinkedIn company page found."
+  },
+  {
+    "task": "fill",
+    "key": "dorsch global|Frankfurt am Main",
+    "c_name": "Dorsch Global GmbH",
+    "city": "Frankfurt am Main",
+    "g_stack": null,
+    "notes": "Checked Dorsch job portal (europe.dorsch.com/de/karriere/offene-stellen, page 1) and searches: only BIM roles (Berlin/Dresden/Nürnberg), no GIS ad naming tools. GIS remote-sensing ad found was for Dorsch Impact GmbH (Essen) and named no tools. Left null."
+  },
+  {
+    "task": "fill",
+    "key": "aecom|Frankfurt am Main",
+    "c_name": "AECOM Deutschland GmbH",
+    "city": "Frankfurt am Main",
+    "g_stack": null,
+    "notes": "AECOM Deutschland ads found (Frankfurt/Berlin: data center, substation, design manager) name no GIS software; AECOM GIS ads naming ArcGIS were US/Dubai roles, not used. Left null."
+  },
+  {
+    "task": "fill",
+    "key": "trassify|Frankfurt am Main",
+    "c_name": "Trassify GmbH",
+    "city": "Frankfurt am Main",
+    "kp_url": null,
+    "notes": "trassify.de/ueber-uns has no careers link (only LinkedIn); site-restricted search found no careers page or Personio portal. Only a third-party Werkstudent Geoinformatiker listing. Left null. Office confirmed: Ostparkstraße 37, 60385 Frankfurt. (Direct fetch of trassify.de homepage was blocked.)"
+  },
+  {
+    "task": "fill",
+    "key": "syna|Frankfurt am Main",
+    "c_name": "Syna GmbH",
+    "city": "Frankfurt am Main",
+    "kp_url": "https://www.syna.de/corp/fuer-bewerber",
+    "notes": "Search result on syna.de titled 'Karriere' (syna.de/corp/fuer-bewerber); the page itself could not be fetched (client error), so confirmed by search result only."
+  },
+  {
+    "task": "fill",
+    "key": "goethe universität frankfurt am main|Frankfurt am Main",
+    "c_name": "Goethe-Universität Frankfurt am Main",
+    "city": "Frankfurt am Main",
+    "li_url": "https://www.linkedin.com/school/goethe-universitat-frankfurt/",
+    "notes": "University's own LinkedIn school page, linked on uni-frankfurt.de/en/datenschutzerklaerung/social-media."
+  },
+  {
+    "task": "fill",
+    "key": "frankfurt university of applied sciences|Frankfurt am Main",
+    "c_name": "Frankfurt University of Applied Sciences",
+    "city": "Frankfurt am Main",
+    "li_url": null,
+    "notes": "Search results show posts by the official page (slug 'frankfurtuas') but never the page URL itself; social-media Impressum page could not be fetched. Not constructing a URL, left null."
+  },
+  {
+    "task": "fill",
+    "key": "abg frankfurt holding wohnungsbau und beteiligungsgesellschaft|Frankfurt am Main",
+    "c_name": "ABG FRANKFURT HOLDING Wohnungsbau- und Beteiligungsgesellschaft mbH",
+    "city": "Frankfurt am Main",
+    "g_stack": null,
+    "notes": "No GIS job ad found; checked Bauingenieur Planung Tiefbau ad on abg.de (names only Microsoft Office and generic CAD). Left null."
+  },
+  {
+    "task": "fill",
+    "key": "universität münster institut für geoinformatik|Münster",
+    "c_name": "Universität Münster – Institut für Geoinformatik",
+    "city": "Münster",
+    "li_url": "https://www.linkedin.com/school/university-of-muenster/",
+    "notes": "li_url is the University of Münster's own LinkedIn school page (from search results); no separate ifgi company page found. ifgi homepage could not be fetched."
+  },
+  {
+    "task": "fill",
+    "key": "fh münster fachbereich bauingenieurwesen|Münster",
+    "c_name": "FH Münster – Fachbereich Bauingenieurwesen",
+    "city": "Münster",
+    "li_url": null,
+    "notes": "No FH Münster linkedin.com/company or /school URL appeared in search results (only personal profiles); left null."
+  },
+  {
+    "task": "fill",
+    "key": "fischer teamplan ingenieurbüro|Essen",
+    "c_name": "FISCHER TEAMPLAN Ingenieurbüro GmbH",
+    "city": "Essen",
+    "adress": null,
+    "postal_code": null,
+    "notes": "A 2024 job ad on fischer-teamplan.de mentions 'Standort Essen' but gives no street address; GIS/GDI job ad lists 9 offices (Solingen, Erftstadt, Köln, Düsseldorf, Dortmund, Coesfeld, Koblenz, Frankfurt, Speyer) without Essen. Essen office unverified; homepage could not be fetched."
+  },
+  {
+    "task": "fill",
+    "key": "hegmanns|Essen",
+    "c_name": "Hegmanns AG",
+    "city": "Essen",
+    "size": null,
+    "notes": "No employee count found (chemie.de, job ads silent). Sources place Hegmanns AG / HGH group in Gelsenkirchen (Hafenstraße 12, 45881), not Essen; HGH is an engineering/automation group, GIS relevance unclear."
+  },
+  {
+    "task": "fill",
+    "key": "universität duisburg essen institut für geographie|Essen",
+    "c_name": "Universität Duisburg-Essen – Institut für Geographie",
+    "city": "Essen",
+    "li_url": "https://www.linkedin.com/school/university-of-duisburg-essen/",
+    "notes": "li_url is the university's central LinkedIn school page, linked from uni-due.de/de/socialmedia/central-socialmedia-channels.php; the institute has no own LinkedIn page listed."
+  },
+  {
+    "task": "fill",
+    "key": "rag montan immobilien|Essen",
+    "c_name": "RAG Montan Immobilien GmbH",
+    "city": "Essen",
+    "g_stack": null,
+    "notes": "No GIS job ads or tech pages from RAG Montan Immobilien found; results were RAG AG ads only. Left null."
+  },
+  {
+    "task": "fill",
+    "key": "geosat|Essen",
+    "c_name": "GEOsat GmbH",
+    "city": "Essen",
+    "kp_url": null,
+    "notes": "No careers page URL appeared in search results; geosat.de could not be fetched. Left null."
+  },
+  {
+    "task": "fill",
+    "key": "christian sommerhoff vermessungsbüro|Dortmund",
+    "c_name": "Christian Sommerhoff Vermessungsbüro",
+    "city": "Dortmund",
+    "c_url": null,
+    "kp_url": null,
+    "li_url": null,
+    "notes": "No own website, careers page or LinkedIn found. The Stadt Dortmund Merkblatt zur Gebäudeeinmessung (2025) lists 'ÖbVI Dipl.-Ing. Christian Sommerhoff, Olpketalstraße 14, 44229 Dortmund' with no website. Only a Workwise.io profile exists (third-party)."
+  },
+  {
+    "task": "fill",
+    "key": "schamp partner architekten stadtplaner|Dortmund",
+    "c_name": "Schamp & Partner Architekten Stadtplaner PartGmbB",
+    "city": "Dortmund",
+    "g_stack": null,
+    "li_url": null,
+    "notes": "No GIS job ads found; no company LinkedIn page in results (only a partner's personal profile). Left null."
+  },
+  {
+    "task": "fill",
+    "key": "rag aktiengesellschaft|Dortmund",
+    "c_name": "RAG Aktiengesellschaft",
+    "city": "Dortmund",
+    "adress": null,
+    "notes": "RAG job ads give only the HQ address (Im Welterbe 10, 45141 Essen) and sites such as Herne; no Dortmund office address found. Left null; Dortmund office may not exist."
+  },
+  {
+    "task": "fill",
+    "key": "dokom gesellschaft für telekommunikation dokom21|Dortmund",
+    "c_name": "DOKOM Gesellschaft für Telekommunikation mbH (DOKOM21)",
+    "city": "Dortmund",
+    "g_stack": null,
+    "notes": "No DOKOM21 GIS or network-documentation job ads found in search results. Left null."
+  },
+  {
+    "task": "fill",
+    "key": "vermessungsbüro töpfer und totzek|Düsseldorf",
+    "c_name": "Vermessungsbüro Töpfer und Totzek",
+    "city": "Düsseldorf",
+    "kp_url": null,
+    "li_url": null,
+    "notes": "No careers page or LinkedIn company page found; t-t.nrw could not be fetched. Small ÖbVI office."
+  },
+  {
+    "task": "fill",
+    "key": "vermessungsbüro düsseldorf dipl ing h büchel|Düsseldorf",
+    "c_name": "Vermessungsbüro Düsseldorf Dipl.-Ing. H. Büchel",
+    "city": "Düsseldorf",
+    "li_url": null,
+    "notes": "No LinkedIn company page in results. Left null."
+  },
+  {
+    "task": "fill",
+    "key": "geoinformatikbüro dassau|Düsseldorf",
+    "c_name": "Geoinformatikbüro Dassau GmbH",
+    "city": "Düsseldorf",
+    "li_url": null,
+    "notes": "LinkedIn search showed only unrelated 'GBD' companies; GitHub org gbd-consult exists but no LinkedIn company page. gbd-consult.de could not be fetched. Left null."
+  },
+  {
+    "task": "fill",
+    "key": "netz zentrum für innovative technologie|Bremen",
+    "c_name": "NETZ-Zentrum für innovative Technologie GmbH",
+    "city": "Bremen",
+    "g_stack": null,
+    "kp_url": null,
+    "notes": "Could not verify: netz-zentrum.de returns no indexed pages in search and could not be fetched; no GIS job ads found on StepStone/Arbeitsagentur. Neither g_stack nor kp_url filled."
+  },
+  {
+    "task": "fill",
+    "key": "universität bremen institut für geographie|Bremen",
+    "c_name": "Universität Bremen – Institut für Geographie",
+    "city": "Bremen",
+    "li_url": "https://www.linkedin.com/school/university-of-bremen",
+    "notes": "li_url is the University of Bremen's own LinkedIn school page (university-level, not the institute), as linked on uni-bremen.de/en/university/university-communication-and-marketing/social-media."
+  },
+  {
+    "task": "fill",
+    "key": "bremer straßenbahn bsag|Bremen",
+    "c_name": "Bremer Straßenbahn AG (BSAG)",
+    "city": "Bremen",
+    "g_stack": null,
+    "notes": "No GIS job ad naming tools found (bsag.de careers page blocks fetching; vaia/Arbeitsagentur listings had only non-GIS jobs). A 'Systembetreuer Infrastrukturmanagementsystem IDMS' ad was listed on praktischkommune.de but the page couldn't be fetched. g_stack left null."
+  },
+  {
+    "task": "fill",
+    "key": "de engineering|Hannover",
+    "c_name": "de engineering gmbh",
+    "city": "Hannover",
+    "adress": null,
+    "postal_code": null,
+    "g_stack": null,
+    "notes": "de-engineering.com (Contact, How to find us, Imprint) lists only one office: Am Kümmerling 21-25, 55294 Bodenheim. No Hannover office mentioned. Services are automotive, mechanical/plant, automation and energy engineering, and no GIS tools are named. Probably the wrong city and not a GIS employer; consider confidence low/hide."
+  },
+  {
+    "task": "fill",
+    "key": "ggis|Hannover",
+    "c_name": "gGIS mbH",
+    "city": "Hannover",
+    "g_stack": null,
+    "notes": "ggis.de redirects (302) to domainmarkt.de/ggis.de, so the domain appears to be parked/for sale. No job ads naming tools found. Company may no longer be active; please re-check."
+  },
+  {
+    "task": "fill",
+    "key": "landesamt für bergbau energie und geologie|Hannover",
+    "c_name": "Landesamt für Bergbau Energie und Geologie",
+    "city": "Hannover",
+    "li_url": null,
+    "notes": "LinkedIn search only returned employee profiles, not a company page; lbeg.niedersachsen.de has no LinkedIn link. li_url not verifiable."
+  },
+  {
+    "task": "fill",
+    "key": "stadt sachsenheim|Stuttgart",
+    "c_name": "Stadt Sachsenheim",
+    "city": "Stuttgart",
+    "size": null,
+    "li_url": null,
+    "notes": "sachsenheim.de Stadtverwaltung page links only Instagram/Facebook and gives no employee count; LinkedIn search returned only employee profiles. Both left null."
+  },
+  {
+    "task": "fill",
+    "key": "bertrandt|Stuttgart",
+    "c_name": "Bertrandt AG",
+    "city": "Stuttgart",
+    "g_stack": null,
+    "notes": "Bertrandt's StepStone job list has no GIS/geodata jobs, and no other GIS ad was found. g_stack left null. GIS seems at most marginal for this employer."
+  },
+  {
+    "task": "fill",
+    "key": "gefaö gesellschaft für angewandte ökologie und umweltplanung|Stuttgart",
+    "c_name": "GefaÖ – Gesellschaft für angewandte Ökologie und Umweltplanung mbH",
+    "city": "Stuttgart",
+    "size": null,
+    "notes": "No employee count on getbaito or yumda profiles. size left null. (Their careers page is gefaoe.de/jobs/aktuelle-stellenangebote according to getbaito, but that column wasn't requested.)"
+  },
+  {
+    "task": "fill",
+    "key": "hochschule für technik stuttgart hft stuttgart|Stuttgart",
+    "c_name": "Hochschule für Technik Stuttgart (HFT Stuttgart)",
+    "city": "Stuttgart",
+    "li_url": "https://de.linkedin.com/school/hochschule-für-technik-stuttgart-–-university-of-applied-sciences/",
+    "notes": "li_url is the HFT's LinkedIn school page, linked in the footer of hft-stuttgart.com (university communications page) and confirmed in LinkedIn search results."
+  },
+  {
+    "task": "fill",
+    "key": "vermessungsbüro ludwig und wettengel gbr|Köln",
+    "c_name": "Vermessungsbüro Ludwig und Wettengel GbR",
+    "city": "Köln",
+    "c_url": null,
+    "g_stack": null,
+    "size": null,
+    "kp_url": null,
+    "li_url": null,
+    "notes": "No own website found. Only the koeln.de directory listing turned up (Kölner Str. 234, 51149 Köln), with no website, staff or tools. Nothing else verifiable."
+  },
+  {
+    "task": "fill",
+    "key": "vermessungsbüro gütz|Köln",
+    "c_name": "Vermessungsbüro Gütz",
+    "city": "Köln",
+    "kp_url": null,
+    "li_url": null,
+    "notes": "vermessung-guetz.de has no general careers/jobs page, only recruiting pages for Werkstudent (/werkstudent/), Ausbildung (/ausbildung/) and Praktikum. kp_url left null, but /werkstudent/ could be used if acceptable. No LinkedIn link on site and no company page in LinkedIn search."
+  },
+  {
+    "task": "fill",
+    "key": "rheinnetz|Köln",
+    "c_name": "RheinNetz GmbH",
+    "city": "Köln",
+    "g_stack": null,
+    "notes": "No current RheinNetz GIS job ad found. rheinnetz.de/stellenangebote loads its listings dynamically (dvinci portal rheinenergie.dvinci-hr.com/de/p/RNG), and none are GIS-related. g_stack left null."
+  }
+]
