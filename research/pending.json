@@ -1,15 +1,5 @@
 [
  {
-  "task": "research",
-  "key": "vertigis|Berlin",
-  "c_name": "VertiGIS",
-  "city": "Berlin",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "Consultant Geoinformationssysteme (GIS) (m/w/x)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/13644-220302-S"
- },
- {
   "task": "fill",
   "key": "ingenieurbüro dipl ing g jonasson|Kiel",
   "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
@@ -188,30 +178,10 @@
  },
  {
   "task": "fill",
-  "key": "esa european space operations centre esoc|Darmstadt",
-  "c_name": "ESA – European Space Operations Centre (ESOC)",
-  "city": "Darmstadt",
-  "c_url": "https://www.esa.int",
-  "missing": [
-   "g_stack"
-  ]
- },
- {
-  "task": "fill",
   "key": "tu darmstadt institut für geodäsie|Darmstadt",
   "c_name": "TU Darmstadt – Institut für Geodäsie",
   "city": "Darmstadt",
   "c_url": "https://www.geodesy.tu-darmstadt.de",
-  "missing": [
-   "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "hochschule darmstadt h_da|Darmstadt",
-  "c_name": "Hochschule Darmstadt (h_da)",
-  "city": "Darmstadt",
-  "c_url": "https://h-da.de",
   "missing": [
    "li_url"
   ]
@@ -255,16 +225,6 @@
   "c_url": "https://www.uni-potsdam.de",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "forschungsinstitut für nachhaltigkeit rifs iass potsdam|Potsdam",
-  "c_name": "Forschungsinstitut für Nachhaltigkeit (RIFS/IASS Potsdam)",
-  "city": "Potsdam",
-  "c_url": "https://www.rifs-potsdam.de",
-  "missing": [
-   "g_stack"
   ]
  },
  {
@@ -532,7 +492,6 @@
   "city": "Frankfurt am Main",
   "c_url": "https://www.seegerundkollegen.de",
   "missing": [
-   "g_stack",
    "size",
    "li_url"
   ]
@@ -563,16 +522,6 @@
   "c_name": "Trassify GmbH",
   "city": "Frankfurt am Main",
   "c_url": "https://www.trassify.de",
-  "missing": [
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "syna|Frankfurt am Main",
-  "c_name": "Syna GmbH",
-  "city": "Frankfurt am Main",
-  "c_url": "https://syna.de",
   "missing": [
    "kp_url"
   ]
