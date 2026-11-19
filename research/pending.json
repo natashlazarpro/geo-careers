@@ -1,35 +1,5 @@
 [
  {
-  "task": "research",
-  "key": "brunel nl wuppertal|Düsseldorf",
-  "c_name": "Brunel GmbH NL Wuppertal",
-  "city": "Düsseldorf",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "Katasterwesen - Vermessungsingenieur/Vermessungstechniker (w/m/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12362-TR274703_172CS3-S"
- },
- {
-  "task": "research",
-  "key": "yer|Essen",
-  "c_name": "YER",
-  "city": "Essen",
-  "address_from_job_ad": null,
-  "open_jobs": 1,
-  "job_titles": "GIS-Spezialist (m/w/d)",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-5002859196-S"
- },
- {
-  "task": "research",
-  "key": "landratsamt enzkreis|Karlsruhe",
-  "c_name": "Landratsamt Enzkreis",
-  "city": "Karlsruhe",
-  "address_from_job_ad": "Zähringerallee 3, 75177",
-  "open_jobs": 1,
-  "job_titles": "Vermessungstechniker*in der Servicestelle des Sachgebiets Liegenschaftskataster und Bodenordnung",
-  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1004032682-S"
- },
- {
   "task": "fill",
   "key": "ingenieurbüro dipl ing g jonasson|Kiel",
   "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
@@ -218,6 +188,17 @@
  },
  {
   "task": "fill",
+  "key": "landratsamt enzkreis|Karlsruhe",
+  "c_name": "Landratsamt Enzkreis",
+  "city": "Karlsruhe",
+  "c_url": "https://www.enzkreis.de",
+  "missing": [
+   "g_stack",
+   "li_url"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "karlsruher institut für technologie kit institut für photogrammetrie und fernerkundung|Karlsruhe",
   "c_name": "Karlsruher Institut für Technologie (KIT) – Institut für Photogrammetrie und Fernerkundung",
   "city": "Karlsruhe",
@@ -353,17 +334,6 @@
  },
  {
   "task": "fill",
-  "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
-  "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
-  "city": "Leipzig",
-  "c_url": "https://www.mdv.de",
-  "missing": [
-   "g_stack",
-   "kp_url"
-  ]
- },
- {
-  "task": "fill",
   "key": "cdm smith|Leipzig",
   "c_name": "CDM Smith SE",
   "city": "Leipzig",
@@ -405,6 +375,16 @@
  },
  {
   "task": "fill",
+  "key": "mitteldeutscher verkehrsverbund mdv|Leipzig",
+  "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)",
+  "city": "Leipzig",
+  "c_url": "https://www.mdv.de",
+  "missing": [
+   "g_stack"
+  ]
+ },
+ {
+  "task": "fill",
   "key": "leipziger institut für energie|Leipzig",
   "c_name": "Leipziger Institut für Energie GmbH",
   "city": "Leipzig",
@@ -431,16 +411,6 @@
   "c_url": "https://www.rpv-westsachsen.de",
   "missing": [
    "li_url"
-  ]
- },
- {
-  "task": "fill",
-  "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig",
-  "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH",
-  "city": "Leipzig",
-  "c_url": "https://mellon-gesellschaft.de",
-  "missing": [
-   "kp_url"
   ]
  },
  {
