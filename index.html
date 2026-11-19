@@ -620,7 +620,8 @@ const SECTOR_DE = {
   'Transport Planning': 'Verkehrsplanung', 'Urban & Spatial Planning': 'Stadtplanung & Raumplanung', 'Other': 'Weitere',
 };
 
-let LANG = 'de';
+// first visit: German only for browsers set to German, English for everyone else; a saved choice wins (see Init)
+let LANG = /^de\b/i.test((navigator.languages && navigator.languages[0]) || navigator.language || '') ? 'de' : 'en';
 const t = k => T[LANG][k];
 
 // ─── State ────────────────────────────────────────────────────────────────────
