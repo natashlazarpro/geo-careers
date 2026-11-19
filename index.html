@@ -34,7 +34,9 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "zb35ete8b6");
   </script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+  <link rel="preconnect" href="https://api.mapbox.com" crossorigin />
+  <link rel="preload" href="https://data-schield.natashlazar-pro.workers.dev" as="fetch" crossorigin="anonymous" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js" defer></script>
   <style>
     /* ── Tokens: Barely-There UI · one accent (Razzmatazz) · Newsreader + Geist ── */
     :root {
@@ -88,6 +90,8 @@
     .nav-ic { display: none; }
     /* Buy Me a Coffee button, sized down to fit the header */
     .support { display: flex; align-items: center; line-height: 0; }
+    .support .bmc-btn { display: inline-flex; align-items: center; background: #db3169; color: #fff; text-decoration: none; white-space: nowrap; }
+    .support .bmc-btn:hover { color: #fff; filter: brightness(.95); }
     .support .bmc-btn { height: 38px !important; min-width: 0 !important; padding: 0 16px !important; border-radius: 999px !important; font-size: 14px !important; font-weight: 500 !important; line-height: 1 !important; font-family: var(--sans) !important; }
     .support .bmc-btn svg { height: 20px !important; }
     .support .bmc-btn-text { margin-left: 6px !important; }
@@ -347,7 +351,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="#map">GeoCareers</a>
-    <div class="support"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="natashlazarpro" data-color="#db3169" data-emoji="🐍" data-font="Inter" data-text="Support GeoCareers" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script></div>
+    <div class="support"><a class="bmc-btn" href="https://buymeacoffee.com/natashlazarpro" target="_blank" rel="noopener"><span aria-hidden="true">🐍</span><span class="bmc-btn-text">Support GeoCareers</span></a></div>
     <nav class="nav" aria-label="Main">
       <a href="#map" data-route="map"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span data-i18n="nav_map">Map</span></a>
       <a href="#employers" data-route="employers"><svg class="nav-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg><span data-i18n="nav_employers">Employers</span></a>
@@ -508,7 +512,7 @@
   </div>
 </footer>
 
-<script>
+<script type="module">
 // ─── Config ───────────────────────────────────────────────────────────────────
 const MAPBOX_TOKEN = '__MAPBOX_TOKEN__';
 const DATA_URL = 'https://data-schield.natashlazar-pro.workers.dev';
@@ -626,8 +630,8 @@ const F = { q: '', city: '', sectors: new Set(), roles: new Set(), langs: new Se
 let openPill = null;          // which filter dropdown is open
 let draft = new Set();        // choices in the open dropdown before Apply
 let selectedId = null;
-const markers = {};
 let hoverPopup = null;
+function syncQuery() { qWords = F.q ? norm(F.q).split(/\s+/).filter(Boolean) : []; cityWant = norm(F.city); }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 const $ = s => document.querySelector(s);
@@ -644,9 +648,13 @@ const sectorParts = s => String(s || '').split('/').map(p => p.trim()).filter(Bo
 const sectorText = s => LANG === 'de' ? sectorParts(s).map(p => SECTOR_DE[p] || p).join(' / ') : sectorParts(s).join(' / ');
 const roleText = r => (r && t('role')[r]) || r || '';
 const langText = l => t('lang')[l] || l || '';
+const CITY_CACHE = new Map();
 const cityOf = name => {
+  if (CITY_CACHE.has(name)) return CITY_CACHE.get(name);
   const n = norm(name);
-  return CITIES.find(c => c.keys.some(k => norm(k) === n || n.startsWith(norm(k))));
+  const hit = CITIES.find(c => c.keys.some(k => norm(k) === n || n.startsWith(norm(k))));
+  CITY_CACHE.set(name, hit);
+  return hit;
 };
 // a town outside the big cities is shown by its own name, without notes like "(Hamburg area)"
 // "Sweco GmbH (Hamburg office)" → "Sweco GmbH": a note in brackets that only names a city or an office is dropped
@@ -661,17 +669,18 @@ const cityText = name => { const c = cityOf(name); return c ? c[LANG] : String(n
 const sortByRating = list => [...list].sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1) || a.name.localeCompare(b.name));
 const starSvg = '<svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>';
 
+// search text and city names per office, worked out once (both languages)
+function prepare(c) {
+  const city = cityOf(c.city);
+  const sectorDe = sectorParts(c.sector).map(p => SECTOR_DE[p] || p).join(' ');
+  c._hay = norm([c.name, c.city, city ? city.de + ' ' + city.en : '', c.sector, sectorDe, c.tech.join(' ')].join(' '));
+  c._cityNames = city ? city.keys.concat([city.de, city.en]).map(norm) : [norm(c.city)];
+  return c;
+}
+let qWords = [], cityWant = '';
 function matches(c) {
-  if (F.q) {
-    const hay = norm([c.name, c.city, cityText(c.city), c.sector, sectorText(c.sector), c.tech.join(' ')].join(' '));
-    if (!norm(F.q).split(/\s+/).every(w => hay.includes(w))) return false;
-  }
-  if (F.city) {
-    const want = norm(F.city);
-    const city = cityOf(c.city);
-    const names = city ? city.keys.concat([city.de, city.en]).map(norm) : [norm(c.city)];
-    if (!names.some(n => n.startsWith(want) || want.startsWith(n))) return false;
-  }
+  if (qWords.length && !qWords.every(w => c._hay.includes(w))) return false;
+  if (cityWant && !c._cityNames.some(n => n.startsWith(cityWant) || cityWant.startsWith(n))) return false;
   if (F.sectors.size && !sectorParts(c.sector).some(p => F.sectors.has(p))) return false;
   if (F.roles.size && !F.roles.has(c.role)) return false;
   if (F.langs.size && ![...F.langs].some(l => (l === 'en' ? /ENG/ : /DE/).test(c.lang || ''))) return false;
@@ -686,25 +695,59 @@ mapboxgl.accessToken = MAPBOX_TOKEN;
 const map = new mapboxgl.Map({ container: 'mapbox', style: 'mapbox://styles/mapbox/light-v11', center: [10.4, 51.1], zoom: 4.6 });
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
 map.on('moveend', () => { if (loadState === 'ready' && selectedId === null) renderPanel(); });
-map.on('click', e => {
-  if (selectedId !== null && !e.originalEvent.target.closest('.mk')) select(null);
-});
+// Employers are drawn by the map itself (one WebGL layer) instead of one HTML element each:
+// panning and zooming no longer move hundreds of DOM nodes. The list beside the map
+// offers the same employers to keyboard and screen-reader users.
+const NONE = ['==', ['get', 'id'], -1];
+let layersReady = false, hoverId = null;
+function addEmployerLayers() {
+  map.addSource('employers', { type: 'geojson', data: {
+    type: 'FeatureCollection',
+    features: COMPANIES.filter(c => isFinite(c.lat) && isFinite(c.lng))
+      .map(c => ({ type: 'Feature', id: c.id, properties: { id: c.id }, geometry: { type: 'Point', coordinates: [c.lng, c.lat] } })),
+  } });
+  map.addLayer({ id: 'emp-dots', type: 'circle', source: 'employers', paint: {
+    'circle-radius': ['case', ['boolean', ['feature-state', 'hover'], false], 7, 5],
+    'circle-color': '#ffffff', 'circle-stroke-color': '#3c3c3b', 'circle-stroke-width': 1.5,
+  } });
+  map.addLayer({ id: 'emp-hit', type: 'circle', source: 'employers', paint: { 'circle-radius': 11, 'circle-color': '#000000', 'circle-opacity': 0 } });
+  map.addLayer({ id: 'emp-halo', type: 'circle', source: 'employers', filter: NONE, paint: { 'circle-radius': 16, 'circle-color': 'rgba(219,48,105,0.14)' } });
+  map.addLayer({ id: 'emp-sel', type: 'circle', source: 'employers', filter: NONE, paint: { 'circle-radius': 7, 'circle-color': '#db3069' } });
+  layersReady = true;
 
-function createMarker(c) {
-  const el = document.createElement('div');
-  el.className = 'mk';
-  el.setAttribute('aria-hidden', 'true');   // the list beside the map offers the same employers to keyboard and screen readers
-  el.innerHTML = '<span class="mk-dot"></span>';
-  el.addEventListener('click', e => { e.stopPropagation(); select(c.id, { fly: true }); });
-  el.addEventListener('mouseenter', () => {
+  const setHover = id => {
+    if (hoverId !== null) map.setFeatureState({ source: 'employers', id: hoverId }, { hover: false });
+    hoverId = id;
+    if (id !== null) map.setFeatureState({ source: 'employers', id }, { hover: true });
+  };
+  map.on('mousemove', 'emp-hit', e => {
+    const id = e.features[0].id;
+    if (id === hoverId) return;
+    setHover(id);
+    map.getCanvas().style.cursor = 'pointer';
+    const c = COMPANIES[id];
     if (hoverPopup) hoverPopup.remove();
     hoverPopup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: 14 })
       .setLngLat([c.lng, c.lat])
       .setHTML(`<div class="pop-name">${esc(c.name)}</div><div class="pop-sector">${esc(sectorText(c.sector))}</div>`)
       .addTo(map);
   });
-  el.addEventListener('mouseleave', () => { if (hoverPopup) { hoverPopup.remove(); hoverPopup = null; } });
-  return new mapboxgl.Marker({ element: el, anchor: 'center' }).setLngLat([c.lng, c.lat]).addTo(map);
+  map.on('mouseleave', 'emp-hit', () => {
+    setHover(null);
+    map.getCanvas().style.cursor = '';
+    if (hoverPopup) { hoverPopup.remove(); hoverPopup = null; }
+  });
+  map.on('click', e => {
+    const f = map.queryRenderedFeatures(e.point, { layers: ['emp-hit'] })[0];
+    if (f) select(f.id, { fly: true });
+    else if (selectedId !== null) select(null);
+  });
+}
+function paintSelection() {
+  if (!layersReady) return;
+  const f = selectedId === null ? NONE : ['==', ['get', 'id'], selectedId];
+  map.setFilter('emp-halo', f);
+  map.setFilter('emp-sel', f);
 }
 
 function fitTo(list) {
@@ -719,8 +762,8 @@ function fitTo(list) {
 function select(id, opts = {}) {
   const prev = selectedId;
   selectedId = id;
-  Object.entries(markers).forEach(([cid, m]) => m.getElement().classList.toggle('on', +cid === id));
-  const c = COMPANIES.find(x => x.id === id);
+  paintSelection();
+  const c = COMPANIES[id];
   if (c && opts.fly) map.flyTo({ center: [c.lng, c.lat], zoom: Math.max(map.getZoom(), 12), duration: 450 });
   renderPanel();
   if (opts.focus && c) $('#panel-detail .d-name')?.focus({ preventScroll: true });
@@ -761,8 +804,27 @@ function detailHTML(c) {
 }
 
 // ─── Rendering ────────────────────────────────────────────────────────────────
+const LIST_CHUNK = 40;
+let listRows = [], listShown = 0;
+const rowHTML = c => `
+    <button type="button" class="row" data-id="${c.id}">
+      <span><span class="row-name">${esc(c.name)}</span>
+      <span class="row-meta" style="display:block">${esc([cityText(c.city), sectorText(c.sector)].filter(Boolean).join(' · '))}${ratingOf(c) ? ` · ★ ${esc(ratingOf(c))}` : ''}</span></span>
+      <span class="row-dot"></span>
+    </button>`;
+const listMore = new IntersectionObserver(entries => { if (entries.some(e => e.isIntersecting)) appendRows(); }, { rootMargin: '200px' });
+function appendRows() {
+  const list = $('#list');
+  listMore.disconnect();
+  const next = listRows.slice(listShown, listShown + LIST_CHUNK);
+  if (!next.length) return;
+  listShown += next.length;
+  list.insertAdjacentHTML('beforeend', next.map(rowHTML).join(''));
+  // when one of the last ten rows comes into view, add the next rows
+  if (listShown < listRows.length) [...list.querySelectorAll('.row')].slice(-10).forEach(r => listMore.observe(r));
+}
 function renderPanel() {
-  const c = COMPANIES.find(x => x.id === selectedId);
+  const c = COMPANIES[selectedId];
   const detail = $('#panel-detail');
   $('#panel-list').hidden = !!c;
   detail.hidden = !c;
@@ -781,18 +843,20 @@ function renderPanel() {
   $('#list').scrollTop = 0;
   $('#city-chip').innerHTML = F.city
     ? `<button type="button" class="city-chip" data-act="clear-city" aria-label="${esc(t('show_all_cities'))}">${esc(cityText(F.city) || F.city)} <span aria-hidden="true">×</span></button>` : '';
-  list.innerHTML = v.length ? v.map(c => `
-    <button type="button" class="row" data-id="${c.id}">
-      <span><span class="row-name">${esc(c.name)}</span>
-      <span class="row-meta" style="display:block">${esc([cityText(c.city), sectorText(c.sector)].filter(Boolean).join(' · '))}${ratingOf(c) ? ` · ★ ${esc(ratingOf(c))}` : ''}</span></span>
-      <span class="row-dot"></span>
-    </button>`).join('') : `<div class="empty">${esc(t('no_results'))}</div>`;
+  listRows = v; listShown = 0;
+  if (!v.length) { listMore.disconnect(); list.innerHTML = `<div class="empty">${esc(t('no_results'))}</div>`; return; }
+  list.innerHTML = '';
+  appendRows();
 }
 
 function renderMarkers() {
-  const ids = new Set(COMPANIES.filter(matches).map(c => c.id));
-  Object.entries(markers).forEach(([id, m]) => { m.getElement().style.display = ids.has(+id) ? '' : 'none'; });
-  if (selectedId !== null && !ids.has(selectedId)) select(null);
+  const ids = COMPANIES.filter(matches).map(c => c.id);
+  if (layersReady) {
+    const f = ids.length === COMPANIES.length ? null : ['in', ['get', 'id'], ['literal', ids]];
+    map.setFilter('emp-dots', f);
+    map.setFilter('emp-hit', f);
+  }
+  if (selectedId !== null && !ids.includes(selectedId)) select(null);
 }
 
 function chipHTML(value, label, pressed, extraClass = '') {
@@ -872,6 +936,8 @@ function groupEmployers(list) {
 
 // every office of the same company (across all cities), whatever the filters show
 let GROUP_OF = new Map();
+let EMP_GROUPS = [];
+let CITY_OFFICES = new Map();
 const ratingOf = c => c.rating || (siblingsOf(c).find(x => x.rating) || {}).rating || null;
 const siblingsOf = c => ((GROUP_OF.get(c.id) || {}).items || []).filter(x => x.id !== c.id);
 
@@ -885,7 +951,12 @@ function pageList(cur, last) {
   }
   return out;
 }
+let dirStale = false;
+const currentView = () => { const r = (location.hash || '#map').slice(1); return ['map', 'employers', 'cities', 'suggest'].includes(r) ? r : 'map'; };
 function renderDirectory() {
+  // the table is only built while the Employers page is open; otherwise it is rebuilt when opened
+  if (currentView() !== 'employers' && loadState === 'ready') { dirStale = true; return; }
+  dirStale = false;
   const body = $('#dir-body');
   if (loadState !== 'ready') {
     body.innerHTML = '';
@@ -895,11 +966,12 @@ function renderDirectory() {
     return;
   }
   // group over all offices so a row shows every city and the company's kununu rating, even with a city filter
-  const groups = groupEmployers(COMPANIES).flatMap(g => {
+  const groups = EMP_GROUPS.flatMap(g => {
     const hit = g.items.filter(matches);
     if (!hit.length) return [];
     const first = [...new Set(hit.map(c => cityText(c.city)).filter(Boolean))];
-    return [{ ...g, id: hit[0].id, cities: first.concat(g.cities.filter(x => !first.includes(x))) }];
+    const all = [...new Set(g.items.map(c => cityText(c.city)).filter(Boolean))];
+    return [{ ...g, id: hit[0].id, cities: first.concat(all.filter(x => !first.includes(x))) }];
   });
   const v = F.sort === 'newest'
     ? groups.sort((a, b) => String(b.added).localeCompare(String(a.added)) || b.newest - a.newest)
@@ -944,7 +1016,7 @@ function mercator(lon, lat, zoom) {
 function cityMap(city) {
   const src = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/${city.lon},${city.lat},${city.zoom},0/${PREVIEW_W}x${PREVIEW_H}@2x?logo=false&attribution=false&access_token=${MAPBOX_TOKEN}`;
   const [cx, cy] = mercator(city.lon, city.lat, city.zoom);
-  const dots = COMPANIES.filter(c => cityOf(c.city) === city && isFinite(c.lat) && isFinite(c.lng)).map(c => {
+  const dots = (CITY_OFFICES.get(city) || []).filter(c => isFinite(c.lat) && isFinite(c.lng)).map(c => {
     const [x, y] = mercator(c.lng, c.lat, city.zoom);
     const left = (x - cx) / PREVIEW_W * 100 + 50, top = (y - cy) / PREVIEW_H * 100 + 50;
     return left < 0 || left > 100 || top < 0 || top > 100 ? '' : `<span class="city-dot" style="left:${left.toFixed(2)}%;top:${top.toFixed(2)}%"></span>`;
@@ -954,7 +1026,7 @@ function cityMap(city) {
 
 function renderCities() {
   $('#city-grid').innerHTML = CITIES.map((city, i) => {
-    const n = COMPANIES.filter(c => cityOf(c.city) === city).length;
+    const n = (CITY_OFFICES.get(city) || []).length;
     const label = loadState !== 'ready' ? '' : (n ? t('employers_n')(n) : t('coming'));
     const off = loadState === 'ready' && n === 0;
     return `<button type="button" class="city-card" data-city="${esc(city[LANG])}" ${off ? 'disabled' : ''}>
@@ -992,6 +1064,7 @@ function route() {
     if (a.dataset.route === view) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
   });
   if (view === 'map') requestAnimationFrame(() => map.resize());
+  if (view === 'employers' && dirStale) renderDirectory();
 }
 window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); });
 
@@ -1014,15 +1087,19 @@ function setLang(l) {
 }
 document.querySelectorAll('[data-setlang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.setlang)));
 
-$('#q').addEventListener('input', e => { F.q = e.target.value; renderMarkers(); renderPanel(); renderDirectory(); });
+let typing = null;
+const afterTyping = fn => { clearTimeout(typing); typing = setTimeout(fn, 160); };
+$('#q').addEventListener('input', e => { F.q = e.target.value; afterTyping(() => { syncQuery(); renderMarkers(); renderPanel(); renderDirectory(); }); });
 $('#hero-search').addEventListener('submit', e => {
   e.preventDefault();
+  clearTimeout(typing); F.q = $('#q').value; syncQuery(); renderMarkers(); renderPanel(); renderDirectory();
   select(null);
   fitTo(COMPANIES.filter(matches));
   $('#explorer').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
-$('#city').addEventListener('input', e => { F.city = e.target.value; renderMarkers(); renderPanel(); renderDirectory(); });
+$('#city').addEventListener('input', e => { F.city = e.target.value; afterTyping(() => { syncQuery(); renderMarkers(); renderPanel(); renderDirectory(); }); });
 
+$('#list').addEventListener('focusin', e => { const r = e.target.closest('.row'); if (r && !r.nextElementSibling) appendRows(); });
 $('#list').addEventListener('click', e => { const b = e.target.closest('.row'); if (b) select(+b.dataset.id, { fly: true, focus: true }); });
 $('#panel-detail').addEventListener('click', e => {
   if (e.target.closest('[data-act="back"]')) select(null, { focus: true });
@@ -1031,7 +1108,7 @@ $('#panel-detail').addEventListener('click', e => {
 });
 
 function toggleIn(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
-function onFilterChange() { renderFilters(); renderMarkers(); renderPanel(); renderDirectory(); }
+function onFilterChange() { syncQuery(); renderFilters(); renderMarkers(); renderPanel(); renderDirectory(); }
 $('#pills').addEventListener('click', e => {
   const pill = e.target.closest('[data-pill]');
   if (pill) {
@@ -1175,8 +1252,11 @@ async function loadData() {
       added:    c.first_seen || '',
       lat:      parseFloat(c.lat),
       lng:      parseFloat(c.lon),
-    })).filter(c => c.name);
-    GROUP_OF = new Map(groupEmployers(COMPANIES).flatMap(g => g.items.map(c => [c.id, g])));
+    })).filter(c => c.name).map((c, i) => prepare({ ...c, id: i }));
+    EMP_GROUPS = groupEmployers(COMPANIES);
+    GROUP_OF = new Map(EMP_GROUPS.flatMap(g => g.items.map(c => [c.id, g])));
+    CITY_OFFICES = new Map();
+    for (const c of COMPANIES) { const city = cityOf(c.city); if (city) CITY_OFFICES.set(city, (CITY_OFFICES.get(city) || []).concat(c)); }
     loadState = 'ready';
   } catch (err) {
     console.error('Failed to load company data:', err);
@@ -1185,7 +1265,7 @@ async function loadData() {
     return;
   }
   const place = () => {
-    COMPANIES.forEach(c => { if (isFinite(c.lat) && isFinite(c.lng)) markers[c.id] = createMarker(c); });
+    addEmployerLayers();
     renderAll();
     fitTo(COMPANIES);
   };
