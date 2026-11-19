@@ -1,0 +1,55 @@
+[
+  {
+    "task": "fill", "key": "mitteldeutscher verkehrsverbund mdv|Leipzig", "c_name": "Mitteldeutscher Verkehrsverbund GmbH (MDV)", "city": "Leipzig",
+    "c_url": "https://www.mdv.de", "adress": "Prager Straße 8", "postal_code": "04103",
+    "sector": "Transport Planning", "g_role": "Side tool", "g_stack": null, "size": "11-50",
+    "kp_url": null, "kununu_url": null, "kununu_rate": null, "li_url": null,
+    "eng": "Mitteldeutscher Verkehrsverbund GmbH (MDV) is the public transport association for parts of Saxony, Saxony-Anhalt and Thuringia, based in Leipzig. Together with 23 shareholder transport companies it organises integrated public transport for about 2.1 million people. Its head office has around 50 staff.",
+    "de": "Die Mitteldeutscher Verkehrsverbund GmbH (MDV) ist der Verkehrsverbund für Teile von Sachsen, Sachsen-Anhalt und Thüringen mit Sitz in Leipzig. Gemeinsam mit 23 Gesellschafter-Verkehrsunternehmen organisiert er einen vernetzten ÖPNV für rund 2,1 Millionen Menschen. In der Geschäftsstelle arbeiten rund 50 Mitarbeitende.",
+    "sprach": "DE", "confidence": "medium",
+    "notes": "Address, legal name and '50 Mitarbeitende' from MDV's own job-ad PDF (mdv.de/site/uploads/241002_sekretariat-der-geschaeftsleitung.pdf, dated 2024; applications via bewerbungen@mdv.de). mdv.de homepage could not be fetched in this unattended run (permission prompt unanswered), so careers page and LinkedIn not found; no GIS job ad or tool list found, g_stack stays empty."
+  },
+  {
+    "task": "fill", "key": "cdm smith|Leipzig", "c_name": "CDM Smith SE", "city": "Leipzig",
+    "c_url": "https://www.cdmsmith.com/de", "adress": null, "postal_code": null,
+    "sector": "Environment & Conservation / Hydrology", "g_role": "Dedicated team", "g_stack": null, "size": "500+",
+    "kp_url": "https://cdmsmith.com/en-150/careers", "kununu_url": null, "kununu_rate": null,
+    "li_url": "https://www.linkedin.com/company/cdmsmith",
+    "eng": "CDM Smith SE is an engineering and consulting company headquartered in Bochum with 880 staff (835 in Germany, end of 2024), working on environment, water, infrastructure and energy projects. It has an office in Leipzig, where it recently advertised a landfill-planning engineer role. Its digitalisation strategy names BIM planning and GIS development.",
+    "de": "Die CDM Smith SE ist ein Ingenieur- und Beratungsunternehmen mit Sitz in Bochum und 880 Mitarbeitenden (835 in Deutschland, Stand 12/2024) für Umwelt, Wasser, Infrastruktur und Energie. In Leipzig unterhält sie einen Standort, für den zuletzt eine Stelle in der Deponieplanung ausgeschrieben war. Ihre Digitalisierungsstrategie nennt BIM-Planung und GIS-Entwicklung.",
+    "sprach": "DE", "confidence": "medium",
+    "notes": "Leipzig street address still not found: cdmsmith.com office pages render client-side/were blocked, contact page lists only HQ Am Umweltpark 3-5, 44793 Bochum; Leipzig job ad (jobv.eu mirror of StepStone, 13.05.2026) gives only '04xxx Leipzig'. Size from CDM Smith SE Nachhaltigkeitsbericht 2024. LinkedIn and careers link from cdmsmith.com/en-eu/contact. No specific GIS tools named."
+  },
+  {
+    "task": "fill", "key": "universität leipzig institut für geographie|Leipzig", "c_name": "Universität Leipzig – Institut für Geographie", "city": "Leipzig",
+    "c_url": "https://www.uni-leipzig.de", "adress": "Johannisallee 19a", "postal_code": "04103",
+    "sector": "Other", "g_role": "Side tool", "g_stack": null, "size": null,
+    "kp_url": null, "kununu_url": null, "kununu_rate": null, "li_url": null,
+    "eng": "The Institute of Geography belongs to Leipzig University's Faculty of Physics and Earth System Sciences and is based at Johannisallee 19a. It has seven professorships and a geoscientific map collection of more than 33,000 items. Maps and spatial data support its research and teaching.",
+    "de": "Das Institut für Geographie gehört zur Fakultät für Physik und Erdsystemwissenschaften der Universität Leipzig und sitzt in der Johannisallee 19a. Es hat sieben Professuren und eine geowissenschaftliche Kartensammlung mit über 33.000 Objekten. Karten und Raumdaten unterstützen Forschung und Lehre.",
+    "sprach": "DE", "confidence": "high",
+    "notes": "Address from physes.uni-leipzig.de/institut-fuer-geographie/institut. LinkedIn still missing: uni-leipzig.de netiquette page confirms an official LinkedIn page exists but the URL could not be extracted, and uni-leipzig.de main site was blocked in this run. No GIS tools named on the institute page."
+  },
+  {
+    "task": "fill", "key": "htwk leipzig hochschule für technik wirtschaft und kultur|Leipzig", "c_name": "HTWK Leipzig – Hochschule für Technik, Wirtschaft und Kultur", "city": "Leipzig",
+    "c_url": "https://www.htwk-leipzig.de", "adress": null, "postal_code": null,
+    "sector": "Other", "g_role": "Side tool", "g_stack": null, "size": null,
+    "kp_url": "https://www.htwk-leipzig.de/en/hochschule/stellenangebote", "kununu_url": null, "kununu_rate": null,
+    "li_url": "https://www.linkedin.com/school/1044558/",
+    "eng": "HTWK Leipzig is a public university of applied sciences in Leipzig covering engineering, computer science, business, architecture, social work and media. It runs alumni networks on LinkedIn and XING. Spatial data and mapping appear mainly in its engineering and planning programmes.",
+    "de": "Die HTWK Leipzig ist eine staatliche Hochschule für angewandte Wissenschaften in Leipzig mit Ingenieurwesen, Informatik, Wirtschaft, Architektur, Sozialer Arbeit und Medien. Sie pflegt Alumni-Netzwerke auf LinkedIn und XING. Raumdaten und Kartierung spielen vor allem in den Ingenieur- und Planungsstudiengängen eine Rolle.",
+    "sprach": "DE", "confidence": "medium",
+    "notes": "LinkedIn (/school/1044558/) and the Stellenangebote link taken from the footer of HTWK's own page fas.htwk-leipzig.de/en/main-navigation/social-sciences/alumni; the job page itself could not be opened (htwk-leipzig.de blocked in this run). Main address not verified. No GIS tools found."
+  },
+  {
+    "task": "fill", "key": "mellon gesellschaft für nachhaltige infrastruktur|Leipzig", "c_name": "mellon Gesellschaft für nachhaltige Infrastruktur mbH", "city": "Leipzig",
+    "c_url": "https://mellon-gesellschaft.de", "adress": null, "postal_code": null,
+    "sector": "Urban & Spatial Planning / Environment & Conservation", "g_role": "Side tool", "g_stack": "GIS", "size": "11-50",
+    "kp_url": null, "kununu_url": null, "kununu_rate": null,
+    "li_url": "https://www.linkedin.com/company/mellon-gesellschaft-f%C3%BCr-nachhaltige-infrastruktur-mbh",
+    "eng": "mellon Gesellschaft für nachhaltige Infrastruktur mbH is a Leipzig-based planning company with about 45 staff working on the transformation of mobility, water and energy infrastructure. It also does landscape planning, nature-conservation reports and municipal heat planning, with further sites in Erfurt and Landkreis Schwäbisch Hall. GIS experience is listed as desirable in its energy and landscape-planning job ads.",
+    "de": "Die mellon Gesellschaft für nachhaltige Infrastruktur mbH ist ein Planungsunternehmen mit Sitz in Leipzig und rund 45 Mitarbeitenden für die Transformation von Mobilitäts-, Wasser- und Energieinfrastruktur. Sie erstellt außerdem Landschaftsplanungen, naturschutzfachliche Gutachten und kommunale Wärmepläne, mit weiteren Standorten in Erfurt und im Landkreis Schwäbisch Hall. GIS-Kenntnisse sind in ihren Stellenanzeigen für Energie und Landschaftsplanung erwünscht.",
+    "sprach": "DE", "confidence": "medium",
+    "notes": "No careers page found: own job-ad PDFs (mellon-gesellschaft.de/wp-content/uploads/2025/05/Ausschreibung-Energie.pdf, 2026/05/Ausschreibung-Umweltplaner_Sued-2026.pdf) only give bewerbungen@mellon-gesellschaft.de; homepage blocked in this run. Tools: only 'GIS' and district-heating planning software named in those ads. Size (45) and LinkedIn URL from the getbaito.com company profile, not from the own site. Address not verified."
+  }
+]
