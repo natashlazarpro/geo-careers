@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "17 5 * * *"        # daily ~06:17 Berlin time: Arbeitsagentur jobs + geocoding
   push:
+    branches: [main]                # research on dev waits there until it is merged
     paths: ["research/inbox/**"]    # research results from the scheduled Claude task
   workflow_dispatch:
     inputs:
