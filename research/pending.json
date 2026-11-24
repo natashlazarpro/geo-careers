@@ -1,6 +1,36 @@
 [
  {
   "task": "research",
+  "key": "victoria consulting|Leipzig",
+  "c_name": "Victoria Consulting GmbH",
+  "city": "Leipzig",
+  "address_from_job_ad": "Prager Straße 34, 04317",
+  "open_jobs": 2,
+  "job_titles": "Vermessungsingenieur Infrastrukturprojekte (m/w/d) | Teamleiter Vermessung & Geodatenmanagement Infrastrukturprojekte (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12697-k10989.12142-S | https://www.arbeitsagentur.de/jobsuche/jobdetail/12697-k10989.12224-S"
+ },
+ {
+  "task": "research",
+  "key": "julius kühn institut bundesforschungsinstitut für kulturpflanzen|Berlin",
+  "c_name": "Julius Kühn-Institut Bundesforschungsinstitut für Kulturpflanzen",
+  "city": "Berlin",
+  "address_from_job_ad": "Stahnsdorfer Damm 81, 14532",
+  "open_jobs": 1,
+  "job_titles": "GIS-Entwicklungsingenieur (w/m/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/20253-81om3fcpm2-S"
+ },
+ {
+  "task": "research",
+  "key": "ka resources|Hamburg",
+  "c_name": "KA Resources",
+  "city": "Hamburg",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Senior Platform Engineer (m/w/d) | Kubernetes | Linux | ArcGIS / Esri bei einem etablierten Technolo",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-5009624433-S"
+ },
+ {
+  "task": "research",
   "key": "materna information communications|Köln",
   "c_name": "Materna Information & Communications SE",
   "city": "Köln",
@@ -8,6 +38,16 @@
   "open_jobs": 1,
   "job_titles": "Senior Consultant ArcGIS / ESRI (m/w/d),Frankfurt am Main,Dortmund,Düsseldorf,Köln",
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12811-2381133-S"
+ },
+ {
+  "task": "research",
+  "key": "ka resources|Frankfurt am Main",
+  "c_name": "KA Resources",
+  "city": "Frankfurt am Main",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "DevSecOps / Platform Engineer (m/w/d), ArcGIS, Kubernetes, Linux bei einem etablierten Technologieko",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-5009626209-S"
  },
  {
   "task": "fill",
