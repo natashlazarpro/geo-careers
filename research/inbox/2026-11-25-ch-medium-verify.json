@@ -1,0 +1,216 @@
+[
+ {
+  "task": "fill",
+  "key": "arx iT Consulting SA|Geneva",
+  "c_name": "arx iT Consulting SA",
+  "city": "Geneva",
+  "confidence": "high",
+  "notes": "Fetched https://www.arxit.com/mentions-legales/, https://job.arxit.com/: legal notice confirms arx iT Consulting SA, 45 av de la Praille, 1227 Carouge/Genève; careers site job.arxit.com (Teamtailor, linked from arxit.com) OK, shows 30 colleagues (size 11-50 consistent)."
+ },
+ {
+  "task": "fill",
+  "key": "HKD Géomatique SA|Geneva",
+  "c_name": "HKD Géomatique SA",
+  "city": "Geneva",
+  "confidence": "high",
+  "c_url": "https://www.hkd-geomatique.com",
+  "notes": "Fetched https://www.hkd-geomatique.com/contact-et-emploi.html: confirms HKD Géomatique SA - Genève, Chemin de l'Echo 3, 1213 Onex; Emploi section states ~60 staff (51-200 consistent); kp_url OK. c_url switched to https (http version failed)."
+ },
+ {
+  "task": "fill",
+  "key": "Haller Wasser + partner SA|Geneva",
+  "c_name": "Haller Wasser + partner SA",
+  "city": "Geneva",
+  "confidence": "high",
+  "notes": "Fetched https://www.haller-wasser.ch/fr/contact, https://www.haller-wasser.ch/fr/offres-demploi: confirms rue Blavignac 10, 1227 Carouge; kp_url (/en/work-offers) opens; currently no openings listed (only internships)."
+ },
+ {
+  "task": "fill",
+  "key": "MBC ingéo SA|Geneva",
+  "c_name": "MBC ingéo SA",
+  "city": "Geneva",
+  "confidence": "high",
+  "c_url": "https://mbc-ingeo.ch/",
+  "g_stack": "ArcGIS, GIS, AutoCAD, GNSS, Laser scanning, MS Office",
+  "notes": "Fetched https://mbc-ingeo.ch/contact/, https://mbc-ingeo.ch/jobs/: confirms Route de Troinex 33, CH-1234 Vessy; jobs page ad requires ArcGIS Desktop (ESRI), Autocad, LTOP, Homère, MS Office -> added ArcGIS, AutoCAD, MS Office. c_url changed to https://mbc-ingeo.ch/ (www/http failed)."
+ },
+ {
+  "task": "fill",
+  "key": "KÜPFER GÉOMÈTRES SA|Geneva",
+  "c_name": "KÜPFER GÉOMÈTRES SA",
+  "city": "Geneva",
+  "confidence": "high",
+  "c_url": "https://www.kupfer-geometres.ch",
+  "kp_url": "https://www.kupfer-geometres.ch/contact.html",
+  "g_stack": "QGIS, AutoCAD, Leica, GNSS, Laser scanning, Mobile mapping",
+  "notes": "Fetched https://www.kupfer-geometres.ch/contact.html, https://www.kupfer-geometres.ch/equipe.html, https://www.kupfer-geometres.ch/Offre_emploi_geomaticien_CFC.pdf: confirms Rue Eugène-Marziano 41, 1227 Les Acacias; kp_url was the team page -> replaced by 'Contact & Emploi' page with current géomaticien(ne) CFC ad; ad requires Leica instruments, Leica Infinity, AutoCAD, Covadis, QGIS and mentions 3D scanning, mobile mapping; 17 staff (11-50 consistent). Domain redirects kupfer-geometre.ch -> kupfer-geometres.ch."
+ },
+ {
+  "task": "fill",
+  "key": "Géomètres associés Ney & Hurni SA|Geneva",
+  "c_name": "Géomètres associés Ney & Hurni SA",
+  "city": "Geneva",
+  "confidence": "high",
+  "g_stack": "GIS, CAD, GNSS, Laser scanning, LiDAR, Drones/UAV",
+  "notes": "Fetched https://www.neyhurni.com/contact.html, https://www.neyhurni.com/, https://www.neyhurni.com/assets/files/offre-CFCMJNewLook.pdf: confirms Rue Chabrey 6, 1202 Genève; Géomaticien CFC ad (on homepage + PDF) names DAO/CAO and SIG software, laser scanners, drones, GNSS -> added GIS, CAD, GNSS, Laser scanning; ad written in French (no explicit language requirement). No dedicated careers page (ad is a homepage section + PDF), kp_url left empty. | Reviewer: sprach dropped (ad states no language requirement)."
+ },
+ {
+  "task": "fill",
+  "key": "Geneva International Centre for Humanitarian Demining (GICHD)|Geneva",
+  "c_name": "Geneva International Centre for Humanitarian Demining (GICHD)",
+  "city": "Geneva",
+  "confidence": "high",
+  "kp_url": "https://www.gichd.org/about/work-with-us/job-opportunities/",
+  "notes": "Fetched https://www.gichd.org/about/contact-us/, https://www.gichd.org/about/work-with-us/job-opportunities/: confirms Maison de la paix, Tower 3, Chemin Eugène-Rigot 2C, P.O. Box 1300, 1211 Geneva 1; old kp_url (/the-gichd/tenders/) is 404 and a tenders page -> replaced by Job Opportunities page."
+ },
+ {
+  "task": "fill",
+  "key": "Ecotec Environnement SA|Geneva",
+  "c_name": "Ecotec Environnement SA",
+  "city": "Geneva",
+  "confidence": "high",
+  "c_url": "https://www.ecotec.ch",
+  "notes": "Fetched https://www.ecotec.ch/, https://www.ecotec.ch/emplois: confirms Bureau principal Genève, Rue de Lyon 95, CH-1203 Genève; kp_url /emplois OK (current ads listed). c_url switched to https (http failed)."
+ },
+ {
+  "task": "fill",
+  "key": "Apaar Sàrl|Geneva",
+  "c_name": "Apaar Sàrl",
+  "city": "Geneva",
+  "confidence": "high",
+  "adress": "Passage Daniel Baud-Bovy 10",
+  "postal_code": "1205",
+  "notes": "Fetched https://apaar.ch/about/: contact block gives Passage Daniel Baud-Bovy 10, 1205 Genève (record had Rue du Môle 42 bis, 1201 -> corrected); team list ~33 staff (11-50 consistent). No jobs page found on site."
+ },
+ {
+  "task": "fill",
+  "key": "BVB Basler Verkehrs-Betriebe|Basel",
+  "c_name": "BVB Basler Verkehrs-Betriebe",
+  "city": "Basel",
+  "confidence": "high",
+  "notes": "Fetched https://www.bvb.ch/de/unternehmen/impressum/: Impressum confirms Basler Verkehrs-Betriebe, Claragraben 55, Postfach, 4005 Basel; kp_url karriere.bvb.ch OK (linked from bvb.ch)."
+ },
+ {
+  "task": "fill",
+  "key": "Swiss Tropical and Public Health Institute (Swiss TPH)|Basel",
+  "c_name": "Swiss Tropical and Public Health Institute (Swiss TPH)",
+  "city": "Basel",
+  "confidence": "high",
+  "kp_url": "https://jobs.swisstph.ch/Jobs/All",
+  "notes": "Fetched https://www.swisstph.ch/de/impressum, https://jobs.swisstph.ch/Jobs/All: Impressum confirms Kreuzstrasse 2, CH-4123 Allschwil; old kp_url /jobs.html redirects to homepage -> replaced by jobs portal linked as 'Jobs' from swisstph.ch."
+ },
+ {
+  "task": "fill",
+  "key": "Rapp AG|Basel",
+  "c_name": "Rapp AG",
+  "city": "Basel",
+  "confidence": "high",
+  "notes": "Fetched https://www.rapp.ch/de/ueber-uns/standorte-kontakt, https://www.rapp.ch/de/ueber-uns/kennzahlen: confirms Basel Hauptsitz Hochstrasse 100 (site prints 'Postfach | 4002 Basel'; kept street postcode 4053); kennzahlen page gives no total headcount, size unchanged."
+ },
+ {
+  "task": "fill",
+  "key": "Kanton Basel-Stadt – Amt für Mobilität|Basel",
+  "c_name": "Kanton Basel-Stadt – Amt für Mobilität",
+  "city": "Basel",
+  "confidence": "high",
+  "kp_url": "https://www.bs.ch/schwerpunkte/arbeitgeber-basel-stadt",
+  "notes": "Fetched https://www.bs.ch/bvd/amt-fuer-mobilitaet, https://www.bs.ch/schwerpunkte/arbeitgeber-basel-stadt: confirms Mobilität contact Dufourstrasse 40/50, 4052 Basel; old kp_url http://www.arbeitgeber.bs.ch fails over http, https version redirects to the canton's 'Arbeitgeber Basel-Stadt' page -> used that."
+ },
+ {
+  "task": "fill",
+  "key": "Jauslin Stebler AG|Basel",
+  "c_name": "Jauslin Stebler AG",
+  "city": "Basel",
+  "confidence": "high",
+  "adress": "Elisabethenanlage 11",
+  "postal_code": "4051",
+  "c_url": "https://jauslinstebler.ch/",
+  "kp_url": "https://jauslinstebler.ch/karriere/",
+  "notes": "Fetched https://jauslinstebler.ch/kontakt/, https://jauslinstebler.ch/karriere/: Standorte list Basel office Elisabethenanlage 11, 4051 Basel (HQ Neue Bahnhofstrasse 125, 4132 Muttenz) -> record's Gartenstrasse 15, 4132 corrected to the Basel office; Geomatik/Vermessung is a Fachbereich; old kp_url 404 -> replaced by /karriere/ (no GIS ad open now). c_url updated (www/http failed)."
+ },
+ {
+  "task": "fill",
+  "key": "BR PLUS Ingénieurs SA|Lausanne",
+  "c_name": "BR PLUS Ingénieurs SA",
+  "city": "Lausanne",
+  "confidence": "high",
+  "notes": "Fetched https://www.br-plus.ch/contact, https://www.br-plus.ch/equipe: confirms Lausanne office Av. du Temple 19c (site shows 'Case postale CH-1000 Lausanne 12'; kept street postcode 1012); team page lists 41 people (11-50 consistent). No jobs page on site."
+ },
+ {
+  "task": "fill",
+  "key": "Commune d'Épalinges|Lausanne",
+  "c_name": "Commune d'Épalinges",
+  "city": "Lausanne",
+  "confidence": "high",
+  "adress": "Route de la Croix-Blanche 25",
+  "kp_url": "https://www.epalinges.ch/administration/ressources-humaines/offres-demploi/",
+  "notes": "Fetched https://www.epalinges.ch/infos-pratiques/contact-et-horaires/, https://www.epalinges.ch/administration/ressources-humaines/offres-demploi/: Administration communale, Route de la Croix-Blanche 25, 1066 Épalinges (record said 'Place' -> corrected); kp_url filled with own 'Offres d'emploi' page (currently lists 'Dessinateur/trice technicien-ne en géomatique (80%)')."
+ },
+ {
+  "task": "fill",
+  "key": "INSER SA|Lausanne",
+  "c_name": "INSER SA",
+  "city": "Lausanne",
+  "confidence": "high",
+  "g_stack": "ArcGIS, ArcGIS Enterprise, ArcGIS Online, PostGIS, FME, FME Flow, FME Form, Oracle, Microsoft SQL Server, Python, JavaScript, Angular, AWS, Azure, Docker, Kubernetes",
+  "notes": "Fetched https://www.inser.ch/fr/contact, https://www.inser.ch/fr/services/sig, https://www.inser.ch/fr/portrait: confirms Lausanne (siège) Ch. de Maillefer 36, CH-1052 Le Mont-sur-Lausanne; SIG services page lists ArcGIS, .NET, Python, JavaScript, Angular, FME, PostGIS, Oracle Spatial, MS SQL Server, ArcGIS Desktop/Enterprise/Online, Docker, Kubernetes, AWS, Azure; portrait mentions FME Flow/FME Form. No jobs page on site."
+ },
+ {
+  "task": "fill",
+  "key": "Geo Data Solutions, IT IS GIS Sàrl|Lausanne",
+  "c_name": "Geo Data Solutions, IT IS GIS Sàrl",
+  "city": "Lausanne",
+  "confidence": "high",
+  "kp_url": "https://geodatasolutions.ch/fr/carrieres",
+  "g_stack": "ArcGIS, ArcGIS Pro, ArcGIS Enterprise, ArcGIS Online, QGIS, PostGIS, FME, GeoServer, OpenLayers, Leaflet, GIS, LiDAR, Mobile mapping, Drones/UAV, PostgreSQL, Python, AI/ML",
+  "notes": "Fetched https://geodatasolutions.ch/fr/ (+ its JS bundle /assets/index-C6V9s2Ap.js holding the page text), https://geodatasolutions.ch/fr/carrieres, https://gds.taleez.com/: contact info gives HQ Blvd Arc-en-Ciel 36, 1030 Bussigny (Bern office Schanzenstrasse 4a, 3008 Bern); old kp_url taleez.com/careers/gds/en is 404 -> replaced by own /fr/carrieres page (links 'GDS Job Portal' gds.taleez.com); tech pages list ArcGIS Pro/Server/Online/Enterprise, QGIS, GeoServer, PostGIS, OpenLayers, Leaflet, PostgreSQL, FME, Python, LiDAR, AI/ML."
+ },
+ {
+  "task": "fill",
+  "key": "Ville de Morges|Lausanne",
+  "c_name": "Ville de Morges",
+  "city": "Lausanne",
+  "confidence": "high",
+  "notes": "Fetched https://www.morges.ch/page/mentions-legales-200365: confirms Greffe municipal, Pl. de l'Hôtel-de-Ville 1, Case postale 272, 1110 Morges 1; kp_url /jobs/ OK."
+ },
+ {
+  "task": "fill",
+  "key": "Basler & Hofmann SA|Lausanne",
+  "c_name": "Basler & Hofmann SA",
+  "city": "Lausanne",
+  "confidence": "high",
+  "notes": "Fetched https://www.baslerhofmann.ch/kontakt/standorte: confirms Basler & Hofmann SA, Av. d'Ouchy 6, Case postale 173, CH-1001 Lausanne; kp_url OK (listings load via umantis JS, no GIS ad readable)."
+ },
+ {
+  "task": "fill",
+  "key": "Gemeinde Köniz|Bern",
+  "c_name": "Gemeinde Köniz",
+  "city": "Bern",
+  "confidence": "high",
+  "notes": "Fetched https://www.koeniz.ch/aktuell/adressen--oeffnungszeiten.page/900: confirms Gemeindeverwaltung Köniz, Landorfstrasse 1, 3098 Köniz; kp_url OK."
+ },
+ {
+  "task": "fill",
+  "key": "BKW Energie AG|Bern",
+  "c_name": "BKW Energie AG",
+  "city": "Bern",
+  "confidence": "high",
+  "notes": "Fetched https://schweiz.bkw.com/de/priv/impressum: Impressum gives BKW, Viktoriaplatz 2, 3013 Bern; kp_url bkw.com career OK (site links bkw.com/de/karriere)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Bevölkerungsschutz BABS|Bern",
+  "c_name": "Bundesamt für Bevölkerungsschutz BABS",
+  "city": "Bern",
+  "confidence": "high",
+  "notes": "Fetched https://www.babs.admin.ch/de/die-standorte-des-babs, https://www.babs.admin.ch/de/das-stellenangebot-des-babs: confirms Guisanplatz 1B, CH-3003 Bern; BABS job page points to Stellenportal Bund (jobs.admin.ch) so kp_url kept."
+ },
+ {
+  "task": "fill",
+  "key": "InfoFlora|Bern",
+  "c_name": "InfoFlora",
+  "city": "Bern",
+  "confidence": "high",
+  "notes": "Fetched https://www.infoflora.ch/en/general/info-flora.html: confirms InfoFlora Bern office c/o Botanischer Garten, Altenbergrain 21, CH-3013 Bern; kp_url (Jobs section of same page) OK."
+ }
+]
