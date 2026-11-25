@@ -1,0 +1,300 @@
+[
+ {
+  "task": "fill",
+  "key": "Land-, forst- und wasserwirtschaftliches Rechenzentrum GmbH|Vienna",
+  "c_name": "Land-, forst- und wasserwirtschaftliches Rechenzentrum GmbH",
+  "city": "Vienna",
+  "size": "11-50",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'LFRZ', website lfrz.gv.at, HQ Vienna, size bucket 11-50 (20 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Geopraevent AG|Zurich",
+  "c_name": "Geopraevent AG",
+  "city": "Zurich",
+  "size": "11-50",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Geopraevent', website http://www.geoprevent.com, HQ Zurich, size bucket 11-50 (28 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Freytag-Berndt u. Artaria KG|Vienna",
+  "c_name": "Freytag-Berndt u. Artaria KG",
+  "city": "Vienna",
+  "li_url": "https://www.linkedin.com/company/freytagberndt",
+  "size": "51-200",
+  "notes": "SocialCrawl API (lookup by domain freytagberndt.com): LinkedIn page 'freytag & berndt', website http://www.freytagberndt.com, HQ Wien, size bucket 51-200 (28 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Verkehrsverbund Ost-Region (VOR) Gesellschaft m.b.H.|Vienna",
+  "c_name": "Verkehrsverbund Ost-Region (VOR) Gesellschaft m.b.H.",
+  "city": "Vienna",
+  "li_url": "https://www.linkedin.com/company/verkehrsverbund-ost-region-vor",
+  "size": "51-200",
+  "notes": "SocialCrawl API (lookup by domain vor.at): LinkedIn page 'Verkehrsverbund Ost-Region (VOR) GmbH', website https://www.vor.at, HQ Wien, size bucket 51-200 (53 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Esri Schweiz AG|Zurich",
+  "c_name": "Esri Schweiz AG",
+  "city": "Zurich",
+  "size": "51-200",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Esri Schweiz', website https://www.esri.ch/de-ch/rechtliches/impressum, HQ Zürich, size bucket 51-200 (48 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Sourcepole AG|Zurich",
+  "c_name": "Sourcepole AG",
+  "city": "Zurich",
+  "size": "1-10",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Sourcepole', website http://sourcepole.ch, HQ Zürich, size bucket 2-10 (3 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "IMPACT Initiatives|Geneva",
+  "c_name": "IMPACT Initiatives",
+  "city": "Geneva",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'IMPACT Initiatives', website http://www.impact-initiatives.org/, HQ Châtelaine, size bucket 501-1000 (316 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "International Federation of Red Cross and Red Crescent Societies (IFRC)|Geneva",
+  "c_name": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+  "city": "Geneva",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'International Federation of Red Cross and Red Crescent Societies - IFRC', website https://linktr.ee/ifrc, HQ Geneva, size bucket 1001-5000 (3841 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Genereso Sàrl|Geneva",
+  "c_name": "Genereso Sàrl",
+  "city": "Geneva",
+  "li_url": "https://www.linkedin.com/company/genereso",
+  "size": "1-10",
+  "notes": "SocialCrawl API (lookup by domain genereso.com): LinkedIn page 'Genereso', website https://www.genereso.com, HQ Genève, size bucket 2-10 (5 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Jermann Ingenieure und Geometer AG|Basel",
+  "c_name": "Jermann Ingenieure und Geometer AG",
+  "city": "Basel",
+  "size": "51-200",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Jermann Ingenieure + Geometer AG', website http://www.jermann-ag.ch, HQ Arlesheim, size bucket 51-200 (73 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Primeo Netz AG|Basel",
+  "c_name": "Primeo Netz AG",
+  "city": "Basel",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Primeo Energie', website http://www.primeo-energie.ch, HQ Münchenstein, size bucket 501-1000 (391 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "État de Vaud|Lausanne",
+  "c_name": "État de Vaud",
+  "city": "Lausanne",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Etat de Vaud', website http://www.vd.ch/, HQ Lausanne, size bucket 10001-+ (10758 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Renaud et Burnand SA|Lausanne",
+  "c_name": "Renaud et Burnand SA",
+  "city": "Lausanne",
+  "size": "11-50",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Renaud et Burnand SA', website http://renaud-burnand.ch, HQ Lausanne, size bucket 11-50 (9 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Université de Lausanne|Lausanne",
+  "c_name": "Université de Lausanne",
+  "city": "Lausanne",
+  "li_url": "https://www.linkedin.com/school/university-of-lausanne",
+  "notes": "SocialCrawl API (lookup by domain unil.ch): LinkedIn page 'University of Lausanne - UNIL', website http://www.unil.ch/, HQ Lausanne, size bucket 1001-5000 (4319 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Mosini et Caviezel SA|Lausanne",
+  "c_name": "Mosini et Caviezel SA",
+  "city": "Lausanne",
+  "li_url": "https://www.linkedin.com/company/geometre",
+  "notes": "SocialCrawl API (lookup by domain mc-sa.ch): LinkedIn page 'Mosini et Caviezel SA', website http://www.mc-sa.ch, HQ Morges, size bucket 11-50 (25 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Landestopografie swisstopo|Bern",
+  "c_name": "Bundesamt für Landestopografie swisstopo",
+  "city": "Bern",
+  "size": "201-500",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Federal Office of Topography swisstopo', website http://www.swisstopo.ch, HQ Wabern, size bucket 201-500 (278 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Umwelt BAFU|Bern",
+  "c_name": "Bundesamt für Umwelt BAFU",
+  "city": "Bern",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Federal Office for the Environment FOEN', website https://www.bafu.admin.ch/, HQ Ittigen, size bucket 501-1000 (606 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Universität Bern|Bern",
+  "c_name": "Universität Bern",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/school/university-of-bern",
+  "notes": "SocialCrawl API (lookup by domain unibe.ch): LinkedIn page 'University of Bern', website http://www.unibe.ch/, HQ Bern, size bucket 5001-10000 (6023 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "SBB AG|Bern",
+  "c_name": "SBB AG",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/sbb",
+  "notes": "SocialCrawl API (lookup by domain sbb.ch): LinkedIn page 'SBB CFF FFS', website https://www.sbb.ch/jobs, HQ Bern, size bucket 10001-+ (18678 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "geo7 AG|Bern",
+  "c_name": "geo7 AG",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/geo7-ag",
+  "notes": "SocialCrawl API (lookup by domain geo7.ch): LinkedIn page 'geo7 AG', website http://www.geo7.ch, HQ Bern, size bucket 11-50 (21 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Raumentwicklung ARE|Bern",
+  "c_name": "Bundesamt für Raumentwicklung ARE",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/bundesamt-fuer-raumentwicklung-are",
+  "size": "51-200",
+  "notes": "SocialCrawl API (lookup by domain are.admin.ch): LinkedIn page 'Federal Office for Spatial Development ARE', website https://www.are.admin.ch, HQ Ittigen, size bucket 51-200 (87 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Landwirtschaft BLW|Bern",
+  "c_name": "Bundesamt für Landwirtschaft BLW",
+  "city": "Bern",
+  "size": "201-500",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Bundesamt für Landwirtschaft BLW', website http://www.blw.admin.ch, HQ Bern, size bucket 201-500 (227 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Sigmaplan AG|Bern",
+  "c_name": "Sigmaplan AG",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/sigmaplan",
+  "size": "11-50",
+  "notes": "SocialCrawl API (lookup by domain sigmaplan.ch): LinkedIn page 'Sigmaplan', website http://www.sigmaplan.ch, HQ Bern, size bucket 11-50 (15 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "International Institute for Applied Systems Analysis (IIASA)|Vienna",
+  "c_name": "International Institute for Applied Systems Analysis (IIASA)",
+  "city": "Vienna",
+  "li_url": "https://www.linkedin.com/company/iiasa-vienna",
+  "notes": "SocialCrawl API (lookup by domain iiasa.ac.at): LinkedIn page 'International Institute for Applied Systems Analysis (IIASA)', website https://iiasa.ac.at, HQ 2361 Laxenburg, size bucket 201-500 (510 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Energie Steiermark AG|Graz",
+  "c_name": "Energie Steiermark AG",
+  "city": "Graz",
+  "li_url": "https://www.linkedin.com/company/energie-steiermark-ag",
+  "notes": "SocialCrawl API (lookup by domain e-steiermark.com): LinkedIn page 'Energie Steiermark AG', website https://www.e-steiermark.com, HQ Graz, size bucket 1001-5000 (563 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Sinergise Solutions GmbH|Graz",
+  "c_name": "Sinergise Solutions GmbH",
+  "city": "Graz",
+  "size": "1-10",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Sentinel Hub Austria', website https://www.sentinel-hub.at/, HQ Graz, size bucket 2-10 (1 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "GeoSphere Austria|Graz",
+  "c_name": "GeoSphere Austria",
+  "city": "Graz",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'GeoSphere Austria', website https://geosphere.at, HQ Vienna, size bucket 501-1000 (232 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Universalmuseum Joanneum GmbH|Graz",
+  "c_name": "Universalmuseum Joanneum GmbH",
+  "city": "Graz",
+  "li_url": "https://www.linkedin.com/company/universalmuseum-joanneum",
+  "size": "201-500",
+  "notes": "SocialCrawl API (lookup by domain museum-joanneum.at): LinkedIn page 'Universalmuseum Joanneum', website https://www.museum-joanneum.at, HQ Graz, size bucket 201-500 (147 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "LINZ AG für Energie, Telekommunikation, Verkehr und Kommunale Dienste|Linz",
+  "c_name": "LINZ AG für Energie, Telekommunikation, Verkehr und Kommunale Dienste",
+  "city": "Linz",
+  "li_url": "https://www.linkedin.com/company/linz-ag",
+  "notes": "SocialCrawl API (lookup by domain linzag.at): LinkedIn page 'LINZ AG', website http://www.linzag.at, HQ Linz, size bucket 1001-5000 (651 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Energie AG Oberösterreich|Linz",
+  "c_name": "Energie AG Oberösterreich",
+  "city": "Linz",
+  "li_url": "https://www.linkedin.com/company/energie-ag-oö",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup by domain energieag.at): LinkedIn page 'Energie AG OÖ', website http://energieag.at, HQ Linz, size bucket 5001-10000 (555 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Magistrat der Landeshauptstadt Linz|Linz",
+  "c_name": "Magistrat der Landeshauptstadt Linz",
+  "city": "Linz",
+  "li_url": "https://www.linkedin.com/company/city-of-linz",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup by domain linz.at): LinkedIn page 'Stadt Linz', website http://www.linz.at/, HQ Linz, size bucket 1001-5000 (695 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "OÖ Verkehrsverbund-Organisations GmbH Nfg. & Co KG|Linz",
+  "c_name": "OÖ Verkehrsverbund-Organisations GmbH Nfg. & Co KG",
+  "city": "Linz",
+  "size": "51-200",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'OÖ Verkehrsverbund', website http://www.ooevv.at, HQ Linz, size bucket 51-200 (15 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "GEMDAT OÖ GmbH & Co KG|Linz",
+  "c_name": "GEMDAT OÖ GmbH & Co KG",
+  "city": "Linz",
+  "li_url": "https://www.linkedin.com/company/gemdat",
+  "size": "51-200",
+  "notes": "SocialCrawl API (lookup by domain gemdat.at): LinkedIn page 'Gemdat OÖ', website http://www.gemdat.at, HQ Linz, size bucket 51-200 (48 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Eich- und Vermessungswesen|Linz",
+  "c_name": "Bundesamt für Eich- und Vermessungswesen",
+  "city": "Linz",
+  "li_url": "https://www.linkedin.com/company/bundesamt-fuer-eich-und-vermessungswesen",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup by domain bev.gv.at): LinkedIn page 'Federal Office of Metrology and Surveying (BEV)', website http://www.bev.gv.at/, HQ Wien, size bucket 1001-5000 (221 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "GeoSphere Austria - Bundesanstalt für Geologie, Geophysik, Klimatologie und Meteorologie|Innsbruck",
+  "c_name": "GeoSphere Austria - Bundesanstalt für Geologie, Geophysik, Klimatologie und Meteorologie",
+  "city": "Innsbruck",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'GeoSphere Austria', website https://geosphere.at, HQ Vienna, size bucket 501-1000 (232 members on LinkedIn)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Eich- und Vermessungswesen|Salzburg",
+  "c_name": "Bundesamt für Eich- und Vermessungswesen",
+  "city": "Salzburg",
+  "size": "500+",
+  "notes": "SocialCrawl API (lookup of the existing li_url): LinkedIn page 'Federal Office of Metrology and Surveying (BEV)', website bev.gv.at, size bucket 1001-5000."
+ }
+]
