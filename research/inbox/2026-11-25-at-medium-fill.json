@@ -1,0 +1,116 @@
+[
+ {
+  "task": "fill",
+  "key": "Korschineck & Partner Vermessung ZT GmbH|Vienna",
+  "c_name": "Korschineck & Partner Vermessung ZT GmbH",
+  "city": "Vienna",
+  "size": "11-50",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'KOPA Vermessung ZT-GmbH', HQ Wien, 24 members, size 11-50."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Eich- und Vermessungswesen|Graz",
+  "c_name": "Bundesamt für Eich- und Vermessungswesen",
+  "city": "Graz",
+  "size": "500+",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Federal Office of Metrology and Surveying (BEV)', size 1001-5000, locations incl. Graz and Linz."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Eich- und Vermessungswesen|Innsbruck",
+  "c_name": "Bundesamt für Eich- und Vermessungswesen",
+  "city": "Innsbruck",
+  "size": "500+",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Federal Office of Metrology and Surveying (BEV)', size 1001-5000, locations incl. Graz and Linz."
+ },
+ {
+  "task": "fill",
+  "key": "Stadt Graz|Graz",
+  "c_name": "Stadt Graz",
+  "city": "Graz",
+  "li_url": "https://www.linkedin.com/company/stadt-graz",
+  "size": "500+",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Stadt Graz' (domain graz.at), size 1001-5000. | Web search: kp_url: graz.at/jobs is named as the city's job page in a Stadt Graz recruiting folder (digitalestadt.graz.at / graz.at PDF), seen in search results; not opened directly. sprach left empty: no Stadt Graz GIS/surveying job ad snippet found.",
+  "kp_url": "https://www.graz.at/jobs"
+ },
+ {
+  "task": "fill",
+  "key": "ASFINAG Service GmbH|Linz",
+  "c_name": "ASFINAG Service GmbH",
+  "city": "Linz",
+  "li_url": "https://www.linkedin.com/company/asfinag",
+  "size": "500+",
+  "notes": "SocialCrawl API (LinkedIn company page): group page 'ASFINAG' (domain asfinag.at), size 1001-5000, locations incl. Ansfelden near Linz. | Web search: kp_url: asfinag.at/ueber-uns/karriere/stellenangebote/ is cited as the job-listings page in an ASFINAG job ad PDF on jobs.tt.com (seen in search results); not opened directly.",
+  "kp_url": "https://www.asfinag.at/ueber-uns/karriere/stellenangebote/"
+ },
+ {
+  "task": "fill",
+  "key": "DVT Daten-Verarbeitung-Tirol GmbH|Innsbruck",
+  "c_name": "DVT Daten-Verarbeitung-Tirol GmbH",
+  "city": "Innsbruck",
+  "li_url": "https://www.linkedin.com/company/dvt-daten-verarbeitung-tirol-gmbh",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'DVT Daten-Verarbeitung-Tirol GmbH' (domain dvt.at), HQ Innsbruck, 26 members on LinkedIn (no size bucket) -> 11-50. | Web search: g_stack: DVT job ad on devjobs.at (en.devjobs.at/job/04693999daa8b65422997c2bea6f65b7) asks for geoinformatics experience (databases, desktop GIS and WebGIS, interfaces), preferably with ESRI technologies. kp_url not found (only devjobs/jobs.at/karriere.at, applications go to dvt@tirol.gv.at). sprach: language requirement not visible in the snippet.",
+  "size": "11-50",
+  "g_stack": "ArcGIS, WebGIS, GIS"
+ },
+ {
+  "task": "fill",
+  "key": "Bernard Ingenieure ZT GmbH|Innsbruck",
+  "c_name": "Bernard Ingenieure ZT GmbH",
+  "city": "Innsbruck",
+  "li_url": "https://www.linkedin.com/company/bernard-gruppe",
+  "notes": "SocialCrawl API (LinkedIn company page): group page 'BERNARD Gruppe' (domain bernard-gruppe.com), HQ Hall in Tirol next to Innsbruck. | Web search: kp_url: search results (BERNARD job postings hosted by htlinn.ac.at, uibk.ac.at career service) name bernard-gruppe.com/karriere as the careers portal; medium confidence, page not opened directly.",
+  "kp_url": "https://www.bernard-gruppe.com/karriere"
+ },
+ {
+  "task": "fill",
+  "key": "SIR - Salzburger Institut für Raumordnung und Wohnen GmbH|Salzburg",
+  "c_name": "SIR - Salzburger Institut für Raumordnung und Wohnen GmbH",
+  "city": "Salzburg",
+  "li_url": "https://www.linkedin.com/company/sir-salzburg",
+  "size": "11-50",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'SIR - Salzburger Institut für Raumordnung und Wohnen GmbH', website sir.at, HQ Salzburg, 32 members, size 11-50."
+ },
+ {
+  "task": "fill",
+  "key": "SynerGIS Informationssysteme GmbH|Vienna",
+  "c_name": "SynerGIS Informationssysteme GmbH",
+  "city": "Vienna",
+  "li_url": "https://www.linkedin.com/company/synergis-informationssysteme-gmbh",
+  "notes": "SocialCrawl API (LinkedIn company page): company search found page 'SynerGIS Informationssysteme GmbH' (tagline 'Esri Official Distributor Österreich'); domain lookup had none."
+ },
+ {
+  "task": "fill",
+  "key": "Stadt Wien, Magistratsabteilung 41 – Stadtvermessung|Vienna",
+  "c_name": "Stadt Wien, Magistratsabteilung 41 – Stadtvermessung",
+  "city": "Vienna",
+  "kp_url": "https://jobs.wien.gv.at/",
+  "size": "500+",
+  "notes": "kp_url: City of Vienna's own job portal jobs.wien.gv.at, seen in search results via jobs.wien.gv.at/praktika/traineeprogramm/ and jobs.wien.gv.at/lehre, and named in wien.gv.at recruiting material (root URL itself not seen as a separate result). size: City of Vienna as employer; ORF wien.orf.at says the city is Vienna's largest employer, and the Wiener Personalbericht 2024 shows 7,226 advertised jobs in 2024 -> 500+."
+ },
+ {
+  "task": "fill",
+  "key": "indoo.rs GmbH|Vienna",
+  "c_name": "indoo.rs GmbH",
+  "city": "Vienna",
+  "kp_url": "https://www.esri.com/careers",
+  "notes": "kp_url: indoo.rs is now the Esri R&D Center Vienna; its Vienna indoor-positioning jobs are posted on Esri's own careers site (e.g. esri.com/careers/5114756007 Product Engineer II - Indoor Positioning Systems, esri.com/careers/5257523007), seen in search results."
+ },
+ {
+  "task": "fill",
+  "key": "Reinhalteverband Großraum Salzburg|Salzburg",
+  "c_name": "Reinhalteverband Großraum Salzburg",
+  "city": "Salzburg",
+  "c_url": "http://www.umweltschutzanlagen.at/",
+  "kp_url": "https://www.umweltschutzanlagen.at/jobs",
+  "notes": "c_url: http://www.umweltschutzanlagen.at/ is in the header of the association's own 2026 PDFs (Allgemeine Bedingungen Übernahme/Reinigung von Abwässern, Notfallinformation Siggerwiesen) on its website CDN. kp_url: karriere.at ad 'Betriebselektriker' (Reinhalteverband Großraum Salzburg, Bergheim) says to apply online at umweltschutzanlagen.at/jobs. g_stack, size, li_url not found within the search budget."
+ },
+ {
+  "task": "fill",
+  "key": "GMD GmbH|Innsbruck",
+  "c_name": "GMD GmbH",
+  "city": "Innsbruck",
+  "size": "1-10",
+  "notes": "size: karriere.at company profile (karriere.at/f/gmd) lists 1-10 employees. kp_url not found: only karriere.at/devjobs.at listings (Full-Stack Developer WebGIS & IoT Platform) came up."
+ }
+]
