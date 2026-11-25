@@ -1,0 +1,120 @@
+[
+ {
+  "task": "fill",
+  "key": "Stadt Wien, Magistratsabteilung 41 – Stadtvermessung|Vienna",
+  "c_name": "Stadt Wien, Magistratsabteilung 41 – Stadtvermessung",
+  "city": "Vienna",
+  "confidence": "high",
+  "notes": "Fetched https://www.wien.gv.at/stadtentwicklung/stadtvermessung/ (-> wien.gv.at/stadtplanung/stadtvermessung), https://www.wien.gv.at/kontakt/ma41, https://jobs.wien.gv.at/: city's own MA 41 contact page gives 'Stadt Wien - Stadtvermessung und Geoinformation (MA 41), Standort 19., Muthgasse 62 Riegel F' (19th district = 1190); address unchanged and confirmed. Page also confirms geodata/surveying tasks and apprenticeships in Vermessungstechnik/Geoinformationstechnik. kp_url https://jobs.wien.gv.at/ loads and is the city's own job portal (linked as 'Jobs bei der Stadt'); it states ~69,000 staff city-wide (size 500+ stays)."
+ },
+ {
+  "task": "fill",
+  "key": "Korschineck & Partner Vermessung ZT GmbH|Vienna",
+  "c_name": "Korschineck & Partner Vermessung ZT GmbH",
+  "city": "Vienna",
+  "confidence": "high",
+  "kp_url": "https://www.kopa.at/de/jobs",
+  "g_stack": "CAD, Total station, GNSS, Laser scanning, Photogrammetry, Drones/UAV",
+  "notes": "Fetched https://www.kopa.at, /de/unternehmen/kontakt, /de/impressum, /de/jobs, /de/unternehmen/team: contact page 'Korschineck & Partner Vermessung ZT GmbH, 1040 Wien, Wiedner Hauptstraße 17' (address confirmed; Impressum now names 'Kopa Vermessung ZT GmbH', FN 654752x, same address). kp_url filled with own jobs page (Vermessungstechniker*in Wien; Diplomingenieur*in Waidhofen/Ybbs; locations Wien, Waidhofen/Ybbs, Linz). Ads: Tachymeter, GPS, geodetic software, CAD; laser scanners, drones, track-measuring vehicle; 'gute Kenntnisse der deutschen Sprache' (sprach DE confirmed); 'ca. 50 MitarbeiterInnen' (size 11-50 confirmed; team page lists ~49 names). Photogrammetry added from homepage service list (Laserscan, Photogrammetrie, BIM)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Eich- und Vermessungswesen|Graz",
+  "c_name": "Bundesamt für Eich- und Vermessungswesen",
+  "city": "Graz",
+  "confidence": "high",
+  "notes": "Fetched https://www.bev.gv.at, https://www.bev.gv.at/Das-BEV/Jobs-und-Karriere.html, https://www.bev.gv.at/Das-BEV/Kontakte-Standorte/Vermessungsaemter.html, https://www.bev.gv.at/Das-BEV/Kontakte-Standorte/Vermessungsaemter/Graz.html: own site lists 'Vermessungsamt Graz, Körblergasse 25, 8010 Graz' -> address confirmed. kp_url loads and is BEV's own Jobs & Karriere page."
+ },
+ {
+  "task": "fill",
+  "key": "Stadt Graz|Graz",
+  "c_name": "Stadt Graz",
+  "city": "Graz",
+  "confidence": "high",
+  "adress": "Europaplatz 20",
+  "postal_code": "8020",
+  "kp_url": "https://www.graz.at/cms/ziel/7764656/DE",
+  "notes": "Fetched https://www.graz.at, https://www.graz.at/sitemap, https://www.graz.at/cms/ziel/8034284/DE/ (Geoportal + Vermessung), Geodatenservice page, https://www.graz.at/cms/beitrag/10020470/8044336/Stadtvermessungsamt.html, https://www.graz.at/cms/ziel/7764656/DE: Stadtvermessungsamt contact/Standort '8020 Graz, Europaplatz 20' -> address corrected from Hauptplatz 1/8010 (Rathaus). Geodatenservice offers GIS analyses, aerial images, 3D city model. kp_url filled with the city's own careers page ('Karriere im Haus Graz', linked as 'Offene Stellen'); listings load via JavaScript so no GIS ad seen (sprach stays empty)."
+ },
+ {
+  "task": "fill",
+  "key": "Vermessung Kusterer|Graz",
+  "c_name": "Vermessung Kusterer",
+  "city": "Graz",
+  "confidence": "high",
+  "notes": "Fetched https://www.kusterer.at (-> kusterer.at): own Kontakt/Impressum 'Dipl.-Ing. Robert Kusterer, Ingenieurkonsulent für Vermessungswesen, Am Hüttenbrenneranger 11/5, 8045 Graz' (plus branch Zweigniederlassung Tirol, Thiersee) -> address confirmed; raised to high: right company/office, surveying work (cadastral, building, industrial, civil-engineering surveys, terrain models). No tools, careers page or team size on site."
+ },
+ {
+  "task": "fill",
+  "key": "Geometer Dipl.-Ing. Thomas ILLY|Graz",
+  "c_name": "Geometer Dipl.-Ing. Thomas ILLY",
+  "city": "Graz",
+  "confidence": "high",
+  "notes": "Fetched https://www.geo-illy.at, /impressum, /technologie, /organisation, /maschinensteuerung/3d-planungssysteme: Impressum 'Geometer Dipl.-Ing. Thomas ILLY, Westbahngasse 95, 8054 Graz, Einzelunternehmen' -> address confirmed; raised to high (surveying office; Technologie page: total stations, geodesy software, 3D CAD system, matching g_stack). No careers page or headcount (only 'qualifiziertes Team')."
+ },
+ {
+  "task": "fill",
+  "key": "Stadt Salzburg|Salzburg",
+  "c_name": "Stadt Salzburg",
+  "city": "Salzburg",
+  "confidence": "high",
+  "adress": "Faberstraße 11",
+  "postal_code": "5020",
+  "notes": "Fetched https://www.stadt-salzburg.at (-> /home), https://www.stadt-salzburg.at/jobs, https://www.stadt-salzburg.at/org-db/ (org tree Stadtverwaltung -> 06-Bauwesen), https://www.stadt-salzburg.at/org-db/ORGTEBW?TODO=TEBSY&ORG=OU76: '0603-Vermessung und Geoinformation, Faberstraße 11, 5020 Salzburg' -> address corrected from Mirabellplatz 4 (main seat). Tasks: digital city map, GIS data provision, geodetic surveying, cadastre. kp_url /jobs loads and is the city's own job portal page (links to jobs.stadt-salzburg.at/Jobs)."
+ },
+ {
+  "task": "fill",
+  "key": "Salzburg AG für Energie, Verkehr und Telekommunikation|Salzburg",
+  "c_name": "Salzburg AG für Energie, Verkehr und Telekommunikation",
+  "city": "Salzburg",
+  "confidence": "high",
+  "notes": "Fetched https://www.salzburg-ag.at, https://www.salzburg-ag.at/servicemenue/impressum.html, https://karriere.salzburg-ag.at/, https://karriere.salzburg-ag.at/stellenangebote.html: Impressum 'Salzburg AG für Energie, Verkehr und Telekommunikation, FN51350s, Bayerhamerstraße 16, 5020 Salzburg' -> address confirmed. kp_url loads and is the own careers portal. Job list rendered no GIS ads at fetch time; g_stack/size unchanged."
+ },
+ {
+  "task": "fill",
+  "key": "SIR - Salzburger Institut für Raumordnung und Wohnen GmbH|Salzburg",
+  "c_name": "SIR - Salzburger Institut für Raumordnung und Wohnen GmbH",
+  "city": "Salzburg",
+  "confidence": "high",
+  "size": "11-50",
+  "li_url": "https://www.linkedin.com/company/sir-salzburg/",
+  "notes": "Fetched https://www.sir.at, https://www.sir.at/ueber-uns/: footer Kontakt 'Schillerstraße 25, Stiege Nord/3. Stock, 5020 Salzburg' -> address confirmed; site names 'SIR – Salzburger Institut für Raumordnung und Wohnen GmbH'. Über uns team list has ~48 staff with direct lines -> size 11-50; staff include spatial energy planning / Raumordnung roles (GIS not named explicitly on these pages). li_url from LinkedIn icon on sir.at. No careers page linked (kp_url stays empty)."
+ },
+ {
+  "task": "fill",
+  "key": "Dipl.-Ing. Christoph Sturm|Salzburg",
+  "c_name": "Dipl.-Ing. Christoph Sturm",
+  "city": "Salzburg",
+  "confidence": "high",
+  "g_stack": "Leica, GNSS",
+  "notes": "Fetched https://www.vermessung-sturm.at, /geoinformationen, /vermessungsbuero: own site 'Dipl.-Ing. Christoph Sturm, Plainstraße 69/1, 5020 Salzburg' -> address confirmed; surveying/cadastre office also offering Geoinformation (utility/geodata capture for municipalities). g_stack from equipment list: 2 Leica electronic theodolites, 2 Leica GPS units, Sokkia digital level, laser rangefinder. Site states founding 1969. No careers page or headcount; sprach DE remains an assumption (no job ad)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Eich- und Vermessungswesen|Innsbruck",
+  "c_name": "Bundesamt für Eich- und Vermessungswesen",
+  "city": "Innsbruck",
+  "confidence": "high",
+  "notes": "Fetched https://www.bev.gv.at, https://www.bev.gv.at/Das-BEV/Jobs-und-Karriere.html, https://www.bev.gv.at/Das-BEV/Kontakte-Standorte/Vermessungsaemter.html, https://www.bev.gv.at/Das-BEV/Kontakte-Standorte/Vermessungsaemter/Innsbruck.html: own site lists 'Vermessungsamt Innsbruck, Bürgerstraße 34, 6020 Innsbruck' -> address confirmed. kp_url loads and is BEV's own Jobs & Karriere page."
+ },
+ {
+  "task": "fill",
+  "key": "DVT Daten-Verarbeitung-Tirol GmbH|Innsbruck",
+  "c_name": "DVT Daten-Verarbeitung-Tirol GmbH",
+  "city": "Innsbruck",
+  "confidence": "low",
+  "kp_url": "https://www.dvt.at/kontakt/offene-stellen/",
+  "notes": "Fetched https://www.dvt.at, /ueber-uns/, /services/, /kontakt/offene-stellen/, /kontakt/offene-stellen/stelle/it-projektleiter-m-w-d/: address 'Adamgasse 22, 6020 Innsbruck' confirmed on own site. Set LOW: own site describes DVT as the Land Tirol's general IT service provider (data centres, networks, Portal Tirol, ELAK) and shows no GIS or surveying work anywhere; GIS link rests only on tirol.gv.at's tiris page. kp_url filled with own Offene Stellen page (only open ad: IT-Projektleiter, German-language ad, no language requirement stated -> DE). g_stack from Services page (Java platform, SAP, Oracle, SQL Server, DB2, MySQL, Linux) - not GIS tools. 'Anwendungsentwicklung ... über 40 Personen' (largest group) is consistent with 51-200. | Reviewer: g_stack (non-GIS IT tools) and sprach (no stated requirement) dropped."
+ },
+ {
+  "task": "fill",
+  "key": "GMD GmbH|Innsbruck",
+  "c_name": "GMD GmbH",
+  "city": "Innsbruck",
+  "confidence": "high",
+  "size": "1-10",
+  "li_url": "https://www.linkedin.com/company/gmdgmbh",
+  "g_stack": "PostGIS, GeoServer, OpenLayers, Leaflet, WebGIS, LiDAR, Photogrammetry, Drones/UAV, Remote sensing, Python, AI/ML",
+  "notes": "Fetched https://www.gmd.care (-> /en), /en/imprint, /en/contact, /en/about-gmd, /en/geosenseai-4d-webgis: Imprint 'GMD® GmbH, FN 621240p, Exlgasse 24, 6020 Innsbruck' -> address confirmed. About page team lists 9 people (CEO, remote sensing, geoinformatics, data science etc.) -> size 1-10. GeoSenseAI 4D WebGIS page: drone LiDAR and photogrammetry, Copernicus satellite data, AI anomaly detection -> added LiDAR, Photogrammetry, Drones/UAV, Remote sensing. li_url from LinkedIn link on own site. No careers page linked (kp_url empty)."
+ }
+]
