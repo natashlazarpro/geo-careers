@@ -1,0 +1,233 @@
+[
+ {
+  "task": "fill",
+  "key": "HKD Géomatique SA|Geneva",
+  "c_name": "HKD Géomatique SA",
+  "city": "Geneva",
+  "c_url": "http://www.hkd-geomatique.com",
+  "li_url": "https://www.linkedin.com/company/hkd-geomatique-sa",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'HKD Géomatique SA', HQ Onex (GE), website hkd-geomatique.com, LinkedIn size 11-50 (46 members). | Web search: kp_url: hkd-geomatique.com 'Contact et emploi' page. No open ad at the time, but the page says they regularly look for new staff and accept applications.",
+  "kp_url": "https://www.hkd-geomatique.com/contact-et-emploi.html"
+ },
+ {
+  "task": "fill",
+  "key": "MBC ingéo SA|Geneva",
+  "c_name": "MBC ingéo SA",
+  "city": "Geneva",
+  "c_url": "http://www.mbc-ingeo.ch/",
+  "li_url": "https://www.linkedin.com/company/mbc-ingéo-sa",
+  "size": "1-10",
+  "g_stack": "GNSS, Laser scanning, GIS",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'MBC ingéo SA', HQ Vessy (GE), website mbc-ingeo.ch, LinkedIn size bucket 2-10; specialities incl. GNSS, laser scanning, GIS. | Web search: kp_url: mbc-ingeo.ch jobs archive page (search result). Ads are old. One geomatics ad names ArcGIS, AutoCAD, LTOP and Homère (g_stack was not requested).",
+  "kp_url": "https://mbc-ingeo.ch/jobs/"
+ },
+ {
+  "task": "fill",
+  "key": "KÜPFER GÉOMÈTRES SA|Geneva",
+  "c_name": "KÜPFER GÉOMÈTRES SA",
+  "city": "Geneva",
+  "c_url": "http://www.kupfer-geometre.ch",
+  "li_url": "https://www.linkedin.com/company/küpfer-géomètres-sa",
+  "size": "11-50",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Küpfer Géomètres SA', HQ Genève Les Acacias, website kupfer-geometre.ch, LinkedIn size bucket 11-50. | Web search: g_stack: kupfer-geometre.ch 'mensurations techniques' service page (GPS surveys, 3D laser scan surveys, DTM, precise levelling). kp_url: the team page carries the recruiting notice 'Nous recrutons actuellement un(e) géomaticien(ne) CFC' with a PDF ad, about 610 days old. There is no separate careers page.",
+  "g_stack": "GNSS, Laser scanning",
+  "kp_url": "https://www.kupfer-geometre.ch/equipe.html"
+ },
+ {
+  "task": "fill",
+  "key": "Géomètres associés Ney & Hurni SA|Geneva",
+  "c_name": "Géomètres associés Ney & Hurni SA",
+  "city": "Geneva",
+  "c_url": "https://www.neyhurni.com",
+  "li_url": "https://www.linkedin.com/company/ney-hurni-sa",
+  "size": "11-50",
+  "g_stack": "LiDAR, Drones/UAV",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Géomètres Associés NEY & HURNI SA', HQ Genève, website neyhurni.com, LinkedIn size 11-50; specialities incl. lidar/drone 3D imaging, BIM."
+ },
+ {
+  "task": "fill",
+  "key": "Jauslin Stebler AG|Basel",
+  "c_name": "Jauslin Stebler AG",
+  "city": "Basel",
+  "c_url": "http://www.jauslinstebler.ch/",
+  "li_url": "https://www.linkedin.com/company/jauslin-stebler-ingenieure-ag",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'JAUSLIN STEBLER AG', HQ Muttenz, offices incl. Basel, website jauslinstebler.ch, 125 members (51-200). | Web search: g_stack: Jauslin Stebler's own job ad (Junior Projektleiter/in) lists the fields Geomatik/Vermessung and Geoinformatik (GIS). No specific software is named, so only GIS is given. kp_url: the path comes from the jauslinstebler.ch ad URL /jobs-und-karriere/offene-stellen/detail/... and the site also has /job/... ad pages. The 'offene Stellen' list page itself was not opened.",
+  "g_stack": "GIS",
+  "kp_url": "https://www.jauslinstebler.ch/jobs-und-karriere/offene-stellen"
+ },
+ {
+  "task": "fill",
+  "key": "Office of the United Nations High Commissioner for Human Rights (OHCHR)|Geneva",
+  "c_name": "Office of the United Nations High Commissioner for Human Rights (OHCHR)",
+  "city": "Geneva",
+  "size": "500+",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'United Nations Human Rights', LinkedIn size 5001-10000. | Web search: kp_url: ohchr.org 'Work and study opportunities' page (search result), which says all OHCHR vacancies are posted on the UN Careers website (careers.un.org).",
+  "kp_url": "https://www.ohchr.org/en/work-with-us"
+ },
+ {
+  "task": "fill",
+  "key": "arx iT Consulting SA|Geneva",
+  "c_name": "arx iT Consulting SA",
+  "city": "Geneva",
+  "size": "11-50",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'arx iT', locations Carouge/Paris/La Rochelle/Villeurbanne, LinkedIn size 11-50 (31 members). | Web search: kp_url: arx iT's own careers site job.arxit.com ('Bienvenue sur notre site carrière - arx iT'), which lists a 2026 open application for Lyon, La Rochelle or Geneva.",
+  "kp_url": "https://job.arxit.com/"
+ },
+ {
+  "task": "fill",
+  "key": "Geneva International Centre for Humanitarian Demining (GICHD)|Geneva",
+  "c_name": "Geneva International Centre for Humanitarian Demining (GICHD)",
+  "city": "Geneva",
+  "size": "51-200",
+  "notes": "SocialCrawl API (LinkedIn company page): page GICHD, HQ Geneva, 130 members, size 51-200."
+ },
+ {
+  "task": "fill",
+  "key": "Haller Wasser + partner SA|Geneva",
+  "c_name": "Haller Wasser + partner SA",
+  "city": "Geneva",
+  "li_url": "https://www.linkedin.com/company/haller-wasser",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Haller Wasser + partner SA', HQ Carouge, website haller-wasser.ch. | Web search: kp_url: haller-wasser.ch 'work-offers' page (jobs, internships, apprenticeship taster days). The ads on it are dated (2021; 3D/BIM PDF from July 2025).",
+  "kp_url": "https://www.haller-wasser.ch/en/work-offers"
+ },
+ {
+  "task": "fill",
+  "key": "Ecotec Environnement SA|Geneva",
+  "c_name": "Ecotec Environnement SA",
+  "city": "Geneva",
+  "li_url": "https://www.linkedin.com/company/ecotec-environnement-sa",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'ECOTEC Environnement SA' (domain ecotec.ch), HQ Genève. | Web search: g_stack: ECOTEC job ads on jobup.ch (project manager, environment, 18.03.2026): 'ArcGIS, QGIS, Suite Adobe et outils bureautiques'. kp_url: ecotec.ch 'Offres d'emploi' page.",
+  "g_stack": "ArcGIS, QGIS, Adobe Creative Suite",
+  "kp_url": "https://www.ecotec.ch/emplois"
+ },
+ {
+  "task": "fill",
+  "key": "Apaar Sàrl|Geneva",
+  "c_name": "Apaar Sàrl",
+  "city": "Geneva",
+  "li_url": "https://www.linkedin.com/company/apaar-sàrl",
+  "size": "11-50",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Apaar Sàrl' (domain apaar.ch), HQ Genève, 12 members on LinkedIn (no size bucket given) -> 11-50."
+ },
+ {
+  "task": "fill",
+  "key": "BVB Basler Verkehrs-Betriebe|Basel",
+  "c_name": "BVB Basler Verkehrs-Betriebe",
+  "city": "Basel",
+  "li_url": "https://www.linkedin.com/company/baslerverkehrsbetriebe",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Basler Verkehrs-Betriebe BVB' (domain bvb.ch), HQ Basel. | Web search: kp_url: BVB's own careers site karriere.bvb.ch (search result, bvb.ch domain).",
+  "kp_url": "https://karriere.bvb.ch/"
+ },
+ {
+  "task": "fill",
+  "key": "Swiss Tropical and Public Health Institute (Swiss TPH)|Basel",
+  "c_name": "Swiss Tropical and Public Health Institute (Swiss TPH)",
+  "city": "Basel",
+  "li_url": "https://www.linkedin.com/company/swiss-tropical-and-public-health-institute",
+  "notes": "SocialCrawl API (LinkedIn company page): company search 'Swiss TPH' returned this page (domain lookup found none)."
+ },
+ {
+  "task": "fill",
+  "key": "Kanton Basel-Stadt – Amt für Mobilität|Basel",
+  "c_name": "Kanton Basel-Stadt – Amt für Mobilität",
+  "city": "Basel",
+  "li_url": "https://www.linkedin.com/company/kanton-basel-stadt",
+  "size": "500+",
+  "kp_url": "http://www.arbeitgeber.bs.ch",
+  "notes": "SocialCrawl API (LinkedIn company page): canton-level page 'Kanton Basel-Stadt' (no separate page for the Amt für Mobilität); size 5001-10000; its website field points to the canton's employer portal arbeitgeber.bs.ch. | Web search: Address: bs.ch/bvd/amt-fuer-mobilitaet and staatskalender.bs.ch give Dufourstrasse 40/50, 4052 Basel (postal address Postfach, 4001 Basel). c_url is the office's page on bs.ch.",
+  "c_url": "https://www.bs.ch/bvd/amt-fuer-mobilitaet",
+  "adress": "Dufourstrasse 40/50",
+  "postal_code": "4052"
+ },
+ {
+  "task": "fill",
+  "key": "BR PLUS Ingénieurs SA|Lausanne",
+  "c_name": "BR PLUS Ingénieurs SA",
+  "city": "Lausanne",
+  "li_url": "https://www.linkedin.com/company/br-plus-ingénieurs-sa",
+  "size": "11-50",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'BR PLUS INGENIEURS SA', HQ Yverdon-les-Bains, LinkedIn size 11-50."
+ },
+ {
+  "task": "fill",
+  "key": "INSER SA|Lausanne",
+  "c_name": "INSER SA",
+  "city": "Lausanne",
+  "li_url": "https://www.linkedin.com/company/inser-sa",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'INSER SA' (domain inser.ch), HQ Le Mont-sur-Lausanne."
+ },
+ {
+  "task": "fill",
+  "key": "Geo Data Solutions, IT IS GIS Sàrl|Lausanne",
+  "c_name": "Geo Data Solutions, IT IS GIS Sàrl",
+  "city": "Lausanne",
+  "li_url": "https://www.linkedin.com/company/geodatasolutions",
+  "size": "11-50",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'GeoDataSolutions, IT IS GIS' (domain geodatasolutions.ch), HQ Bussigny-près-Lausanne, LinkedIn size 11-50 (8 members). | Web search: kp_url: the company's own Taleez careers page (lists GIS developer, IT architect, project manager, data scientist and ETL designer, plus unsolicited applications; says about 12 employees). sprach: the page snippet gave no language requirement.",
+  "kp_url": "https://taleez.com/careers/gds/en"
+ },
+ {
+  "task": "fill",
+  "key": "Ville de Morges|Lausanne",
+  "c_name": "Ville de Morges",
+  "city": "Lausanne",
+  "li_url": "https://www.linkedin.com/company/ville-de-morges",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Ville de Morges' (domain morges.ch). | Web search: kp_url: morges.ch/jobs, the city's own job board with current ads.",
+  "kp_url": "https://www.morges.ch/jobs/"
+ },
+ {
+  "task": "fill",
+  "key": "Gemeinde Köniz|Bern",
+  "c_name": "Gemeinde Köniz",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/gemeinde-koeniz",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Gemeinde Koeniz' (domain koeniz.ch); LinkedIn gives no size bucket, so size not filled from it. | Web search: Size: Köniz job ads say about 800 staff in 100 professions. kp_url: koeniz.ch 'Jobs und Karriere' page.",
+  "size": "500+",
+  "kp_url": "https://www.koeniz.ch/aktuell/jobs-und-karriere.page/29"
+ },
+ {
+  "task": "fill",
+  "key": "BKW Energie AG|Bern",
+  "c_name": "BKW Energie AG",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/bkwag",
+  "notes": "SocialCrawl API (LinkedIn company page): group page 'BKW AG', HQ Bern, website bkw.com (domain bkw.ch had no page)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Bevölkerungsschutz BABS|Bern",
+  "c_name": "Bundesamt für Bevölkerungsschutz BABS",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/babs-ofpp-ufpp",
+  "size": "201-500",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'Federal Office for Civil Protection FOCP', website babs.admin.ch, HQ Bern, size 201-500. | Web search: kp_url: federal job portal. The BABS ad 'Chef/in Fachbereich Kulturgüterschutz' links to jobs.admin.ch. sprach: no BABS GIS ad found.",
+  "kp_url": "https://www.jobs.admin.ch"
+ },
+ {
+  "task": "fill",
+  "key": "InfoFlora|Bern",
+  "c_name": "InfoFlora",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/infoflora",
+  "notes": "SocialCrawl API (LinkedIn company page): page 'InfoFlora' (domain infoflora.ch), locations Bern/Chambésy-Genève/Lugano."
+ },
+ {
+  "task": "fill",
+  "key": "Kanton Basel-Landschaft – Bau- und Umweltschutzdirektion|Basel",
+  "c_name": "Kanton Basel-Landschaft – Bau- und Umweltschutzdirektion",
+  "city": "Basel",
+  "adress": "Rheinstrasse 29",
+  "postal_code": "4410",
+  "size": "500+",
+  "kp_url": "https://www.baselland.ch/offene-stellen",
+  "notes": "Address: baselland.ch BUD contact page, Rheinstrasse 29, 4410 Liestal. Size: canton administration; a 2020 Personalamt Infoheft gives about 10,000 staff (administration plus schools), and jobs.ch calls it 'die grösste Arbeitgeberin im Kanton'. kp_url: baselland.ch 'offene Stellen' (the canton's job portal). li_url: the canton's social media page says it uses LinkedIn for job ads, but no linkedin.com/company URL appeared in results, so li_url is left out."
+ },
+ {
+  "task": "fill",
+  "key": "Commune d'Épalinges|Lausanne",
+  "c_name": "Commune d'Épalinges",
+  "city": "Lausanne",
+  "size": "51-200",
+  "notes": "Size: Épalinges job ad (2026) says the commune is 'gérée, entretenue et animée par une centaine d'employés'. kp_url: no own jobs page found. Ads are posted as PDFs under epalinges.ch/wp-content/uploads and on jobup. li_url: none found."
+ }
+]
