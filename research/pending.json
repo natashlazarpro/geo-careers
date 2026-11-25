@@ -50,6 +50,16 @@
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12288-5009626209-S"
  },
  {
+  "task": "research",
+  "key": "stadt leipzig personalamt abteilung personalgewinnung|Leipzig",
+  "c_name": "Stadt Leipzig Personalamt Abteilung Personalgewinnung",
+  "city": "Leipzig",
+  "address_from_job_ad": "Thomasiusstraße 1, 04109",
+  "open_jobs": 1,
+  "job_titles": "Wissenschaftliche/-r Sachbearbeiter/-in Daten und Geoinformation (m/w/d)",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/18952-2385554-S"
+ },
+ {
   "task": "fill",
   "key": "ingenieurbüro dipl ing g jonasson|Kiel",
   "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
