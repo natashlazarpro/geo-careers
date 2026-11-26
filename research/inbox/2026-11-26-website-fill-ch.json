@@ -1,0 +1,129 @@
+[
+ {
+  "task": "fill",
+  "key": "Haute école du paysage, d'ingénierie et d'architecture de Genève (HEPIA)|Geneva",
+  "c_name": "Haute école du paysage, d'ingénierie et d'architecture de Genève (HEPIA)",
+  "city": "Geneva",
+  "size": "201-500",
+  "kp_url": "https://hepia.hesge.ch/offres-emploi",
+  "li_url": "https://www.linkedin.com/school/hepia",
+  "notes": "Fetched https://hepia.hesge.ch/, https://hepia.hesge.ch/offres-emploi, https://hepia.hesge.ch/lecole/mission: size from mission page (\"environ 380 collaborateurs et collaboratrices\"); kp_url = Offres d emploi page linked in header menu; li_url from footer social icon (linkedin.com/school/hepia/, a school page so kept as /school/)."
+ },
+ {
+  "task": "fill",
+  "key": "Médecins Sans Frontières Suisse|Geneva",
+  "c_name": "Médecins Sans Frontières Suisse",
+  "city": "Geneva",
+  "size": "500+",
+  "notes": "Fetched https://www.msf.ch/travailler-avec-nous: size from \"MSF Suisse en 2024 ... 7854 employé·e·s travaillant sur le terrain\"."
+ },
+ {
+  "task": "fill",
+  "key": "Apaar Sàrl|Geneva",
+  "c_name": "Apaar Sàrl",
+  "city": "Geneva",
+  "kp_url": "https://apaar.ch/about/",
+  "notes": "Fetched https://apaar.ch/, https://apaar.ch/about/: kp_url = Infos page containing the NOUS RECHERCHONS (jobs/applications) section, candidatures@apaar.ch; no separate careers page exists."
+ },
+ {
+  "task": "fill",
+  "key": "EBL (Genossenschaft Elektra Baselland)|Basel",
+  "c_name": "EBL (Genossenschaft Elektra Baselland)",
+  "city": "Basel",
+  "kp_url": "https://www.ebl.ch/de/ueber-uns/karriere/stellenportal",
+  "li_url": "https://www.linkedin.com/company/ebl-elektra-basel-land-",
+  "notes": "Fetched https://www.ebl.ch/de/: kp_url = Stellenportal link in Karriere menu; li_url from footer LinkedIn icon (linkedin.com/company/ebl-elektra-basel-land-?trk=top_nav_home, tracking param stripped; slug ends with a hyphen as linked)."
+ },
+ {
+  "task": "fill",
+  "key": "Fachhochschule Nordwestschweiz FHNW – Institut Geomatik|Basel",
+  "c_name": "Fachhochschule Nordwestschweiz FHNW – Institut Geomatik",
+  "city": "Basel",
+  "kp_url": "https://www.fhnw.ch/de/die-fhnw/karriere",
+  "notes": "Fetched https://www.fhnw.ch/de/architektur-bau-geomatik/ueber-uns/institute/geomatik: kp_url = Jobs und Karriere link on institute page (the separate Stellenportal Geomatik is an industry job board, not FHNW vacancies)."
+ },
+ {
+  "task": "fill",
+  "key": "Universität Basel – Departement Umweltwissenschaften|Basel",
+  "c_name": "Universität Basel – Departement Umweltwissenschaften",
+  "city": "Basel",
+  "kp_url": "https://www.unibas.ch/de/Jobs-und-Karriere.html",
+  "li_url": "https://www.linkedin.com/school/unibasel",
+  "notes": "Fetched https://duw.unibas.ch/de/ (no own jobs page; footer links to unibas.ch), https://www.unibas.ch/de: kp_url = Universität Basel Jobs & Karriere link; li_url = University footer LinkedIn icon (ch.linkedin.com/school/unibasel/, kept as /school/). University-wide, not department-specific."
+ },
+ {
+  "task": "fill",
+  "key": "Géomètres associés Ney & Hurni SA|Geneva",
+  "c_name": "Géomètres associés Ney & Hurni SA",
+  "city": "Geneva",
+  "kp_url": "http://neyhurni.com/index.html",
+  "notes": "Fetched http://neyhurni.com/ (www.neyhurni.com/ fails, 000), PDF http://neyhurni.com/assets/files/offre-CFCMJNewLook.pdf: no separate careers page; the jobs section \"Rejoignez l equipe Ney & Hurni SA\" (Géomaticien CFC ad) is on the homepage. Ad states no language requirement, so sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Aerospacelab Switzerland Sàrl|Lausanne",
+  "c_name": "Aerospacelab Switzerland Sàrl",
+  "city": "Lausanne",
+  "kp_url": "https://www.aerospacelab.com/jobs",
+  "li_url": "https://www.linkedin.com/company/aerospacelab",
+  "notes": "Fetched https://www.aerospacelab.ch (redirects to https://www.aerospacelab.com/), https://www.aerospacelab.com/jobs: kp_url = careers link in footer (jobs filterable incl. Switzerland/Lausanne); li_url from footer social icon. No GIS/geodata ad found, so sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Energie BFE|Bern",
+  "c_name": "Bundesamt für Energie BFE",
+  "city": "Bern",
+  "size": "201-500",
+  "kp_url": "https://www.bfe.admin.ch/de/stellen",
+  "li_url": "https://www.linkedin.com/company/bundesamt-fuer-energie",
+  "notes": "Fetched https://www.bfe.admin.ch/de, https://www.bfe.admin.ch/de/stellen: size from Stellen page (\"Anzahl Mitarbeitende: ca. 343\"); kp_url = Stellenangebote link in footer; li_url from footer LinkedIn link."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Raumentwicklung ARE|Bern",
+  "c_name": "Bundesamt für Raumentwicklung ARE",
+  "city": "Bern",
+  "kp_url": "https://www.are.admin.ch/de/arbeiten-beim-bundesamt-fuer-raumentwicklung",
+  "notes": "Fetched https://www.are.admin.ch/de: kp_url = Jobs link in header. Job ads are on JS-only jobs.admin.ch, so sprach not verifiable."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Landwirtschaft BLW|Bern",
+  "c_name": "Bundesamt für Landwirtschaft BLW",
+  "city": "Bern",
+  "kp_url": "https://www.blw.admin.ch/de/stellenangebote",
+  "notes": "Fetched https://www.blw.admin.ch/de: kp_url = Jobs und Karriere link. Job ads on JS-only jobs.admin.ch, sprach not verifiable."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesamt für Strassen ASTRA|Bern",
+  "c_name": "Bundesamt für Strassen ASTRA",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/bundesamt-fuer-strassen",
+  "notes": "Fetched https://www.astra.admin.ch/de/stellenangebot: li_url from \"LinkedIn ASTRA\" link (ch.linkedin.com/company/bundesamt-fuer-strassen). Job ads on JS-only jobs.admin.ch, sprach not verifiable."
+ },
+ {
+  "task": "fill",
+  "key": "Geoinformation Stadt Bern|Bern",
+  "c_name": "Geoinformation Stadt Bern",
+  "city": "Bern",
+  "li_url": "https://www.linkedin.com/company/stadt-bern",
+  "notes": "Fetched https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/tvs/geoinformation, https://www.bern.ch/themen/arbeiten-fuer-die-stadt-bern/offene-stellen: li_url from footer LINKEDIN link (ch.linkedin.com/company/stadt-bern, City of Bern account). No staff count or GIS ad language found."
+ },
+ {
+  "task": "fill",
+  "key": "SBB AG|Bern",
+  "c_name": "SBB AG",
+  "city": "Bern",
+  "kp_url": "https://company.sbb.ch/de/jobs-karriere.html",
+  "notes": "Fetched https://www.sbb.ch/de: kp_url = Jobs & Karriere link (company.sbb.ch)."
+ },
+ {
+  "task": "fill",
+  "key": "geo7 AG|Bern",
+  "c_name": "geo7 AG",
+  "city": "Bern",
+  "kp_url": "https://geo7.ch/ueber-uns/stellenangebote/",
+  "notes": "Fetched https://geo7.ch/, https://geo7.ch/ueber-uns/, https://geo7.ch/sitemap.xml: kp_url = Stellenangebote page linked from Über uns (also in sitemap). Listing content JS-rendered; no ad text, so sprach left empty."
+ }
+]
