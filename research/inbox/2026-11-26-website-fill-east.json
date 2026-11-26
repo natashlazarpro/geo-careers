@@ -1,0 +1,169 @@
+[
+ {
+  "task": "fill",
+  "key": "Republički geodetski zavod|Belgrade",
+  "c_name": "Republički geodetski zavod",
+  "city": "Belgrade",
+  "kp_url": "https://www.rgz.gov.rs/јавне-набавке-огласи-за-радна-места",
+  "notes": "Fetched https://www.rgz.gov.rs/, https://www.rgz.gov.rs/јавне-набавке-огласи-за-радна-места: kp_url = 'Огласи за радна места' page linked from the RGZ main menu (lists public/internal job competitions, latest 2025/2026). No LinkedIn on site."
+ },
+ {
+  "task": "fill",
+  "key": "Univerzitet u Beogradu – Građevinski fakultet|Belgrade",
+  "c_name": "Univerzitet u Beogradu – Građevinski fakultet",
+  "city": "Belgrade",
+  "kp_url": "https://web1.grf.bg.ac.rs/vesti/lid?vid=2541&t=5",
+  "notes": "Fetched https://www.grf.bg.ac.rs (-> web1.grf.bg.ac.rs/home), https://web1.grf.bg.ac.rs/vesti/lid?vid=2541&t=5: kp_url = 'Конкурси' news category linked from homepage, lists the faculty's job competitions ('Конкурс за избор у звање и заснивање радног односа', 25-11-26). Size not stated on site."
+ },
+ {
+  "task": "fill",
+  "key": "Institut za vodoprivredu „Jaroslav Černi“ a.d.|Belgrade",
+  "c_name": "Institut za vodoprivredu „Jaroslav Černi“ a.d.",
+  "city": "Belgrade",
+  "kp_url": "https://www.jcerni.rs/karijera/",
+  "notes": "Fetched https://www.jcerni.co.rs (-> https://www.jcerni.rs/), https://www.jcerni.rs/karijera/: kp_url = 'Каријера' page from main menu; lists open positions (BIM Manager, BIM Coordinator, civil/hydro engineers), applications to posao@jcerni.rs. Note: domain now jcerni.rs; footer address Јарослава Черног 80, 11226 Београд."
+ },
+ {
+  "task": "fill",
+  "key": "Telekom Srbija a.d.|Belgrade",
+  "c_name": "Telekom Srbija a.d.",
+  "city": "Belgrade",
+  "kp_url": "https://karijera.mts.rs/",
+  "notes": "Fetched https://mts.rs/, https://mts.rs/O-Telekomu: 'Karijera' link on O nama page points to https://karijera.mts.rs/ (own career portal) -> kp_url. No GIS ad read, sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Geološki zavod Srbije|Belgrade",
+  "c_name": "Geološki zavod Srbije",
+  "city": "Belgrade",
+  "kp_url": "https://gzs.gov.rs/konkursi/",
+  "notes": "Fetched https://gzs.gov.rs/, https://gzs.gov.rs/konkursi/, https://gzs.gov.rs/kontakt/: kp_url = 'Конкурси' menu page (sub-pages Интерни конкурси / Јавни конкурси). Contact page confirms Ровињска 12, 11050 Београд. No LinkedIn, no headcount on site."
+ },
+ {
+  "task": "fill",
+  "key": "Republički zavod za statistiku|Belgrade",
+  "c_name": "Republički zavod za statistiku",
+  "city": "Belgrade",
+  "kp_url": "https://www.stat.gov.rs/o-nama/javni-konkurs-za-popunjavanje-izvrsilackih-radnih-mesta-u-rzs/",
+  "notes": "Fetched https://www.stat.gov.rs/, https://www.stat.gov.rs/o-nama/javni-konkurs-za-popunjavanje-izvrsilackih-radnih-mesta-u-rzs/: kp_url = 'Конкурси и огласи' page (O nama menu) with internal/public competitions for posts (latest 10/2025). No LinkedIn link; ads give no language requirement."
+ },
+ {
+  "task": "fill",
+  "key": "Putevi Srbije d.o.o.|Belgrade",
+  "c_name": "Putevi Srbije d.o.o.",
+  "city": "Belgrade",
+  "li_url": "https://www.linkedin.com/company/jp-putevi-srbije-pe-roads-of-serbia",
+  "notes": "Fetched https://www.putevi-srbije.rs/, https://www.putevi-srbije.rs/index.php/огласи, https://www.putevi-srbije.rs/index.php/контакт-јппс: footer social icon links linkedin.com/company/jp-putevi-srbije-pe-roads-of-serbia -> li_url. 'Јавни позиви и огласи' page is empty/not a jobs page, so kp_url left empty; no headcount stated."
+ },
+ {
+  "task": "fill",
+  "key": "Saobraćajni institut CIP d.o.o.|Belgrade",
+  "c_name": "Saobraćajni institut CIP d.o.o.",
+  "city": "Belgrade",
+  "size": "201-500",
+  "g_stack": "Laser scanning",
+  "notes": "Fetched https://sicip.rs/, https://sicip.rs/timovi/, https://sicip.rs/kontakt/, https://sicip.rs/page-sitemap.xml: homepage counter states '450+ ZAPOSLENIH' -> size 201-500; Timovi page: Tim za geodeziju does '3D lasersko skeniranje' -> Laser scanning (traffic tools Visum/OpenTrack also named, not in ORDER). Contact confirms Nemanjina 6/IV, 11000 Beograd. No careers page or LinkedIn found."
+ },
+ {
+  "task": "fill",
+  "key": "Institut za šumarstvo|Belgrade",
+  "c_name": "Institut za šumarstvo",
+  "city": "Belgrade",
+  "postal_code": "11030",
+  "notes": "Fetched https://forest.org.rs/ (from http://www.forest.org.rs), https://forest.org.rs/kontakt/: contact page gives Кнеза Вишеслава 3, 11030 Београд -> postal_code. No careers page, LinkedIn or headcount found."
+ },
+ {
+  "task": "fill",
+  "key": "Institut Mihajlo Pupin d.o.o.|Belgrade",
+  "c_name": "Institut Mihajlo Pupin d.o.o.",
+  "city": "Belgrade",
+  "kp_url": "https://www.pupin.rs/posao/",
+  "li_url": "https://www.linkedin.com/company/institute-mihajlo-pupin",
+  "notes": "Fetched https://www.pupin.rs/, https://www.pupin.rs/posao/, https://www.pupin.rs/kontakt/: 'Посао' menu page is a standing call for applicants (PhD/MSc EE/CS) -> kp_url; homepage social link rs.linkedin.com/company/institute-mihajlo-pupin -> li_url (normalised). Contact: Волгина 15, 11060 Београд. No headcount and no GIS ad with language requirement."
+ },
+ {
+  "task": "fill",
+  "key": "Caucasus Environmental NGO Network (CENN)|Tbilisi",
+  "c_name": "Caucasus Environmental NGO Network (CENN)",
+  "city": "Tbilisi",
+  "size": "51-200",
+  "kp_url": "https://www.cenn.org/careers/",
+  "notes": "Fetched https://www.cenn.org/, https://www.cenn.org/about/, https://www.cenn.org/careers/, https://www.cenn.org/careers/vacancies/: About page states 'more than 60 full-time members of staff' -> 51-200; 'Careers' menu page (Vacancies/Internship/Tenders) -> kp_url; vacancies page currently 'No vacancies available', so sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "National Statistics Office of Georgia (Geostat)|Tbilisi",
+  "c_name": "National Statistics Office of Georgia (Geostat)",
+  "city": "Tbilisi",
+  "kp_url": "https://www.geostat.ge/en/vacancies",
+  "notes": "Fetched https://www.geostat.ge/en, https://www.geostat.ge/en/modules/categories/187/about-us, https://www.geostat.ge/en/vacancies, https://www.geostat.ge/ka/vacancies, https://www.geostat.ge/ka/single_vacancy/191/...: 'Vacancies' link on About Us page -> kp_url (lists e.g. senior specialist of the Software and Geoinformation Systems Development Division, deadline 25 Nov 2026). Ad detail is only a link to vacancy.hr.gov.ge (fetch failed), so sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Roads Department of the Ministry of Regional Development and Infrastructure of Georgia|Tbilisi",
+  "c_name": "Roads Department of the Ministry of Regional Development and Infrastructure of Georgia",
+  "city": "Tbilisi",
+  "kp_url": "https://georoad.gov.ge/ka/vakansiebi-2/63",
+  "notes": "Fetched https://georoad.ge (record's https://www.georoad.ge/ fails; root redirects to https://georoad.gov.ge/ka), https://georoad.gov.ge/ka/vakansiebi-2/63: 'ვაკანსიები' menu page lists current vacancies (Nov 2026) -> kp_url. Consider updating c_url to https://georoad.gov.ge/. No LinkedIn, headcount or language requirement seen."
+ },
+ {
+  "task": "fill",
+  "key": "Georgian Technical University|Tbilisi",
+  "c_name": "Georgian Technical University",
+  "city": "Tbilisi",
+  "kp_url": "https://www.gtu.edu.ge/konkursi/",
+  "notes": "Fetched https://gtu.ge (-> https://www.gtu.edu.ge/), https://www.gtu.edu.ge/konkursi/: 'კონკურსი' menu page lists GTU competitions incl. open competitions for academic positions -> kp_url. No language requirement read for a GIS post."
+ },
+ {
+  "task": "fill",
+  "key": "Ivane Javakhishvili Tbilisi State University|Tbilisi",
+  "c_name": "Ivane Javakhishvili Tbilisi State University",
+  "city": "Tbilisi",
+  "kp_url": "https://tsu.ge/en/vacancies",
+  "notes": "Fetched https://tsu.ge/en, https://tsu.ge/en/vacancies: 'Vacancies' link on homepage -> kp_url (lists current competitions, e.g. lab head at Vekua Institute of Applied Mathematics). No GIS ad with language requirement seen."
+ },
+ {
+  "task": "fill",
+  "key": "Food and Agriculture Organization of the United Nations (FAO) – Representation in Georgia|Tbilisi",
+  "c_name": "Food and Agriculture Organization of the United Nations (FAO) – Representation in Georgia",
+  "city": "Tbilisi",
+  "postal_code": "0159",
+  "kp_url": "https://www.fao.org/employment/home/en/",
+  "li_url": "https://www.linkedin.com/company/fao",
+  "notes": "Fetched https://www.fao.org/georgia/en, https://www.fao.org/georgia/our-office/our-team/en, https://www.fao.org/employment/home/en/: Georgia page contact block 'Ministry of Agriculture, 6 Marshall Gelovani Avenue, 0159 Tbilisi' -> postal_code 0159; footer 'Jobs' -> FAO employment portal (organisation-wide) as kp_url; footer social link linkedin.com/company/fao (global FAO page) -> li_url. No headcount for the representation."
+ },
+ {
+  "task": "fill",
+  "key": "Georgian National Communications Commission|Tbilisi",
+  "c_name": "Georgian National Communications Commission",
+  "city": "Tbilisi",
+  "kp_url": "https://comcom.ge/ge/the-commission/vakansiebi",
+  "notes": "Fetched https://comcom.ge/ (-> /ge/), https://comcom.ge/ge/the-commission/vakansiebi, https://comcom.ge/ge/the-commission/about-commission: 'ვაკანსიები' page (sections კონკურსები / სტაჟირება / მოკლევადიანი დასაქმება) -> kp_url. No staff count stated."
+ },
+ {
+  "task": "fill",
+  "key": "LEPL National Agency for Cultural Heritage Preservation of Georgia|Tbilisi",
+  "c_name": "LEPL National Agency for Cultural Heritage Preservation of Georgia",
+  "city": "Tbilisi",
+  "kp_url": "https://heritagesites.ge/ka/services/44",
+  "notes": "Fetched https://heritagesites.ge/ka, https://heritagesites.ge/ka/services/44, https://heritagesites.ge/ka/page/106: 'ვაკანსიები' link on site -> kp_url (no ads listed right now). Note: contact page gives address თბილისი, აღმაშენებლის 79 (Aghmashenebeli 79), not Atoneli St 27 as in record."
+ },
+ {
+  "task": "fill",
+  "key": "LEPL Spatial and Urban Development Agency|Tbilisi",
+  "c_name": "LEPL Spatial and Urban Development Agency",
+  "city": "Tbilisi",
+  "kp_url": "https://suda.gov.ge/vacancies",
+  "li_url": "https://www.linkedin.com/company/sudage",
+  "notes": "Fetched https://suda.gov.ge/ (https://suda.gov.ge/ fails intermittently; http works), https://suda.gov.ge/vacancies, https://suda.gov.ge/contact, https://suda.gov.ge/about: 'ვაკანსიები' page lists agency vacancies (spatial/urban planner etc., ads hosted on hr.gov.ge) -> kp_url; footer LinkedIn link linkedin.com/company/sudage/mycompany/ -> normalised li_url. Contact page shows no street/postcode in text."
+ },
+ {
+  "task": "fill",
+  "key": "Copter Tech LLC|Tbilisi",
+  "c_name": "Copter Tech LLC",
+  "city": "Tbilisi",
+  "kp_url": "https://coptertech.ge/vacancies/",
+  "li_url": "https://www.linkedin.com/company/coptertech",
+  "notes": "Fetched https://coptertech.ge/, https://coptertech.ge/vacancies/: 'ვაკანსიები' menu page -> kp_url; social link ge.linkedin.com/company/coptertech -> normalised li_url. Only ad is 'Drone technician - Tbilisi' (repair/service, requires English and Russian at technical level) - not a GIS/survey ad and RU not a code, so sprach left empty."
+ }
+]
