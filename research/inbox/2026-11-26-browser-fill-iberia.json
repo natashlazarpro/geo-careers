@@ -1,0 +1,53 @@
+[
+ {
+  "task": "fill",
+  "key": "Esri España Soluciones Geoespaciales S.L.|Madrid",
+  "c_name": "Esri España Soluciones Geoespaciales S.L.",
+  "city": "Madrid",
+  "kp_url": "https://www.esri.es/es-es/acerca-de/unete-a-nosotros/unete-a-nosotros",
+  "notes": "Rendered https://www.esri.es (footer link 'Únete a nosotros') and the careers page itself, which has an 'Ofertas de empleo' section -> kp_url. sprach not filled: the only current ad (https://www.esri.es/es-es/acerca-de/unete-a-nosotros/ofertas/2026/gerente-dinamizacion) is a commercial/customer-success role ('Inglés: nivel alto', GIS/ArcGIS only 'preferible'), not a GIS job ad. Also noted: the contact page lists the Madrid office as 'Calle de Orense, 34. Torre Sur. Planta 3ª 28020 Madrid', which differs from the stored address (Paseo de la Castellana 91)."
+ },
+ {
+  "task": "fill",
+  "key": "Esri España Soluciones Geoespaciales, S.L.|Barcelona",
+  "c_name": "Esri España Soluciones Geoespaciales, S.L.",
+  "city": "Barcelona",
+  "kp_url": "https://www.esri.es/es-es/acerca-de/unete-a-nosotros/unete-a-nosotros",
+  "li_url": "https://www.linkedin.com/company/esri-spain",
+  "notes": "Rendered https://www.esri.es: footer links 'Únete a nosotros' (company-wide careers page for Esri España) -> kp_url and linkedin.com/company/esri-spain -> li_url. postal_code not found: https://www.esri.es/es-es/acerca-de/contacto/contacto lists only the Madrid office."
+ },
+ {
+  "task": "fill",
+  "key": "Esri Portugal - Sistemas e Informação Geográfica, S.A.|Lisbon",
+  "c_name": "Esri Portugal - Sistemas e Informação Geográfica, S.A.",
+  "city": "Lisbon",
+  "kp_url": "https://www.esri-portugal.pt/pt-pt/carreiras",
+  "sprach": "ENG",
+  "notes": "Rendered https://www.esri-portugal.pt/pt-pt/home (link 'Carreiras') -> kp_url. Rendered ad https://www.esri-portugal.pt/pt-pt/carreiras/formador-sig ('Formador SIG - ArcGIS & Sistemas de Informação Geográfica'): 'Elevados conhecimentos da língua inglesa' and 'Bons conhecimentos de inglês, falado e escrito' -> ENG. The ad also asks for 'Elevados conhecimentos de ArcGIS Pro'. Portuguese is not stated as a requirement. Size is not stated on the site."
+ },
+ {
+  "task": "fill",
+  "key": "Laboratório Nacional de Engenharia Civil|Lisbon",
+  "c_name": "Laboratório Nacional de Engenharia Civil",
+  "city": "Lisbon",
+  "kp_url": "https://www.lnec.pt/careers/application_c",
+  "notes": "Rendered https://www.lnec.pt: the RECRUTAMENTO section links 'Procedimentos Concursais' (https://www.lnec.pt/careers/application_c, rendered OK) -> kp_url. Other careers links: /careers/bic, /careers/application. Size not stated."
+ },
+ {
+  "task": "fill",
+  "key": "IDOM Consulting, Engineering, Architecture, S.A.U.|Madrid",
+  "c_name": "IDOM Consulting, Engineering, Architecture, S.A.U.",
+  "city": "Madrid",
+  "sprach": "ENG",
+  "notes": "Rendered https://www.idom.com/en/work-with-us/ -> 'Available jobs' link https://career.idom.com/search?locale=en_US; went through result pages startrow=25 and 50. Only survey-related ad: 'Topography Assistant' (https://career.idom.com/job/Bilbao-Topography-Assistant/1377962557/), which is for the BILBAO office, not Madrid: 'You have an advanced level of English.' -> ENG (Bilbao office ad; also asks for AutoCAD)."
+ },
+ {
+  "task": "fill",
+  "key": "Departament d'Agricultura, Ramaderia, Pesca i Alimentació|Barcelona",
+  "c_name": "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+  "city": "Barcelona",
+  "kp_url": "https://web.gencat.cat/ca/generalitat/treballar-generalitat",
+  "li_url": "https://www.linkedin.com/company/generalitat-de-catalunya/",
+  "notes": "Rendered https://www.gencat.cat (-> web.gencat.cat/ca/inici): link 'Treballar a la Generalitat' (rendered OK; sub-pages for oposicions, ofertes de treball temporal, borses de treball) -> kp_url; footer LinkedIn link -> li_url. Both are Generalitat-wide (the department is part of the Generalitat de Catalunya), not department-specific."
+ }
+]
