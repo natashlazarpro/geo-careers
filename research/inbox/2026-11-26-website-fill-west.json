@@ -1,0 +1,173 @@
+[
+ {
+  "task": "fill",
+  "key": "Centre for Sustainable Energy|Bristol",
+  "c_name": "Centre for Sustainable Energy",
+  "city": "Bristol",
+  "kp_url": "https://www.cse.org.uk/jobs-volunteering/",
+  "notes": "Fetched https://www.cse.org.uk/ and https://www.cse.org.uk/jobs-volunteering/: kp_url = 'Jobs & volunteering' menu link (page 200)."
+ },
+ {
+  "task": "fill",
+  "key": "Waternet|Amsterdam",
+  "c_name": "Waternet",
+  "city": "Amsterdam",
+  "kp_url": "https://www.waternet.nl/werken-bij/vacatures/",
+  "notes": "Fetched https://www.waternet.nl/ and https://www.waternet.nl/werken-bij/vacatures/: kp_url = 'Vacatures' link under 'Werken bij' (page 200, title 'Vacatures Waternet')."
+ },
+ {
+  "task": "fill",
+  "key": "Vrije Universiteit Amsterdam|Amsterdam",
+  "c_name": "Vrije Universiteit Amsterdam",
+  "city": "Amsterdam",
+  "kp_url": "https://werkenbij.vu.nl/",
+  "notes": "Fetched https://vu.nl/nl and https://werkenbij.vu.nl/: kp_url = 'Bekijk onze vacatures!' link to own portal 'Werken bij VU'."
+ },
+ {
+  "task": "fill",
+  "key": "Universiteit van Amsterdam|Amsterdam",
+  "c_name": "Universiteit van Amsterdam",
+  "city": "Amsterdam",
+  "kp_url": "https://werkenbij.uva.nl/vacatures",
+  "li_url": "https://www.linkedin.com/school/university-of-amsterdam",
+  "notes": "Fetched https://www.uva.nl/ and https://werkenbij.uva.nl/vacatures: kp_url = 'Bekijk alle vacatures' link to own portal; li_url = footer LinkedIn icon (a /school/ page, kept as /school/)."
+ },
+ {
+  "task": "fill",
+  "key": "Arcadis Nederland B.V.|Amsterdam",
+  "c_name": "Arcadis Nederland B.V.",
+  "city": "Amsterdam",
+  "size": "500+",
+  "notes": "Fetched https://www.arcadis.com/nl-nl/over-ons/company-profile: size from '34.000 medewerkers' (Arcadis group-wide)."
+ },
+ {
+  "task": "fill",
+  "key": "Gemeente Amsterdam|Amsterdam",
+  "c_name": "Gemeente Amsterdam",
+  "city": "Amsterdam",
+  "kp_url": "https://werkenbij.amsterdam.nl/",
+  "notes": "Fetched https://www.amsterdam.nl/ and https://werkenbij.amsterdam.nl/: kp_url = 'Vacatures' link to own portal 'Werken bij Amsterdam'."
+ },
+ {
+  "task": "fill",
+  "key": "Meridia Land B.V.|Amsterdam",
+  "c_name": "Meridia Land B.V.",
+  "city": "Amsterdam",
+  "kp_url": "https://www.meridia.land/career",
+  "li_url": "https://www.linkedin.com/company/meridialand",
+  "notes": "Fetched https://www.meridia.land/ and https://www.meridia.land/career: kp_url = 'See open positions' link (page currently says 'No items found'); li_url = LinkedIn link on the career page."
+ },
+ {
+  "task": "fill",
+  "key": "HaskoningDHV Nederland B.V.|Amsterdam",
+  "c_name": "HaskoningDHV Nederland B.V.",
+  "city": "Amsterdam",
+  "kp_url": "https://www.haskoning.com/en/careers/vacancies",
+  "notes": "Fetched https://www.haskoning.com/ and https://www.haskoning.com/en/careers/vacancies: kp_url = 'Our vacancies' link. No LinkedIn link on home/contact/vacancies pages; job list is JS-loaded so sprach not found."
+ },
+ {
+  "task": "fill",
+  "key": "Booking.com B.V.|Amsterdam",
+  "c_name": "Booking.com B.V.",
+  "city": "Amsterdam",
+  "kp_url": "https://careers.booking.com/",
+  "notes": "Fetched https://www.booking.com/ (202 challenge) and https://www.booking.com/sitemap.xml (404 page with site footer): kp_url = footer 'Careers' link (careers.booking.com, utm params removed). No LinkedIn link seen."
+ },
+ {
+  "task": "fill",
+  "key": "Rainforest Alliance|Amsterdam",
+  "c_name": "Rainforest Alliance",
+  "city": "Amsterdam",
+  "size": "500+",
+  "notes": "Fetched https://www.rainforest-alliance.org/careers/: size from 'nearly 700 members of staff based in 36 countries'."
+ },
+ {
+  "task": "fill",
+  "key": "Royal NLR|Amsterdam",
+  "c_name": "Royal NLR",
+  "city": "Amsterdam",
+  "kp_url": "https://werkenbijnlr.recruitee.com/vacatures",
+  "li_url": "https://www.linkedin.com/company/nlr",
+  "notes": "Fetched https://www.nlr.org/ and https://www.nlr.org/working-at-nlr/: kp_url = 'Vacancies' link to own Recruitee portal; li_url = footer LinkedIn link (linkedin.com/company/nlr/posts..., normalised)."
+ },
+ {
+  "task": "fill",
+  "key": "Atelier parisien d'urbanisme (Apur)|Paris",
+  "c_name": "Atelier parisien d'urbanisme (Apur)",
+  "city": "Paris",
+  "kp_url": "https://www.apur.org/fr/offres-emploi",
+  "notes": "Fetched https://www.apur.org/fr and https://www.apur.org/fr/offres-emploi: kp_url = footer \"offre d'emploi\" link (page 200, title 'Offres d'emploi | Apur')."
+ },
+ {
+  "task": "fill",
+  "key": "L'Institut Paris Region|Paris",
+  "c_name": "L'Institut Paris Region",
+  "city": "Paris",
+  "kp_url": "https://www.institutparisregion.fr/offres-demploi-et-de-stage/",
+  "notes": "Fetched https://www.institutparisregion.fr/ and https://www.institutparisregion.fr/offres-demploi-et-de-stage/: kp_url = \"Offres d'emploi\" menu link."
+ },
+ {
+  "task": "fill",
+  "key": "Algoé|Paris",
+  "c_name": "Algoé",
+  "city": "Paris",
+  "kp_url": "https://www.algoe.fr/savoir_faire/carriere/",
+  "notes": "Fetched https://www.algoe.fr/ and https://www.algoe.fr/savoir_faire/carriere/: kp_url = 'Carrière' page on own site (the 'Nos offres' button goes to welcometothejungle.com, a job board, so not used)."
+ },
+ {
+  "task": "fill",
+  "key": "Direction régionale et interdépartementale de l'environnement, de l'aménagement et des transports d'Île-de-France (DRIEAT)|Paris",
+  "c_name": "Direction régionale et interdépartementale de l'environnement, de l'aménagement et des transports d'Île-de-France (DRIEAT)",
+  "city": "Paris",
+  "kp_url": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/recrutement-r3995.html",
+  "notes": "Fetched https://www.drieat.ile-de-france.developpement-durable.gouv.fr/ and its recrutement-r3995.html: kp_url = 'Recrutement' menu link (page 200)."
+ },
+ {
+  "task": "fill",
+  "key": "UMR 8504 Géographie-cités|Paris",
+  "c_name": "UMR 8504 Géographie-cités",
+  "city": "Paris",
+  "size": "51-200",
+  "notes": "Fetched https://geographie-cites.cnrs.fr/membres/: counted the member list: about 232 people listed, of whom about 75 are associates and 3 emeriti, leaving about 155 staff, researchers, doctoral students and postdocs -> 51-200 (it would be 201-500 if associates were counted)."
+ },
+ {
+  "task": "fill",
+  "key": "Coexya|Paris",
+  "c_name": "Coexya",
+  "city": "Paris",
+  "c_url": "https://coexya.eu/",
+  "notes": "Fetched https://jobs.coexya.eu/: c_url = 'Site corporate' link (https://coexya.eu/)."
+ },
+ {
+  "task": "fill",
+  "key": "Arcadis|Bristol",
+  "c_name": "Arcadis",
+  "city": "Bristol",
+  "kp_url": "https://careers.arcadis.com/locations/uk",
+  "notes": "Fetched https://www.arcadis.com/en-gb and https://careers.arcadis.com/locations/uk: kp_url = 'Careers' menu link to own portal (Arcadis UK page)."
+ },
+ {
+  "task": "fill",
+  "key": "Sweco UK Limited|Bristol",
+  "c_name": "Sweco UK Limited",
+  "city": "Bristol",
+  "li_url": "https://www.linkedin.com/company/sweco",
+  "notes": "Fetched https://www.sweco.co.uk/: li_url = footer LinkedIn link."
+ },
+ {
+  "task": "fill",
+  "key": "RSK ADAS Ltd|Bristol",
+  "c_name": "RSK ADAS Ltd",
+  "city": "Bristol",
+  "kp_url": "https://adas.co.uk/careers/",
+  "notes": "Fetched https://adas.co.uk/ and https://adas.co.uk/careers/: kp_url = 'Careers' menu link."
+ },
+ {
+  "task": "fill",
+  "key": "Wessex Archaeology Limited|Bristol",
+  "c_name": "Wessex Archaeology Limited",
+  "city": "Bristol",
+  "kp_url": "https://www.wessexarch.co.uk/vacancies",
+  "notes": "Fetched https://www.wessexarch.co.uk/ and https://www.wessexarch.co.uk/vacancies: kp_url = 'Vacancies' menu link (lists current vacancies)."
+ }
+]
