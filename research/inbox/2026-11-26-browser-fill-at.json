@@ -1,0 +1,26 @@
+[
+ {
+  "task": "fill",
+  "key": "Bundesamt für Eich- und Vermessungswesen|Salzburg",
+  "c_name": "Bundesamt für Eich- und Vermessungswesen",
+  "city": "Salzburg",
+  "sprach": "DE/ENG",
+  "notes": "Rendered https://www.bev.gv.at/Das-BEV/Jobs-und-Karriere/Offene-Stellen.html (links to Jobbörse der Republik) and the BEV ad https://bund.jobboerse.gv.at/sap/bc/jobs/#/details/00505684ED691FD1B6A3897DB25D6000 'Akademische/r Referent/in (w/m/d) für das Vermessungsamt Graz (A 1/1)', Dienststelle BEV, ref BMWET-26-0319 (expanded sections read via page textContent). NOTE: ad is for the BEV Vermessungsamt Graz, not the Salzburg office. sprach: 'verhandlungssichere Beherrschung der deutschen Sprache in Wort und Schrift' + 'facheinschlägige Englischkenntnisse' -> DE/ENG. g_stack: 'umfassende EDV-Anwenderkenntnisse (insbes. im MS-Office)'. | Reviewer: g_stack dropped (MS Office only, not a GIS tool)."
+ },
+ {
+  "task": "fill",
+  "key": "Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft|Innsbruck",
+  "c_name": "Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft",
+  "city": "Innsbruck",
+  "size": "201-500",
+  "notes": "Rendered https://www.bfw.gv.at/das-bfw/organisation-berichte/: 'Insgesamt hat das BFW derzeit rund 385 Mitarbeiterinnen und Mitarbeiter (Stand Oktober 2025).'"
+ },
+ {
+  "task": "fill",
+  "key": "GEOGEM ZT KG|Innsbruck",
+  "c_name": "GEOGEM ZT KG",
+  "city": "Innsbruck",
+  "size": "1-10",
+  "notes": "Rendered team page https://www.geogem.at/?page_id=144 ('Unser Team', 'Team Geogem Innsbruck'): 7 people listed (2 Ingenieurkonsulenten, 4 Vermessungstechniker/in, 1 Lehrling). A second office in Lechaschau has no staff listed."
+ }
+]
