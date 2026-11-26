@@ -1,0 +1,261 @@
+[
+ {
+  "task": "fill",
+  "key": "Xcalibur Multiphysics Group S.L.|Madrid",
+  "c_name": "Xcalibur Multiphysics Group S.L.",
+  "city": "Madrid",
+  "kp_url": "https://xcaliburmp.bamboohr.com/careers",
+  "li_url": "https://www.linkedin.com/company/xcaliburmultiphysics",
+  "notes": "Fetched https://xcaliburmp.com/: footer 'Work with Us' links BambooHR portal xcaliburmp.bamboohr.com/careers (kp_url); LinkedIn icon links linkedin.com/company/xcaliburmultiphysics."
+ },
+ {
+  "task": "fill",
+  "key": "TomTom International B.V.|Madrid",
+  "c_name": "TomTom International B.V.",
+  "city": "Madrid",
+  "li_url": "https://www.linkedin.com/company/tomtom",
+  "notes": "Fetched https://www.tomtom.com/: footer social link linkedin.com/company/tomtom."
+ },
+ {
+  "task": "fill",
+  "key": "Ingeniería y Economía del Transporte, S.M.E. M.P., S.A. (Ineco)|Madrid",
+  "c_name": "Ingeniería y Economía del Transporte, S.M.E. M.P., S.A. (Ineco)",
+  "city": "Madrid",
+  "li_url": "https://www.linkedin.com/company/ineco_es",
+  "notes": "Fetched https://www.ineco.com/ineco/: footer LinkedIn link linkedin.com/company/ineco_es."
+ },
+ {
+  "task": "fill",
+  "key": "Nommon Solutions and Technologies, S.L.|Madrid",
+  "c_name": "Nommon Solutions and Technologies, S.L.",
+  "city": "Madrid",
+  "size": "11-50",
+  "notes": "Fetched https://www.nommon.es/our-team/: team page lists 35 named people (counted) -> 11-50."
+ },
+ {
+  "task": "fill",
+  "key": "Telespazio Ibérica, S.L.U.|Madrid",
+  "c_name": "Telespazio Ibérica, S.L.U.",
+  "city": "Madrid",
+  "kp_url": "https://telespazioiberica.teamtailor.com/",
+  "notes": "Fetched https://www.telespazio.es/en/: 'Join a Global Company' links Teamtailor portal telespazioiberica.teamtailor.com (kp_url); site also has /en/sobre-nosotros/carreras-profesionales."
+ },
+ {
+  "task": "fill",
+  "key": "Canal de Isabel II, S.A., M.P.|Madrid",
+  "c_name": "Canal de Isabel II, S.A., M.P.",
+  "city": "Madrid",
+  "li_url": "https://www.linkedin.com/company/canal-de-isabel-ii",
+  "notes": "Fetched https://convocatoriascanaldeisabelsegunda.es/ (own job portal; main site www.canaldeisabelsegunda.es failed 000/503): footer LinkedIn icon links linkedin.com/company/canal-de-isabel-ii."
+ },
+ {
+  "task": "fill",
+  "key": "Lobelia Earth SL|Barcelona",
+  "c_name": "Lobelia Earth SL",
+  "city": "Barcelona",
+  "kp_url": "https://www.lobelia.earth/careers",
+  "notes": "Fetched https://www.lobelia.earth/ and https://www.lobelia.earth/careers: footer 'Careers' page lists current openings (Front-End Software Developer, Project coordinator, External Communications Manager - Barcelona)."
+ },
+ {
+  "task": "fill",
+  "key": "Consultoria Tecnica Nexus Geografics, S.L.|Barcelona",
+  "c_name": "Consultoria Tecnica Nexus Geografics, S.L.",
+  "city": "Barcelona",
+  "kp_url": "https://www.nexusgeographics.com/treballa-amb-nosaltres/",
+  "notes": "Fetched https://www.nexusgeographics.com/ and /treballa-amb-nosaltres/: 'Treballa amb nosaltres' page (CV upload form, no individual ads) -> kp_url; no ad stating language requirements, sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "TRE ALTAMIRA, S.L.|Barcelona",
+  "c_name": "TRE ALTAMIRA, S.L.",
+  "city": "Barcelona",
+  "kp_url": "https://site.tre-altamira.com/work-with-us/",
+  "notes": "Fetched https://site.tre-altamira.com/ and /work-with-us/: 'Work with us' page with current ads (GIS/InSAR geospatial roles; ArcGIS, QGIS named; C-level English, native Portuguese for one role); page states over 130 people."
+ },
+ {
+  "task": "fill",
+  "key": "GeoNumerics|Barcelona",
+  "c_name": "GeoNumerics",
+  "city": "Barcelona",
+  "kp_url": "https://www.geonumerics.es/index.php/work-with-us",
+  "sprach": "ENG",
+  "notes": "Fetched https://www.geonumerics.es/, /index.php/work-with-us, /index.php/work-with-us/111-gnss-navigation-position-2, /109-junior-software-development-2, /110-junior-r-d-job-position-in-geomatics-navigation-2: 'Work with us' lists open positions (kp_url); GNSS navigation ad requires 'Fluent English' (Spanish and Catalan only 'a plus'), other ads also require English -> ENG. No LinkedIn link on site; 'Staff' page is a login, homepage only says 'small team' (no number) -> size left empty."
+ },
+ {
+  "task": "fill",
+  "key": "SITEP, S.L.|Barcelona",
+  "c_name": "SITEP, S.L.",
+  "city": "Barcelona",
+  "kp_url": "https://sitep.com/oferta-sitep/",
+  "notes": "Fetched https://sitep.com/, https://sitep.com/oferta-sitep/, https://sitep.com/sobre-nosotros/: homepage links 'Oferta Empleo SITEP: ANALISTA PROGRAMADOR' (Sitep Ingeniería GIS; mentions GeoServer, OpenLayers) -> kp_url (note: ad reference APWEB 4T2016, may be old); ad's minimum requirements 'Castellano leído y escrito', Catalan only 'deseable' -> ES. No employee count stated (only a generic legal remark about companies >50 staff), size left empty. | Reviewer: sprach dropped (ad from 2016)."
+ },
+ {
+  "task": "fill",
+  "key": "HEMAV TECHNOLOGY, SL|Barcelona",
+  "c_name": "HEMAV TECHNOLOGY, SL",
+  "city": "Barcelona",
+  "kp_url": "https://layerscrop.com/en/careers",
+  "notes": "Fetched https://www.hemav.com (redirects to https://layerscrop.com/en/) and https://layerscrop.com/en/careers: LAYERS is 'a registered trademark of HEMAV Technology S.L.', HQ Barcelona; careers page = kp_url. 'Languages: Spanish, Portuguese, English' there describes company operations, not an ad requirement -> sprach left empty; no headcount stated."
+ },
+ {
+  "task": "fill",
+  "key": "Instituto de Geografia e Ordenamento do Território da Universidade de Lisboa|Lisbon",
+  "c_name": "Instituto de Geografia e Ordenamento do Território da Universidade de Lisboa",
+  "city": "Lisbon",
+  "kp_url": "https://www.igot.ulisboa.pt/recrutamento",
+  "notes": "Fetched https://www.igot.ulisboa.pt/ and /recrutamento: footer/menu 'Recrutamento' page (concursos/recruitment documents) -> kp_url. No staff count found, size left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Instituto Hidrográfico|Lisbon",
+  "c_name": "Instituto Hidrográfico",
+  "city": "Lisbon",
+  "kp_url": "https://www.hidrografico.pt/recrutamento/da/drh/recrutamento-de-pessoal/",
+  "notes": "Fetched https://www.hidrografico.pt/: menu 'Recrutamento' / 'Junta-te a nós!' links /recrutamento/da/drh/recrutamento-de-pessoal/ -> kp_url. No headcount, size left empty."
+ },
+ {
+  "task": "fill",
+  "key": "TML – Transportes Metropolitanos de Lisboa, E.M.T., S.A.|Lisbon",
+  "c_name": "TML – Transportes Metropolitanos de Lisboa, E.M.T., S.A.",
+  "city": "Lisbon",
+  "kp_url": "https://www.tmlmobilidade.pt/sobre-a-tml/recrutamento-tml/",
+  "notes": "Fetched https://www.tmlmobilidade.pt/ and /sobre-a-tml/recrutamento-tml/ (resolves to /0/recrutamento-tml/): 'Recrutamento da TML' page (currently 'não temos ofertas de trabalho disponíveis') -> kp_url. No headcount found on /sobre-a-tml/instrumentos-de-gestao/recursos-humanos/, size left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Área Metropolitana de Lisboa|Lisbon",
+  "c_name": "Área Metropolitana de Lisboa",
+  "city": "Lisbon",
+  "li_url": "https://www.linkedin.com/company/%C3%A1rea-metropolitana-de-lisboa",
+  "notes": "Fetched https://documentacao.aml.pt/ and https://www.aml.pt/index.php?cp=COMPONENT_CONTACT&sr=SUS5787A8A26D650: aml.pt contact page footer links linkedin.com/company/%C3%A1rea-metropolitana-de-lisboa (área-metropolitana-de-lisboa). No dedicated careers page found (documentacao.aml.pt only lists 'Procedimento Recrutamento' editais as PDFs), kp_url left empty."
+ },
+ {
+  "task": "fill",
+  "key": "APL - Administração do Porto de Lisboa, S.A.|Lisbon",
+  "c_name": "APL - Administração do Porto de Lisboa, S.A.",
+  "city": "Lisbon",
+  "kp_url": "https://www.portodelisboa.pt/recrutamento",
+  "li_url": "https://www.linkedin.com/company/porto-de-lisboa",
+  "notes": "Fetched https://www.portodelisboa.pt/, /recrutamento, /linkedinlink: menu 'Recrutamento' page (Oportunidades de Carreira) -> kp_url; footer LinkedIn icon /linkedinlink redirects to linkedin.com/company/porto-de-lisboa. No headcount or tool list found."
+ },
+ {
+  "task": "fill",
+  "key": "Instituto Superior Técnico (Universidade de Lisboa)|Lisbon",
+  "c_name": "Instituto Superior Técnico (Universidade de Lisboa)",
+  "city": "Lisbon",
+  "c_url": "https://tecnico.ulisboa.pt",
+  "notes": "Fetched https://drh.tecnico.ulisboa.pt/ (record's kp_url): header/footer link 'Instituto Superior Técnico' -> https://tecnico.ulisboa.pt (c_url)."
+ },
+ {
+  "task": "fill",
+  "key": "Agência Portuguesa do Ambiente, I.P.|Lisbon",
+  "c_name": "Agência Portuguesa do Ambiente, I.P.",
+  "city": "Lisbon",
+  "kp_url": "https://apambiente.pt/apa/trabalhar-na-apa",
+  "size": "500+",
+  "notes": "Fetched https://apambiente.pt/, /apa/trabalhar-na-apa, /apa/quem-somos-e-o-que-fazemos: menu 'Trabalhar na APA' -> kp_url; 'Quem somos' states 'Somos cerca de quase 800 profissionais' -> 500+. No LinkedIn link on site."
+ },
+ {
+  "task": "fill",
+  "key": "Entidad Pública Empresarial Administrador de Infraestructuras Ferroviarias|Madrid",
+  "c_name": "Entidad Pública Empresarial Administrador de Infraestructuras Ferroviarias",
+  "city": "Madrid",
+  "kp_url": "https://www.adif.es/empleo",
+  "li_url": "https://www.linkedin.com/company/adif",
+  "notes": "Fetched https://www.adif.es/: menu 'Empleo' (oferta de empleo público, bolsa de empleo) -> kp_url; footer 'Ir a linkedin' links es.linkedin.com/company/adif."
+ },
+ {
+  "task": "fill",
+  "key": "Instituto Nacional de Estatística, I.P.|Lisbon",
+  "c_name": "Instituto Nacional de Estatística, I.P.",
+  "city": "Lisbon",
+  "kp_url": "https://recrutamento.ine.pt/",
+  "li_url": "https://www.linkedin.com/company/ine",
+  "notes": "Fetched https://www.ine.pt/: header 'Join Us' links recrutamento.ine.pt (own recruitment portal) -> kp_url; footer LinkedIn icon pt.linkedin.com/company/ine."
+ },
+ {
+  "task": "fill",
+  "key": "Laboratório Nacional de Energia e Geologia, I.P.|Lisbon",
+  "c_name": "Laboratório Nacional de Energia e Geologia, I.P.",
+  "city": "Lisbon",
+  "kp_url": "https://www.lneg.pt/o-lneg/recrutamento/",
+  "notes": "Fetched https://www.lneg.pt/ and /o-lneg/recrutamento/: 'Recrutamento' page with open calls (incl. Assistant researcher in Geosciences - applied geological cartography with GIS and AI) -> kp_url."
+ },
+ {
+  "task": "fill",
+  "key": "EPAL - Empresa Portuguesa das Águas Livres, S.A.|Lisbon",
+  "c_name": "EPAL - Empresa Portuguesa das Águas Livres, S.A.",
+  "city": "Lisbon",
+  "kp_url": "https://www.epal.pt/EPAL/menu/epal/recrutamento",
+  "notes": "Fetched https://www.epal.pt/EPAL/homepage and /EPAL/menu/epal/recrutamento: menu 'Recrutamento' page (Carreiras EPAL, Ofertas de Emprego) -> kp_url."
+ },
+ {
+  "task": "fill",
+  "key": "COBA, S.A.|Lisbon",
+  "c_name": "COBA, S.A.",
+  "city": "Lisbon",
+  "g_stack": "ArcGIS, QGIS, GIS, Civil 3D, Revit, LiDAR, Remote sensing",
+  "sprach": "ENG",
+  "notes": "Fetched https://www.cobagroup.com/carreiras-PT.aspx, https://www.cobagroup.com/OPORTUNIDADES/VisualizarVagas.aspx?Vaga=EGE_LAND_1126, https://www.cobagroup.com/grupo-PT.aspx: ad 'Lisboa - Engenheiro(a) Geógrafo(a) / Geoespacial' names SIG, LiDAR, Deteção Remota, BIM and values ArcGIS, QGIS, Civil 3D, Revit -> g_stack; requires 'Bons conhecimentos de inglês' -> ENG (Portuguese not stated). No employee number on group page, size left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Diputació de Barcelona|Barcelona",
+  "c_name": "Diputació de Barcelona",
+  "city": "Barcelona",
+  "kp_url": "https://www.diba.cat/web/talent",
+  "li_url": "https://www.linkedin.com/company/diputacio-de-barcelona",
+  "notes": "Fetched https://www.diba.cat/ca/inici, https://www.diba.cat/web/talent, https://www.diba.cat/web/talent/ofertes-de-treball, https://seuelectronica.diba.cat/ca/recursos-humans: homepage 'Talent' block (generem ocupació de qualitat) -> kp_url (sub-page 'Ofertes de treball' lists borses/OPO/provisió); footer LinkedIn link linkedin.com/company/diputacio-de-barcelona (also /company/348352). No GIS ad with language requirement found, sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Aigües de Barcelona, Empresa Metropolitana de Gestió del Cicle Integral de l'Aigua, S.A.|Barcelona",
+  "c_name": "Aigües de Barcelona, Empresa Metropolitana de Gestió del Cicle Integral de l'Aigua, S.A.",
+  "city": "Barcelona",
+  "li_url": "https://www.linkedin.com/company/aig%C3%BCes-de-barcelona",
+  "notes": "Fetched https://www.aiguesdebarcelona.cat/, /web/guest/avis-legal, /contacta-amb-nosaltres: footer LinkedIn icon links linkedin.com/company/aig%C3%BCes-de-barcelona (aigües-de-barcelona). No careers link found on these pages, kp_url/sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Universitat Autònoma de Barcelona|Barcelona",
+  "c_name": "Universitat Autònoma de Barcelona",
+  "city": "Barcelona",
+  "li_url": "https://www.linkedin.com/school/uabbarcelona",
+  "size": "500+",
+  "kp_url": "https://www.uab.cat/web/personal-uab-1345469070817.html",
+  "notes": "Fetched https://www.uab.cat/, https://www.uab.cat/web/la-uab/la-uab/la-uab-en-xifres-1345965582915.html, https://www.uab.cat/web/personal-uab-1345469070817.html: footer LinkedIn links linkedin.com/school/uabbarcelona (school page, kept /school/); 'La UAB en xifres' gives 4,452 PDI + 2,273 PTGAS -> 500+; 'Personal UAB' page links 'Oferta pública d'ocupació' (PDI and PTGAS) and 'Selecció i contractació' -> kp_url (staff/recruitment hub, no dedicated jobs portal found). sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Universitat Politècnica de Catalunya|Barcelona",
+  "c_name": "Universitat Politècnica de Catalunya",
+  "city": "Barcelona",
+  "kp_url": "https://treballa.upc.edu/",
+  "li_url": "https://www.linkedin.com/school/166622",
+  "notes": "Fetched https://www.upc.edu/ca, https://www.upc.edu/ca/contacte, https://treballa.upc.edu/: 'Treballa a la UPC' -> treballa.upc.edu (convocatòries PDI/PTGAS) = kp_url; contact page LinkedIn icon links linkedin.com/school/166622/ (numeric school id). No staff total found, size left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Faculdade de Ciências da Universidade de Lisboa|Lisbon",
+  "c_name": "Faculdade de Ciências da Universidade de Lisboa",
+  "city": "Lisbon",
+  "size": "500+",
+  "notes": "Fetched https://ciencias.ulisboa.pt/ and https://ciencias.ulisboa.pt/sobre-nos: 'mais de 6000 alunos, 650 professores e investigadores' -> 500+. Only a student 'portal de emprego' found (not an employer careers page), kp_url left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Turner & Townsend|Madrid",
+  "c_name": "Turner & Townsend",
+  "city": "Madrid",
+  "size": "500+",
+  "notes": "Fetched https://www.turnerandtownsend.com/ and https://www.turnerandtownsend.com/who-we-are/: 'Key facts' state '23k+ people' -> 500+."
+ },
+ {
+  "task": "fill",
+  "key": "TRESCIENTOSMILKILOMETROSPORSEGUNDO, SL|Barcelona",
+  "c_name": "TRESCIENTOSMILKILOMETROSPORSEGUNDO, SL",
+  "city": "Barcelona",
+  "size": "1-10",
+  "notes": "Fetched https://300000kms.net/, https://300000kms.net/about/, https://300000kms.net/sitemap_index.xml, https://300000kms.net/people-sitemap.xml: About page 'Team' section lists 5 people (2 founders, 2 project managers, 1 collaborator; counted) -> 1-10. No jobs page or LinkedIn link found; kp_url/li_url/sprach left empty."
+ }
+]
