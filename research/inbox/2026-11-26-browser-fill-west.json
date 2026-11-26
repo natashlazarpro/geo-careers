@@ -1,0 +1,18 @@
+[
+ {
+  "task": "fill",
+  "key": "HaskoningDHV Nederland B.V.|Amsterdam",
+  "c_name": "HaskoningDHV Nederland B.V.",
+  "city": "Amsterdam",
+  "li_url": "http://linkedin.com/company/haskoning",
+  "notes": "Rendered https://www.haskoning.com/en/careers/vacancies: footer link http://linkedin.com/company/haskoning -> li_url. sprach not filled: no GIS/geodata ad visible in the first page of the rendered vacancy list (EN) or https://www.haskoning.nl/nl-nl/werken-bij/vacatures (NL); filters are click-only."
+ },
+ {
+  "task": "fill",
+  "key": "Booking.com B.V.|Amsterdam",
+  "c_name": "Booking.com B.V.",
+  "city": "Amsterdam",
+  "li_url": "https://www.linkedin.com/company/booking.com/",
+  "notes": "Rendered https://careers.booking.com/ (linked as 'Careers' from booking.com footer): LinkedIn link https://www.linkedin.com/company/booking.com/ -> li_url."
+ }
+]
