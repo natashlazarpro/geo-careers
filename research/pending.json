@@ -60,6 +60,16 @@
   "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/18952-2385554-S"
  },
  {
+  "task": "research",
+  "key": "tkms|Kiel",
+  "c_name": "TKMS GmbH",
+  "city": "Kiel",
+  "address_from_job_ad": null,
+  "open_jobs": 1,
+  "job_titles": "Vermessungsingenieure (m/w/d) ",
+  "job_links": "https://www.arbeitsagentur.de/jobsuche/jobdetail/16604-977723-008-S"
+ },
+ {
   "task": "fill",
   "key": "ingenieurbüro dipl ing g jonasson|Kiel",
   "c_name": "Ingenieurbüro Dipl.-Ing. G. Jonasson GmbH",
