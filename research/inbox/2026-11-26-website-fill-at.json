@@ -1,0 +1,160 @@
+[
+ {
+  "task": "fill",
+  "key": "Stadt Wien, Magistratsabteilung 41 – Stadtvermessung|Vienna",
+  "c_name": "Stadt Wien, Magistratsabteilung 41 – Stadtvermessung",
+  "city": "Vienna",
+  "li_url": "https://www.linkedin.com/company/city-of-vienna",
+  "notes": "Fetched https://www.wien.gv.at/stadtplanung/stadtvermessung: li_url from site social link linkedin.com/company/city-of-vienna/"
+ },
+ {
+  "task": "fill",
+  "key": "Stadt Wien, Magistratsabteilung 01 – Wien Digital|Vienna",
+  "c_name": "Stadt Wien, Magistratsabteilung 01 – Wien Digital",
+  "city": "Vienna",
+  "kp_url": "https://jobs.wien.gv.at/",
+  "notes": "Fetched https://www.wien.gv.at/: kp_url from header link \"Jobs bei der Stadt\""
+ },
+ {
+  "task": "fill",
+  "key": "WIGeoGIS Softwareerstellungs- und Handelsgesellschaft m.b.H.|Vienna",
+  "c_name": "WIGeoGIS Softwareerstellungs- und Handelsgesellschaft m.b.H.",
+  "city": "Vienna",
+  "kp_url": "https://www.wigeogis.com/de/jobs",
+  "sprach": "DE",
+  "notes": "Fetched https://www.wigeogis.com/de/home, https://www.wigeogis.com/de/jobs, https://www.wigeogis.com/de/praktikum_gis_geoinformatik_muenchen: kp_url = Jobs page (offene Stellen Wien und München); sprach from GIS/Geoinformatik internship ad \"Du sprichst fließend Deutsch (mind. B2)\" (ad is for the Munich office; only current GIS ad)"
+ },
+ {
+  "task": "fill",
+  "key": "Amt der Steiermärkischen Landesregierung|Graz",
+  "c_name": "Amt der Steiermärkischen Landesregierung",
+  "city": "Graz",
+  "kp_url": "https://www.verwaltung.steiermark.at/cms/ziel/145195449/DE",
+  "li_url": "https://www.linkedin.com/company/land-steiermark",
+  "notes": "Fetched https://www.verwaltung.steiermark.at/, https://www.verwaltung.steiermark.at/cms/ziel/145195449/DE: kp_url = Land Steiermark Jobportal linked from homepage; li_url from homepage social link linkedin.com/company/land-steiermark"
+ },
+ {
+  "task": "fill",
+  "key": "Energie AG Oberösterreich|Linz",
+  "c_name": "Energie AG Oberösterreich",
+  "city": "Linz",
+  "kp_url": "https://karriere.energieag.at/",
+  "notes": "Fetched https://www.energieag.at/: kp_url from site link \"Karriere\""
+ },
+ {
+  "task": "fill",
+  "key": "Amt der Oberösterreichischen Landesregierung|Linz",
+  "c_name": "Amt der Oberösterreichischen Landesregierung",
+  "city": "Linz",
+  "size": "500+",
+  "li_url": "https://www.linkedin.com/company/amt-der-o-landesregierung",
+  "notes": "Fetched https://www.land-oberoesterreich.gv.at/karriereportal.htm (-> arbeiten-fuers-land.htm): size from \"Mit rund 11.000 Mitarbeitenden\"; li_url from LinkedIn link on that page"
+ },
+ {
+  "task": "fill",
+  "key": "geolanz ZT GmbH|Linz",
+  "c_name": "geolanz ZT GmbH",
+  "city": "Linz",
+  "size": "1-10",
+  "notes": "Fetched https://geolanz.at/team/: size by counting team page (6 people listed incl. one retired partner); g_stack/li_url not found on homepage, karriere, zt, 3d pages"
+ },
+ {
+  "task": "fill",
+  "key": "Johannes Kepler Universität Linz|Linz",
+  "c_name": "Johannes Kepler Universität Linz",
+  "city": "Linz",
+  "kp_url": "https://karriere.jku.at/hcm/jobexchange/showJobOfferList.do",
+  "li_url": "https://www.linkedin.com/school/jkulinz",
+  "notes": "Fetched https://www.jku.at/, https://karriere.jku.at/hcm/jobexchange/showJobOfferList.do, https://www.jku.at/die-jku/ueber-uns/daten-fakten/: kp_url = own job portal linked as \"Stellenausschreibungen\"; li_url from homepage link at.linkedin.com/school/jkulinz/ (school page, kept /school/). Size not filled: Daten & Fakten only states ~180 professors / 27,000 students, no total staff figure."
+ },
+ {
+  "task": "fill",
+  "key": "Amt der Salzburger Landesregierung|Salzburg",
+  "c_name": "Amt der Salzburger Landesregierung",
+  "city": "Salzburg",
+  "size": "500+",
+  "notes": "Fetched https://www.salzburg.gv.at/, https://www.salzburg.gv.at/karriere: size from \"Mit rund 3.100 Mitarbeitenden zählt das Land Salzburg zu den größten Arbeitgebern der Region\""
+ },
+ {
+  "task": "fill",
+  "key": "Geometer Schartner Ziviltechniker-GmbH|Salzburg",
+  "c_name": "Geometer Schartner Ziviltechniker-GmbH",
+  "city": "Salzburg",
+  "size": "11-50",
+  "notes": "Fetched https://www.geometer-schartner.at/team: size by counting team page (22 people listed: owner + 21 staff with \"dabei seit\" dates, Salzburg + Oberndorf/Zell am See/Mittersill branches); no LinkedIn link on homepage/team/offene-stellen pages"
+ },
+ {
+  "task": "fill",
+  "key": "SIR - Salzburger Institut für Raumordnung und Wohnen GmbH|Salzburg",
+  "c_name": "SIR - Salzburger Institut für Raumordnung und Wohnen GmbH",
+  "city": "Salzburg",
+  "kp_url": "https://www.sir.at/ueber-uns/",
+  "notes": "Fetched https://www.sir.at/, https://www.sir.at/ueber-uns/: kp_url = Über uns page holding the \"Aktuelle Jobangebote\" section (currently no openings, Initiativbewerbung to sir@salzburg.gv.at); no separate careers page. sprach: no ad available."
+ },
+ {
+  "task": "fill",
+  "key": "eoVision GmbH|Salzburg",
+  "c_name": "eoVision GmbH",
+  "city": "Salzburg",
+  "size": "1-10",
+  "notes": "Fetched https://eovision.at/, https://eovision.at/team/, https://eovision.at/eovision/firmenportrait/: size by counting team page (3 people: Markus Eisl, Gerald Mansberger, Paul Schreilechner); no careers page or LinkedIn link found in menu/footer"
+ },
+ {
+  "task": "fill",
+  "key": "Salzburg Research Forschungsgesellschaft|Salzburg",
+  "c_name": "Salzburg Research Forschungsgesellschaft",
+  "city": "Salzburg",
+  "size": "51-200",
+  "notes": "Fetched https://www.salzburgresearch.at/en/jobs/, https://www.salzburgresearch.at/en/employees/, https://www.salzburgresearch.at/en/current-job-openings/: size by counting employees page (74 individual staff profile links, no pagination); sprach not filled: current openings are health/tourism/AI roles, no GIS ad"
+ },
+ {
+  "task": "fill",
+  "key": "Trafficon - Traffic Consultants GmbH|Salzburg",
+  "c_name": "Trafficon - Traffic Consultants GmbH",
+  "city": "Salzburg",
+  "li_url": "https://www.linkedin.com/company/trafficon-software",
+  "notes": "Fetched https://www.trafficon.eu/, https://www.trafficon.eu/karriere/: li_url from footer link linkedin.com/company/trafficon-software/"
+ },
+ {
+  "task": "fill",
+  "key": "Amt der Tiroler Landesregierung|Innsbruck",
+  "c_name": "Amt der Tiroler Landesregierung",
+  "city": "Innsbruck",
+  "size": "500+",
+  "notes": "Fetched https://www.tirol.gv.at/, https://www.tirol.gv.at/buergerservice/karriereportal/: size from \"Die Tiroler Landesverwaltung beschäftigt derzeit rund 4.500 MitarbeiterInnen\"; no LinkedIn link found on these pages"
+ },
+ {
+  "task": "fill",
+  "key": "Stadt Innsbruck|Innsbruck",
+  "c_name": "Stadt Innsbruck",
+  "city": "Innsbruck",
+  "size": "500+",
+  "kp_url": "https://karriere.innsbruck.gv.at/",
+  "li_url": "https://www.linkedin.com/company/innsbruck-magistrat",
+  "notes": "Fetched https://www.innsbruck.gv.at/, https://karriere.innsbruck.gv.at/, https://karriere.innsbruck.gv.at/content/About-us/?locale=de_DE: kp_url = own job portal linked from homepage as \"Karriere bei der Stadt\"; li_url from LinkedIn link on the career portal; size from \"alle unsere rund 2000 Mitarbeitenden\""
+ },
+ {
+  "task": "fill",
+  "key": "Leopold-Franzens-Universität Innsbruck|Innsbruck",
+  "c_name": "Leopold-Franzens-Universität Innsbruck",
+  "city": "Innsbruck",
+  "size": "500+",
+  "notes": "Fetched https://www.uibk.ac.at/de/: size from \"bietet sie 28.000 Studierenden und 5.800 Mitarbeiter:innen beste Bedingungen\""
+ },
+ {
+  "task": "fill",
+  "key": "GeoSphere Austria - Bundesanstalt für Geologie, Geophysik, Klimatologie und Meteorologie|Innsbruck",
+  "c_name": "GeoSphere Austria - Bundesanstalt für Geologie, Geophysik, Klimatologie und Meteorologie",
+  "city": "Innsbruck",
+  "kp_url": "https://geosphere.at/de/ueber-uns/karriere",
+  "notes": "Fetched https://geosphere.at/de, https://geosphere.at/de/ueber-uns/karriere: kp_url = Karriere page linked from main menu (job list loaded by JS, so no ad text for g_stack/sprach)"
+ },
+ {
+  "task": "fill",
+  "key": "VE - Vermessung Ebenbichler ZT GmbH|Innsbruck",
+  "c_name": "VE - Vermessung Ebenbichler ZT GmbH",
+  "city": "Innsbruck",
+  "size": "11-50",
+  "notes": "Fetched https://www.ebenbichler.com/, https://www.ebenbichler.com/team, https://www.ebenbichler.com/daten--fakten: size by counting team page (15 distinct people across Mayrhofen/Brandberg and Hall in Tirol offices); no careers page or LinkedIn link in menu/footer"
+ }
+]
