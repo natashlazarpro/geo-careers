@@ -1,0 +1,34 @@
+[
+ {
+  "task": "fill",
+  "key": "Univerzitet u Beogradu – Šumarski fakultet|Belgrade",
+  "c_name": "Univerzitet u Beogradu – Šumarski fakultet",
+  "city": "Belgrade",
+  "kp_url": "https://www.sfb.bg.ac.rs/fakultet/oglasna-tabla/konkursi-i-stipendije/",
+  "notes": "Rendered https://www.sfb.bg.ac.rs, https://www.sfb.bg.ac.rs/fakultet/oglasna-tabla/, https://www.sfb.bg.ac.rs/fakultet/oglasna-tabla/konkursi-i-stipendije/: kp_url = 'Огласи, конкурси и стипендије' (Огласна табла menu), lists job competitions e.g. 'Универзитет у Београду – Шумарски факултет расписује конкурс за избор једног наставника у звање ванредног професора'. No LinkedIn link on site; no GIS ad with language requirement."
+ },
+ {
+  "task": "fill",
+  "key": "Saobraćajni institut CIP d.o.o.|Belgrade",
+  "c_name": "Saobraćajni institut CIP d.o.o.",
+  "city": "Belgrade",
+  "size": "201-500",
+  "notes": "Rendered https://sicip.rs/, https://sicip.rs/timovi/, https://sicip.rs/ko-smo-mi/ (+ plain HTML of https://sicip.rs/ for the animated counter): homepage counter 'ZAPOSLENIH' data-value=450 with unit '+' (i.e. '450+ zaposlenih') -> size 201-500 (stated as 450+, could marginally exceed 500). No careers page or LinkedIn link found."
+ },
+ {
+  "task": "fill",
+  "key": "Institut Mihajlo Pupin d.o.o.|Belgrade",
+  "c_name": "Institut Mihajlo Pupin d.o.o.",
+  "city": "Belgrade",
+  "size": "201-500",
+  "notes": "Rendered https://www.pupin.rs/posao/, https://www.pupin.rs/en/career/, https://www.pupin.rs/en/about-imp/profile/: profile page states '350 researchers out of 497 employees' -> size 201-500. Jobs page lists only general requirements (PhD/MSc CS/EE), no GIS ad, no language requirement -> sprach left empty."
+ },
+ {
+  "task": "fill",
+  "key": "Arup d.o.o.|Belgrade",
+  "c_name": "Arup d.o.o.",
+  "city": "Belgrade",
+  "postal_code": "11000",
+  "notes": "Rendered https://www.arup.com/offices/serbia/ (-> https://www.arup.com/en-us/contact-us/serbia/): 'Belgrade – Bulevar vojvode Misica 17, 11000 Belgrade' -> postal_code 11000. No Belgrade headcount stated."
+ }
+]
