@@ -1,0 +1,26 @@
+[
+ {
+  "task": "fill",
+  "key": "Amt für Geoinformation des Kantons Bern|Bern",
+  "c_name": "Amt für Geoinformation des Kantons Bern",
+  "city": "Bern",
+  "li_url": "https://linkedin.com/company/kantonbern",
+  "notes": "Rendered https://www.agi.dij.be.ch/de/start/ueber-uns/offene-stellen.html (links 'Jobs' -> https://www.be.ch/jobs) and https://www.be.ch/jobs (redirects to https://www.jobs.sites.be.ch/de/start/jobs.html): li_url is the LinkedIn link in that canton jobs page footer ('Halten Sie sich auf dem Laufenden: LinkedIn'). It is the Kanton Bern company page (AGI is a canton office); no AGI-specific LinkedIn found."
+ },
+ {
+  "task": "fill",
+  "key": "Commune d'Épalinges|Lausanne",
+  "c_name": "Commune d'Épalinges",
+  "city": "Lausanne",
+  "li_url": "https://www.linkedin.com/company/commune-d-epalinges",
+  "notes": "Rendered https://www.epalinges.ch/administration/ressources-humaines/offres-demploi/: li_url is the LinkedIn link on that commune page."
+ },
+ {
+  "task": "fill",
+  "key": "Berner Fachhochschule BFH|Bern",
+  "c_name": "Berner Fachhochschule BFH",
+  "city": "Bern",
+  "size": "500+",
+  "notes": "Rendered https://www.bfh.ch/de/ueber-die-bfh/zahlen-und-fakten/die-bfh-in-zahlen/: 'Mitarbeitende: 2'910' (Quelle: Geschäftsbericht BFH 2025, Stand 31.12.2025) -> 500+."
+ }
+]
