@@ -10,3 +10,7 @@ mkdir -p public
 sed "s|__MAPBOX_TOKEN__|$MAPBOX_TOKEN|" index.html > public/index.html
 # Favicons (browser tab icon, iPhone home-screen icon)
 cp icons/* public/
+cp robots.txt public/
+# Static city pages for search engines (/de/<city>, /en/<city>) and sitemap.xml.
+# Fetches the employer list from data-schield; if that fails the build stops and the last version stays online.
+node scripts/build_cities.mjs

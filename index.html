@@ -244,6 +244,9 @@
     .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
     .city-card { background: var(--surface); border: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; gap: 14px; text-align: left; cursor: pointer; }
     .city-card:hover { border-color: var(--field); }
+    .city-cell { display: flex; flex-direction: column; gap: 10px; }
+    .city-cell .city-card { flex: 1; }
+    .city-more { align-self: flex-start; font-size: 13px; padding: 4px 0; }
     .city-card[disabled] { cursor: default; opacity: .55; }
     .city-top { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
     .city-name { font-family: var(--serif); font-size: 34px; line-height: 1; }
@@ -572,7 +575,7 @@ const T = {
     clear: 'Clear filters', done: 'Done', sorted: 'Sorted by rating',
     th_employer: 'Employer', th_city: 'City', th_sector: 'Sector', th_role: 'GIS role', th_lang: 'Language', th_rating: 'Rating', th_jobs: 'Jobs',
     no_results: 'No employers match these filters.', loading: 'Loading employers…', d_loading: 'Loading details…', d_error: 'The details could not be loaded. Please try again in a minute.', load_error: 'The employer data could not be loaded. Please try again later.',
-    cities_eyebrow: 'Twenty cities', cities_title: 'Pick a <em>city</em>',
+    city_page: 'All employers in this city', cities_eyebrow: 'Twenty cities', cities_title: 'Pick a <em>city</em>',
     coming: 'Coming soon',
     all: 'All', role: { 'Core product': 'Core product', 'Dedicated team': 'Dedicated team', 'Side tool': 'Side tool' },
     lang: { ENG: 'English', DE: 'German', 'DE/ENG': 'English / German' }, lang_short: { all: 'All', en: 'EN', de: 'DE' },
@@ -605,7 +608,7 @@ const T = {
     clear: 'Filter zurücksetzen', done: 'Fertig', sorted: 'Nach Bewertung sortiert',
     th_employer: 'Arbeitgeber', th_city: 'Stadt', th_sector: 'Branche', th_role: 'GIS-Rolle', th_lang: 'Sprache', th_rating: 'Bewertung', th_jobs: 'Stellen',
     no_results: 'Keine Arbeitgeber entsprechen diesen Filtern.', loading: 'Arbeitgeber werden geladen…', d_loading: 'Details werden geladen…', d_error: 'Die Details konnten nicht geladen werden. Bitte in einer Minute erneut versuchen.', load_error: 'Die Daten konnten nicht geladen werden. Bitte später erneut versuchen.',
-    cities_eyebrow: 'Zwanzig Städte', cities_title: 'Wähle eine <em>Stadt</em>',
+    city_page: 'Alle Arbeitgeber der Stadt', cities_eyebrow: 'Zwanzig Städte', cities_title: 'Wähle eine <em>Stadt</em>',
     coming: 'Demnächst',
     all: 'Alle', role: { 'Core product': 'Kernprodukt', 'Dedicated team': 'GIS-Team', 'Side tool': 'Nebentool' },
     lang: { ENG: 'Englisch', DE: 'Deutsch', 'DE/ENG': 'Englisch / Deutsch' }, lang_short: { all: 'Alle', en: 'EN', de: 'DE' },
@@ -666,6 +669,8 @@ const cleanName = (name, city) => String(name || '').replace(/\s*\(([^)]*)\)/g, 
   for (const k of CITIES.flatMap(c => c.keys.concat([c.de, c.en])).concat([city || '']).map(norm).filter(Boolean)) rest = rest.split(k).join(' ');
   return rest.replace(OFFICE_WORDS, ' ').replace(/[\s,;:/&.–-]+/g, '') ? m : '';
 }).trim();
+const citySlug = s => s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const cityPage = city => LANG === 'de' ? `/de/${citySlug(city.de)}` : `/en/${citySlug(city.en)}`;
 const cityText = name => { const c = cityOf(name); return c ? c[LANG] : String(name || '').replace(/\s*\(.*?\)\s*/g, ' ').trim(); };
 const sortByRating = list => [...list].sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1) || a.name.localeCompare(b.name));
 const starSvg = '<svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>';
@@ -1071,11 +1076,11 @@ function renderCities() {
     const n = (CITY_OFFICES.get(city) || []).length;
     const label = loadState !== 'ready' ? '' : (n ? t('employers_n')(n) : t('coming'));
     const off = loadState === 'ready' && n === 0;
-    return `<button type="button" class="city-card" data-city="${esc(city[LANG])}" ${off ? 'disabled' : ''}>
+    return `<div class="city-cell"><button type="button" class="city-card" data-city="${esc(city[LANG])}" ${off ? 'disabled' : ''}>
       <span class="city-top"><span>${String(i + 1).padStart(2, '0')}</span><span>${esc(label)}</span></span>
       ${cityMap(city)}
       <span class="city-name">${esc(city[LANG])}</span>
-    </button>`;
+    </button>${n ? `<a class="city-more" href="${cityPage(city)}">${esc(t('city_page'))} →</a>` : ''}</div>`;
   }).join('');
 }
 
@@ -1265,6 +1270,12 @@ $('#sg-again').addEventListener('click', () => {
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 try { const saved = localStorage.getItem('gc-lang'); if (saved === 'en' || saved === 'de') LANG = saved; } catch (e) {}
+// links from the city pages: /?city=<slug>&lang=de|en#map opens the map filtered to that city
+const params = new URLSearchParams(location.search);
+if (params.get('lang') === 'de' || params.get('lang') === 'en') LANG = params.get('lang');
+const linkedCity = CITIES.find(c => [citySlug(c.de), citySlug(c.en)].includes(params.get('city')));
+if (linkedCity) { F.city = linkedCity[LANG]; $('#city').value = F.city; syncQuery(); }
+if (location.search) history.replaceState(null, '', location.pathname + location.hash);
 route();
 renderAll();
 
@@ -1314,7 +1325,7 @@ async function loadData() {
   const place = () => {
     addEmployerLayers();
     renderAll();
-    fitTo(COMPANIES);
+    fitTo(F.city ? COMPANIES.filter(matches) : COMPANIES);
   };
   if (map.loaded()) place(); else map.on('load', place);
 }
