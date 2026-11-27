@@ -7,5 +7,11 @@
   "kv_namespaces": [{ "binding": "DATA", "id": "__KV_ID__" }],
   // Emails each new employer suggestion. The recipient is the Worker secret NOTIFY_TO
   // (must be a verified Email Routing destination address); without it no email is sent.
-  "send_email": [{ "name": "NOTIFY" }]
+  "send_email": [{ "name": "NOTIFY" }],
+  // Per-visitor request limits (Cloudflare rate limiting, counted per IP, nothing stored).
+  // RATE_DETAIL: employer details and careers redirects; RATE_LIST: the employer list (one per page load).
+  "ratelimits": [
+    { "name": "RATE_DETAIL", "namespace_id": "1101", "simple": { "limit": 30, "period": 60 } },
+    { "name": "RATE_LIST", "namespace_id": "1102", "simple": { "limit": 20, "period": 60 } }
+  ]
 }

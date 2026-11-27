@@ -1,5 +1,11 @@
 // data-schield: serves the GeoCareers map data from Cloudflare KV to the website only,
 // and accepts employer suggestions from the website's Suggest page.
+//
+// To make copying the whole dataset harder, the data is split:
+//   GET /                 the list the map, search and filters need (no descriptions, addresses or links)
+//   GET /employer/3,17    the full details of up to 5 employers, loaded when a profile is opened
+//   GET /go/3             redirects to employer 3's careers page (used by the Employers table)
+// Details and redirects are rate limited per visitor (RATE_DETAIL), the list too (RATE_LIST).
 // The workbook and caches are stored in the same KV namespace but are never served.
 const ALLOWED_ORIGINS = [
   "https://geocareers.app",
@@ -12,14 +18,45 @@ const SUGGESTION_PREFIX = "suggestions/";
 const MAX_PER_IP_PER_DAY = 10;
 const LIMITS = { company: 150, city: 80, careers_url: 400, tools: 300, note: 1500 };
 
+// Fields sent in the list; everything else only comes through /employer/<i>.
+const LIST_FIELDS = ["c_name", "c_url", "city", "sector", "g_role", "g_stack", "size", "kununu_rate", "sprach", "first_seen", "lon", "lat"];
+const DETAIL_FIELDS = ["c_name", "adress", "postal_code", "kp_url", "kununu_url", "li_url", "eng", "de"];
+const MAX_IDS = 5;
+
+// companies.json parsed once per Worker instance for a minute, instead of on every request
+let cache = { at: 0, rows: [] };
+async function rows(env) {
+  if (Date.now() - cache.at < 60_000) return cache.rows;
+  const raw = await env.DATA.get("companies.json", { cacheTtl: 300 });
+  let list = [];
+  try { list = JSON.parse(raw || "[]"); } catch { list = []; }
+  cache = { at: Date.now(), rows: Array.isArray(list) ? list : [] };
+  return cache.rows;
+}
+const pick = (row, fields) => Object.fromEntries(fields.filter((f) => row[f] !== undefined && row[f] !== "").map((f) => [f, row[f]]));
+
+// Cloudflare rate-limit bindings (see wrangler.template.jsonc); without them nothing is limited.
+async function allowed(limiter, request) {
+  if (!limiter) return true;
+  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+  try { return (await limiter.limit({ key: ip })).success; } catch { return true; }
+}
+const tooMany = (cors) => new Response("Too many requests", { status: 429, headers: { ...cors, "Retry-After": "60" } });
+
 export default {
   async fetch(request, env) {
+    const url = new URL(request.url);
+
+    // Careers-page redirect: a normal link click sends no Origin header, so check the Referer instead.
+    if (request.method === "GET" && url.pathname.startsWith("/go/")) {
+      return handleGo(request, env, url);
+    }
+
     const origin = request.headers.get("Origin") || "";
     if (!ALLOWED_ORIGINS.includes(origin)) {
       return new Response("Forbidden", { status: 403 });
     }
     const cors = { "Access-Control-Allow-Origin": origin, "Vary": "Origin" };
-    const url = new URL(request.url);
 
     if (request.method === "OPTIONS") {
       return new Response(null, {
@@ -39,12 +76,40 @@ export default {
     if (request.method !== "GET") {
       return new Response("Method not allowed", { status: 405, headers: cors });
     }
-    const data = await env.DATA.get("companies.json", { cacheTtl: 300 });
-    return new Response(data || "[]", {
-      headers: { ...cors, "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=300" },
+    if (url.pathname.startsWith("/employer/")) {
+      if (!(await allowed(env.RATE_DETAIL, request))) return tooMany(cors);
+      const ids = url.pathname.slice("/employer/".length).split(",").slice(0, MAX_IDS)
+        .map((x) => Number(x)).filter((x) => Number.isInteger(x) && x >= 0);
+      const all = await rows(env);
+      const out = ids.filter((i) => i < all.length).map((i) => ({ i, ...pick(all[i], DETAIL_FIELDS) }));
+      return new Response(JSON.stringify(out), {
+        headers: { ...cors, "Content-Type": "application/json; charset=utf-8", "Cache-Control": "private, max-age=300" },
+      });
+    }
+
+    if (url.pathname !== "/") return new Response("Not found", { status: 404, headers: cors });
+    if (!(await allowed(env.RATE_LIST, request))) return tooMany(cors);
+    const list = (await rows(env)).map((row, i) => ({ i, ...pick(row, LIST_FIELDS), ...(row.kp_url ? { jobs: 1 } : {}) }));
+    return new Response(JSON.stringify(list), {
+      headers: { ...cors, "Content-Type": "application/json; charset=utf-8", "Cache-Control": "private, max-age=300" },
     });
   },
 };
+
+async function handleGo(request, env, url) {
+  const referer = request.headers.get("Referer") || "";
+  if (!ALLOWED_ORIGINS.some((o) => referer === o || referer.startsWith(o + "/"))) {
+    return new Response("Forbidden", { status: 403 });
+  }
+  if (!(await allowed(env.RATE_DETAIL, request))) return tooMany({});
+  const i = Number(url.pathname.slice("/go/".length));
+  const row = Number.isInteger(i) && i >= 0 ? (await rows(env))[i] : null;
+  let target = row && String(row.kp_url || "").trim();
+  if (target && !/^https?:\/\//i.test(target)) target = "https://" + target;
+  try { target = target && new URL(target).href; } catch { target = ""; }
+  if (!target) return new Response("Not found", { status: 404 });
+  return new Response(null, { status: 302, headers: { Location: target, "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" } });
+}
 
 function json(body, status, cors) {
   return new Response(JSON.stringify(body), {

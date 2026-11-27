@@ -28,6 +28,9 @@ in Cloudflare and deletes the file. A company is only researched once.
 - `gis_employers.xlsx` — your 17 columns, plus grey helper columns:
   `lat, lon, open_jobs, job_titles, job_links, first_seen, last_seen, source, agent_check, agent_notes`
 - `companies.json` — what the website loads through data-schield
+  (split on the way out: the map list has no descriptions, addresses or links; `/employer/<i>` returns those for
+  up to 5 employers when a profile is opened, `/go/<i>` redirects to a careers page; both are limited to
+  30 requests a minute per visitor, the list to 20)
 - `companies.geojson` — GeoJSON
 - `companies.gpkg` — for ArcGIS Pro / QGIS (EPSG:25832)
 

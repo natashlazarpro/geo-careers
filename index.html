@@ -571,7 +571,7 @@ const T = {
     clear_all: 'Clear all', apply: 'Apply', reset_filters: 'Reset filters', sort_by: 'Sort by', sort_rating: 'Rating', sort_newest: 'Newest', th_size: 'Size',
     clear: 'Clear filters', done: 'Done', sorted: 'Sorted by rating',
     th_employer: 'Employer', th_city: 'City', th_sector: 'Sector', th_role: 'GIS role', th_lang: 'Language', th_rating: 'Rating', th_jobs: 'Jobs',
-    no_results: 'No employers match these filters.', loading: 'Loading employers…', load_error: 'The employer data could not be loaded. Please try again later.',
+    no_results: 'No employers match these filters.', loading: 'Loading employers…', d_loading: 'Loading details…', d_error: 'The details could not be loaded. Please try again in a minute.', load_error: 'The employer data could not be loaded. Please try again later.',
     cities_eyebrow: 'Twenty cities', cities_title: 'Pick a <em>city</em>',
     coming: 'Coming soon',
     all: 'All', role: { 'Core product': 'Core product', 'Dedicated team': 'Dedicated team', 'Side tool': 'Side tool' },
@@ -604,7 +604,7 @@ const T = {
     clear_all: 'Alle löschen', apply: 'Anwenden', reset_filters: 'Filter zurücksetzen', sort_by: 'Sortieren', sort_rating: 'Bewertung', sort_newest: 'Neueste', th_size: 'Größe',
     clear: 'Filter zurücksetzen', done: 'Fertig', sorted: 'Nach Bewertung sortiert',
     th_employer: 'Arbeitgeber', th_city: 'Stadt', th_sector: 'Branche', th_role: 'GIS-Rolle', th_lang: 'Sprache', th_rating: 'Bewertung', th_jobs: 'Stellen',
-    no_results: 'Keine Arbeitgeber entsprechen diesen Filtern.', loading: 'Arbeitgeber werden geladen…', load_error: 'Die Daten konnten nicht geladen werden. Bitte später erneut versuchen.',
+    no_results: 'Keine Arbeitgeber entsprechen diesen Filtern.', loading: 'Arbeitgeber werden geladen…', d_loading: 'Details werden geladen…', d_error: 'Die Details konnten nicht geladen werden. Bitte in einer Minute erneut versuchen.', load_error: 'Die Daten konnten nicht geladen werden. Bitte später erneut versuchen.',
     cities_eyebrow: 'Zwanzig Städte', cities_title: 'Wähle eine <em>Stadt</em>',
     coming: 'Demnächst',
     all: 'Alle', role: { 'Core product': 'Kernprodukt', 'Dedicated team': 'GIS-Team', 'Side tool': 'Nebentool' },
@@ -767,8 +767,44 @@ function select(id, opts = {}) {
   const c = COMPANIES[id];
   if (c && opts.fly) map.flyTo({ center: [c.lng, c.lat], zoom: Math.max(map.getZoom(), 12), duration: 450 });
   renderPanel();
+  if (c && !c._detail) loadDetails(c);
   if (opts.focus && c) $('#panel-detail .d-name')?.focus({ preventScroll: true });
   if (opts.focus && !c && prev !== null) ($(`#list .row[data-id="${prev}"]`) || $('#list .row'))?.focus({ preventScroll: true });
+}
+
+// Descriptions, addresses and links are not in the list the page loads; they are fetched
+// for one employer (plus its other offices, max 5) when its profile is opened.
+const BY_SRC = new Map();
+function applyDetail(c, d) {
+  c.address = d.adress || '';
+  c.careers = d.kp_url || ''; c.kununu = d.kununu_url || ''; c.linkedin = d.li_url || '';
+  c.about_en = d.eng || ''; c.about_de = d.de || '';
+  c._detail = true; c._detailErr = false;
+}
+async function loadDetails(c) {
+  const want = [c, ...siblingsOf(c)].filter(x => !x._detail && !x._loading).slice(0, 5);
+  if (!want.length) return;
+  want.forEach(x => { x._loading = true; });
+  try {
+    const res = await fetch(`${DATA_URL}/employer/${want.map(x => x.src).join(',')}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    // an older data Worker answers every path with the full list: then pick by position
+    const found = rows.length && rows[0].i === undefined ? want.map(x => [x, rows[x.src]]) : rows.map(d => [BY_SRC.get(d.i), d]);
+    for (const [x, d] of found) if (x && d && d.c_name === x.rawName) applyDetail(x, d);
+    want.forEach(x => { if (!x._detail) x._detailErr = true; });
+  } catch (err) {
+    console.error('Failed to load employer details:', err);
+    want.forEach(x => { x._detailErr = true; });
+  } finally {
+    want.forEach(x => { x._loading = false; });
+  }
+  if (selectedId === c.id) {
+    const detail = $('#panel-detail'), top = detail.scrollTop, hadFocus = detail.contains(document.activeElement);
+    detail.innerHTML = detailHTML(c);
+    detail.scrollTop = top;
+    if (hadFocus) detail.querySelector('.d-name')?.focus({ preventScroll: true });
+  }
 }
 
 function detailHTML(c) {
@@ -778,6 +814,7 @@ function detailHTML(c) {
   const pick = f => c[f] || (sib.find(x => x[f]) || {})[f];
   const rating = c.rating || pick('rating');
   const web = safeUrl(c.website), jobs = safeUrl(c.careers), rev = safeUrl(pick('kununu')), li = safeUrl(pick('linkedin'));
+  const pending = !c._detail;
   const elsewhere = [];
   for (const x of sib) if (x.city !== c.city && !elsewhere.some(o => o.city === x.city)) elsewhere.push(x);
   const meta = [c.size, langText(c.lang)].filter(Boolean).map(esc);
@@ -796,10 +833,13 @@ function detailHTML(c) {
       ${elsewhere.length ? `<p class="d-also">${esc(t('also_in'))}: ${elsewhere.map(x => `<button type="button" data-office="${x.id}">${esc(cityText(x.city))}</button>`).join(', ')}</p>` : ''}
       ${web ? `<a class="d-web" href="${esc(web)}" target="_blank" rel="noopener">${esc(web.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}
     </div>
+    ${pending ? `<p class="d-addr" role="status">${esc(t(c._detailErr ? 'd_error' : 'd_loading'))}</p>` : ''}
     ${about ? `<div class="d-block"><span class="label">${esc(t('about'))}</span><p class="d-about">${esc(about)}</p></div>` : ''}
     ${c.tech.length ? `<div class="d-block"><span class="label">${esc(t('tech'))}</span><div class="tags">${c.tech.map(x => `<span class="tag">${esc(x)}</span>`).join('')}</div></div>` : ''}
     <div class="actions">
-      ${jobs ? `<a class="btn" href="${esc(jobs)}" target="_blank" rel="noopener">${esc(t('view_jobs'))}</a>` : `<span class="btn btn-ghost" aria-disabled="true" style="cursor:default">${esc(t('no_jobs'))}</span>`}
+      ${jobs ? `<a class="btn" href="${esc(jobs)}" target="_blank" rel="noopener">${esc(t('view_jobs'))}</a>`
+        : pending && c.hasJobs ? `<span class="btn" aria-disabled="true" style="cursor:default;opacity:.55">${esc(t('view_jobs'))}</span>`
+        : `<span class="btn btn-ghost" aria-disabled="true" style="cursor:default">${esc(t('no_jobs'))}</span>`}
       ${second ? `<div class="actions-row">${second}</div>` : ''}
     </div>`;
 }
@@ -926,7 +966,8 @@ function groupEmployers(list) {
       : langs.find(l => l) || '';
     const ratings = items.map(c => c.rating).filter(r => r);
     const rating = ratings.length ? Math.max(...ratings.map(Number)) : null;
-    const careers = items.map(c => c.careers).find(u => safeUrl(u)) || '';
+    const withJobs = items.find(c => c.hasJobs);
+    const careers = withJobs ? `${DATA_URL}/go/${withJobs.src}` : '';
     const sizeIdx = Math.max(...items.map(c => SIZES.indexOf(c.size)));
     const size = sizeIdx >= 0 ? SIZES[sizeIdx] : '';
     const added = items.map(c => c.added).sort().pop() || '';
@@ -1234,6 +1275,10 @@ async function loadData() {
     // ids in the workbook restart in every city sheet, so give each office its own unique id here
     COMPANIES = (await res.json()).map((c, i) => ({
       id:       i,
+      src:      c.i ?? i,
+      rawName:  c.c_name,
+      hasJobs:  !!(c.jobs || c.kp_url),
+      _detail:  'kp_url' in c || 'eng' in c || 'adress' in c,
       rowId:    Number(c.id),
       name:     cleanName(c.c_name, c.city),
       website:  c.c_url,
@@ -1254,6 +1299,7 @@ async function loadData() {
       lat:      parseFloat(c.lat),
       lng:      parseFloat(c.lon),
     })).filter(c => c.name).map((c, i) => prepare({ ...c, id: i }));
+    BY_SRC.clear(); COMPANIES.forEach(c => BY_SRC.set(c.src, c));
     EMP_GROUPS = groupEmployers(COMPANIES);
     GROUP_OF = new Map(EMP_GROUPS.flatMap(g => g.items.map(c => [c.id, g])));
     CITY_OFFICES = new Map();
